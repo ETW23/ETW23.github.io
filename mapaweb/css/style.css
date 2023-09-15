@@ -227,3 +227,55 @@ footer section a {
 .f1 img {
   width: 3em;
 }
+
+/* ### Menu de 4 opciones despues de en click en MODULOS */
+#bloque4 {
+  /* permite posicionar absolutalmente dentro del bordes de este elemento */
+  position: relative;
+}
+
+#options {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0px;
+  visibility: hidden;
+}
+
+#options.abierto {
+  visibility: visible;
+  animation: slidingin 1s linear;
+  grid-template-rows: 398px;
+}
+
+@keyframes slidingin {
+  from {
+    grid-template-rows: 32px;
+  }
+
+  to {
+    grid-template-rows: 398px;
+  }
+}
+
+#options-inner {
+  border-radius: 16px;
+  /* background-color: #ee3e5d; */
+  background-color: pink;
+  /* font-weight: bold; */
+}
+
+#options-inner a {
+  text-decoration: inherit;
+  color: inherit;
+  border-top: 1px solid #1f243d;
+  display: block;
+  text-align: center;
+  padding-block: .75rem;
+  margin-inline: 1.5rem;
+}

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Escuela Taller Gijón Acompaña</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="quitar-webhost-logo.css">
 </head>
 
 <body>
@@ -76,7 +77,27 @@
           <img src="logos/formacion.png" alt="Logo Modulo" />
         </figure>
         <div class="enlaces">
-          <a href="../formacion/index.html">Web Modulo</a>
+          <a href="javascript:document.getElementById('options').classList.toggle('abierto')">Ver Modulos</a>
+        </div>
+
+        <div id="options">
+          <ul id="options-inner">
+            <li>
+              <h2>Modulo</h2>
+            </li>
+            <li>
+              <a href="#">Paginas y aplicaciones Web</a>
+            </li>
+            <li>
+              <a href="#">Atención Sociosanitaria</a>
+            </li>
+            <li>
+              <a href="#">Atención Sociosanitaria con Dinamización</a>
+            </li>
+            <li>
+              <a href="#">Servicios de Oficina</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="bloque" id="bloque5">
