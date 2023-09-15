@@ -32,7 +32,7 @@ btn1.onclick = function () {
     "ATENCIÓN SOCIOSANITARIA CON DINAMIZACIÓN",
     "images/alu (1).jpg",
     1,
-    5
+    6
   );
 };
 btn2.onclick = function () {
@@ -42,7 +42,7 @@ btn3.onclick = function () {
   cambioModus("SERVICIOS DE OFICINA", "images/alu (20).jpg", 19, 26);
 };
 btn4.onclick = function () {
-  cambioModus("ATENCIÓN SOCIOSANITARIA", "images/alu (29).jpg", 29, 36);
+  cambioModus("ATENCIÓN SOCIOSANITARIA", "images/alu (29).jpg", 27, 36);
 };
 btn5.onclick = function () {
   cambioModus("PERSONAL", "images/profezo.jpg");
@@ -82,6 +82,6 @@ ant.onclick = function () {
   fotoAlu.src = "images/alu (" + num + ").jpg";
 };
 
-for (let event of ['cut', 'copy', 'paste', 'contextmenu']) {
-  window.addEventListener(event, e => e.preventDefault())
+for (let event of ["cut", "copy", "paste", "contextmenu"]) {
+  window.addEventListener(event, (e) => e.preventDefault());
 }
