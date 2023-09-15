@@ -241,25 +241,24 @@ footer section a {
   left: 0;
   right: 0;
 
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0px;
+  height: 0px;
+  overflow: hidden;
   visibility: hidden;
 }
 
 #options.abierto {
   visibility: visible;
   animation: slidingin 1s linear;
-  grid-template-rows: 398px;
+  height: 398px;
 }
 
 @keyframes slidingin {
   from {
-    grid-template-rows: 32px;
+    height: 32px;
   }
 
   to {
-    grid-template-rows: 398px;
+    height: 398px;
   }
 }
 
@@ -268,6 +267,7 @@ footer section a {
   /* background-color: #ee3e5d; */
   background-color: pink;
   /* font-weight: bold; */
+  height: 100%;
 }
 
 #options-inner a {
