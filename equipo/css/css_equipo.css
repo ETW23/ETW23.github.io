@@ -1,0 +1,95 @@
+.contenedorh1     {
+      width: 100%;
+      background-image: linear-gradient(to bottom right, rgb(139, 139, 139), rgba(255, 255, 255, 1));
+      text-align: center;
+      padding: 5em 0 5em 0;
+      font-family: monospace;
+      font-variant: small-caps;
+}
+h1    {
+      font-size: 5em;
+}
+.contenedor {
+      width: 100%;
+      margin: auto;
+      padding-top: 5em;
+      padding-bottom: 5em;
+      background-image: linear-gradient(to top right, rgba(255, 0, 0, 0.719), rgba(255, 255, 255, 1));
+}
+.conteimgs {
+      display: flex;
+      flex-wrap: wrap; /* Permite que los elementos se envuelvan en filas */
+      justify-content: space-between; /* Distribuye los elementos uniformemente en la fila */
+      width: 70%;
+      margin: auto;
+      background-color: #f1f1f1;
+      border-radius: 5em;
+      padding: 2em;
+} 
+
+.centro {
+      display: flex;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center; /* Centra verticalmente */
+      border: solid 0.3em black;
+      width: 32%;
+      padding-top: 1em;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    
+.cargoimg   {
+      padding: 1em 0 1em 0;
+      border: solid 1px black;
+      background-color: whitesmoke;
+      width: 70%;
+      margin: auto;
+      position: relative;
+      margin-top:-2em;
+      margin-bottom: 2em;
+}
+
+.cargoimg h2      {line-height: 1.5rem;
+}
+.container {border: solid 0.3em black;
+            width: 32%;
+            padding-top: 1em;
+            text-align: center;
+            margin-bottom: 1em; /* Margen inferior para separar las filas */
+            position: relative;
+}
+.overlay   {position: absolute;
+            border-radius: 0 0 1em 1em;
+            bottom: 0;
+            left: 0;
+            top: 16px;
+            right: 0;
+            background-color: #c33c3c;
+            overflow: hidden;
+            width: 81%;
+            margin: auto;
+            margin-top: 0;
+            height: 0;
+            transition: .5s ease;
+}
+.container:hover .overlay {bottom: 0;
+                           height: 82%;
+}
+.txt11      {color: white;
+             font-size: 1.2em;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             -webkit-transform: translate(-50%, -50%);
+             -ms-transform: translate(-50%, -50%);
+             transform: translate(-50%, -50%);
+             text-align: center;
+}
+
+.container img   {width: 80%;
+                  height: 22rem;
+                  margin: auto;
+}
+.centro img {width: 100%;
+             height: 100%;
+}
