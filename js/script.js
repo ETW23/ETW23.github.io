@@ -53,17 +53,25 @@ changeBackgroundImage();
 for (let event of ['cut', 'copy', 'paste', 'contextmenu']) {
     window.addEventListener(event, e => e.preventDefault())
 }
-///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////    
+var popupContainer = document.getElementById('popup-container');
+var closeButton = document.getElementById('close-btn');
+
 window.addEventListener('DOMContentLoaded', function () {
-    var popupContainer = document.getElementById('popup-container');
-    var closeButton = document.getElementById('close-btn');
 
     if (!localStorage.getItem('popupShown')) {
         popupContainer.style.display = 'block';
     }
-
     closeButton.addEventListener('click', function () {
         popupContainer.style.display = 'none';
         localStorage.setItem('popupShown', true);
     });
+});
+
+
+var mostrar = document.getElementById('mostrarNota');
+
+mostrar.addEventListener('click', function () {
+    popupContainer.style.display = 'block';
+    localStorage.setItem('popupShown', true);
 });
