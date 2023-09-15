@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda | E.T. Gij&oacute;n Acompa&ntilde;a</title>
+  <link rel="stylesheet" type="text/css" href="css/css_index.css">
+  <link rel="stylesheet" type="text/css" href="css/css_calendario.css">
+  <link rel="stylesheet" type="text/css" href="css/css_notitas.css">
+  <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
+  <script src="js/calendario_script.js" defer></script>
+  <script src="js/notitas_script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <!--Logo de Gijon -->
+    <div class="portadaLogo">
+      <div>
+        <img class="logo" src="../images/Logo Gijon.png" alt="Ayto Gijón" title="Ayto Gijón" />
+      </div>
+      <div>
+        <img class="logo" src="../images/logoet2.png" alt="Escuela Taller" title="Escuela Taller" id="et" />
+      </div>
+    </div>
+    <!--Hamburguesa desplegable-->
+    <div class="portadaMenu">
+      <button id="botonHamburguesa" type="button"><span>&#9776;</span></button>
+      <nav id="menu">
+        <ul id="menunav">
+          <li><a href="../agenda/">Agenda</a></li>
+          <li><a id="botonModus" href="../modulo/">Modulo</a></li>
+          <li><a href="../equipo/">Equipo</a></li>
+          <li><a href="../alumnado/">Alumnado</a></li>
+          <li><a href="../instalaciones/">Instalaciones</a></li>
+          <li><a href="../mapaweb/">Mapa de la Web</a></li>
+          <li><a href="../manual/">Manual de usuario</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--Agenda-->
+  <div class="noticias">
+    <div class="fondo">
+      <div class="norota">
+        <div class="notiTitulo">
+          <div class="divtitle">AGENDA</div>
+        </div>
+      </div>
+    </div>
+    <div class="elementosmain">
+      <div class="calendario">
+        <div class="box">
+          <div class="headerx">
+            <div class="date-container">
+              <div class="current-date" ondblclick="chooseMonth()">
+                <select name="month" id="month">
+                  <option value="0">Enero</option>
+                  <option value="1">Febrero</option>
+                  <option value="2">Marzo</option>
+                  <option value="3">Abril</option>
+                  <option value="4">Mayo</option>
+                  <option value="5">Junio</option>
+                  <option value="6">Julio</option>
+                  <option value="7">Agosto</option>
+                  <option value="8">Septiembre</option>
+                  <option value="9">Octubre</option>
+                  <option value="10">Noviembre</option>
+                  <option value="11">Diciembre</option>
+                </select>
+              </div>
+              <div class="current-year" ondblclick="chooseYear()">
+              </div>
+            </div>
+            <button type="button" name="actual" id="actual">Fecha Actual</button>
+            <div class="icons">
+              <span id="prev" class="symbols-arrows">chevron_left</span>
+              <span id="next" class="symbols-arrows">chevron_right</span>
+            </div>
+          </div>
+          <div class="calendar">
+            <ul class="weeks">
+              <li>Lun</li>
+              <li>Mar</li>
+              <li>Mie</li>
+              <li>Jue</li>
+              <li>Vie</li>
+              <li>Sab</li>
+              <li>Dom</li>
+            </ul>
+            <ul class="days"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="preportada" id="preportadaid">
+        <h2>EVENTOS</h2><br>
+        <ul class="ulpreportada">
+          <li>Conceyo de la Moced&aacute; (CMX)
+            <div class="ulfecha">01/06/2023</div>
+          </li>
+          <li>Cogersa
+            <div class="ulfecha">01/06/2023</div>
+          </li>
+          <li>Antigua Escuela de Comercio de Gij&oacute;n
+            <div class="ulfecha">02/06/2023</div>
+          </li>
+          <li>Agencia Local de Empleo
+            <div class="ulfecha">04/07/2023</div>
+          </li>
+        </ul>
+        <div class="divpreportada">
+          Para saber m&aacute;s presione el <div class="circlepreport"></div> en el "Calendario".<br>
+          <br>
+          Haga click en la nota para desplegar la informaci&oacute;n.
+        </div>
+      </div>
+      <div class="notitnovisible" id="notitas">
+        <div class="dias_uno" id="event1">
+          <p class="titudia">Conceyu de la Moced&aacute; (CMX).</p>
+          <br>
+          <p class="textcont">
+            Visita al CMX a Compa&ntilde;&iacute;a para conocer las instalaciones y tareas que realiza.
+            <br><br>
+            Tambi&eacute;n asistieron a la Exposici&oacute;n "Desplegando Alas" en el espacio Astragal.
+          </p>
+          <br>
+          <p class="fechass">
+            Fecha: 01/06/2023
+          </p>
+        </div>
+        <br>
+        <div class="dias_uno" id="event2">
+          <p class="titudia">COGERSA.</p>
+          <br>
+          <p class="textcont">
+            Visita a la Compa&ntilde;&iacute;a para la Gesti&oacute;n de los Residuos S&oacute;lidos
+            en Asturias para conocer los principios b&aacute;sicos de un sistema de gesti&oacute;n
+            de residuos eficiente, p&uacute;blico y &uacute;til para el desarrollo sostenible.
+          </p>
+          <br>
+          <p class="fechass">
+            Fecha: 01/06/2023
+          </p>
+        </div>
+        <div class="dias_uno" id="event3">
+          <p class="titudia">Antigua Escuela de Comercio de Gij&oacute;n.</p>
+          <br>
+          <p class="textcont">
+            Visita a la Oficina de la Juventud de Gij&oacute;n, para conocer las funciones y
+            tareas que realiza, as&iacute; como el apoyo que puede aportar al alumnado.
+          </p>
+          <br>
+          <p class="fechass">
+            Fecha: 02/06/2023
+          </p>
+        </div>
+        <div class="dias_uno" id="event4">
+          <p class="titudia">Agencia Local de Empleo.</p>
+          <br>
+          <p class="textcont">
+            Desde las 9 hasta las 12 recibieron formaci&oacute;n en Prevenci&oacute;n de Riesgos
+            Laborales en el Aula 2 de la Agencia Local de Empleo.
+            <br><br>
+            Posteriormente recibieron informaci&oacute;n del Convenio Colectivo del
+            Ayuntamiento de Gij&oacute;n, por parte de la Coordinadora de Escuela Taller, Marian Artola.
+          </p>
+          <br>
+          <p class="fechass">
+            Fecha: 04/07/2023
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <section class="f1">
+      <img src="imagenes/acces.png" alt="accesibilidad "><!-- imagen access AAA HTML5 -->
+      <p class="dire">Accesibilidad:</p>
+      <p class="dire">AAA HTML5</p>
+    </section>
+    <section class="f2">
+      <p><a href="" class="links">Aviso legal</a></p>
+      <p><a href="https://www.boe.es/eli/es/lo/2018/12/05/3/con" class="links">Proteccion de datos</a></p>
+      <p><a href="" class="links">Incidencias</a> </p>
+    </section>
+    <section class="f3">
+      <p class="links">Contacto:</p>
+      <p class="dire">630 76 16 62</p>
+      <p class="dire">C. R&iacute;o de Oro, 15</p>
+      <p class="dire">33209</p>
+      <p class="dire">Gij&oacute;n, Asturias</p>
+    </section>
+  </footer>
+  <script src="js/index_script.js"></script>
+  <script src="js/notitas_script.js" defer></script>
+</body>
+
+</html>

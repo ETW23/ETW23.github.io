@@ -1,0 +1,121 @@
+.notitas    {
+    float: left;
+    width: 30%;
+    margin: auto;
+    margin-top: 6rem;
+    display: block;
+    margin-left: 5.25em;
+    margin-right: 14.25em;
+}
+.dias_uno   {width: 60%;
+             height: auto;
+             margin: auto;
+             display: none;
+             border-radius: 0.75em;
+             background-color: #f7f7f7;
+             box-shadow: 0 0.125rem 0.75rem #ad0000;
+             padding: 0.25rem;
+             font-family: sans-serif;
+             transition: transform 1s ease;
+             transform-origin: center;
+             transform: rotate(0deg);
+}
+.dias_uno.girado  {transform: rotate(360deg);
+                   height: auto;
+}
+.diactive   {display: block;
+}
+.novisible  {
+    display: none;
+}
+.notitnovisible {
+    display: none;
+}
+.titudia    {text-align: center;
+             font-size: 140%;
+             font-weight: bold;
+             font-style: italic;
+             text-decoration: underline;
+}
+.textcont   {width: 90%;
+             text-align: justify;
+             margin: auto;
+             font-size: .1px;
+             transition: font-size 1.5s ease;
+}
+.textout    {font-size: 1rem;
+             animation: font-size 1.5s ease;
+}
+.fechass    {width: 95%;
+             text-align: right;
+             margin-top: .25rem;
+}
+.preportada {
+    display: block;
+    float: right;
+    height: auto;
+    margin: auto;
+    margin-top: 5em;
+    margin-right: 30em;
+}
+.ulpreportada   {
+    list-style: circle;
+    list-style-type: circle;
+    overflow: visible;
+}
+.ulfecha    {
+    width: 100%;
+    text-align: right;
+    font-style: oblique;
+    font-size: 0.8em;
+    padding-top: 0.5em;
+}
+.divpreportada  {
+    clear: both;
+    margin-top: 2em;
+}
+.circlepreport  {
+    width: 1em;
+    height: 1em;
+    background-color: #6969FF;
+    display: inline-block;
+    border-radius: 1em;
+    margin: 0 0.2em 0 0.2em;
+}
+@media (width<= 767px) {.dias_uno    {width: 60%;
+                                      height: auto;
+                                      margin: auto;
+}
+                        .dias_uno.girado  {transform: rotate(360deg);
+                                            height: auto;
+}
+                        .notitas    {float: left;
+                                    width: 100%;
+                                    margin: auto;
+                                    margin-top: 20rem;
+                                    margin-bottom: 1rem;
+                                    height: auto;
+                                    padding-bottom: 2em;
+}
+                        .preportada {
+                            display: block;
+                            width: 90%;
+                            float: left;
+                            height: auto;
+                            margin: auto;
+                            margin-top: 18em;
+                            margin-left: 2rem;
+                            padding-bottom: 2em;
+}}
+@media (min-width: 767px) and (max-width: 1812px) {.preportada {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                            margin-top: 2em;
+                            margin-right: 0;
+                            margin-left: 7rem;
+                            padding-bottom: 2em;
+}
+                        .notitas    {
+                            padding-bottom: 2em;
+}}

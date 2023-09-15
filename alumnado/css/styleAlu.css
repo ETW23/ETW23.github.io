@@ -1,0 +1,437 @@
+* {
+  box-sizing: border-box;
+  margin: 0em;
+  padding: 0em;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Abril;
+  src: url(AbrilFatface-Regular.ttf);
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 95vh;
+  background-image: url("../images/portada.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 0px 40px 1px black;
+  min-height: 100vh;
+}
+
+.portadaLogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  border-bottom: 0.125em solid #f8f9fa;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.portadaLogo .logos div {
+  width: auto;
+  height: 4rem;
+  border-right: 0.125em solid #f8f9fa;
+}
+
+.portadaLogo .logos div img {
+  height: 4rem;
+  padding: 10px;
+}
+
+.portadaMenu {
+  width: 4rem;
+  height: 4rem;
+  border-left: 0.125em solid #f8f9fa;
+}
+
+/*---------------------------------------COMIENZO Menu--------------------------------------------*/
+
+#menu {
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  width: 21em;
+  position: absolute;
+  right: 0em;
+}
+
+#modulos {
+  justify-content: flex-end;
+  overflow: hidden;
+  width: 20em;
+  position: relative;
+  transition: height 0.3s ease;
+}
+
+#menunav {
+  position: relative;
+  right: -20em;
+  transition: 1s;
+  backdrop-filter: blur(10px);
+}
+
+#menumodus {
+  position: relative;
+  transition: 1s;
+  font-size: 0.7em;
+}
+
+#menu ul li a {
+  color: #f8f9fa;
+  font-size: 1.5em;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  width: 100%;
+  line-height: 3em;
+  border: 0.06em solid #f8f9fa;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+  font-variant: small-caps;
+  white-space: nowrap;
+  display: list-item;
+  text-decoration: none;
+}
+
+#modus ul li a {
+  color: #252525;
+  font-size: 1.5em;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  width: 100%;
+  line-height: 3em;
+  border: 0.06em solid #f8f9fa;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: center;
+  font-variant: small-caps;
+  white-space: nowrap;
+  display: list-item;
+  text-decoration: none;
+}
+
+#botonHamburguesa {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0);
+  font-size: 1.5em;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  color: #f8f9fa;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  overflow: hidden;
+}
+
+/*----------------------------------------FIN Menu------------------------------------------------*/
+/*----------------------------------------Portada------------------------------------------------*/
+.portadaTexto {
+  width: 43%;
+  position: absolute;
+  top: 74vh;
+  left: 2%;
+  font-size: 1.9vw;
+  color: #f8f9fa;
+  padding: 1em;
+  background-color: #00000070;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur (16px) saturate (180%);
+  border-radius: 1em;
+  /* box-shadow: 0px 0px 10px 5px #00000048; */
+  border: 0.06em solid #f8f9fa;
+}
+
+h1 {
+  font-size: 3.5em;
+  padding-top: 0em;
+  font-weight: bolder;
+  word-spacing: 0.15em;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+}
+
+.textoIntro {
+  font-size: 0.75em;
+  margin-top: 0.5em;
+  text-align: justify;
+  letter-spacing: 0.09em;
+  line-height: 1.35em;
+}
+
+.botonPortada {
+  width: 10%;
+  height: 10vh;
+  position: absolute;
+  top: 90vh;
+  left: 80rem;
+  z-index: 1;
+}
+
+.bajar {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.439);
+  border: none;
+}
+
+.bajar>a {
+  width: 100%;
+  height: 100%;
+}
+
+.bajar>a>img {
+  height: 100%;
+}
+
+/*------------------------Selectores------------------------*/
+.modulos {
+  clear: both;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  background-color: rgba(136, 135, 135, 0.301);
+}
+
+.selectores {
+  width: 32vw;
+  height: 16vw;
+  margin-top: 1em;
+  display: flex;
+}
+
+.selectores button {
+  margin: auto;
+  width: 46%;
+  height: 89%;
+  border-radius: 50%;
+  font-size: 1.3vw;
+  font-weight: 600;
+  background-color: #ad0000;
+  color: white;
+}
+
+.selectores button a {
+  text-decoration: none;
+  color: white;
+}
+
+/*-------------------------GALERIA--------------------------------------------*/
+.galeria {
+  width: 70%;
+  height: 75vh;
+  margin: auto;
+  margin-top: 10em;
+  margin-bottom: 3rem;
+  background-color: rgba(216, 212, 212, 0.301);
+  margin-bottom: 1em;
+  display: flex;
+}
+
+h2 {
+  position: relative;
+  rotate: -90deg;
+  top: 29vh;
+  font-size: 3em;
+  color: #fff;
+}
+
+#orla {
+  top: 27vh;
+}
+
+.tituloModu {
+  width: 20%;
+  height: 100%;
+  background-color: #ad0000;
+}
+
+.ventana {
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+}
+
+.cajaFotos {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.carrusel {
+  height: 100%;
+  width: 80%;
+  background-color: rgba(0, 255, 255, 0);
+  box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.322);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.boton {
+  width: 20%;
+  height: 100%;
+  border: none;
+  background-color: white;
+}
+
+.flechas {
+  width: 70%;
+}
+
+.cajaFotoAlu {
+  height: 100%;
+  background-color: white;
+}
+
+#fotoAlu {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.nombreAlu {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+/*---------------------------Foter-------------------------------------------*/
+
+footer {
+  clear: both;
+  display: flex;
+  color: #f8f9fa;
+  background-color: #252525;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 10px 10px #252525;
+  height: 7em;
+  font-size: 1.3em;
+  line-height: 2em;
+  text-align: center;
+  margin-top: 10em;
+}
+
+footer section a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.links {
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.dire {
+  line-height: normal;
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+.f1 img {
+  width: 3em;
+}
+
+@media only screen and (max-width: 600px) {
+  .galeria {
+    width: 90%;
+    height: 45vh;
+    flex-direction: column;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+
+  #menunav {
+    background-color: #4f4f4f;
+  }
+
+  .cajaFotos {
+    height: 40vh;
+  }
+
+  .tituloModu {
+    width: 100%;
+    height: 10%;
+    line-height: 4em;
+    text-align: center;
+    margin: auto;
+    background-color: #ad0000;
+  }
+
+  h2 {
+    position: relative;
+    top: -1.5vh;
+    rotate: 0deg;
+    font-size: 3vw;
+    color: #fff;
+  }
+
+  .carrusel {
+    width: 100%;
+    height: 90%;
+  }
+
+  .selectores {
+    width: 48%;
+    height: 29%;
+    /* margin-top: 1em; */
+    display: flex;
+  }
+
+  .selectores button {
+    margin: auto;
+    width: 100%;
+    height: 80%;
+    border-radius: 50%;
+    font-size: 1.3em;
+    font-weight: 600;
+    background-color: #ad0000;
+    color: white;
+  }
+
+  .portadaTexto {
+    width: 90%;
+    position: absolute;
+    top: 83vh;
+    left: 2%;
+    font-size: 4vw;
+    color: #f8f9fa;
+    padding: 1em;
+    background-color: #00000070;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur (16px) saturate (180%);
+    border-radius: 1em;
+    /* box-shadow: 0px 0px 10px 5px #00000048; */
+    border: 0.06em solid #f8f9fa;
+  }
+
+  footer {
+    margin-top: 0em;
+    font-size: 3vw;
+  }
+}

@@ -1,0 +1,693 @@
+* {
+    box-sizing: border-box;
+    margin: 0em;
+    padding: 0em;
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: Abril;
+    src: url(../AbrilFatface-Regular.ttf);
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 57rem;
+    background-image: url("../images/DSC_9832.JPG");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 40px 1px black;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.transition-background {
+    transition: background-image 0.5s ease-in-out;
+}
+
+.portadaLogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    border-bottom: 0.125em solid #f8f9fa;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.portadaLogo .logos div {
+    width: auto;
+    height: 4rem;
+    border-right: 0.125em solid #f8f9fa;
+}
+
+.portadaLogo .logos div img {
+    height: 4rem;
+    padding: 10px;
+}
+
+.portadaMenu {
+    width: 4rem;
+    height: 4rem;
+    border-left: 0.125em solid #f8f9fa;
+}
+
+/*---------------------------------------COMIENZO Menu--------------------------------------------*/
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 21em;
+    position: relative;
+    right: 17em;
+}
+
+#modulos {
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 20em;
+    position: relative;
+    transition: height 0.3s ease;
+}
+
+#menunav {
+    position: relative;
+    right: -20em;
+    transition: 1s;
+    backdrop-filter: blur(10px);
+}
+
+#menumodus {
+    position: relative;
+    transition: 1s;
+    font-size: 0.7em;
+}
+
+#menu ul li a {
+    color: #f8f9fa;
+    font-size: 1.5em;
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+    width: 100%;
+    line-height: 3em;
+    border: 0.06em solid #f8f9fa;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+    font-variant: small-caps;
+    white-space: nowrap;
+    display: list-item;
+    text-decoration: none;
+}
+
+#modus ul li a {
+    color: #f8f9fa;
+    font-size: 1.5em;
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+    width: 100%;
+    line-height: 3em;
+    border: 0.06em solid #f8f9fa;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+    font-variant: small-caps;
+    white-space: nowrap;
+    display: list-item;
+    text-decoration: none;
+}
+
+#botonHamburguesa {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0);
+    font-size: 1.5em;
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+    color: #f8f9fa;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+/*----------------------------------------FIN Menu------------------------------------------------*/
+
+/*----------------------------------------Portada------------------------------------------------*/
+
+.portadaTexto {
+    width: 55%;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    font-size: 2rem;
+    color: #f8f9fa;
+    padding: 1em;
+    background-color: #00000070;
+    border-radius: 1em;
+    border: 0.06em solid #f8f9fa;
+    backdrop-filter: blur(16px) saturate(180%);
+}
+
+h1 {
+    font-size: 3vw;
+    padding-top: 0em;
+    font-weight: bolder;
+    word-spacing: 0.15em;
+    font-variant: small-caps;
+    letter-spacing: 0.12em;
+}
+
+.textoIntro {
+    font-size: 1.5vw;
+    margin-top: 0.5em;
+    text-align: justify;
+    letter-spacing: 0.09em;
+    line-height: 1.35em;
+}
+
+.botonPortada {
+    width: 15%;
+    height: 10vh;
+    position: relative;
+    top: 83.6vh;
+    left: 74vw;
+    z-index: 1;
+    border: 1px 1px 1px 1px solid #f8f9fa;
+}
+
+.bajar {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    background-color: #00000070;
+    backdrop-filter: blur(10px);
+    border: none;
+}
+
+.bajar>a {
+    width: 100%;
+    height: 100%;
+}
+
+.bajar>a>img {
+    height: 100%;
+}
+
+/*---------------------FIN PORTADA-------------------------------------------------------*/
+
+/*-------------------------------ULTIMAS NOTICIAS----------------------------------------*/
+
+.noticias {
+    height: 65vw;
+}
+
+.fondo {
+    height: 41vw;
+    width: 90%;
+    background-color: #ad0000;
+    transform: rotate(355deg);
+    margin: auto;
+    color: #ffffff;
+    padding: 0%;
+    border-radius: 10px;
+    margin-top: 10rem;
+}
+
+.norota {
+    transform: rotate(-355deg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portaTarjetas {
+    width: 45vw;
+    height: 28vw;
+}
+
+.tarjeta img {
+    width: 95%;
+    height: 50%;
+    border-radius: 5px;
+    margin-top: 2.5%;
+}
+
+.tarjeta button {
+    background-color: #ad0000;
+    color: #ffffff;
+    border: 0px;
+    border-radius: 5px;
+    width: 30%;
+    height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.tarjeta button:hover {
+    background-color: #be3535;
+}
+
+.tarjeta p {
+    text-align: justify;
+    padding: 1em;
+}
+
+@keyframes slide {
+
+    0%,
+    33% {
+        transform: scale(0.8);
+        z-index: 4;
+        left: 60vw;
+        cursor: default;
+    }
+
+    34%,
+    66% {
+        transform: scale(1.2);
+        z-index: 5;
+        left: 44vw;
+        cursor: pointer;
+    }
+
+    67%,
+    100% {
+        transform: scale(0.8);
+        z-index: 4;
+        left: 28vw;
+        cursor: default;
+    }
+}
+
+.tarjeta {
+    position: absolute;
+    color: #ffffff;
+    background: #252525;
+    cursor: pointer;
+    width: 30vw;
+    height: 35vw;
+    border-radius: 1%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    text-align: center;
+    font-size: 1.2vw;
+    padding: 0.5rem;
+}
+
+.tj1,
+.tj2,
+.tj3 {
+    animation: slide 15s infinite;
+}
+
+.tj2 {
+    left: 25vw;
+    transform: scale(0.8);
+    z-index: 4;
+    animation-delay: 10s;
+}
+
+.tj1 {
+    transform: scale(1.2);
+    z-index: 5;
+    animation-delay: 5s;
+}
+
+.tj3 {
+    left: 17rem;
+    transform: scale(0.8);
+    z-index: 4;
+    animation-delay: 0s;
+}
+
+.notiTitulo div {
+    font-family: "Abril";
+    word-wrap: break-word;
+    margin: 2.5em 0em 0em 0.7em;
+    font-size: 6vw;
+    font-weight: 700;
+    font-variant: small-caps;
+}
+
+/*----------------------------FIN NOTICIAS------------------------------------------------*/
+
+/*--------------------------------COMIENZO TARJETAS---------------------------------------*/
+
+.tarjetero {
+    width: 100%;
+    height: 40rem;
+}
+
+h1:first-of-type {
+    font-weight: 200;
+    color: (rgb(76, 78, 97));
+}
+
+h1:last-of-type {
+    color: (rgb(76, 78, 97));
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.box p {
+    color: (rgb(163, 165, 174));
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px (rgb(163, 165, 174));
+    padding: 30px;
+    margin: 20px;
+    filter: opacity(60%);
+    transition: 0.5s;
+}
+
+.box img {
+    float: right;
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+
+    .row2-container {
+        margin-bottom: 1em;
+    }
+}
+
+.verde {
+    border-top: 3px solid rgb(69, 211, 211);
+}
+
+.rojo {
+    border-top: 3px solid rgb(234, 83, 83);
+}
+
+.azul {
+    border-top: 3px solid rgb(84, 158, 242);
+}
+
+.naranja {
+    border-top: 3px solid rgb(252, 175, 74);
+}
+
+h2 {
+    color: (rgb(76, 78, 97));
+    font-weight: 600;
+}
+
+@media (min-width: 950px) {
+    .col1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    .box-down {
+        position: relative;
+        top: 150px;
+    }
+
+    .box {
+        width: 25%;
+        height: 12rem;
+    }
+}
+
+.logos {
+    height: 65%;
+}
+
+.enlaTarje {
+    text-decoration: none;
+}
+
+.enlaTarje:visited {
+    color: black;
+}
+
+/*--------------------------------------foter-------------------------------------------*/
+
+footer {
+    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 7em;
+    color: #f8f9fa;
+    background-color: #252525;
+    box-shadow: 0 0 10px 10px #252525;
+    font-size: 1.3em;
+    line-height: 2em;
+    text-align: center;
+    margin-top: 7em;
+}
+
+footer section a {
+    color: #f8f9fa;
+}
+
+.links {
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+.dire {
+    line-height: normal;
+    font-size: 0.7em;
+    font-style: italic;
+}
+
+.f1 img {
+    width: 3em;
+}
+
+/* Pa las cookies by Joel 28/08 */
+
+#popup-container {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    font-size: 1rem;
+    /* Adjust the font size as desired */
+    color: #f8f9fae0;
+    text-shadow: 0 1 1px #f8f9fa9c;
+    letter-spacing: .15rem;
+
+}
+
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1F243D;
+    padding: 20px;
+    border-radius: 5px;
+    padding: 5rem;
+    font-family: Abril, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#listacursos {
+    list-style: disc;
+    margin-left: 1rem;
+}
+
+#achedos {
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.boldeando {
+    font-weight: bold;
+}
+
+.long-line {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.medium-line {
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+}
+
+.short-line {
+    font-size: 1.3rem;
+    letter-spacing: 0.03rem;
+}
+
+/*Fin de cukis*/
+
+/* ----------------------------------------movil---------------------------------------------------- */
+
+@media (max-width: 670px) {
+    .botonPortada {
+        display: none;
+    }
+
+    .portadaTexto {
+        width: 90%;
+        margin: auto;
+        left: 0.5em;
+    }
+
+    .textoIntro {
+        font-size: 3.5vw;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    #menu ul li a {
+        font-size: 4.5vw;
+        padding-right: 0em;
+        padding-left: 0em;
+    }
+
+    #menunav {
+        right: 0em;
+        width: 80%;
+        z-index: 1;
+        background-color: #4f4f4f;
+    }
+
+    .tarjetero {
+        height: 800px;
+    }
+
+    footer {
+        margin-top: 5em;
+    }
+
+    #popup-container {
+        height: 80vh;
+    }
+
+    #popup {
+        height: 80vh;
+    }
+}
+
+/*Boton noticias 31/08*/
+.botonNoticias {
+    display: inline-block;
+    padding: 1vw;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    left: 5vw;
+    top: 0vh;
+    overflow: hidden;
+    color: black;
+    z-index: 1;
+    letter-spacing: 0.2rem;
+    rotate: 5deg;
+}
+
+.botonNoticias:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.botonNoticias:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #39bda7;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.botonNoticias:hover {
+    color: #ffffff;
+    border: 1px solid #39bda7;
+}
+
+.botonNoticias:hover:before {
+    top: -35%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.botonNoticias:hover:after {
+    top: -45%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+#linkNoticias {
+    text-decoration: none;
+    color: inherit;
+    font-size: 2vw;
+}

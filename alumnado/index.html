@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alumnado</title>
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/styleAlu.css" />
+  <style></style>
+</head>
+
+<body>
+  <header id="background-container">
+    <!--Logo de Gijon -->
+    <div class="portadaLogo">
+      <div class="logos">
+        <div>
+          <img class="logo" src="../images/Logo Gijon.png" alt="Ayto Gijón" title="Ayto Gijón" />
+        </div>
+        <div>
+          <img class="logo" src="../images/logoet2.png" alt="Escuela Taller" title="Escuela Taller" id="et" />
+        </div>
+      </div>
+      <div class="portadaMenu">
+        <button id="botonHamburguesa">
+          <span>&#9776;</span>
+        </button>
+        <nav id="menu">
+          <ul id="menunav">
+            <li><a href="../agenda/">Agenda</a></li>
+            <li><a id="botonModus" href="../modulo/">Modulo</a></li>
+            <li><a href="../equipo/">Equipo</a></li>
+            <li><a href="../alumnado/">Alumnado</a></li>
+            <li><a href="../instalaciones/">Instalaciones</a></li>
+            <li><a href="../mapaweb/">Mapa de la Web</a></li>
+            <li><a href="../manual/">Manual de usuario</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!--Texto de acompañamiento-->
+    <div class="portadaTexto">
+      <h1>Alumnado</h1>
+    </div>
+  </header>
+  <!-------------FIN DE LA PORTADA------------------------->
+
+  <!----------SELECTORES--------------->
+
+  <div class="modulos">
+    <div class="selectores">
+      <button id="btn1">
+        <a href="#gale">ATENCIÓN SOCIOSANITARIA CON DINAMIZACIÓN</a>
+      </button>
+    </div>
+    <div class="selectores">
+      <button id="btn2">
+        <a href="#gale">PÁGINAS Y APLICACIONES WEB</a>
+      </button>
+    </div>
+    <div class="selectores">
+      <button id="btn3"><a href="#gale">SERVICIOS DE OFICINA</a></button>
+    </div>
+    <div class="selectores">
+      <button id="btn4"><a href="#gale">ATENCIÓN SOCIOSANITARIA</a></button>
+    </div>
+    <div class="selectores">
+      <button id="btn5"><a href="#gale">PERSONAL</a></button>
+    </div>
+    <div class="selectores">
+      <button id="btn6"><a href="#gale">ORLA</a></button>
+    </div>
+  </div>
+  <!----------FIN SELECTORES--------------->
+
+  <!----------------GALERIA------------->
+
+  <div class="galeria" id="gale">
+    <!--aside titulo modulo-->
+    <div class="tituloModu">
+      <!--20%-->
+      <h2 id="nombreModulo">ORLA</h2>
+    </div>
+    <!--caja de fotos-->
+    <div class="carrusel">
+      <!--80%-->
+      <!--boton atras-->
+      <button class="boton prevButton" id="ant">
+        <!--20%-->
+        <img src="images/fledeR.png" alt="anterior" class="flechas" />
+      </button>
+
+      <div class="cajaFotos">
+        <!--Donde van las fotos-->
+        <div class="cajaFotoAlu">
+          <!--100%-->
+          <img src="images/portada.jpg" alt="alu1" id="fotoAlu" /><!--80% 80% margin auto-->
+        </div>
+      </div>
+
+      <!--Boton Avanza-->
+
+      <button class="boton nextButton" id="sig">
+        <img src="images/fleizR.png" alt="siguiente" class="flechas" />
+      </button>
+    </div>
+    <!--clase carrusel-->
+  </div>
+  <!--Fin Galeria-->
+
+  <footer id="pie">
+    <section class="f1">
+      <!-- imagen access AAA HTML5 -->
+      <img src="images/acces.png" alt="accesibilidad " />
+      <p class="dire">Accesibilidad:</p>
+      <p class="dire">AAA HTML5</p>
+    </section>
+    <section class="f2">
+      <a href="#null">Aviso legal</a>
+      <br />
+      <a href="https://www.boe.es/eli/es/lo/2018/12/05/3/con">Proteccion de datos</a>
+    </section>
+    <section class="f3">
+      <p>Incidencias</p>
+      <p>Contacto:</p>
+      <p class="dire">630 76 16 62</p>
+      <p class="dire">C. Río de Oro, 15</p>
+      <p class="dire">33209</p>
+      <p class="dire">Gijón, Asturias</p>
+    </section>
+  </footer>
+
+  <script src="js/scriptAlu.js"></script>
+</body>
+
+</html>
