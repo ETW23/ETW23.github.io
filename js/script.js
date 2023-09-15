@@ -1,0 +1,69 @@
+
+
+///////////// MENU ///////////////////
+document.getElementById("menunav").style.right = "-20em";
+document
+    .getElementById("botonHamburguesa")
+    .addEventListener("click", function () {
+        var menu = document.getElementById("menunav");
+        if (menu.style.right == "-20em") {
+            menu.style.right = "0em";
+            menu.style.transition = "1s";
+        } else {
+            menu.style.right = "-20em";
+        }
+    });
+
+var tarjetas = document.getElementsByClassName('box')
+for (let i = 0; i < tarjetas.length; i++) {
+    tarjetas[i].onmouseover = function () {
+        this.style.filter = 'opacity(100%)';
+    }
+    tarjetas[i].onmouseout = function () {
+        this.style.filter = 'opacity(60%)'
+    }
+}
+
+// animación carrousel header
+
+var images = [
+    "images/DSC_9832.JPG",
+    "images/DSC_9825.JPG",
+    "images/DSC_9826.JPG"
+];
+
+function changeBackgroundImage() {
+    var backgroundContainer = document.getElementById("background-container");
+    var currentImageIndex = 0;
+
+    setInterval(function () {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        backgroundContainer.classList.add("transition-background");
+        backgroundContainer.style.backgroundImage = "url(" + images[currentImageIndex] + ")";
+        setTimeout(function () {
+            backgroundContainer.classList.remove("transition-background");
+        }, 500); // Duración de la transición en milisegundos
+    }, 3000);
+}
+
+changeBackgroundImage();
+
+/////////////////Click derecho desactivado///////////////////
+
+for (let event of ['cut', 'copy', 'paste', 'contextmenu']) {
+    window.addEventListener(event, e => e.preventDefault())
+}
+///////////////////////////////////////////////////////////
+window.addEventListener('DOMContentLoaded', function () {
+    var popupContainer = document.getElementById('popup-container');
+    var closeButton = document.getElementById('close-btn');
+
+    if (!localStorage.getItem('popupShown')) {
+        popupContainer.style.display = 'block';
+    }
+
+    closeButton.addEventListener('click', function () {
+        popupContainer.style.display = 'none';
+        localStorage.setItem('popupShown', true);
+    });
+});
