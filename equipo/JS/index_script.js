@@ -12,25 +12,29 @@ document
     }
   });
 
-document.getElementById("modulos").style.height = "0px";
-document
-  .getElementById("botonModus")
-  .onclick = function () {
-    var modus = document.getElementById("modulos")
-    if (modus.style.height == "0px") {
-      modus.style.height = "209px";
-      document.getElementById('botonModus').style.textDecoration = "underline";
-    } else {
-      modus.style.height = "0px";
-      document.getElementById('botonModus').style.textDecoration = "none";
-    }
-  };
+document.getElementById('et').onclick= function () {
+  window.location.href = "../index.html"
+}
+
+// document.getElementById("modulos").style.height = "0px";
+// document
+//   .getElementById("botonModus")
+//   .onclick = function () {
+//     var modus = document.getElementById("modulos")
+//     if (modus.style.height == "0px") {
+//       modus.style.height = "209px";
+//       document.getElementById('botonModus').style.textDecoration = "underline";
+//     } else {
+//       modus.style.height = "0px";
+//       document.getElementById('botonModus').style.textDecoration = "none";
+//     }
+//   };
 
   const hambnav = document.getElementById("botonHamburguesa");
   const menuMenu = document.getElementById("menu");
-  
+
   let menuVisible = false;
-  
+
   hambnav.addEventListener("click", () => {
     if (menuVisible) {
       menuMenu.style.display = "none";
