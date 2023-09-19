@@ -132,7 +132,7 @@ ul {
   color: #252525;
   border-radius: 16px;
   text-align: center;
-  font-size: 4rem;
+  font-size: 4vw;
   font-variant: small-caps;
   width: 50%;
   margin: 3rem auto;
@@ -276,6 +276,6 @@ footer section a {
   border-top: 1px solid #1f243d;
   display: block;
   text-align: center;
-  padding-block: .75rem;
+  padding-block: 0.75rem;
   margin-inline: 1.5rem;
 }
