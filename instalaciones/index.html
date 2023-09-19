@@ -27,7 +27,8 @@
 
         .instalaciones #background-container {
             background: none !important;
-            height: fit-content;
+            height: fit-content !important;
+            min-height: 0;
         }
 
         .instalaciones .portadaLogo {
@@ -40,14 +41,6 @@
         .instalaciones #menunav {
             background-color: black;
             color: white;
-        }
-
-        .instalaciones header::after {
-            content: ' ';
-            position: absolute;
-            inset: 0;
-            /* background: linear-gradient(to bottom, black, white 50%); */
-            pointer-events: none;
         }
 
         .instalaciones #menunav {
@@ -163,7 +156,6 @@
                 </nav>
             </div>
         </div>
-
     </header>
 
     <main>
