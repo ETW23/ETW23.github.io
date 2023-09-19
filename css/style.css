@@ -88,7 +88,7 @@ header {
     position: relative;
     right: -20em;
     transition: 1s;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(100px);
 }
 
 #menumodus {
