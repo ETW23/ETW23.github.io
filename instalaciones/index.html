@@ -21,6 +21,10 @@
             font-family: inherit;
         }
 
+        .instalaciones #botonHamburguesa {
+            background-color: none;
+        }
+
         .instalaciones #background-container {
             background: none !important;
             height: fit-content;
@@ -57,10 +61,31 @@
         }
 
         .instalaciones h1 {
-            font-size: min(11.5vw, 7.5rem);
+            font-size: max(min(11.5vw, 7.5rem), 5rem);
             font-family: 'Abril', sans-serif;
-            letter-spacing: .15rem;
+            letter-spacing: 0;
             text-align: center;
+        }
+        
+        .instalaciones footer {
+            margin-top: 8rem;
+            height: fit-content;
+            display: flex;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 60em) {
+            .instalaciones footer {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+
+        .instalaciones h3,
+        .h3 {
+            font-size: 1.1725rem;
+            font-weight: bold;
+
         }
 
         .instalaciones p {
@@ -76,7 +101,7 @@
             display: grid;
             grid-template-columns: repeat(3, calc(33.33% - 1.33333rem));
             gap: 2rem;
-            margin-top: 2rem
+            margin-top: 1.5rem
         }
 
         @media (max-width: 60em) {
@@ -103,18 +128,8 @@
             justify-content: center;
         }
 
-        .instalaciones footer {
-            margin-top: 8rem;
-            height: fit-content;
-            display: flex;
-            font-size: 1rem;
-        }
-
-        @media (max-width: 60em) {
-            .instalaciones footer {
-                flex-direction: column;
-                gap: 2rem;
-            }
+        .cursive {
+            font-style: italic;
         }
 
         .mt-2rem {
@@ -127,10 +142,10 @@
     <header id="background-container">
         <!--Logo de Gijon -->
         <div class="portadaLogo">
-            <div class="logos">
+            <a href="../" class="logos">
                 <div> <img class="logo" src="images/Logo Gijon.png" alt="gijon" title="gijon" /> </div>
                 <div> <img class="logo" src="images/logoet.png" alt="gijon" title="gijon" /></div>
-            </div>
+            </a>
             <div class="portadaMenu">
                 <button id="botonHamburguesa">
                     <span>&#9776;</span>
@@ -157,7 +172,7 @@
             <section class="tres-columnas">
                 <div class="flex-center">
                     <div>
-                        <h3>Modernas Instalaciones en Gijón</h3>
+                        <h2 class="h3">Modernas Instalaciones en Gijón</h2>
                         <p>En Escuelas Taller Gijón, estamos comprometidos en brindar una educación de calidad que va
                             más allá de lo ordinario.
                         </p>
@@ -262,7 +277,6 @@
                 <div
                     style="margin-top: 2rem; display: grid; justify-content: center; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(512px, min(768px, calc(50% - 1rem))));">
                     <img src="images/entradadentro.jpg" alt="dentro entrada a Escuelas Taller">
-                    <!-- <img src="images/servicios.jpg" alt="servicios"> -->
                     <img src="images/escalera2.jpg" alt="escalera a la segunda planta">
                     <img src="images/instalacion-de-sociodinamizacion.jpg"
                         alt="instalación hecha por la clase de atencion sociosanitaria con dinamización dedicada al verano">
@@ -276,9 +290,6 @@
                     <img src="images/aula-no-se2.jpg" alt="aula de clase de servicios de oficina">
                     <img src="images/aula-no-se3.jpg" alt="aula de clase de servicios de oficina">
                     <img src="images/director.jpg" alt="administracion">
-                    <img src="images/administracion.jpg" alt="administracion">
-                    <!-- <img src="images/administracion2.jpg" alt="administracion">
-                    <img src="images/administracion3.jpg" alt="administracion"> -->
                 </div>
             </section>
         </main>
@@ -286,7 +297,10 @@
         <footer>
             <section>
                 <img src="../images/acces.png" alt="accesibilidad" style="max-width: 128px">
-                <p><i>Accesibilidad:</i><br><i>AAA HTML5</i></p>
+                <p><span class="cursive">Accesibilidad:</span>
+                    <br>
+                    <span class="cursive">AAA HTML5</span>
+                </p>
             </section>
             <section>
                 <a href="#null">Aviso legal</a>
@@ -296,10 +310,10 @@
             <section>
                 <p>Incidencias</p>
                 <p>Contacto:</p>
-                <i>630 76 16 62</i><br>
-                <i>C. Río de Oro, 15</i><br>
-                <i>33209</i><br>
-                <i>Gijón, Asturias</i>
+                <span class="cursive">630 76 16 62</span><br>
+                <span class="cursive">C. Río de Oro, 15</span><br>
+                <span class="cursive">33209</span><br>
+                <span class="cursive">Gijón, Asturias</span>
             </section>
         </footer>
 
