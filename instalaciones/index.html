@@ -23,44 +23,9 @@
 
         .instalaciones * {
             /* normalmente se pone `body { font-family: ...}` y no `* { font-family: ...}`
-              porque fuente es una propiedad heretada normalmente, aqui lo vuelva a ser heretado */
+              porque fuente es una propiedad heretada, aqui lo vuelva a ser heretado */
             font-family: inherit;
         }
-
-        /* 
-        .instalaciones #botonHamburguesa {
-            background-color: transparent;
-        }
-
-        .instalaciones #background-container {
-            background: none !important;
-            height: auto;
-            min-height: 0;
-        }
-
-        .instalaciones .portadaLogo {
-            box-shadow: 0px 0px 1rem black;
-            height: fit-content;
-        }
-
-        .instalaciones #menu {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            z-index: 10;
-        }
-
-        .instalaciones .portadaLogo,
-        .instalaciones .portadaMenu,
-        .instalaciones #menunav {
-            background-color: black;
-            color: white;
-        }
-
-        .instalaciones .portadaMenu {
-            position: relative;
-            isolation: isolate;
-        } */
 
         .instalaciones main {
             margin-inline: auto;
@@ -89,8 +54,12 @@
             }
         }
 
+        .instalaciones h2 {
+            font-size: 2.25rem
+        }
+
         .instalaciones h3,
-        .h3 {
+        .instalaciones .h3 {
             font-size: 1.1725rem;
             font-weight: bold;
 
@@ -103,6 +72,14 @@
 
         .instalaciones img {
             max-width: 100%;
+        }
+
+        .galeria {
+            margin-top: 2rem;
+            display: grid;
+            justify-content: center;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(512px, min(1024px, calc(50% - 1rem))));
         }
 
         .instalaciones .tres-columnas {
@@ -136,8 +113,16 @@
             justify-content: center;
         }
 
+        .container {
+            margin-inline: auto;
+        }
+
         .cursive {
             font-style: italic;
+        }
+
+        .center {
+            text-align: center;
         }
 
         .mt-2rem {
@@ -198,13 +183,11 @@
             </div>
         </section>
 
-        <section style="margin-inline: auto; margin-top: 2rem;">
-            <h2 style="text-align: center; font-size: 2.25rem">Nuestros clases</h2>
-            <div
-                style="display: grid; width: 100%; grid-template-columns: repeat(auto-fit, minmax(20rem, calc(33.333% - .75rem))); gap: 1rem; justify-content: center; margin-top: 1.5rem; ">
+        <section class="container mt-2rem">
+            <h2 class="center">Nuestros clases</h2>
+            <div class="tres-columnas">
                 <div>
                     <h3>Espacios de Aprendizaje Modernos</h3>
-
                     <p>
                         Nuestras aulas están equipadas con la última tecnología y recursos educativos para
                         garantizar que nuestros estudiantes tengan acceso a la información y herramientas más
@@ -280,10 +263,9 @@
             </div>
         </section>
 
-        <section style="margin-inline: auto; margin-top: 2rem;">
-            <h2 style="text-align: center; font-size: 2.25rem">Galería</h2>
-            <div
-                style="margin-top: 2rem; display: grid; justify-content: center; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(512px, min(768px, calc(50% - 1rem))));">
+        <section class="container mt-2rem">
+            <h2 class="center">Galería</h2>
+            <div class="galeria">
                 <img src="images/entradadentro.jpg" alt="dentro entrada a Escuelas Taller">
                 <img src="images/escalera2.jpg" alt="escalera a la segunda planta">
                 <img src="images/instalacion-de-sociodinamizacion.jpg"
