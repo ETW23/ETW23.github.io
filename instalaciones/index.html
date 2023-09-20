@@ -5,156 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instalaciones Escuela Taller 2023-24</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
-    <style>
-        .instalaciones {
-            color-scheme: light dark;
-            background-color: white;
-            color: black;
-            font-family: "Open Sans", system-ui, sans-serif;
-        }
-
-        .instalaciones * {
-            /* normalmente se pone `body { font-family: ...}` y no `* { font-family: ...}`
-              porque fuente es una propiedad heretada normalmente, aqui lo vuelva a ser heretado */
-            font-family: inherit;
-        }
-
-        .instalaciones #botonHamburguesa {
-            background-color: transparent;
-        }
-
-        .instalaciones #background-container {
-            background: none !important;
-            height: fit-content !important;
-            min-height: 0;
-        }
-
-        .instalaciones .portadaLogo {
-            box-shadow: 0px 0px 1rem black;
-            height: fit-content;
-        }
-
-        .instalaciones .portadaLogo,
-        .instalaciones .portadaMenu,
-        .instalaciones #menunav {
-            background-color: black;
-            color: white;
-        }
-
-        .instalaciones #menunav {
-            /* sobre el gradiente */
-            z-index: 1;
-        }
-
-        .instalaciones main {
-            margin-inline: auto;
-            max-width: min(100% - 2rem, 1150px);
-        }
-
-        .instalaciones h1 {
-            font-size: max(min(11.5vw, 7.5rem), 5rem);
-            font-family: 'Abril', sans-serif;
-            letter-spacing: 0;
-            text-align: center;
-        }
-
-        .instalaciones footer {
-            margin-top: 8rem;
-            height: fit-content;
-            display: flex;
-            font-size: 1rem;
-        }
-
-        @media (max-width: 60em) {
-            .instalaciones footer {
-                flex-direction: column;
-                gap: 2rem;
-            }
-        }
-
-        .instalaciones h3,
-        .h3 {
-            font-size: 1.1725rem;
-            font-weight: bold;
-
-        }
-
-        .instalaciones p {
-            max-width: 35em;
-            margin-top: 1em;
-        }
-
-        .instalaciones img {
-            max-width: 100%;
-        }
-
-        .instalaciones .tres-columnas {
-            display: grid;
-            grid-template-columns: repeat(3, calc(33.33% - 1.33333rem));
-            gap: 2rem;
-            margin-top: 1.5rem
-        }
-
-        @media (max-width: 60em) {
-            .instalaciones .tres-columnas {
-                grid-template-columns: 1fr;
-                width: fit-content;
-                margin-inline: auto;
-            }
-        }
-
-        .adaptive-column-span-2 {
-            grid-column: span 2 / span 2;
-        }
-
-        @media (max-width: 60em) {
-            .adaptive-column-span-2 {
-                grid-column: span 1 / span 1;
-            }
-        }
-
-        .flex-center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .cursive {
-            font-style: italic;
-        }
-
-        .mt-2rem {
-            margin-top: 2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="instalaciones.css">
 </head>
 
 <body class="instalaciones">
-    <header id="background-container">
+    <header>
         <!--Logo de Gijon -->
         <div class="portadaLogo">
-            <a href="../" class="logos">
-                <div> <img class="logo" src="images/Logo%20Gijon.png" alt="gijon" title="gijon"> </div>
-                <div> <img class="logo" src="images/logoet.png" alt="gijon" title="gijon"></div>
-            </a>
-            <div class="portadaMenu">
-                <button id="botonHamburguesa">
-                    <span>&#9776;</span>
-                </button>
-                <nav id="menu">
-                    <ul id="menunav">
-                        <li><a href="../agenda/">Agenda</a></li>
-                        <li><a id="botonModus" href="../modulo/">Modulo</a></li>
-                        <li><a href="../equipo/">Equipo</a></li>
-                        <li><a href="../alumnado/">Alumnado</a></li>
-                        <li><a href="../instalaciones/">Instalaciones</a></li>
-                        <li><a href="../mapaweb/">Mapa de la Web</a></li>
-                        <li><a href="../manual/">Manual de usuario</a></li>
-                    </ul>
-                </nav>
+            <div>
+                <img class="logo" src="../images/Logo Gijon.png" alt="Ayto Gijón" title="Ayto Gijón" />
             </div>
+            <div>
+                <img class="logo" src="../images/logoet2.png" alt="Escuela Taller" title="Escuela Taller" id="et" />
+            </div>
+        </div>
+        <!--Hamburguesa desplegable-->
+        <div class="portadaMenu">
+            <button id="botonHamburguesa" type="button"><span>&#9776;</span></button>
+            <nav id="menu">
+                <ul id="menunav">
+                    <li><a href="../agenda/">Agenda</a></li>
+                    <li><a id="botonModus" href="../modulo/">Modulo</a></li>
+                    <li><a href="../equipo/">Equipo</a></li>
+                    <li><a href="../alumnado/">Alumnado</a></li>
+                    <li><a href="../instalaciones/">Instalaciones</a></li>
+                    <li><a href="../mapaweb/">Mapa de la Web</a></li>
+                    <li><a href="../manual/">Manual de usuario</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -182,13 +62,11 @@
             </div>
         </section>
 
-        <section style="margin-inline: auto; margin-top: 2rem;">
-            <h2 style="text-align: center; font-size: 2.25rem">Nuestros clases</h2>
-            <div
-                style="display: grid; width: 100%; grid-template-columns: repeat(auto-fit, minmax(20rem, calc(33.333% - .75rem))); gap: 1rem; justify-content: center; margin-top: 1.5rem; ">
+        <section class="container mt-2rem">
+            <h2 class="center">Nuestros clases</h2>
+            <div class="tres-columnas">
                 <div>
                     <h3>Espacios de Aprendizaje Modernos</h3>
-
                     <p>
                         Nuestras aulas están equipadas con la última tecnología y recursos educativos para
                         garantizar que nuestros estudiantes tengan acceso a la información y herramientas más
@@ -264,10 +142,9 @@
             </div>
         </section>
 
-        <section style="margin-inline: auto; margin-top: 2rem;">
-            <h2 style="text-align: center; font-size: 2.25rem">Galería</h2>
-            <div
-                style="margin-top: 2rem; display: grid; justify-content: center; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(512px, min(768px, calc(50% - 1rem))));">
+        <section class="container mt-2rem">
+            <h2 class="center">Galería</h2>
+            <div class="galeria">
                 <img src="images/entradadentro.jpg" alt="dentro entrada a Escuelas Taller">
                 <img src="images/escalera2.jpg" alt="escalera a la segunda planta">
                 <img src="images/instalacion-de-sociodinamizacion.jpg"
@@ -309,7 +186,7 @@
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <script src="script.js"></script>
     <script src="no-copiar-pegar-menu.js"></script>
 </body>
 
