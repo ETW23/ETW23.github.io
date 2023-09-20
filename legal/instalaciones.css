@@ -115,6 +115,10 @@
     margin-inline: auto;
 }
 
+.w-content {
+    width: fit-content;
+}
+
 .cursive {
     font-style: italic;
 }
