@@ -1,310 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instalaciones Escuela Taller 2023-24</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
-    <style>
-        .instalaciones {
-            color-scheme: light dark;
-            background-color: white;
-            color: black;
-            font-family: "Open Sans", system-ui, sans-serif;
-        }
-
-        .instalaciones * {
-            /* normalmente se pone `body { font-family: ...}` y no `* { font-family: ...}`
-              porque fuente es una propiedad heretada normalmente, aqui lo vuelva a ser heretado */
-            font-family: inherit;
-        }
-
-        .instalaciones #background-container {
-            background: none !important;
-            height: fit-content;
-        }
-
-        .instalaciones .portadaLogo {
-            box-shadow: 0px 0px 1rem black;
-            height: fit-content;
-        }
-
-        .instalaciones .portadaLogo,
-        .instalaciones .portadaMenu,
-        .instalaciones #menunav {
-            background-color: black;
-            color: white;
-        }
-
-        .instalaciones header::after {
-            content: ' ';
-            position: absolute;
-            inset: 0;
-            /* background: linear-gradient(to bottom, black, white 50%); */
-            pointer-events: none;
-        }
-
-        .instalaciones #menunav {
-            /* sobre el gradiente */
-            z-index: 1;
-        }
-
-        .instalaciones main {
-            margin-inline: auto;
-            max-width: min(100% - 2rem, 1150px);
-        }
-
-        .instalaciones h1 {
-            font-size: min(11.5vw, 7.5rem);
-            font-family: 'Abril', sans-serif;
-            letter-spacing: .15rem;
-            text-align: center;
-        }
-
-        .instalaciones p {
-            max-width: 35em;
-            margin-top: 1em;
-        }
-
-        .instalaciones img {
-            max-width: 100%;
-        }
-
-        .instalaciones .tres-columnas {
-            display: grid;
-            grid-template-columns: repeat(3, calc(33.33% - 1.33333rem));
-            gap: 2rem;
-            margin-top: 2rem
-        }
-
-        @media (max-width: 60em) {
-            .instalaciones .tres-columnas {
-                grid-template-columns: 1fr;
-                width: fit-content;
-                margin-inline: auto;
-            }
-        }
-
-        .adaptive-column-span-2 {
-            grid-column: span 2 / span 2;
-        }
-
-        @media (max-width: 60em) {
-            .adaptive-column-span-2 {
-                grid-column: span 1 / span 1;
-            }
-        }
-
-        .flex-center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .instalaciones footer {
-            margin-top: 8rem;
-            height: fit-content;
-            display: flex;
-            font-size: 1rem;
-        }
-
-        @media (max-width: 60em) {
-            .instalaciones footer {
-                flex-direction: column;
-                gap: 2rem;
-            }
-        }
-
-        .mt-2rem {
-            margin-top: 2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="instalaciones.css">
 </head>
 
 <body class="instalaciones">
-    <header id="background-container">
+    <header>
         <!--Logo de Gijon -->
         <div class="portadaLogo">
-            <div class="logos">
-                <div> <img class="logo" src="images/Logo Gijon.png" alt="gijon" title="gijon" /> </div>
-                <div> <img class="logo" src="images/logoet.png" alt="gijon" title="gijon" /></div>
+            <div>
+                <img class="logo" src="../images/Logo Gijon.png" alt="Ayto Gijón" title="Ayto Gijón" />
             </div>
-            <div class="portadaMenu">
-                <button id="botonHamburguesa">
-                    <span>&#9776;</span>
-                </button>
-                <nav id="menu">
-                    <ul id="menunav">
-                        <li><a href="../agenda/">Agenda</a></li>
-                        <li><a id="botonModus" href="../modulo/">Modulo</a></li>
-                        <li><a href="../equipo/">Equipo</a></li>
-                        <li><a href="../alumnado/">Alumnado</a></li>
-                        <li><a href="../instalaciones/">Instalaciones</a></li>
-                        <li><a href="../mapaweb/">Mapa de la Web</a></li>
-                        <li><a href="../manual/">Manual de usuario</a></li>
-                    </ul>
-                </nav>
+            <div>
+                <img class="logo" src="../images/logoet2.png" alt="Escuela Taller" title="Escuela Taller" id="et" />
             </div>
         </div>
+        <!--Hamburguesa desplegable-->
+        <div class="portadaMenu">
+            <button id="botonHamburguesa" type="button"><span>&#9776;</span></button>
+            <nav id="menu">
+                <ul id="menunav">
+                    <li><a href="../agenda/">Agenda</a></li>
+                    <li><a id="botonModus" href="../modulo/">Modulo</a></li>
+                    <li><a href="../equipo/">Equipo</a></li>
+                    <li><a href="../alumnado/">Alumnado</a></li>
+                    <li><a href="../instalaciones/">Instalaciones</a></li>
+                    <li><a href="../mapaweb/">Mapa de la Web</a></li>
+                    <li><a href="../manual/">Manual de usuario</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main>
+        <h1>Instalaciones</h1>
 
-
-        <main>
-            <h1>Instalaciones</h1>
-
-            <section class="tres-columnas">
-                <div class="flex-center">
-                    <div>
-                        <h3>Modernas Instalaciones en Gijón</h3>
-                        <p>En Escuelas Taller Gijón, estamos comprometidos en brindar una educación de calidad que va
-                            más allá de lo ordinario.
-                        </p>
-                        <p>Nuestras instalaciones de vanguardia están diseñadas para ofrecer un ambiente de aprendizaje
-                            enriquecedor y estimulante para todos nuestros estudiantes.
-                        </p>
-                        <p>Nos enorgullece ser parte de un proyecto que no solo imparte cursos de certificación en
-                            formación profesional, sino que también ofrece un año de experiencia práctica invaluable en
-                            diversas áreas.
-                        </p>
-                    </div>
+        <section class="tres-columnas">
+            <div class="flex-center">
+                <div>
+                    <h2 class="h3">Modernas Instalaciones en Gijón</h2>
+                    <p>En Escuelas Taller Gijón, estamos comprometidos en brindar una educación de calidad que va
+                        más allá de lo ordinario.
+                    </p>
+                    <p>Nuestras instalaciones de vanguardia están diseñadas para ofrecer un ambiente de aprendizaje
+                        enriquecedor y estimulante para todos nuestros estudiantes.
+                    </p>
+                    <p>Nos enorgullece ser parte de un proyecto que no solo imparte cursos de certificación en
+                        formación profesional, sino que también ofrece un año de experiencia práctica invaluable en
+                        diversas áreas.
+                    </p>
                 </div>
-                <div class="adaptive-column-span-2">
-                    <img src="images/entrada.jpg" alt="entrada a Escuela Taller del calle">
-                </div>
-            </section>
+            </div>
+            <div class="adaptive-column-span-2">
+                <img src="images/entrada.jpg" alt="entrada a Escuela Taller del calle">
+            </div>
+        </section>
 
-            <section style="margin-inline: auto; margin-top: 2rem;">
-                <h2 style="text-align: center; font-size: 2.25rem">Nuestros clases</h2>
-                <div
-                    style="display: grid; width: 100%; grid-template-columns: repeat(auto-fit, minmax(20rem, calc(33.333% - .75rem))); gap: 1rem; justify-content: center; margin-top: 1.5rem; ">
-                    <div>
-                        <h3>Espacios de Aprendizaje Modernos</h3>
-
-                        <p>
-                            Nuestras aulas están equipadas con la última tecnología y recursos educativos para
-                            garantizar que nuestros estudiantes tengan acceso a la información y herramientas más
-                            actualizadas. Fomentamos la interacción y el aprendizaje colaborativo para que los alumnos
-                            desarrollen habilidades esenciales para el mundo laboral.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Laboratorios de Desarrollo Web</h3>
-                        <p>
-                            Para nuestros estudiantes de "Páginas y Aplicaciones Web", contamos con laboratorios de
-                            última generación donde podrán poner en práctica sus habilidades de diseño y programación en
-                            un entorno realista.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Simulaciones de Atención Sanitaria</h3>
-                        <p>
-                            Los estudiantes de "Atención Sociosanitaria" y "Atención Sanitaria con Dinamización" se
-                            beneficiarán de nuestras instalaciones de simulación de atención médica, que les permiten
-                            adquirir habilidades clínicas esenciales bajo la supervisión de profesionales
-                            experimentados.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Espacios de Oficina</h3>
-                        <p>
-                            Para nuestros futuros profesionales de "Servicios de Oficina", hemos diseñado espacios que
-                            reflejan la dinámica de un entorno de trabajo real, con equipos de oficina y software
-                            actualizado.
-                        </p>
-                    </div>
+        <section class="container mt-2rem">
+            <h2 class="center">Nuestros clases</h2>
+            <div class="tres-columnas">
+                <div>
+                    <h3>Espacios de Aprendizaje Modernos</h3>
+                    <p>
+                        Nuestras aulas están equipadas con la última tecnología y recursos educativos para
+                        garantizar que nuestros estudiantes tengan acceso a la información y herramientas más
+                        actualizadas. Fomentamos la interacción y el aprendizaje colaborativo para que los alumnos
+                        desarrollen habilidades esenciales para el mundo laboral.
+                    </p>
                 </div>
-            </section>
+                <div>
+                    <h3>Laboratorios de Desarrollo Web</h3>
+                    <p>
+                        Para nuestros estudiantes de "Páginas y Aplicaciones Web", contamos con laboratorios de
+                        última generación donde podrán poner en práctica sus habilidades de diseño y programación en
+                        un entorno realista.
+                    </p>
+                </div>
+                <div>
+                    <h3>Simulaciones de Atención Sanitaria</h3>
+                    <p>
+                        Los estudiantes de "Atención Sociosanitaria" y "Atención Sanitaria con Dinamización" se
+                        beneficiarán de nuestras instalaciones de simulación de atención médica, que les permiten
+                        adquirir habilidades clínicas esenciales bajo la supervisión de profesionales
+                        experimentados.
+                    </p>
+                </div>
+                <div>
+                    <h3>Espacios de Oficina</h3>
+                    <p>
+                        Para nuestros futuros profesionales de "Servicios de Oficina", hemos diseñado espacios que
+                        reflejan la dinámica de un entorno de trabajo real, con equipos de oficina y software
+                        actualizado.
+                    </p>
+                </div>
+            </div>
+        </section>
 
 
-            <section class="tres-columnas">
-                <div class="adaptive-column-span-2">
-                    <img src="images/experiencia.jpg" alt="aula de attención sociosanitaria">
+        <section class="tres-columnas">
+            <div class="adaptive-column-span-2">
+                <img src="images/experiencia.jpg" alt="aula de attención sociosanitaria">
+            </div>
+            <div class="flex-center">
+                <div>
+                    <h3>Experiencia Práctica</h3>
+                    <p>En Escuelas Taller Gijón, entendemos la importancia de la experiencia práctica en la
+                        formación profesional.
+                    </p>
+                    <p>
+                        Por eso, ofrecemos a nuestros estudiantes la oportunidad de aplicar sus conocimientos en
+                        situaciones reales de trabajo durante un año completo.
+                    </p>
+                    <p>
+                        Esto les brinda una ventaja invaluable al ingresar al mercado laboral, ya que han tenido la
+                        oportunidad de desarrollar habilidades prácticas y adquirir experiencia en el campo que han
+                        elegido.
+                    </p>
                 </div>
-                <div class="flex-center">
-                    <div>
-                        <h3>Experiencia Práctica</h3>
-                        <p>En Escuelas Taller Gijón, entendemos la importancia de la experiencia práctica en la
-                            formación profesional.
-                        </p>
-                        <p>
-                            Por eso, ofrecemos a nuestros estudiantes la oportunidad de aplicar sus conocimientos en
-                            situaciones reales de trabajo durante un año completo.
-                        </p>
-                        <p>
-                            Esto les brinda una ventaja invaluable al ingresar al mercado laboral, ya que han tenido la
-                            oportunidad de desarrollar habilidades prácticas y adquirir experiencia en el campo que han
-                            elegido.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="tres-columnas">
-                <div class="flex-center">
-                    <div>
-                        <h3>Nuestro Compromiso</h3>
-                        <p>En Escuelas Taller Gijón, estamos comprometidos con el éxito de nuestros estudiantes.
-                        <p> Nuestro equipo de instructores altamente capacitados y experimentados está dedicado a guiar
-                            a cada estudiante en su viaje de aprendizaje.
-                        <p>Nuestra meta es ayudarlos a alcanzar sus objetivos profesionales y convertirse en expertos en
-                            sus respectivas áreas.</p>
-                    </div>
+        <section class="tres-columnas">
+            <div class="flex-center">
+                <div>
+                    <h3>Nuestro Compromiso</h3>
+                    <p>En Escuelas Taller Gijón, estamos comprometidos con el éxito de nuestros estudiantes.
+                    <p> Nuestro equipo de instructores altamente capacitados y experimentados está dedicado a guiar
+                        a cada estudiante en su viaje de aprendizaje.
+                    <p>Nuestra meta es ayudarlos a alcanzar sus objetivos profesionales y convertirse en expertos en
+                        sus respectivas áreas.</p>
                 </div>
-                <div class="adaptive-column-span-2">
-                    <img src="images/compromiso.jpg" alt="un pasillo dentro escuelas taller">
-                </div>
-            </section>
+            </div>
+            <div class="adaptive-column-span-2">
+                <img src="images/compromiso.jpg" alt="un pasillo dentro escuelas taller">
+            </div>
+        </section>
 
-            <section style="margin-inline: auto; margin-top: 2rem;">
-                <h2 style="text-align: center; font-size: 2.25rem">Galería</h2>
-                <div
-                    style="margin-top: 2rem; display: grid; justify-content: center; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(512px, min(768px, calc(50% - 1rem))));">
-                    <img src="images/entradadentro.jpg" alt="dentro entrada a Escuelas Taller">
-                    <!-- <img src="images/servicios.jpg" alt="servicios"> -->
-                    <img src="images/escalera2.jpg" alt="escalera a la segunda planta">
-                    <img src="images/instalacion-de-sociodinamizacion.jpg"
-                        alt="instalación hecha por la clase de atencion sociosanitaria con dinamización dedicada al verano">
-                    <img src="images/aula-sociosanitaria.jpg" alt="aula para la clase de atención sociosanitaria">
-                    <img src="images/aula-sociosanitaria2.jpg" alt="aula para la clase de atención sociosanitaria">
-                    <img src="images/aula-sociosanitaria3.jpg" alt="aula para la clase de atención sociosanitaria">
-                    <img src="images/aula-sociosanitaria4.jpg" alt="aula para la clase de atención sociosanitaria">
-                    <img src="images/aula-sociosanitaria5.jpg" alt="aula para la clase de atención sociosanitaria">
-                    <img src="images/aula-sociosanitaria6.jpg" alt="aula para la clase de atención sociosanitaria">
-                    <img src="images/aula-no-se1.jpg" alt="aula de clase de servicios de oficina">
-                    <img src="images/aula-no-se2.jpg" alt="aula de clase de servicios de oficina">
-                    <img src="images/aula-no-se3.jpg" alt="aula de clase de servicios de oficina">
-                    <img src="images/director.jpg" alt="administracion">
-                    <img src="images/administracion.jpg" alt="administracion">
-                    <!-- <img src="images/administracion2.jpg" alt="administracion">
-                    <img src="images/administracion3.jpg" alt="administracion"> -->
-                </div>
-            </section>
-        </main>
+        <section class="container mt-2rem">
+            <h2 class="center">Galería</h2>
+            <div class="galeria">
+                <img src="images/entradadentro.jpg" alt="dentro entrada a Escuelas Taller">
+                <img src="images/escalera2.jpg" alt="escalera a la segunda planta">
+                <img src="images/instalacion-de-sociodinamizacion.jpg"
+                    alt="instalación hecha por la clase de atencion sociosanitaria con dinamización dedicada al verano">
+                <img src="images/aula-sociosanitaria.jpg" alt="aula para la clase de atención sociosanitaria">
+                <img src="images/aula-sociosanitaria2.jpg" alt="aula para la clase de atención sociosanitaria">
+                <img src="images/aula-sociosanitaria3.jpg" alt="aula para la clase de atención sociosanitaria">
+                <img src="images/aula-sociosanitaria4.jpg" alt="aula para la clase de atención sociosanitaria">
+                <img src="images/aula-sociosanitaria5.jpg" alt="aula para la clase de atención sociosanitaria">
+                <img src="images/aula-sociosanitaria6.jpg" alt="aula para la clase de atención sociosanitaria">
+                <img src="images/aula-no-se1.jpg" alt="aula de clase de servicios de oficina">
+                <img src="images/aula-no-se2.jpg" alt="aula de clase de servicios de oficina">
+                <img src="images/aula-no-se3.jpg" alt="aula de clase de servicios de oficina">
+                <img src="images/director.jpg" alt="administracion">
+            </div>
+        </section>
+    </main>
 
-        <footer>
-            <section>
-                <img src="../images/acces.png" alt="accesibilidad" style="max-width: 128px">
-                <p><i>Accesibilidad:</i><br><i>AAA HTML5</i></p>
-            </section>
-            <section>
-                <a href="#null">Aviso legal</a>
+    <footer>
+        <div>
+            <img src="../images/acces.png" alt="accesibilidad" style="max-width: 128px">
+            <p><span class="cursive">Accesibilidad:</span>
                 <br>
-                <a href="https://www.boe.es/eli/es/lo/2018/12/05/3/con">Proteccion de datos</a>
-            </section>
-            <section>
-                <p>Incidencias</p>
-                <p>Contacto:</p>
-                <i>630 76 16 62</i><br>
-                <i>C. Río de Oro, 15</i><br>
-                <i>33209</i><br>
-                <i>Gijón, Asturias</i>
-            </section>
-        </footer>
+                <span class="cursive">AAA HTML5</span>
+            </p>
+        </div>
+        <div>
+            <a href="../legal/">Aviso legal</a>
+            <br>
+            <a href="https://www.boe.es/eli/es/lo/2018/12/05/3/con">Proteccion de datos</a>
+        </div>
+        <div>
+            <p>Incidencias</p>
+            <p>Contacto:</p>
+            <span class="cursive">630 76 16 62</span><br>
+            <span class="cursive">C. Río de Oro, 15</span><br>
+            <span class="cursive">33209</span><br>
+            <span class="cursive">Gijón, Asturias</span>
+        </div>
+    </footer>
 
-        <script src="../js/script.js"></script>
-        <script src="no-copiar-pegar-menu.js"></script>
+    <script src="script.js"></script>
+    <script src="no-copiar-pegar-menu.js"></script>
 </body>
 
 </html>

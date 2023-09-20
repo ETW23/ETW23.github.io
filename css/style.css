@@ -19,12 +19,14 @@ body {
 header {
     width: 100%;
     height: 57rem;
+    background-color: #25252500;
     background-image: url("../images/DSC_9832.JPG");
     background-position: center;
     background-size: cover;
     box-shadow: 0px 0px 40px 1px black;
     min-height: 100vh;
     overflow: hidden;
+
 }
 
 .transition-background {
@@ -86,7 +88,7 @@ header {
     position: relative;
     right: -20em;
     transition: 1s;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(100px);
 }
 
 #menumodus {
@@ -131,7 +133,7 @@ header {
     width: 100%;
     height: 100%;
     text-align: center;
-    background-color: rgba(255, 0, 0, 0);
+    background-color: transparent;
     font-size: 1.5em;
     font-family: Open Sans, Helvetica, Arial, sans-serif;
     color: #f8f9fa;
@@ -602,7 +604,7 @@ footer section a {
         right: 0em;
         width: 80%;
         z-index: 1;
-        background-color: #4f4f4f;
+        background-color: rgb(79, 79, 79);
     }
 
     .tarjetero {
