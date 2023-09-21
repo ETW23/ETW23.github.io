@@ -23,3 +23,7 @@ document.getElementById("botonModus").onclick = function () {
     document.getElementById("botonModus").style.textDecoration = "none";
   }
 };
+////////////////////////////////////////////////
+et.onclick = function () {
+  window.location.href = "../index.html";
+};
