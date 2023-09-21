@@ -196,3 +196,37 @@ h2 {
   margin-top: 1em;
   font-size: 2vw;
 }
+/* footer */
+footer {
+  clear: both;
+  display: flex;
+  color: #f8f9fa;
+  background-color: #252525;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 10px 10px #252525;
+  height: 7em;
+  font-size: 1.3em;
+  line-height: 2em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+footer section a {
+  color: #f8f9fa;
+}
+
+.links {
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.dire {
+  line-height: normal;
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+.f1 img {
+  width: 3em;
+}
