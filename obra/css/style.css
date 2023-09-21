@@ -148,7 +148,7 @@ h2 {
   margin: 1em;
   font-size: 4vw;
 }
-.practicas {
+.obra {
   background-color: #f8f9fa;
   padding: 1em;
   border-radius: 16px;
@@ -159,7 +159,7 @@ h2 {
   align-items: center;
   justify-content: space-evenly;
 }
-.practicas figure {
+.obra figure {
   width: 35%;
   height: 20vw;
   overflow: hidden;
@@ -168,16 +168,16 @@ h2 {
   align-items: center;
   justify-content: space-between;
 }
-.practicas figure img {
+.obra figure img {
   height: 80%;
 }
-.practicas figure figcaption {
+.obra figure figcaption {
   width: 100%;
   height: 20%;
   font-size: 1.5vw;
   font-style: italic;
 }
-.practicas figure figcaption img {
+.obra figure figcaption img {
   height: 30%;
   margin-right: 5%;
 }
