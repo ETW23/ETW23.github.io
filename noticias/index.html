@@ -1,194 +1,217 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escuela Taller Gijón Acompaña</title>
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escuela Taller Gijón Acompaña</title>
-  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-  <!--  Parte fija de toda pagina del sitio -->
-  <header id="background-container">
-    <!--Logo de Gijon -->
-    <div class="portadaLogo">
-      <div class="logos">
-        <div> <img class="logo" src="images/Logo Gijon.png" alt="Ayto Gijón" title="Ayto Gijón" /> </div>
-        <div> <img class="logo" src="images/logoet2.png" alt="Escuela Taller" title="Escuela Taller" id="et" /></div>
-      </div>
-      <div class="portadaMenu">
-        <button id="botonHamburguesa">
-          <p>&#9776;</p>
-        </button>
-        <nav id="menu">
-          <ul id="menunav">
-            <li><a href="agenda/">Agenda</a></li>
-            <li><a id="botonModus" href="modulo/">Modulo</a></li>
-            <li><a href="equipo/">Equipo</a></li>
-            <li><a href="alumnado/">Alumnado</a></li>
-            <li><a href="instalaciones/">Instalaciones</a></li>
-            <li><a href="mapaweb/">Mapa de la Web</a></li>
-            <li><a href="manual/">Manual de usuario</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <div class="cabecera">
-    <div id="location">Gijón, Principado de Asturias</div>
-    <div id="date"></div>
-  </div>
-  <div class="maincontainer">
-    <div class="news-container">
-      <p class="news-date">1 de agosto de 2023</p>
-      <h2>Proyecto Pluriculturalidad</h2>
-      <div class="containerTextoYFoto">
-        <div class="textoNoticia">
-          <p>
-            En el módulo web, se está desarrollando un sitio web interactivo
-            que servirá como plataforma para que estudiantes de diferentes
-            naciones compartan sus experiencias en sus respectivos países, con
-            el objetivo de ampliar las perspectivas de los demás y fomentar
-            una comprensión más profunda de diferentes culturas. Esta
-            iniciativa se alinea con los principios de la diplomacia global y
-            el intercambio cultural, promoviendo el diálogo intercultural y
-            fomentando un sentido de unidad en la diversidad. Al fomentar la
-            participación intercultural y facilitar el intercambio de ideas,
-            esta plataforma busca incentivar una cooperación y armonía
-            internacional efectivas.
-          </p>
+  <body>
+    <!--  Parte fija de toda pagina del sitio -->
+    <header id="background-container">
+      <!--Logo de Gijon -->
+      <div class="portadaLogo">
+        <div class="logos">
+          <div>
+            <img
+              class="logo"
+              src="images/Logo Gijon.png"
+              alt="Ayto Gijón"
+              title="Ayto Gijón"
+            />
+          </div>
+          <div>
+            <img
+              class="logo"
+              src="images/logoet2.png"
+              alt="Escuela Taller"
+              title="Escuela Taller"
+              id="et"
+            />
+          </div>
         </div>
-        <figure class="fotoNoticia">
-          <img src="images/pluriCultuNoti.png" alt="noticia 1" />
-        </figure>
-      </div>
-    </div>
-    <hr />
-    <div class="news-container">
-      <p class="news-date">1 de julio de 2023</p>
-      <h2>Empieza la fase de contrato</h2>
-      <div class="containerTextoYFoto">
-        <div class="textoNoticia">
-          <p>
-            Los chicos y chicas de la Escuela Taller "Gijón Acompaña", que
-            consta de cuatro módulos formativos, y la Escuela Taller "La
-            Casina", que consta de tres módulos formativos, comenzaron su
-            contrato de trabajo el 1 de julio. Están llenos de ilusión y
-            entusiasmo por esta oportunidad. Están emocionados por embarcarse
-            en esta experiencia, ansiosos por aprender y crecer en sus
-            respectivas áreas de formación. Han expresado su gratitud por la
-            confianza depositada en ellos y están comprometidos a dar lo mejor
-            de sí mismos durante la duración de su contrato. Están ansiosos
-            por adquirir nuevas habilidades y conocimientos, y esperan
-            contribuir de manera significativa al éxito de sus respectivas
-            escuelas taller.
-          </p>
+        <div class="portadaMenu">
+          <button id="botonHamburguesa">
+            <p>&#9776;</p>
+          </button>
+          <nav id="menu">
+            <ul id="menunav">
+              <li><a href="agenda/">Agenda</a></li>
+              <li><a id="botonModus" href="modulo/">Modulo</a></li>
+              <li><a href="equipo/">Equipo</a></li>
+              <li><a href="alumnado/">Alumnado</a></li>
+              <li><a href="instalaciones/">Instalaciones</a></li>
+              <li><a href="mapaweb/">Mapa de la Web</a></li>
+              <li><a href="manual/">Manual de usuario</a></li>
+            </ul>
+          </nav>
         </div>
-        <figure class="fotoNoticia">
-          <img src="images/contrato.png" alt="noticia 3" />
-        </figure>
       </div>
+    </header>
+    <h1 class="oculto">T&iacute;tulo</h1>
+    <div class="cabecera">
+      <div id="location">Gijón, Principado de Asturias</div>
+      <div id="date"></div>
     </div>
-    <hr />
-    <div class="news-container">
-      <p class="news-date">1 de abril de 2023</p>
-      <h2>Comienzo Escuela Taller Gijón Acompaña</h2>
-      <div class="containerTextoYFoto">
-        <div class="textoNoticia">
-          <p>
-            El 1 de abril de 2023, la Escuela Taller Gijón Acompaña inició sus
-            actividades con un grupo diverso de 36 alumnos de diferentes
-            nacionalidades y culturas. Ubicada en la calle Río de Oro 15B,
-            este año el programa presenta algunas novedades. En lugar de
-            seguir el esquema tradicional, constará de tres meses de formación
-            seguidos de 15 meses de trabajo. Además, se ha ampliado el límite
-            de edad hasta los 30 años, con el objetivo de promover la
-            inclusión y brindar oportunidades a un rango más amplio de
-            personas. Esta iniciativa busca fomentar la diversidad y el
-            intercambio cultural, creando un ambiente en el que todos los
-            estudiantes puedan sentirse bienvenidos y valorados.
-          </p>
+    <div class="maincontainer">
+      <div class="news-container">
+        <p class="news-date">1 de agosto de 2023</p>
+        <h2>Proyecto Pluriculturalidad</h2>
+        <div class="containerTextoYFoto">
+          <div class="textoNoticia">
+            <p>
+              En el módulo web, se está desarrollando un sitio web interactivo
+              que servirá como plataforma para que estudiantes de diferentes
+              naciones compartan sus experiencias en sus respectivos países, con
+              el objetivo de ampliar las perspectivas de los demás y fomentar
+              una comprensión más profunda de diferentes culturas. Esta
+              iniciativa se alinea con los principios de la diplomacia global y
+              el intercambio cultural, promoviendo el diálogo intercultural y
+              fomentando un sentido de unidad en la diversidad. Al fomentar la
+              participación intercultural y facilitar el intercambio de ideas,
+              esta plataforma busca incentivar una cooperación y armonía
+              internacional efectivas.
+            </p>
+          </div>
+          <figure class="fotoNoticia">
+            <img src="images/pluriCultuNoti.png" alt="noticia 1" />
+          </figure>
         </div>
-        <figure class="fotoNoticia">
-          <img src="images/logo-escuelas-taller.jpg" alt="noticia 2" />
-        </figure>
       </div>
+      <hr />
+      <div class="news-container">
+        <p class="news-date">1 de julio de 2023</p>
+        <h2>Empieza la fase de contrato</h2>
+        <div class="containerTextoYFoto">
+          <div class="textoNoticia">
+            <p>
+              Los chicos y chicas de la Escuela Taller "Gijón Acompaña", que
+              consta de cuatro módulos formativos, y la Escuela Taller "La
+              Casina", que consta de tres módulos formativos, comenzaron su
+              contrato de trabajo el 1 de julio. Están llenos de ilusión y
+              entusiasmo por esta oportunidad. Están emocionados por embarcarse
+              en esta experiencia, ansiosos por aprender y crecer en sus
+              respectivas áreas de formación. Han expresado su gratitud por la
+              confianza depositada en ellos y están comprometidos a dar lo mejor
+              de sí mismos durante la duración de su contrato. Están ansiosos
+              por adquirir nuevas habilidades y conocimientos, y esperan
+              contribuir de manera significativa al éxito de sus respectivas
+              escuelas taller.
+            </p>
+          </div>
+          <figure class="fotoNoticia">
+            <img src="images/contrato.png" alt="noticia 3" />
+          </figure>
+        </div>
+      </div>
+      <hr />
+      <div class="news-container">
+        <p class="news-date">1 de abril de 2023</p>
+        <h2>Comienzo Escuela Taller Gijón Acompaña</h2>
+        <div class="containerTextoYFoto">
+          <div class="textoNoticia">
+            <p>
+              El 1 de abril de 2023, la Escuela Taller Gijón Acompaña inició sus
+              actividades con un grupo diverso de 36 alumnos de diferentes
+              nacionalidades y culturas. Ubicada en la calle Río de Oro 15B,
+              este año el programa presenta algunas novedades. En lugar de
+              seguir el esquema tradicional, constará de tres meses de formación
+              seguidos de 15 meses de trabajo. Además, se ha ampliado el límite
+              de edad hasta los 30 años, con el objetivo de promover la
+              inclusión y brindar oportunidades a un rango más amplio de
+              personas. Esta iniciativa busca fomentar la diversidad y el
+              intercambio cultural, creando un ambiente en el que todos los
+              estudiantes puedan sentirse bienvenidos y valorados.
+            </p>
+          </div>
+          <figure class="fotoNoticia">
+            <img src="images/logo-escuelas-taller.jpg" alt="noticia 2" />
+          </figure>
+        </div>
+      </div>
+      <hr />
     </div>
-    <hr />
-  </div>
-  <footer>
-    <section class="f1">
-      <img src="images/acces.png" alt="accesibilidad " /><!-- imagen access AAA HTML5 -->
+    <footer>
+      <section class="f1">
+        <img
+          src="images/acces.png"
+          alt="accesibilidad "
+        /><!-- imagen access AAA HTML5 -->
 
-      <p class="dire">Accesibilidad:</p>
+        <p class="dire">Accesibilidad:</p>
 
-      <p class="dire">AAA HTML5</p>
-    </section>
+        <p class="dire">AAA HTML5</p>
+      </section>
 
-    <section class="f2">
-      <p><a href="" class="links">Aviso legal</a></p>
+      <section class="f2">
+        <p><a href="../legal/" class="links">Aviso legal</a></p>
 
-      <p>
-        <a href="https://www.boe.es/eli/es/lo/2018/12/05/3/con" class="links">Proteccion de datos</a>
-      </p>
+        <p>
+          <a href="https://www.boe.es/eli/es/lo/2018/12/05/3/con" class="links"
+            >Proteccion de datos</a
+          >
+        </p>
 
-      <p><a href="" class="links">Incidencias</a></p>
-    </section>
+        <p><a href="" class="links">Incidencias</a></p>
+      </section>
 
-    <section class="f3">
-      <p class="links">Contacto:</p>
+      <section class="f3">
+        <p class="links">Contacto:</p>
 
-      <p class="dire">630 76 16 62</p>
+        <p class="dire">630 76 16 62</p>
 
-      <p class="dire">C. Río de Oro, 15</p>
+        <p class="dire">C. Río de Oro, 15</p>
 
-      <p class="dire">33209</p>
+        <p class="dire">33209</p>
 
-      <p class="dire">Gijón, Asturias</p>
-    </section>
-  </footer>
-  <script src="js/script.js"></script>
-  <script>
-    // Creamos array con los meses del año
-    const meses = [
-      "enero",
-      "febrero",
-      "marzo",
-      "abril",
-      "mayo",
-      "junio",
-      "julio",
-      "agosto",
-      "septiembre",
-      "octubre",
-      "noviembre",
-      "diciembre",
-    ];
-    // Creamos array con los días de la semana
-    const dias_semana = [
-      "Domingo",
-      "Lunes",
-      "martes",
-      "Miércoles",
-      "Jueves",
-      "Viernes",
-      "Sábado",
-    ];
-    // Creamos el objeto fecha instanciándolo con la clase Date
-    const fecha = new Date();
-    // Construimos el formato de salida
-    dia_mes_anno =
-      dias_semana[fecha.getDay()] +
-      ", " +
-      fecha.getDate() +
-      " de " +
-      meses[fecha.getMonth()] +
-      " de " +
-      fecha.getUTCFullYear();
-    document.getElementById("date").textContent = dia_mes_anno;
-  </script>
-</body>
-
+        <p class="dire">Gijón, Asturias</p>
+      </section>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+      // Creamos array con los meses del año
+      const meses = [
+        "enero",
+        "febrero",
+        "marzo",
+        "abril",
+        "mayo",
+        "junio",
+        "julio",
+        "agosto",
+        "septiembre",
+        "octubre",
+        "noviembre",
+        "diciembre",
+      ];
+      // Creamos array con los días de la semana
+      const dias_semana = [
+        "Domingo",
+        "Lunes",
+        "martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+      ];
+      // Creamos el objeto fecha instanciándolo con la clase Date
+      const fecha = new Date();
+      // Construimos el formato de salida
+      dia_mes_anno =
+        dias_semana[fecha.getDay()] +
+        ", " +
+        fecha.getDate() +
+        " de " +
+        meses[fecha.getMonth()] +
+        " de " +
+        fecha.getUTCFullYear();
+      document.getElementById("date").textContent = dia_mes_anno;
+    </script>
+  </body>
 </html>

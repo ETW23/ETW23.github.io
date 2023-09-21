@@ -20,35 +20,54 @@ document
 //////////////////////CAMBIO DE MODULO/////////////////////////////
 var min;
 var tope;
+var redondeo = document.getElementById('fotoAlu');
+
 function cambioModus(nombre, dire, menor, maxi) {
   nombreModulo.innerHTML = nombre;
   fotoAlu.src = dire;
   min = menor;
   tope = maxi;
 }
+function noOrla() {
+  redondeo.style.borderRadius = '50%';
+  redondeo.style.height = '100%'
+  redondeo.style.marginTop = '0%';
+}
+
+function paraOrla() {
+  redondeo.style.height = '80%'
+  redondeo.style.marginTop = '10%';
+  redondeo.style.borderRadius = '0%';
+}
+window.onload = function () {
+  cambioModus("ORLAS", "images/alu (37).jpg", 37, 40);
+  paraOrla();
+};
+
 
 btn1.onclick = function () {
-  cambioModus(
-    "ATENCIÓN SOCIOSANITARIA CON DINAMIZACIÓN",
-    "images/alu (1).jpg",
-    1,
-    6
-  );
+  cambioModus("ATENCIÓN SOCIOSANITARIA CON DINAMIZACIÓN", "images/alu (1).jpg", 1, 6);
+  noOrla();
 };
 btn2.onclick = function () {
   cambioModus("PÁGINAS Y APLICACIONES WEB", "images/alu (10).jpg", 9, 18);
+  noOrla();
 };
 btn3.onclick = function () {
   cambioModus("SERVICIOS DE OFICINA", "images/alu (20).jpg", 19, 26);
+  noOrla();
 };
 btn4.onclick = function () {
-  cambioModus("ATENCIÓN SOCIOSANITARIA", "images/alu (29).jpg", 27, 36);
+  cambioModus("ATENCIÓN SOCIOSANITARIA", "images/alu (27).jpg", 27, 36);
+  noOrla();
 };
 btn5.onclick = function () {
-  cambioModus("PERSONAL", "images/profezo.jpg");
+  cambioModus("PERSONAL", "images/alu (41).jpg");
+  noOrla();
 };
 btn6.onclick = function () {
-  cambioModus("ORLA", "images/portada.jpg");
+  cambioModus("ORLAS", "images/alu (37).jpg", 37, 40);
+  paraOrla();
 };
 
 ////////////////////////CAMBIO DE FOTO/////////////////////////////
@@ -82,6 +101,7 @@ ant.onclick = function () {
   fotoAlu.src = "images/alu (" + num + ").jpg";
 };
 
-for (let event of ["cut", "copy", "paste", "contextmenu"]) {
-  window.addEventListener(event, (e) => e.preventDefault());
+
+for (let event of ['cut', 'copy', 'paste', 'contextmenu']) {
+  window.addEventListener(event, e => e.preventDefault())
 }
