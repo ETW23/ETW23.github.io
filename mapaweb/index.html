@@ -1,164 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Escuela Taller Gijón Acompaña</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <header id="background-container">
-      <!--Logo de Gijon -->
-      <div class="portadaLogo">
-        <div class="logos">
-          <div>
-            <img
-              class="logo"
-              src="../images/Logo Gijon.png"
-              alt="Ayto Gijón"
-              title="Ayto Gijón"
-            />
-          </div>
-          <div>
-            <img
-              class="logo"
-              src="../images/logoet.png"
-              alt="Escuela Taller"
-              title="Escuela Taller"
-              id="et"
-            />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escuela Taller Gijón Acompaña</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header id="background-container">
+    <!--Logo de Gijon -->
+    <div class="portadaLogo">
+      <div class="logos">
+        <div>
+          <img class="logo" src="../images/Logo Gijon.png" alt="Ayto Gijón" title="Ayto Gijón" />
         </div>
-        <div class="portadaMenu">
-          <button id="botonHamburguesa">
-            <span>&#9776;</span>
-          </button>
-          <nav id="menu">
-            <ul id="menunav">
-              <li><a href="../agenda/index.html">Agenda</a></li>
-              <li><a id="botonModus" href="../modulo/index.html">Modulo</a></li>
-              <li><a href="../equipo/index.html">Equipo</a></li>
-              <li><a href="../alumnado/index.html">Alumnado</a></li>
-              <li><a href="../instalaciones/index.html">Instalaciones</a></li>
-              <li><a href="../mapaweb/index.html">Mapa de la Web</a></li>
-              <li><a href="../manual/manualdeusuario.pdf" target="_blank">Manual de usuario</a></li>
-            </ul>
-          </nav>
+        <div>
+          <img class="logo" src="../images/logoet.png" alt="Escuela Taller" title="Escuela Taller" id="et" />
         </div>
       </div>
-    </header>
-    <main>
-      <div class="title">
-        <h1>Mapa Web</h1>
+      <div class="portadaMenu">
+        <button id="botonHamburguesa">
+          <span>&#9776;</span>
+        </button>
+        <nav id="menu">
+          <ul id="menunav">
+            <li><a href="../agenda/index.html">Agenda</a></li>
+            <li><a id="botonModus" href="../modulo/index.html">Modulo</a></li>
+            <li><a href="../equipo/index.html">Equipo</a></li>
+            <li><a href="../alumnado/index.html">Alumnado</a></li>
+            <li><a href="../instalaciones/index.html">Instalaciones</a></li>
+            <li><a href="../mapaweb/index.html">Mapa de la Web</a></li>
+            <li><a href="../manual/manualdeusuario.pdf" target="_blank">Manual de usuario</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="mapa">
-        <div class="bloque" id="bloque1">
-          <h2>Alumnado</h2>
-          <figure>
-            <img src="logos/alumnado.png" alt="Logo Alumnado" />
-          </figure>
-          <div class="enlaces">
-            <a href="../alumnado/index.html">Web Alumnado</a>
-          </div>
-        </div>
-        <div class="bloque" id="bloque2">
-          <h2>Instalaciones</h2>
-          <figure>
-            <img src="logos/instalaciones.png" alt="Logo Instalaciones" />
-          </figure>
-          <div class="enlaces">
-            <a href="../instalaciones/index.html">Web Instalaciones</a>
-          </div>
-        </div>
-        <div class="bloque" id="bloque3">
-          <h2>Equipo</h2>
-          <figure>
-            <img src="logos/equipo.png" alt="Logo Equipo" />
-          </figure>
-          <div class="enlaces">
-            <a href="../equipo/index.html">Web Equipo</a>
-          </div>
-        </div>
-        <div class="bloque" id="bloque4">
-          <h2>Modulo</h2>
-          <figure>
-            <img src="logos/formacion.png" alt="Logo Modulo" />
-          </figure>
-          <div class="enlaces">
-            <a
-              onclick="document.getElementById('options').classList.toggle('abierto')"
-              >Ver Modulos</a
-            >
-          </div>
-
-          <div id="options">
-            <ul id="options-inner">
-              <li>
-                <h2>Modulo</h2>
-              </li>
-              <li>
-                <a href="#../modulo/index.html/ancla2"
-                  >Paginas y aplicaciones Web</a
-                >
-              </li>
-              <li>
-                <a href="#../modulo/index.html/ancla4"
-                  >Atención Sociosanitaria</a
-                >
-              </li>
-              <li>
-                <a href="#../modulo/index.html/ancla3"
-                  >Atención Sociosanitaria con Dinamización</a
-                >
-              </li>
-              <li>
-                <a href="#../modulo/index.html/ancla1">Servicios de Oficina</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="bloque" id="bloque5">
-          <h2>Agenda</h2>
-          <figure>
-            <img src="logos/agenda.png" alt="Logo Agenda" />
-          </figure>
-          <div class="enlaces">
-            <a href="../agenda/index.html">Web Agenda</a>
-          </div>
+    </div>
+  </header>
+  <main>
+    <div class="title">
+      <h1>Mapa Web</h1>
+    </div>
+    <div class="mapa">
+      <div class="bloque" id="bloque1">
+        <h2>Alumnado</h2>
+        <figure>
+          <img src="logos/alumnado.png" alt="Logo Alumnado" />
+        </figure>
+        <div class="enlaces">
+          <a href="../alumnado/index.html">Web Alumnado</a>
         </div>
       </div>
-    </main>
+      <div class="bloque" id="bloque2">
+        <h2>Instalaciones</h2>
+        <figure>
+          <img src="logos/instalaciones.png" alt="Logo Instalaciones" />
+        </figure>
+        <div class="enlaces">
+          <a href="../instalaciones/index.html">Web Instalaciones</a>
+        </div>
+      </div>
+      <div class="bloque" id="bloque3">
+        <h2>Equipo</h2>
+        <figure>
+          <img src="logos/equipo.png" alt="Logo Equipo" />
+        </figure>
+        <div class="enlaces">
+          <a href="../equipo/index.html">Web Equipo</a>
+        </div>
+      </div>
+      <div class="bloque" id="bloque4">
+        <h2>Modulo</h2>
+        <figure>
+          <img src="logos/formacion.png" alt="Logo Modulo" />
+        </figure>
+        <div class="enlaces">
+          <a onclick="document.getElementById('options').classList.toggle('abierto')">Ver Modulos</a>
+        </div>
 
-    <footer>
-      <section class="f1">
-        <img
-          src="images/acces.png"
-          alt="accesibilidad "
-        /><!-- imagen access AAA HTML5 -->
-        <p class="dire">Accesibilidad:</p>
-        <p class="dire">AAA HTML5</p>
-      </section>
+        <div id="options">
+          <ul id="options-inner">
+            <li>
+              <h2>Modulo</h2>
+            </li>
+            <li>
+              <a href="#../modulo/index.html/ancla2">Paginas y aplicaciones Web</a>
+            </li>
+            <li>
+              <a href="#../modulo/index.html/ancla4">Atención Sociosanitaria</a>
+            </li>
+            <li>
+              <a href="#../modulo/index.html/ancla3">Atención Sociosanitaria con Dinamización</a>
+            </li>
+            <li>
+              <a href="#../modulo/index.html/ancla1">Servicios de Oficina</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bloque" id="bloque5">
+        <h2>Agenda</h2>
+        <figure>
+          <img src="logos/agenda.png" alt="Logo Agenda" />
+        </figure>
+        <div class="enlaces">
+          <a href="../agenda/index.html">Web Agenda</a>
+        </div>
+      </div>
+    </div>
+  </main>
 
-      <section class="f2">
-        <p><a href="../legal/" class="links">Aviso legal</a></p>
-        <p>
-          <a href="https://www.boe.es/eli/es/lo/2018/12/05/3/con" class="links"
-            >Proteccion de datos</a
-          >
-        </p>
-        <p><a href="" class="links">Incidencias</a></p>
-      </section>
+  <footer>
+    <section class="f1">
+      <img src="images/acces.png" alt="accesibilidad " /><!-- imagen access AAA HTML5 -->
+      <p class="dire">Accesibilidad:</p>
+      <p class="dire">AAA HTML5</p>
+    </section>
 
-      <section class="f3">
-        <p class="links">Contacto:</p>
-        <p class="dire">630 76 16 62</p>
-        <p class="dire">C. Rio de oro, 15</p>
-        <p class="dire">33209</p>
-        <p class="dire">Gijón, Asturias</p>
-      </section>
-    </footer>
+    <section class="f2">
+      <p><a href="../legal/" class="links">Aviso legal</a></p>
+      <p><a href="https://www.boe.es/eli/es/lo/2018/12/05/3/con" class="links">Proteccion de datos</a></p>
+      <p><a href="../ubicacion/index.html" class="links">Ubicaci&oacute;n</a> </p>
+    </section>
 
-    <script src="js/script.js"></script>
-  </body>
+    <section class="f3">
+      <p class="links">Contacto:</p>
+      <p class="dire">630 76 16 62</p>
+      <p class="dire">985 18 16 13</p>
+      <p class="dire">985 86 57 05</p>
+    </section>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>
