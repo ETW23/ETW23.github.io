@@ -28,7 +28,7 @@ for (let i = 0; i < tarjetas.length; i++) {
 
 var images = [
     "images/DSC_9832.JPG",
-    "images/20230705_135240.JPG",
+    "images/portada2.jpg",
     "modulo/images/DSC_9856.JPG"
 ];
 
