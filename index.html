@@ -84,31 +84,28 @@
 
           <article class="tarjeta tj2">
             <!-- incluir el enlace a las imagenes -->
-            <img src="images/logo-escuelas-taller.jpg" alt="noticia 2" />
+            <img src="images/contrato.png" alt="noticia 2" />
             <p>
-              <strong> Comienzo Escuela Taller Gij&oacute;n Acompa&ntilde;a </strong> <br>
-              El 1 de Abril de 2023 comenz&oacute; la Escuela Taller Gij&oacute;n Acompa&ntilde;a, consta de cuatro
-              m&oacute;dulos y un total de 36 alumnos
-              de diversas nacionalidades y culturas. A diferencia de a&ntilde;os anteriores, su estructura est&aacute;
-              compuesta de 3 meses de
-              formaci&oacute;n y 15 de trabajo.
-              Adem&aacute;s, hay una ampliaci&oacute;n en la edad l&iacute;mite hasta los 30 a&ntilde;os.
+              <strong>Pr&oacute;ximo comienzo tercera fase:</strong> <br>
+              El pr&oacute;ximo 1 de Octubre de 2023 dar&aacute; comienzo la tercera fase de la Escuela Taller que se extender&aacute; hasta el 30 de Marzo de 2024,
+              en dicha fase se firmar&aacute; un nuevo contrato de seis meses para la realizaci&oacute;n de la parte de obra correspondiente a cada m&oacute;dulo
+              y en la parte de formaci&oacute;n se continuar&aacute; con la impartici&oacute;n de los certificados correspondientes.
             </p>
           </article>
 
           <article class="tarjeta tj3">
             <!-- incluir el enlace a las imagenes -->
-            <img src="images/contrato.png" alt="noticia 2" />
+            <img src="images/IMG_20230919_114140_2.png" alt="noticia 2" />
             <p>
-              <strong> Empieza la fase de contrato:</strong>
+              <strong> Visita de la Directora General de Promoción del Empleo de Gij&oacute;n:</strong>
               <br>
-              Los chicos y chicas de
-              la Escuela Taller "Gijón Acompa&ntilde;a" que cuenta con cuatro
-              módulos formativos, y la Escuela Taller "La Casina" que cuenta con tres
-              módulos formativos, empezaron el dia 1 de julio su contrato de trabajo.
-              <br>
-              La duracion del contrato sera del 1 de julio del 2023 al 30 de
-              septiembre de 2024.
+              Recibimos la visita de Carla Álvarez Sanjurjo, Directora General de
+              Promoción del Empleo del Ayuntamiento de Gijón. Estamos realmente agradecidos por
+              su presencia y dedicación al apoyar nuestras iniciativas. La
+              Directora se interes&oacute; en conocer la tarea que llevamos
+              acabo en la Escuela Taller. Se realiz&oacute; una
+              presentaci&oacute;n de los proyectos en desarrollo y se
+              concluy&oacute; la visita con una foto grupal.
             </p>
           </article>
         </section>
@@ -117,49 +114,6 @@
         <a href="noticias/index.html" id="linkNoticias">M&aacute;s noticias</a>
       </button>
     </div>
-
-    <script>
-      // cogemos el documento de noticias con Fetch API
-      fetch("./noticias/index.html")
-        .then(response => response.text())
-        .then(text => {
-          const porta = document.querySelector(".portaTarjetas");
-          porta.replaceChildren([]);
-
-          const dom = new DOMParser().parseFromString(text, "text/html");
-          Array.from(dom.querySelectorAll(".news-container"))
-            .slice(0, 3)
-            .forEach((noticia, idx) => {
-              const nombre = noticia.querySelector("h2").textContent;
-              const descripcion = noticia.querySelector(".textoNoticia").textContent;
-              const imagenSrc = noticia.querySelector("img").src.replace("images/", "noticias/images/");
-
-              porta.insertAdjacentHTML("beforeend",
-                `<article class="tarjeta tj${1 + idx}">
-                  <img src="${imagenSrc}" alt="noticia ${idx}" />
-                  <p>
-                  <strong>${nombre}:</strong> <br>
-                  ${descripcion}
-                  </p>
-                </article>`);
-            });
-        })
-        .catch(reason => {
-          console.log("Error recogiendo los ultimas noticias: " + reason);
-        });
-    </script>
-    <style>
-      .tarjeta {
-        overflow: hidden;
-      }
-      
-      .tarjeta::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to bottom, transparent, transparent 60%, #252525);
-      }
-      </style>
   </section>
 
   <!--Tarjetas-->
@@ -175,7 +129,7 @@
       </div>
 
       <div class="box rojo">
-        <h2><a class="enlaTarje" href="obra/index.html">Obra</a></h2>
+        <h2><a class="enlaTarje" href="#null">Obra</a></h2>
         <p>Trabajos realizados por parte del alumnado durante el proceso</a></p>
         <img class="logos" src="images/obra.png" alt="obra">
       </div>
@@ -193,6 +147,7 @@
         <p>Acceda a la nota informativa inicial</p>
         <img class="logos" src="https://assets.codepen.io/2301174/icon-karma.svg" alt="acceso">
       </div>
+
     </div>
   </div>
 
