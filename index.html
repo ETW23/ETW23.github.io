@@ -117,6 +117,49 @@
         <a href="noticias/index.html" id="linkNoticias">M&aacute;s noticias</a>
       </button>
     </div>
+
+    <script>
+      // cogemos el documento de noticias con Fetch API
+      fetch("./noticias/index.html")
+        .then(response => response.text())
+        .then(text => {
+          const porta = document.querySelector(".portaTarjetas");
+          porta.replaceChildren([]);
+
+          const dom = new DOMParser().parseFromString(text, "text/html");
+          Array.from(dom.querySelectorAll(".news-container"))
+            .slice(0, 3)
+            .forEach((noticia, idx) => {
+              const nombre = noticia.querySelector("h2").textContent;
+              const descripcion = noticia.querySelector(".textoNoticia").textContent;
+              const imagenSrc = noticia.querySelector("img").src.replace("images/", "noticias/images/");
+
+              porta.insertAdjacentHTML("beforeend",
+                `<article class="tarjeta tj${1 + idx}">
+                  <img src="${imagenSrc}" alt="noticia ${idx}" />
+                  <p>
+                  <strong>${nombre}:</strong> <br>
+                  ${descripcion}
+                  </p>
+                </article>`);
+            });
+        })
+        .catch(reason => {
+          console.log("Error recogiendo los ultimas noticias: " + reason);
+        });
+    </script>
+    <style>
+      .tarjeta {
+        overflow: hidden;
+      }
+      
+      .tarjeta::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, transparent, transparent 60%, #252525);
+      }
+      </style>
   </section>
 
   <!--Tarjetas-->
@@ -150,7 +193,6 @@
         <p>Acceda a la nota informativa inicial</p>
         <img class="logos" src="https://assets.codepen.io/2301174/icon-karma.svg" alt="acceso">
       </div>
-
     </div>
   </div>
 
