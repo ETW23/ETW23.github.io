@@ -49,6 +49,14 @@ a {
     }
 }
 
+.instalaciones .portadaLogo {
+    width: calc(100% - 4rem);
+}
+
+.instalaciones .portadaMenu {
+    width: 4rem;
+}
+
 .instalaciones h2 {
     font-size: 2.25rem
 }
