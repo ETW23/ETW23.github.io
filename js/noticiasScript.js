@@ -4,21 +4,28 @@ peticion.send(null);
 peticion.onreadystatechange = function () {
     if (peticion.readyState == 4) {
         if (peticion.status == 200) {
-            let raiz = peticion.responseText;
-            let root = raiz.querySelectorAll('news-container');
-            console.log('root');
-            let titulo = root.getElementsByClassName('tituloNoti');
-            let contenido = root.getElementsByClassName('textoNoti');
-            let foto = root.getElementsByClassName('fotoNoti');
-            let noti1 = document.getElementById('primeraNoti');
-            let noti2 = document.getElementById('segundaNoti');
-            let noti3 = document.getElementById('terceraNoti');
-            let fotoNoti1 = document.getElementById('primeraFotoNoti');
-            let fotoNoti2 = document.getElementById('segundaFotoNoti')
-            let fotoNoti3 = document.getElementById('terceraFotoNoti')
+            //Cojo el documento
+            let doc = peticion.responseText;
+            //Lo transformo a HTML
+            var raiz = new DOMParser().parseFromString(doc, "text/html");
+            //
+            let titulos = raiz.querySelectorAll('h2.tituloNoti');
+            let contenidos = raiz.querySelectorAll('p.textoNoti');
+            let foto = raiz.querySelectorAll('img.fotoNoti');
+
+            let fotos = [];
+            fotos[0] = document.getElementById('primeraFotoNoti');
+            fotos[1] = document.getElementById('segundaFotoNoti');
+            fotos[2] = document.getElementById('terceraFotoNoti');
+
+            let notis = []
+            notis[0] = document.getElementById('primeraNoti');
+            notis[1] = document.getElementById('segundaNoti');
+            notis[2] = document.getElementById('terceraNoti');
+
             for (let i = 0; i < 3; i++) {
-                fotoNoti1.src = ''
-                noti1.innerHTML = '<p>' + '<strong>' + titulo.innerHTML + '</strong> <br>' + contenido.innerHTML + '</p>';
+                fotos[i].src = 'noticias/' + foto[i].src.substring(foto[i].src.indexOf("images/"))
+                notis[i].innerHTML = '<p>' + '<strong>' + titulos[i].innerHTML + '</strong> <br>' + contenidos[i].innerHTML + '</p>';
             }
         }
     }
