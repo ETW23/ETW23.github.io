@@ -12,9 +12,9 @@ document
     }
   });
 
-document.getElementById('et').onclick= function () {history.back()
-  return
-}
+  et.onclick = function () {
+    window.location.href = "../index.html";
+  };
 
 // document.getElementById("modulos").style.height = "0px";
 // document
