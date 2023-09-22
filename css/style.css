@@ -310,6 +310,7 @@ h1 {
     text-align: center;
     font-size: 1.2vw;
     padding: 0.5rem;
+    overflow: hidden;
 }
 
 .tj1,
