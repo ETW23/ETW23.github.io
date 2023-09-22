@@ -1,0 +1,192 @@
+.tit1  {width: 100%;
+        height: 30rem;
+        line-height: 5rem;
+        background-image: url('../imagenes/entrada.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0 0 .25em .25em;
+        position: relative;
+        display: flow-root;
+}
+
+.stilo  {position: absolute;
+         inset: 0;
+         background-color: rgba(0, 0, 0, .5);
+}
+
+.tit1 h1    {margin-top: 9rem;
+             margin-left: 9.5rem;
+             font-size: 400%;
+             color: #fff;
+             z-index: 1;
+             position: relative;
+             font-variant: small-caps;
+     
+}
+
+.mapp {width: 50%;
+       border: 0.125em #000 solid;
+       margin: auto;
+       margin-top: 5em;
+       margin-bottom: 5em;
+}
+
+.mapita {width: 100%;
+         height: 35rem;
+}
+
+.directs        {width: 18.5%;
+                 float: right;
+                 position: relative;
+                 z-index: 1;
+                 color: #fff;
+                 font-size: 3rem;
+}
+.links1 {font-size: .75em;
+         text-decoration: underline;
+}
+.dire1  {line-height: normal;
+         font-size: .45em;
+         font-style: italic;
+}
+.directs1       {width: 4%;
+                 float: right;
+                 position: relative;
+                 z-index: 1;
+                 font-size: 3rem;
+                 margin-top: 4rem;
+                 margin-right: 1rem;
+}
+.directs1 img    {width: 100%;
+                  margin: auto;
+                 height: 5rem;
+}
+
+@media (min-width: 490px) and (max-width: 800px)       {.tit1 h1 {margin-top: 3rem;
+    margin-left: 0.5rem;
+    font-size: 400%;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+}
+
+.directs {width: 30.5%;
+          margin-top: 5rem;
+          float: right;
+          position: relative;
+          z-index: 1;
+          color: #fff;
+          font-size: 3rem;
+}
+
+.directs1 {width: 10%;
+           float: right;
+           position: relative;
+           z-index: 1;
+           font-size: 3rem;
+           margin-top: 9rem;
+           margin-right: 1rem;
+}
+
+.mapp {width: 70%;
+       border: 0.125em #000 solid;
+       margin: auto;
+       margin-top: 5em;
+       margin-bottom: 5em;
+}
+
+}
+
+@media (min-width: 801px) and (max-width: 1280px)        {
+    .directs1 {
+    width: 7%;
+    float: right;
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-right: 1rem;
+}
+}
+
+@media (min-width: 300px) and (max-width: 489px)        {.tit1 h1 {margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 400%;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+}
+
+.mapp {width: 70%;
+       border: 0.125em #000 solid;
+       margin: auto;
+       margin-top: 5em;
+       margin-bottom: 5em;
+}
+
+.directs {width: 45.5%;
+          float: right;
+          position: relative;
+          z-index: 1;
+          color: #fff;
+          font-size: 3rem;
+          margin-top: 4rem;
+}
+
+.directs1 {width: 17%;
+           float: right;
+           position: relative;
+           z-index: 1;
+           font-size: 3rem;
+           margin-top: 9rem;
+           margin-right: 1rem;
+}
+
+}
+
+@media (min-width: 220px) and (max-width: 299px)        {.directs {width: 45%;
+    float: right;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 3rem;
+}
+.directs1 {
+    width: 18%;
+    float: right;
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-right: 1rem;
+}
+.tit1 h1 {margin-top: 4rem;
+          margin-left: 0.5rem;
+          font-size: 400%;
+          color: #fff;
+          z-index: 1;
+          position: relative;
+}
+
+.mapp {width: 70%;
+       border: 0.125em #000 solid;
+       margin: auto;
+       margin-top: 5em;
+       margin-bottom: 5em;
+}
+}
+@media (max-width: 220px)  {
+    body {
+        min-width: 47em;
+    }
+    .directs1 {
+        width: 11%;
+        float: right;
+        position: relative;
+        z-index: 1;
+        font-size: 3rem;
+        margin-top: 4rem;
+        margin-right: 1rem;
+    }
+}
