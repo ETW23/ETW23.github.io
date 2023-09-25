@@ -31,13 +31,13 @@
 }
 
 .instalaciones footer {
-    margin-top: 8rem;
+     /* margin-top: 8rem;  */
     height: fit-content;
     display: flex;
-    font-size: 1rem;
+     /* font-size: 1rem;  */
 }
 
-@media (max-width: 60em) {
+@media (max-width: 35em) {
     .instalaciones footer {
         flex-direction: column;
         gap: 2rem;
