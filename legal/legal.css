@@ -31,10 +31,10 @@
 }
 
 .instalaciones footer {
-     /* margin-top: 8rem;  */
+    /* margin-top: 8rem;  */
     height: fit-content;
     display: flex;
-     /* font-size: 1rem;  */
+    /* font-size: 1rem;  */
 }
 
 @media (max-width: 35em) {
@@ -129,4 +129,16 @@
 
 .mt-2rem {
     margin-top: 2rem;
+}
+
+/* para estrechar la parte central fijando el footer al pie de la pagina */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+main {
+    flex: 1;
 }
