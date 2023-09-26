@@ -506,8 +506,8 @@ footer section a {
   z-index: 9999;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  margin: auto;
+  margin-left: 5%;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(5px);
   font-size: 1rem;
@@ -515,21 +515,20 @@ footer section a {
   color: #f8f9fae0;
   text-shadow: 0 1 1px #f8f9fa9c;
   letter-spacing: 0.15rem;
-  overflow-y: scroll;
 }
 
 #popup {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   background-color: #1f243d;
-  padding: 20px;
+  width: 90vw;
   border-radius: 5px;
-  padding: 5rem;
+  padding: 5em;
   font-family: Abril, sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
+  height: auto;
+  overflow-y: scroll;
 }
 
 #close-btn {
@@ -556,17 +555,17 @@ footer section a {
 }
 
 .long-line {
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   letter-spacing: 0.1rem;
 }
 
 .medium-line {
-  font-size: 1.4rem;
+  font-size: 1.4vw;
   letter-spacing: 0.05rem;
 }
 
 .short-line {
-  font-size: 1.3rem;
+  font-size: 1.3vw;
   letter-spacing: 0.03rem;
 }
 
@@ -615,11 +614,32 @@ footer section a {
   }
 
   #popup-container {
-    height: 80vh;
+    height: 100vh;
   }
 
   #popup {
     height: 80vh;
+  }
+  .long-line {
+    font-size: 3vw;
+    letter-spacing: 0.1rem;
+  }
+
+  .medium-line {
+    font-size: 3.2vw;
+    letter-spacing: 0.05rem;
+  }
+
+  .short-line {
+    font-size: 3.4vw;
+    letter-spacing: 0.03rem;
+  }
+  .listacursosLi {
+    font-size: 4vw;
+    letter-spacing: 0.05rem;
+  }
+  .achedos {
+    font-size: 6vw;
   }
 }
 
