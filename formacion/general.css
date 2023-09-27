@@ -265,7 +265,8 @@ main {
 
 #articuno,
 #articdos,
-#artictres {
+#artictres,
+#articuatro {
   background: rgb(103, 183, 209);
   background: linear-gradient(
     90deg,
@@ -427,6 +428,27 @@ figcaption {
       rgba(53, 126, 185, 0.358),
     rgba(53, 126, 185, 0.20045518207282953)
   );
+}
+#articuatro {
+  background: linear-gradient(
+    90deg,
+    /* rgba(103, 191, 209, 0.20045518207282953) 100% */
+      /* rgba(112, 41, 99, 0.3578606442577031) 58%,
+      
+      /*rgba(112, 41, 99, 0.20045518207282953) 100% */
+      rgba(243, 247, 38, 0.358),
+    rgba(181, 202, 61, 0.2)
+  );
+}
+
+#elparrafito  {width: 100%;
+               text-align: justify;
+}
+.lasfotos {text-align: center;
+}
+.lasfotos img {width: 35%;
+               height: 24rem;
+               margin: auto;
 }
 
 /*--------------------------------------foter-------------------------------------------*/
