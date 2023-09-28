@@ -1,0 +1,673 @@
+
+
+* {
+
+
+
+    box-sizing: border-box;
+
+    padding: 0em;
+
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+
+    scroll-behavior: smooth;
+
+
+
+}
+
+
+
+body {
+
+
+
+    background-color: #F8F9FA;
+
+    width: 100%;
+
+    overflow-x: hidden;
+
+
+
+}
+
+
+
+h1 {
+
+
+
+    text-align: center;
+
+    color: #252525;
+
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+    clear: both;
+
+
+
+}
+
+
+
+.modu {
+
+
+
+    width: 12%;
+
+    height: 2em;
+
+    line-height: 2em;
+
+    background-color: #252525;
+
+    border-radius: 16px;
+
+    color: #F8F9FA;
+
+    text-align: center;
+
+
+
+}
+
+
+
+.cursillo {
+
+
+
+    text-align: center;
+
+    text-decoration: underline;
+
+    font-style: italic;
+
+    color: #252525;
+
+
+
+}
+
+
+
+hr {
+
+
+
+    border-color: #c30000;
+
+    clear: both;
+
+
+
+}
+
+
+
+.foton {
+
+
+
+    width: 60%;
+
+    height: 15em;
+
+
+
+}
+
+
+
+figure {
+
+
+
+    width: 30%;
+
+    float: left;
+
+
+
+}
+
+
+
+article {
+
+    
+
+    width: 70%;
+
+    margin: auto;
+
+    margin-top: 6em;
+
+
+
+}
+
+
+
+p {
+
+
+
+    font-weight: bolder;
+
+
+
+}
+
+
+
+#menu {
+
+
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    overflow: hidden;
+
+    width: 21em;
+
+    position: relative;
+
+    right: 15em;
+
+
+
+}
+
+
+
+#modulos {
+
+
+
+    justify-content: flex-end;
+
+    overflow: hidden;
+
+    width: 20em;
+
+    position: relative;
+
+    transition: height 0.3s ease;
+
+
+
+}
+
+
+
+#menunav {
+
+
+
+    position: relative;
+
+    right: -20em;
+
+    transition: 1s;
+
+    backdrop-filter: blur(10px) ;
+
+
+
+}
+
+
+
+#menumodus {
+
+    
+
+    position: relative;
+
+    transition: 1s;
+
+    font-size: 0.7em;
+
+
+
+}
+
+
+
+#menu ul li a {
+
+
+
+    color: #252525;
+
+    font-size: 1.5em;
+
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+
+    width: 100%;
+
+    line-height: 3em;
+
+    border: 0.06em solid #252525;
+
+    padding-left: 2em;
+
+    padding-right: 2em;
+
+    text-align: center;
+
+    font-variant: small-caps;
+
+    white-space: nowrap;
+
+    display: list-item;
+
+    text-decoration: none;
+
+
+
+}
+
+
+
+#modus ul li a {
+
+
+
+    color: #252525;
+
+    font-size: 1.5em;
+
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+
+    width: 100%;
+
+    line-height: 3em;
+
+    border: 0.06em solid #252525;
+
+    padding-left: 2em;
+
+    padding-right: 2em;
+
+    text-align: center;
+
+    font-variant: small-caps;
+
+    white-space: nowrap;
+
+    display: list-item;
+
+    text-decoration: none;
+
+
+
+}
+
+
+
+#botonHamburguesa {
+
+
+
+    width: 100%;
+
+    height: 100%;
+
+    text-align: center;
+
+    background-color: rgba(255, 0, 0, 0);
+
+    font-size: 1.5em;
+
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+
+    color: #252525;
+
+    border: none;
+
+    cursor: pointer;
+
+
+
+}
+
+
+
+ul {
+
+
+
+    list-style: none;
+
+    overflow: hidden;
+
+
+
+}
+
+
+
+ header {
+
+
+
+    width: 100%;
+
+    box-shadow: 0px 0px 40px 1px black;
+
+    clear: both;
+
+
+
+} 
+
+
+
+.logo {
+
+
+
+    filter: invert(1);
+
+
+
+}
+
+
+
+.transition-background {
+
+
+
+    transition: background-image 0.5s ease-in-out;
+
+
+
+}
+
+
+
+.portadaLogo {
+
+
+
+    width: 95%;
+
+    float: left;
+
+    height: 4rem;
+
+    margin-bottom: 1em;
+
+    border-bottom: 0.125em solid #252525;
+
+
+
+}
+
+
+
+.portadaLogo div {
+
+
+
+    float: left;
+
+    width: auto;
+
+    height: 4rem;
+
+    border-right: 0.125em solid #252525;
+
+    border-bottom: 0.125em solid #252525;
+
+
+
+}
+
+
+
+.portadaLogo div img {
+
+
+
+    height: 100%;
+
+    width: 100%;
+
+    padding: 10px;
+
+
+
+}
+
+
+
+.portadaMenu {
+
+
+
+    width: 5%;
+
+    float: right;
+
+    height: 4rem;
+
+    border-left: 0.125em solid #252525;
+
+    border-bottom: 0.125em solid #252525;
+
+
+
+}
+
+
+
+.certificados {
+
+
+
+    width: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+
+
+}
+
+
+
+.foto {
+
+
+
+    width: 70%;
+
+    margin: 0em;
+
+    text-align: center;
+
+
+
+}
+
+
+
+.fotito {
+
+
+
+    width: 70%;
+    margin-top: 1em;
+    border-radius: 16px;
+    transition: 1s;
+
+}
+
+.agrandar{
+    transition: 1s;
+}
+
+
+
+.fotito:hover {
+
+
+
+    transition: 1s;
+
+    transform: scale(1.1);
+
+    cursor: pointer;
+
+
+
+}
+
+
+
+main {
+
+
+
+    width: 80%;
+
+    margin: auto;
+
+
+
+}
+
+
+
+.fot {
+
+
+
+    width: 100%;
+
+    height: 18em;
+
+    background-image: url(foto.jpg);
+
+    background-repeat: no-repeat;
+
+    background-position: top;
+
+    background-size: cover;
+
+    border-radius: 16px;
+
+
+
+}
+
+
+
+.bloque {
+
+
+
+    width: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-size: 1.1em;
+
+
+
+}
+
+
+
+.ordenar {
+
+
+
+    display: flex;
+
+    margin-top: 3em;
+
+    margin-bottom: 2em;
+
+
+
+}
+
+
+
+footer {
+
+    clear: both;
+
+    display: flex;
+
+    color: #f8f9fa;
+
+    background-color: #252525;
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    box-shadow: 0 0 10px 10px #252525;
+
+    font-size: 1.3em;
+
+    text-align: center;
+
+}
+
+
+
+footer section a {
+
+    color: #f8f9fa;
+
+}
+
+
+
+.links {
+
+    font-size: 0.8em;
+
+    text-decoration: none;
+
+}
+
+
+
+.dire {
+
+    line-height: normal;
+
+    font-size: 0.7em;
+
+    font-style: italic;
+
+    margin: 0em;
+
+}
+
+
+
+.f1 img {
+
+    width: 3em;
+
+}
+
