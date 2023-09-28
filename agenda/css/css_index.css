@@ -170,9 +170,7 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 0 0 10px 10px #252525;
-  height: 7em;
   font-size: 1.3em;
-  line-height: 2em;
   text-align: center;
 }
 
@@ -184,11 +182,11 @@ footer section a {
   font-size: 0.8em;
   text-decoration: none;
 }
-
 .dire {
   line-height: normal;
   font-size: 0.7em;
   font-style: italic;
+  margin: 0;
 }
 
 .f1 img {
