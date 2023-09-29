@@ -246,6 +246,7 @@ h1 {
   height: 50%;
   border-radius: 5px;
   margin-top: 2.5%;
+  overflow: hidden;
 }
 
 .tarjeta button {
