@@ -214,7 +214,7 @@ h1 {
 /*-------------------------------ULTIMAS NOTICIAS----------------------------------------*/
 
 .noticias {
-  height: 65vw;
+  height: 50vw;
 }
 
 .fondo {
@@ -255,7 +255,7 @@ h1 {
   border-radius: 5px;
   width: 30%;
   height: 1.5rem;
-  font-size: 0.9vw;
+  font-size: 1rem;
   line-height: 1.5rem;
   margin-top: 1em;
   cursor: pointer;
@@ -306,9 +306,8 @@ h1 {
   border-radius: 1%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   text-align: center;
-  font-size: 0.9vw;
+  font-size: 1.2vw;
   padding: 0.5rem;
-  overflow: hidden;
 }
 
 .tj1,
@@ -352,7 +351,9 @@ h1 {
 
 .tarjetero {
   width: 100%;
-  height: 40rem;
+  height: auto;
+  display: flex;
+  align-items: center;
 }
 
 h1:first-of-type {
@@ -398,10 +399,6 @@ h1:last-of-type {
     text-align: center;
     height: 180px;
   }
-
-  .row2-container {
-    margin-bottom: 1em;
-  }
 }
 
 .verde {
@@ -430,13 +427,6 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .row2-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1em;
   }
 
   .box-down {
@@ -506,8 +496,8 @@ footer section a {
   z-index: 9999;
   top: 0;
   left: 0;
-  margin: auto;
-  margin-left: 5%;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(5px);
   font-size: 1rem;
@@ -519,16 +509,16 @@ footer section a {
 
 #popup {
   position: absolute;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #1f243d;
-  width: 90vw;
+  padding: 20px;
   border-radius: 5px;
-  padding: 5em;
+  padding: 5rem;
   font-family: Abril, sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
-  height: auto;
-  overflow-y: scroll;
 }
 
 #close-btn {
@@ -555,22 +545,21 @@ footer section a {
 }
 
 .long-line {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   letter-spacing: 0.1rem;
 }
 
 .medium-line {
-  font-size: 1.4vw;
+  font-size: 1.4rem;
   letter-spacing: 0.05rem;
 }
 
 .short-line {
-  font-size: 1.3vw;
+  font-size: 1.3rem;
   letter-spacing: 0.03rem;
 }
 
 /*Fin de cukis*/
-
 /* ----------------------------------------movil---------------------------------------------------- */
 
 @media (max-width: 670px) {
@@ -606,7 +595,7 @@ footer section a {
   }
 
   .tarjetero {
-    height: 800px;
+    height: 40rem;
   }
 
   footer {
@@ -614,32 +603,11 @@ footer section a {
   }
 
   #popup-container {
-    height: 100vh;
+    height: 80vh;
   }
 
   #popup {
     height: 80vh;
-  }
-  .long-line {
-    font-size: 3vw;
-    letter-spacing: 0.1rem;
-  }
-
-  .medium-line {
-    font-size: 3.2vw;
-    letter-spacing: 0.05rem;
-  }
-
-  .short-line {
-    font-size: 3.4vw;
-    letter-spacing: 0.03rem;
-  }
-  .listacursosLi {
-    font-size: 4vw;
-    letter-spacing: 0.05rem;
-  }
-  .achedos {
-    font-size: 6vw;
   }
 }
 
