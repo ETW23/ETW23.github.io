@@ -7,57 +7,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formación Complementaria</title>
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="general.css">
-  <style>
-    h1 {
-      font-size: 5rem;
-      font-weight: bold !important;
-      text-align: center;
-      margin-top: 1.5rem;
-      margin-bottom: -3rem !important;
-    }
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/cssbased.css" media="screen">
+  <link rel="stylesheet" href="css/cssfont.css">
 
-    h2.bb {
-      color: black;
-      font-size: 3rem;
-      letter-spacing: normal;
-      line-height: 110%;
-      margin-top: 0;
-      text-wrap: balance;
+  <style class="u-style">
+    .seccion2 {
+        background-image: none;
+        min-height: 563px;
     }
-
-    span.organizacion {
-      display: block;
-      letter-spacing: normal;
-      font-weight: normal;
-      font-size: 1.75rem;
-      margin-top: .5rem;
+    .seccion2 .forma1-1 {
+        width: calc(((100% - 1140px) / 2) + 570px);
+        background-image: none;
+        right: auto;
     }
-
-    .section-bohdan {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      font-size: 1rem;
-      font-weight: normal;
+    .seccion2 .cubierta1-1 {
+        width: 1140px;
+        margin: 60px auto;
     }
-
-    .section-image-centered {
-      margin-inline: auto;
+    .seccion2 .cubierta2-cell-1 {
+        min-height: 443px;
     }
-
-
-    .section-list.section-list {
-      display: flex;
-      flex-direction: column;
-      gap: .35rem;
-      margin-top: 1rem;
-      list-style-type: disc;
-      list-style-position: inside;
+    .seccion2 .cubierta3-1 {
+        padding: 30px;
+        padding-right: 0;
     }
-
-    article {
-      padding: 3rem 4rem 4rem !important;
+    .seccion2 .texto1-1 {
+        font-size: 3.7rem;
+        width: 10.5em;
+        margin: 0;
     }
+    .seccion2 .texto1-11 {
+        font-size: 2.8rem;
+        width: 13.8em;
+        margin: 0;
+    }
+    .seccion2 .texto1-2 {
+        font-size: 1.875rem;
+    }
+    .seccion2 .imagen1-1 {
+        min-height: 443px;
+        background-image: url("img/fotoIOT.jpg");
+        background-position: 50% 50%;
+    }
+    .seccion2 .imagen1-2 {
+        min-height: 443px;
+        background-image: url("img/logoet.png");
+        background-position: 50% 50%;
+    }
+    .seccion2 .imagen1-3 {
+        min-height: 443px;
+        background-image: url("img/ft2.jpg");
+        background-position: 50% 50%;
+    }
+    .seccion2 .imagen1-4 {
+        min-height: 443px;
+        background-image: url("img/ft1.jpg");
+        background-position: 50% 50%;
+    }
+    
+    .seccion2 .cubierta3-2 {
+        padding: 30px;
+    }
+    .seccion2 .cubierta2-cell-3 {
+        min-height: 444px;
+    }
+    .seccion2 .cubierta3-3 {
+        padding: 30px;
+        padding-right: 0;
+    }
+    .seccion2 .texto1-3 {
+        line-height: 2;
+        margin: 0;
+        text-align: left;
+    }
+    .seccion2 .texto1-4 {
+        font-weight: 700;
+        margin: 20px 0 0;
+    }
+    h5  {
+        font-style: italic;
+        color: inherit;
+        font-weight: lighter;
+    }
+/* ------------------------------------------------------------------ MEDIA -------------------------------------------------------------------------------------------- */    
+    @media (max-width: 1199px) {
+    .seccion2 {
+        min-height: 485px;
+    }
+    .seccion2 .forma1-1 {
+        width: calc(((100% - 940px) / 2) + 470px);
+    }
+    .seccion2 .cubierta1-1 {
+        width: 940px;
+    }
+    .seccion2 .cubierta2-cell-1 {
+        min-height: 365px;
+    }
+    .seccion2 .texto1-1 {
+        font-size: 4.5rem;
+    }
+    .seccion2 .imagen1-1 {
+        min-height: 365px;
+    }
+    .seccion2 .cubierta2-cell-3 {
+        min-height: 366px;
+    }
+    }
+    @media (max-width: 991px) {
+    .seccion2 {
+        min-height: 399px;
+    }
+    .seccion2 .forma1-1 {
+        width: calc(((100% - 720px) / 2) + 360px);
+    }
+    .seccion2 .cubierta1-1 {
+        width: 720px;
+    }
+    .seccion2 .cubierta2-cell-1 {
+        min-height: 100px;
+    }
+    .seccion2 .texto1-1 {
+        font-size: 3rem;
+    }
+    .seccion2 .texto1-2 {
+        font-size: 1.5rem;
+    }
+    .seccion2 .imagen1-1 {
+        min-height: 280px;
+        height: 20em;
+    }
+    .seccion2 .cubierta2-cell-3 {
+        min-height: 100px;
+    }
+    .izquierda1 {
+  text-align: left;
+  margin-left: 0;
+  margin-top: -4em;
+}
+    }
+    @media (max-width: 767px) {
+    .seccion2 {
+        min-height: 849px;
+    }
+    .seccion2 .forma1-1 {
+        width: calc(((100% - 540px) / 2) + 270px);
+    }
+    .seccion2 .cubierta1-1 {
+        width: 540px;
+    }
+    .seccion2 .cubierta3-1 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .seccion2 .texto1-1 {
+        font-size: 5.5rem;
+    }
+    .seccion2 .imagen1-1 {
+        min-height: 630px;
+    }
+    .seccion2 .cubierta3-2 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .seccion2 .cubierta3-3 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }}
+    @media (max-width: 575px) {
+    .seccion2 {
+        min-height: 616px;
+    }
+    .seccion2 .forma1-1 {
+        width: calc(((100% - 340px) / 2) + 170px);
+    }
+    .seccion2 .cubierta1-1 {
+        width: 340px;
+    }
+    .seccion2 .texto1-1 {
+        font-size: 4.5rem;
+    }
+    .seccion2 .imagen1-1 {
+        min-height: 397px;
+    }}
   </style>
 </head>
 
@@ -67,10 +199,10 @@
     <div class="portadaLogo">
       <div class="logos">
         <div>
-          <img class="logo" src="images/Logo Gijon.png" alt="Ayto Gijón" title="Ayto Gijón">
+          <img class="logo" src="img/Logo Gijon.png" alt="Ayto Gijón" title="Ayto Gijón">
         </div>
         <div>
-          <img class="logo" src="images/logoet2.png" alt="Escuela Taller" title="Escuela Taller" id="et">
+          <img class="logo" src="img/logoet2.png" alt="Escuela Taller" title="Escuela Taller" id="et">
         </div>
       </div>
       <div class="portadaMenu">
@@ -93,137 +225,164 @@
       </div>
     </div>
   </header>
-
-  <h1>Formaciones Complementarias</h1>
   <main>
-    <section>
-      <article id="articuno">
-        <div>
-          <h2 class="bb">
-            Internet de las Cosas
-          </h2>
-          <span class="organizacion">
-            Páginas y Aplicaciones Web - Luce Gijón
-          </span>
-        </div>
-        <br>
-
-        <div class="section-bohdan">
-          <ul class="section-list">
-            <li> Programación de circuitos eléctricos sobre componentes reales. </li>
-            <li> Programación sobre microcontrolador "Arduino". </li>
-            <li> Diseño de dispositivos IoT para capturar datos de diferentes tipos de sensores. </li>
-            <li> Sistemas de gestión de base de datos mediante gráficos y mapas. </li>
-            <li> Primer contacto con lenguajes de programación (HTML, CSS, Javascript, C++). </li>
-            <li> Conexión de dispositivos IoT con diferentes plataformas de visualización y control remoto </li>
-            <li> Proyectos finales por cada nivel para aplicar en la práctica todos los conocimientos adquiridos. </li>
-          </ul>
-
-          <img src="images/Logotipo-Laboratorio-Urbano-LUCE-P6-Innovacion-Social-Gijon__ScaleHeightWzEwMF0.png"
-            alt="Luce Gijon" class="section-image-centered">
-        </div>
-      </article>
-
-      <article id="articdos">
-        <div>
-          <h2 class="bb">
-            Manipulador/a de alimentos, alergias e intolerancias alimentarias
-          </h2>
-          <span class="organizacion">
-            Atención sociosanitaria condinamización
-          </span>
-        </div>
-        <br>
-
-        <div class="section-bohdan">
-          <ul class="section-list">
-            <li> Alteración y contaminación de los alimentos.Fuentes de contaminación. </li>
-            <li> Factores determinantes del desarrollo de microorganismos. </li>
-            <li>Intoxicaciones alimentarias.</li>
-            <li> Condiciones higiénico-sanitarias de las instalaciones,
-              maquinaria y utillaje conforme a la normativa vigente. </li>
-            <li>Limpieza y desinfección.</li>
-            <li> Personal: Higiene, hábitos y salud </li>
-            <li> Autocontrol, Análisis de peligros y puntos e control
-              cr&iacute;ticos y guia de prácticas correctas de
-              higiene. </li>
-            <li> Alergias e intolerancias alimentarias. </li>
-          </ul>
-
-          <img src="images/gijonempleo.png" alt="Logo Gijon Empleo" class="section-image-centered">
-        </div>
-      </article>
-
-      <br>
-
-      <article id="artictres">
-        <div>
-          <h2 class="bb">Formación Acogida Escuela Taller Gijón Acompaña</h2>
-          <span class="organizacion">Atención Sociosanitaria con Dinamización, Servicios de Oficina, Páginas y
-            Aplicaciones Web, Atención Sociosanitaria</span>
-        </div>
-        <br>
-
-        <div class="section-bohdan">
-          <ul class="section-list">
-            <li>Principios generales de la acción preventiva. </li>
-            <li>Marco normativo básico.</li>
-            <li>Legislación aplicable en España.</li>
-            <li>Derechos y obligaciones de los trabajadores.</li>
-            <li>Riesgos ligados a las Condiciones de Seguridad. </li>
-            <li>Riesgos ligados al Medio Ambiente de trabajo. </li>
-            <li>Carga de trabajo, fatiga e insatisfacción laboral.</li>
-            <li>Sistemas elementales de control de riesgos.</li>
-            <li>Riesgos espec&iacute;ficos del puesto de trabajo o
-              función del trabajador</li>
-            <li> El control de la salud de los trabajadores</li>
-          </ul>
-
-          <img src="images/gijonempleo.png" alt="Logo Gijon Empleo" class="section-image-centered">
-        </div>
-      </article>
-
-<br>
-
-<article id="articuatro">
-        <div>
-          <h2 class="bb">Formación «DEA»</h2>
-          <span class="organizacion">
-            Alumnado de la Escuela Taller «Gijón Acompaña»
-          </span>
-        </div>
-        <br>
-
-        <div class="section-bohdan">
-          <div id="elparrafito">
-          <p>Los contenidos vienen recogidos en el Anexo V del Decreto 54/2016, de 28
-            de septiembre, por el que se regula la instalación y la utilización de
-            desfibriladores externos fuera del ámbito sanitario, así como la
-            formación y acreditación de las entidades formadoras para este uso:</p>
-            <ul class="section-list">
-              <li>INTRODUCCI&Oacute;N (Cadena de supervivencia, importancia de la
-                desfibrilaci&oacute;n precoz y legislaci&oacute;n y &eacute;tica).</li>
-              <li>RCP B&Aacute;SICA (Valoraci&oacute;n inicial y actuaci&oacute;n b&aacute;sica ante una persona
-                inconsciente)</li>
-              <li>DEA (Protocolos de utilizaci&oacute;n, seguridad y resoluci&oacute;n de problemas
-  frecuentes).</li>
-              <li>RECOGIDA DE DATOS (M&eacute;todo Utstein y mantenimiento del DEA).</li>
-              <li>EVALUCI&Oacute;N.</li>
-            </ul>
+    <div class="basecentral1">
+      <div class="section centro negro fijo medio medio2 medio3 medio4 seccion2">
+      <div class="expand1 base1 forma1 forma1-rectangle forma1-1"></div>
+      <div class="fijo cubierta1 cubierta1-1">
+          <div class="cubierta2">
+          <div class="cubierta2-row">
+              <div class="izquierda1 estilo1 cubierta2-cell tam1 cubierta2-cell-1">
+              <div class="cubierta3 cubierta3-1">
+                  <h2 class="forma2 fuente1 texto1 texto1-1">Internet de las Cosas</h2>
+                  <h5 class="forma2 fuente1 texto1 texto1-2">Páginas y Aplicaciones Web - Luce Gijón</h5>
+              </div>
+              </div>
+              <div class="estilo1 imagen1 cubierta2-cell tam1 imagen1-1">
+              <div class="cubierta3 cubierta3-2"></div>
+              </div>
+              <div class="estilo1 cubierta2-cell tam1 cubierta2-cell-3">
+              <div class="cubierta3 abajo1 cubierta3-3">
+                  <div class="forma2 cabeza1 texto1 texto1-3 p">
+                      <ul>
+                          <li>Programación de circuitos eléctricos sobre componentes reales.</li>
+                          <li>Programación sobre microcontrolador "Arduino".</li>
+                          <li>Diseño de dispositivos IoT para capturar datos de diferentes tipos de sensores.</li>
+                          <li>Sistemas de gestión de base de datos mediante gráficos y mapas.</li>
+                          <li>Primer contacto con lenguajes de programación (HTML, CSS, Javascript, C++).</li>
+                          <li>Conexión de dispositivos IoT con diferentes plataformas de visualización y control remoto.</li>
+                          <li>Proyectos finales por cada nivel para aplicar en la práctica todos los conocimientos adquiridos.</li>
+                      </ul>
+                    </div>
+              </div>
+              </div>
           </div>
+          </div>
+      </div>
+      </div>
+  </div>
 
-<div class="lasfotos">
-<img src="images/ft1.jpg" alt="Momentos del curso">
-</div>
-        </div>
-      </article>
+  <div class="basecentral2">
+      <div class="section centro color2 fijo medio medio2 medio3 medio4 seccion2">
+      <div class="expand1 base2 forma1 forma1-rectangle forma1-1"></div>
+      <div class="fijo cubierta1 cubierta1-1">
+          <div class="cubierta2">
+          <div class="cubierta2-row">
+              <div class="izquierda1 estilo1 cubierta2-cell tam1 cubierta2-cell-1">
+              <div class="cubierta3 cubierta3-1">
+                  <h2 class="forma2 fuente1 texto1 texto1-11">Manipulador/a de alimentos</h2>
+                  <h5 class="forma2 fuente1 texto1 texto1-2">Atención sociosanitaria con dinamización</h5>
+              </div>
+              </div>
+              <div class="estilo1 imagen1 cubierta2-cell tam1 imagen1-2">
+              <div class="cubierta3 cubierta3-2"></div>
+              </div>
+              <div class="estilo1 cubierta2-cell tam1 cubierta2-cell-3">
+              <div class="cubierta3 abajo1 cubierta3-3">
+                  <div class="forma2 cabeza1 texto1 texto1-3 p">
+                      <ul>
+                          <li>Alteración y contaminación de los alimentos.Fuentes de contaminación.</li>
+                          <li>Factores determinantes del desarrollo de microorganismos.</li>
+                          <li>Intoxicaciones alimentarias.</li>
+                          <li>Condiciones higiénico-sanitarias de las instalaciones, maquinaria y utillaje conforme a la normativa vigente.</li>
+                          <li>Limpieza y desinfección.</li>
+                          <li>Personal: Higiene, hábitos y salud</li>
+                          <li>Autocontrol, Análisis de peligros y puntos e control críticos y guia de prácticas correctas de higiene.</li>
+                          <li>Alergias e intolerancias alimentarias.</li>
+                      </ul>
+                    </div>
+              </div>
+              </div>
+          </div>
+          </div>
+      </div>
+      </div>
+  </div>
 
-    </section>
+  <div class="basecentral3">
+      <div class="section centro negro fijo medio medio2 medio3 medio4 seccion2">
+      <div class="expand1 base1 forma1 forma1-rectangle forma1-1"></div>
+      <div class="fijo cubierta1 cubierta1-1">
+          <div class="cubierta2">
+          <div class="cubierta2-row">
+              <div class="izquierda1 estilo1 cubierta2-cell tam1 cubierta2-cell-1">
+              <div class="cubierta3 cubierta3-1">
+                  <h2 class="forma2 fuente1 texto1 texto1-1">Formación Acogida</h2>
+                  <h5 class="forma2 fuente1 texto1 texto1-2">Alumnado de la Escuela Taller «Gijón Acompaña»</h5>
+              </div>
+              </div>
+              <div class="estilo1 imagen1 cubierta2-cell tam1 imagen1-3">
+              <div class="cubierta3 cubierta3-2"></div>
+              </div>
+              <div class="estilo1 cubierta2-cell tam1 cubierta2-cell-3">
+              <div class="cubierta3 abajo1 cubierta3-3">
+                  <div class="forma2 cabeza1 texto1 texto1-3 p">
+                      <ul>
+                          <li>Principios generales de la acción preventiva.</li>
+                          <li>Marco normativo básico.</li>
+                          <li>Legislación aplicable en España.</li>
+                          <li>Derechos y obligaciones de los trabajadores.</li>
+                          <li>Riesgos ligados a las Condiciones de Seguridad.</li>
+                          <li>Riesgos ligados al Medio Ambiente de trabajo.</li>
+                          <li>Carga de trabajo, fatiga e insatisfacción laboral.</li>
+                          <li>Sistemas elementales de control de riesgos.</li>
+                          <li>Riesgos específicos del puesto de trabajo o función del trabajador</li>
+                          <li>El control de la salud de los trabajadores</li>
+                      </ul>
+                    </div>
+              </div>
+              </div>
+          </div>
+          </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="basecentral4">
+      <div class="section centro color2 fijo medio medio2 medio3 medio4 seccion2">
+      <div class="expand1 base2 forma1 forma1-rectangle forma1-1"></div>
+      <div class="fijo cubierta1 cubierta1-1">
+          <div class="cubierta2">
+          <div class="cubierta2-row">
+              <div class="izquierda1 estilo1 cubierta2-cell tam1 cubierta2-cell-1">
+              <div class="cubierta3 cubierta3-1">
+                  <h2 class="forma2 fuente1 texto1 texto1-1">Formación «DEA»</h2>
+                  <h5 class="forma2 fuente1 texto1 texto1-2">Alumnado de la Escuela Taller «Gijón Acompaña»</h5>
+              </div>
+              </div>
+              <div class="estilo1 imagen1 cubierta2-cell tam1 imagen1-4">
+              <div class="cubierta3 cubierta3-2"></div>
+              </div>
+              <div class="estilo1 cubierta2-cell tam1 cubierta2-cell-3">
+              <div class="cubierta3 abajo1 cubierta3-3">
+                  <div class="forma2 cabeza1 texto1 texto1-3 p">
+                      <div class="contenidos">
+                          Los contenidos vienen recogidos en el Anexo V del Decreto 54/2016, de 28 de septiembre,
+                          por el que se regula la instalación y la utilización de desfibriladores externos fuera del
+                          ámbito sanitario, así como la formación y acreditación de las entidades formadoras para este uso:
+                      </div>
+                      <div>
+                          <ul>
+                              <li>INTRODUCCIÓN (Cadena de supervivencia, importancia de la desfibrilación precoz y legislación y ética).</li>
+                              <li>RCP BÁSICA (Valoración inicial y actuación básica ante una persona inconsciente)</li>
+                              <li>DEA (Protocolos de utilización, seguridad y resolución de problemas frecuentes).</li>
+                              <li>RECOGIDA DE DATOS (Método Utstein y mantenimiento del DEA).</li>
+                              <li>EVALUCIÓN.</li>
+                          </ul>
+                      </div>
+                    </div>
+              </div>
+              </div>
+          </div>
+          </div>
+      </div>
+      </div>
+  </div>
   </main>
   <footer id="pie">
     <section class="f1">
       <!-- imagen access AAA HTML5 -->
-      <img src="images/acces.png" alt="accesibilidad ">
+      <img src="img/acces.png" alt="accesibilidad ">
       <p class="dire">Accesibilidad:</p>
       <p class="dire">AAA HTML5</p>
     </section>
