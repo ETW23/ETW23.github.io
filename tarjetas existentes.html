@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <title>Mapas de Calor de Calidad de Aire</title> -->
+</head>
+
+<body>
+  <script>
+    const urls = {
+      [2002]: "https://opendata.gijon.es/descargar.php?id=629&tipo=JSON",
+      [2003]: "https://opendata.gijon.es/descargar.php?id=630&tipo=JSON",
+      [2004]: "https://opendata.gijon.es/descargar.php?id=631&tipo=JSON",
+      [2005]: "https://opendata.gijon.es/descargar.php?id=632&tipo=JSON",
+      [2006]: "https://opendata.gijon.es/descargar.php?id=633&tipo=JSON",
+      [2007]: "https://opendata.gijon.es/descargar.php?id=634&tipo=JSON",
+      [2008]: "https://opendata.gijon.es/descargar.php?id=635&tipo=JSON",
+      [2009]: "https://opendata.gijon.es/descargar.php?id=636&tipo=JSON",
+      [2010]: "https://opendata.gijon.es/descargar.php?id=637&tipo=JSON",
+      [2011]: "https://opendata.gijon.es/descargar.php?id=638&tipo=JSON",
+      [2012]: "https://opendata.gijon.es/descargar.php?id=639&tipo=JSON",
+      [2013]: "https://opendata.gijon.es/descargar.php?id=640&tipo=JSON",
+      [2014]: "https://opendata.gijon.es/descargar.php?id=641&tipo=JSON",
+      [2015]: "https://opendata.gijon.es/descargar.php?id=642&tipo=JSON",
+    }
+
+    const scale = 5;
+
+    Promise.all(Object.entries(urls).map(([year, url]) => {
+      return fetch(url)
+        .then((response) => response.json())
+        .then((data) => data.numtarjetaciudadanas.numtarjetaciudadana)
+    })).then(responses => {
+      // parecen sorteadas, simplemente contcatenarlos es suficiente
+      const data = responses.reduce((acc, json) => [...acc, ...json], [])
+        // quitamos los jovenes o lo que sea la J
+        .filter(entry => entry.tipo === "F");
+
+      const count = data.length;
+      const max = data.reduce((max, json) => Math.max(max, json.cuantos), 0)
+
+      document.body.innerHTML += `<svg viewBox="0 0 ${count * scale} ${100 * scale}">
+        ${data.map((json, index) => {
+        const x = index * scale;
+        const y = (max - json.cuantos) / max * 100 * scale;
+        const width = scale - 1;
+        const height = json.cuantos / max * 100 * scale;
+        const color = "red";
+        return `<rect x="${x}" y="${y}" width="${width}" height="${height}" fill="${color}">
+          <title>${json.aÑo} ${json.mes}&ensp;&mdash;&ensp;${json.cuantos} tarjetas</title>
+        </rect>`
+      }).join("")}
+      </svg>`
+    })
+  </script>
+</body>
+
+</html>
