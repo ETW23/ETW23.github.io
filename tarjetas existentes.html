@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <title>Mapas de Calor de Calidad de Aire</title> -->
+  <title>Tarjetas existentes</title>
 </head>
 
 <body>
@@ -29,31 +29,45 @@
 
     const scale = 5;
 
-    Promise.all(Object.entries(urls).map(([year, url]) => {
+    Promise.all(Object.values(urls).map(url => {
       return fetch(url)
-        .then((response) => response.json())
-        .then((data) => data.numtarjetaciudadanas.numtarjetaciudadana)
+        .then(response => response.json())
     })).then(responses => {
-      // parecen sorteadas, simplemente contcatenarlos es suficiente
-      const data = responses.reduce((acc, json) => [...acc, ...json], [])
-        // quitamos los jovenes o lo que sea la J
-        .filter(entry => entry.tipo === "F");
+      let count = 0, max = 0;
+      for (const response of responses) {
+        for (const entry of response.numtarjetaciudadanas.numtarjetaciudadana) {
+          if (entry.tipo === "F") {
+            count++;
+            if (entry.cuantos > max) {
+              max = entry.cuantos;
+            }
+          }
+        }
+      }
 
-      const count = data.length;
-      const max = data.reduce((max, json) => Math.max(max, json.cuantos), 0)
+      let svg = '<svg viewBox="0 0 ' + count * scale + ' ' + 100 * scale + '">';
 
-      document.body.innerHTML += `<svg viewBox="0 0 ${count * scale} ${100 * scale}">
-        ${data.map((json, index) => {
-        const x = index * scale;
-        const y = (max - json.cuantos) / max * 100 * scale;
-        const width = scale - 1;
-        const height = json.cuantos / max * 100 * scale;
-        const color = "red";
-        return `<rect x="${x}" y="${y}" width="${width}" height="${height}" fill="${color}">
-          <title>${json.aÑo} ${json.mes}&ensp;&mdash;&ensp;${json.cuantos} tarjetas</title>
-        </rect>`
-      }).join("")}
-      </svg>`
+      let i = 0;
+      for (const response of responses) {
+        for (const entry of response.numtarjetaciudadanas.numtarjetaciudadana) {
+          if (entry.tipo === "F") {
+            const x = i * scale;
+            const y = (max - entry.cuantos) / max * 100 * scale;
+            const width = scale - 1;
+            const height = entry.cuantos / max * 100 * scale;
+            const color = "red";
+            svg += '<rect x="' + x + '" y="' + y + '" width="' + width + '" height="' + height + '" fill="' + color + '">';
+            svg += '<title>' + entry.aÑo + ' ' + entry.mes + '&ensp;&mdash;&ensp;' + entry.cuantos + ' tarjetas</title>';
+            svg += '</rect>';
+
+            i++;
+          }
+        }
+      }
+
+      svg += '</svg>';
+
+      document.body.innerHTML = svg;
     })
   </script>
 </body>
