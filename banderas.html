@@ -19,9 +19,24 @@
             align-items: center;
         }
 
+        .rotate {
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         .inputs {
             position: absolute;
             inset: 0;
+            pointer-events: none;
             min-height: 100vh;
 
             display: flex;
@@ -32,12 +47,16 @@
             flex-direction: column;
         }
 
+        .inputs * {
+            pointer-events: all;
+        }
+
         .flags {
             position: absolute;
             inset: 0;
+            pointer-events: none;
             min-height: calc(100vh - 2rem);
 
-            pointer-events: none;
 
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -65,7 +84,7 @@
 </head>
 
 <body>
-    <div class="background">
+    <div class="background" onclick="event.target.classList.toggle('rotate')">
         <img src="https://unsplash.it/800/600" alt="">
     </div>
     <div class="inputs">
