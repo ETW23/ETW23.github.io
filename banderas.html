@@ -73,14 +73,10 @@
         <input type="number" name="count" id="count" value="6" min="1" step="1" onchange="changeFlags(event.target.value)">
     </div>
     <div class="flags">
-        <!-- <img src="https://unsplash.it/300/200" alt="">
-        <img src="https://unsplash.it/300/200" alt="">
-        <img src="https://unsplash.it/300/200" alt="">
-        <img src="https://unsplash.it/300/200" alt="">
-        <img src="https://unsplash.it/300/200" alt="">
-        <img src="https://unsplash.it/300/200" alt="">
-        <img src="https://unsplash.it/300/200" alt=""> -->
     </div>
+    <script>
+        changeFlags(document.querySelector('#count').value);
+    </script>
 </body>
 
 </html>
