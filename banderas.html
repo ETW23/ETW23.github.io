@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+        }
+
+        .background {
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inputs {
+            position: absolute;
+            inset: 0;
+            min-height: 100vh;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            flex-direction: column;
+        }
+
+        .flags {
+            position: absolute;
+            inset: 0;
+            min-height: calc(100vh - 2rem);
+
+            pointer-events: none;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .flags :nth-child(even) {
+            justify-self: end;
+        }
+    </style>
+    <script>
+        function changeFlags(count) {
+            const flags = document.querySelector('.flags');
+            flags.innerHTML = '';
+            for (let i = 0; i < count; i++) {
+                const flag = document.createElement('img');
+                flag.src = `https://unsplash.it/300/200?random=${i}`;
+                flag.alt = `Flag ${i}`;
+                flags.appendChild(flag);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="background">
+        <img src="https://unsplash.it/800/600" alt="">
+    </div>
+    <div class="inputs">
+        <label for="count">Count:</label>
+        <input type="number" name="count" id="count" value="6" min="1" step="1" onchange="changeFlags(event.target.value)">
+    </div>
+    <div class="flags">
+        <!-- <img src="https://unsplash.it/300/200" alt="">
+        <img src="https://unsplash.it/300/200" alt="">
+        <img src="https://unsplash.it/300/200" alt="">
+        <img src="https://unsplash.it/300/200" alt="">
+        <img src="https://unsplash.it/300/200" alt="">
+        <img src="https://unsplash.it/300/200" alt="">
+        <img src="https://unsplash.it/300/200" alt=""> -->
+    </div>
+</body>
+
+</html>
