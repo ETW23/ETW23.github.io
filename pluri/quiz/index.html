@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // makes the custom properties animatable
+        CSS.registerProperty({
+            name: '--radius',
+            syntax: '<length>',
+            inherits: false,
+            initialValue: 0
+        })
+        CSS.registerProperty({
+            name: '--scale',
+            syntax: '<number>',
+            inherits: false,
+            initialValue: 1
+        })
+
+        const countryNames = {
+            afganistan: 'Afganistan',
+            argentina: 'Argentina',
+            nicaragua: 'Nicaragua',
+            venezuela: 'Venezuela',
+            ucrania: 'Ucrania',
+            romania: 'Romania',
+            congo: 'Republica Democratica del Congo',
+            sahrawi: 'Sahara Occidental',
+            etnia_gitana: 'Etnia Gitana'
+        }
+
+        let currentCountry = null;
+
+        function toggleSelected(el) {
+            const prev = document.querySelector('.flag.selected');
+            if (prev) {
+                currentCountry = null;
+                prev.classList.remove('selected');
+                prev.classList.add('unselected');
+                setTimeout(() => {
+                    prev.classList.remove('unselected');
+                }, 1000);
+
+                const backdrop = document.querySelector('.backdrop');
+                backdrop.classList.remove('selected');
+
+                const play = document.querySelector('.play');
+                play.classList.add('none');
+
+                const title = document.querySelector('.country-title');
+                title.innerText = '';
+                title.classList.add('none');
+            }
+            if (el && el !== prev) {
+                el.classList.add('selected');
+                const backdrop = document.querySelector('.backdrop');
+                backdrop.classList.add('selected');
+
+                setTimeout(() => {
+                    const play = document.querySelector('.play');
+                    play.classList.remove('none');
+
+                    const title = document.querySelector('.country-title');
+                    title.classList.remove('none');
+                    currentCountry = el.getAttribute('href').slice(1);
+                    title.innerText = countryNames[currentCountry];
+                }, 1000);
+            }
+        }
+
+        function play() {
+            if (currentCountry) {
+                window.location.href = `./${currentCountry}.html`;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="./logo.svg" alt="Logotipo de Escuelas Taller" height="320">
+        <h1 style="font-weight: 500">
+            Escuelas Taller<br>
+            Gijón Acompaña<br>
+            <span style="font-weight: 300">Pluriculturalidad</span>
+        </h1>
+    </div>
+
+    <div class="flags">
+        <a href="#afganistan" class="flag" style="--idx: 1" onclick="toggleSelected(this)">
+            <img src="./Flag_of_Afghanistan_(2013–2021).svg" alt="Bandera de Afganistan">
+        </a>
+        <a href="#argentina" class="flag" style="--idx: 2" onclick="toggleSelected(this)">
+            <img src="./Flag_of_Argentina.svg" alt="Bandera de Argentina">
+        </a>
+        <a href="#nicaragua" class="flag" style="--idx: 3" onclick="toggleSelected(this)">
+            <img src="./Flag_of_Nicaragua.svg" alt="Bandera de Nicaragua">
+        </a>
+        <a href="#venezuela" class="flag" style="--idx: 4" onclick="toggleSelected(this)">
+            <img src="./Flag_of_Venezuela.svg" alt="Bandera de Venezuela">
+        </a>
+        <a href="#ucrania" class="flag" style="--idx: 5" onclick="toggleSelected(this)">
+            <img src="./Flag_of_Ukraine.svg" alt="Bandera de Ucrania">
+        </a>
+        <a href="#romania" class="flag" style="--idx: 6" onclick="toggleSelected(this)">
+            <img src="./Flag_of_Romania.svg" alt="Bandera de Romania">
+        </a>
+        <a href="#congo" class="flag" style="--idx: 7" onclick="toggleSelected(this)">
+            <img src="./Flag_of_the_Democratic_Republic_of_the_Congo.svg"
+                alt="Bandera de la Republica Democaratica de Congo">
+        </a>
+        <a href="#sahrawi" class="flag" style="--idx: 8" onclick="toggleSelected(this)">
+            <img src="./Flag_of_the_Sahrawi_Arab_Democratic_Republic_(proposal).svg" alt="Bandera de Sahara Occidental">
+        </a>
+        <a href="#etnia_gitana" class="flag" style="--idx: 9" onclick="toggleSelected(this)">
+            <img src="./Flag_of_the_Romani_people.svg" alt="Bandera de la etnia gitana">
+        </a>
+        <div class="backdrop" onclick="toggleSelected(null)">
+
+        </div>
+    </div>
+
+    <div class="country-title none">
+
+    </div>
+
+    <button class="play none" onclick="play()">
+        Play
+    </button>
+
+    <script>
+        const root = document.documentElement;
+
+        let time = 0;
+
+        setInterval(() => {
+            time += 0.002;
+            root.style.setProperty('--time', time);
+        }, 10);
+    </script>
+</body>
+
+</html>

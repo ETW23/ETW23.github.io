@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const questions = [
+            {
+                question: "¿Qué pais no limita Ucrania?",
+                answers: [
+                    "Polonia",
+                    "Hungría",
+                    "Rumania",
+                    "Serbia"
+                ],
+                correctAnswer: 3
+            },
+            {
+                question: "¿Durante qué evento fue completamente destruida la ciudad de Kiev?",
+                answers: [
+                    "La Segunda Guerra Mundial",
+                    "La Guerra Civil Rusa",
+                    "La Invasion Mongola",
+                    "La Guerra de los Seis Días"
+                ],
+                correctAnswer: 2
+            },
+            {
+                question: "¿Que no está declarado Patrimonio de la Humanidad por la UNESCO?",
+                answers: [
+                    "Centro historico de Odesa",
+                    "La Iglesia de San Andrés",
+                    "Monasterio de las Cuevas de Kiev",
+                    "Biblioteca Nacional de Ucrania V. I. Vernadsky"
+                ],
+                correctAnswer: 3
+            },
+            {
+                question: "¿Cuando se independizo Ucrania de la URSS?",
+                answers: [
+                    "1990",
+                    "1991",
+                    "1992",
+                    "1993",
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "¿Qué ciudad fue la primera capital de Ucrania Sovietica?",
+                answers: [
+                    "Kharkiv (Járkov)",
+                    "Kyiv (Kiev)",
+                    "Odesa (Odessa)",
+                    "Lviv"
+                ],
+                correctAnswer: 0
+            },
+            {
+                question: "¿Entre qué paises se dividia el territorio de Ucrania?",
+                answers: [
+                    "Reino de Polonia y Principado de Moscú",
+                    "Mancomunidad de Polonia-Lituania y Zarato ruso",
+                    "Imperio austrohúngaro y Imperio ruso",
+                    "Todo lo anterior",
+                ],
+                correctAnswer: 3
+            },
+            {
+                question: "¿Qué sistema político se utiliza en Ucrania?",
+                answers: [
+                    "República parlementaria",
+                    "República semipresidencialista",
+                    "República presidencialista",
+                    "Monarquía",
+                ],
+                correctAnswer: 1
+            },
+            {
+                question: "¿Qué religión predomina en Ucrania?",
+                answers: [
+                    "Judaísmo",
+                    "Catolicismo",
+                    "Cristianismo ortodoxo",
+                    "Islam",
+                ],
+                correctAnswer: 2
+            }
+        ]
+
+        let currentQuestion = 0, correctAnswers = 0;
+        let answered = false;
+
+        function populateQuestionAndAnswers(idx) {
+            currentQuestion = idx;
+
+            const questionElement = document.querySelector('.question');
+            const answersElements = document.querySelectorAll('.answer');
+
+            if (idx >= 0 && idx < questions.length) {
+                const question = questions[idx].question;
+                const answers = questions[idx].answers;
+
+                questionElement.textContent = question;
+
+                answersElements.forEach((answerElement, index) => {
+                    answerElement.textContent = answers[index];
+                    answerElement.classList.remove('correct', 'incorrect');
+                });
+            }
+        }
+
+        function handleAnswer(idx) {
+            if (answered || currentQuestion >= questions.length) {
+                return;
+            }
+
+            answered = true;
+
+            const correctAnswer = questions[currentQuestion].correctAnswer;
+            const answersElements = document.querySelectorAll('.answer');
+
+            answersElements.forEach((answerElement, buttonIdx) => {
+                answerElement.classList.remove('correct', 'incorrect');
+                if (correctAnswer === buttonIdx || Array.isArray(correctAnswer) && correctAnswer.includes(buttonIdx)) {
+                    answerElement.classList.add('correct');
+                } else if (buttonIdx === idx) {
+                    answerElement.classList.add('incorrect');
+                }
+            });
+
+            if (correctAnswer === idx || Array.isArray(correctAnswer) && correctAnswer.includes(idx)) {
+                correctAnswers++;
+            }
+
+            setTimeout(() => {
+                answered = false;
+                if (currentQuestion + 1 < questions.length) {
+                    populateQuestionAndAnswers(currentQuestion + 1);
+                } else {
+                    const quizElement = document.querySelector('.question');
+                    quizElement.innerHTML = `
+                        Has acertado ${correctAnswers} de ${questions.length} preguntas
+                        <button onclick="window.location.href = '/index.html'" class="return">Volver</button>
+                    `;
+                    document.querySelector('.answers').classList.add('none');
+                }
+            }, 1000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            populateQuestionAndAnswers(0);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="quiz">
+        <a class="header" href="./">
+            <img src="./logo.svg" alt="">
+            <h1>
+                Escuelas Taller Gijón Acompaña<br>
+                <span style="font-weight: 300">Pluriculturalidad Quiz</span>
+            </h1>
+        </a>
+        <div class="question">
+        </div>
+        <div class="answers">
+            <button class="answer" onclick="handleAnswer(0)"></button>
+            <button class="answer" onclick="handleAnswer(1)"></button>
+            <button class="answer" onclick="handleAnswer(2)"></button>
+            <button class="answer" onclick="handleAnswer(3)"></button>
+        </div>
+    </div>
+</body>
+
+</html>
