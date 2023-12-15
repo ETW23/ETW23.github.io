@@ -470,6 +470,34 @@
         document.addEventListener('DOMContentLoaded', () => {
             populateQuestionAndAnswers(0);
         });
+
+        function renderAnswers() {
+            document.body.innerHTML = "";
+            const element = document.createElement('div');
+            element.id = 'answers-for-print';
+
+            Object.entries(questionsByCountry).forEach(([country, questions]) => {
+                element.innerHTML += `
+                    <h1>${country}</h1>
+                    <ul>
+                        ${questions.map((question, questionIndex) => (`
+                                <li>
+                                    <h2>${question.question}</h2>
+                                    <ul>
+                                        ${question.answers.map((answer, answerIndex) => (`
+                                                <li>
+                                                    ${answerIndex === question.correctAnswer || Array.isArray(question.correctAnswer) && question.correctAnswer.includes(answerIndex) ? `<b>${answer}</b>` : answer}
+                                                </li>
+                                        `)).join('')}
+                                    </ul>
+                                </li>
+                        `)).join('')}
+                    </ul>
+                `;
+            });
+
+            document.body.appendChild(element);
+        }
     </script>
 </head>
 
@@ -491,30 +519,6 @@
             <button class="answer" onclick="handleAnswer(3)"></button>
         </div>
     </div>
-    <!-- <div id="render-for-elena">
-        <script>
-            const element = document.querySelector('#render-for-elena');
-            Object.entries(questionsByCountry).forEach(([country, questions]) => {
-                element.innerHTML += `
-                    <h1>${country}</h1>
-                    <ul>
-                        ${questions.map((question, index) => (`
-                                <li>
-                                    <h2>${question.question}</h2>
-                                    <ul>
-                                        ${question.answers.map((answer, answerIndex) => (`
-                                                <li>
-                                                    ${answerIndex === question.correctAnswer ? `<strong>${answer}</strong>` : answer}
-                                                </li>
-                                        `)).join('')}
-                                    </ul>
-                                </li>
-                        `)).join('')}
-                    </ul >
-                `;
-            });
-        </script>
-    </div> -->
 </body>
 
 </html>
