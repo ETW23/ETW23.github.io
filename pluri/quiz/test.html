@@ -153,16 +153,16 @@
                 }
             ],
             argentina: [
-                {
-                    question: "¿Cuando se independizo Argentina?",
-                    answers: [
-                        "1810",
-                        "1816",
-                        "1820",
-                        "1825"
-                    ],
-                    correctAnswer: 1
-                },
+                // {
+                //     question: "¿Cuando se independizo Argentina?",
+                //     answers: [
+                //         "1810",
+                //         "1816",
+                //         "1820",
+                //         "1825"
+                //     ],
+                //     correctAnswer: 1
+                // },
                 {
                     question: "¿Qué es la moneda oficial de Argentina?",
                     answers: [
@@ -256,6 +256,26 @@
                     correctAnswer: 3
                 },
                 {
+                    question: "¿Cuando Nicaragua independizó de España?",
+                    answers: [
+                        "1810",
+                        "1821",
+                        "1825",
+                        "1830",
+                    ],
+                    correctAnswer: 1
+                },
+                {
+                    question: "¿Qué es la idioma oficial de Nicaragua?",
+                    answers: [
+                        "Español",
+                        "Inglés",
+                        "Francés",
+                        "Portugués",
+                    ],
+                    correctAnswer: 0
+                },
+                {
                     question: "¿Qué es la mayor exportación de agricultura de Nicaragua?",
                     answers: [
                         "Ajonjolí (sesamo)",
@@ -327,6 +347,28 @@
                     ],
                     correctAnswer: 2
                 }
+            ],
+            etnia_gitana: [
+                {
+                    question: "¿Según los estudios, ¿de dónde proviene la etnia gitana?",
+                    answers: [
+                        "India",
+                        "Egipto",
+                        "Rumania",
+                        "España"
+                    ],
+                    correctAnswer: 0
+                },
+                {
+                    question: "¿Qué estilo musical es de la cultura gitana?",
+                    answers: [
+                        "Rumba",
+                        "Bolero",
+                        "Tango",
+                        "Flamenco",
+                    ],
+                    correctAnswer: 3
+                },
             ]
         }
 
@@ -429,6 +471,30 @@
             <button class="answer" onclick="handleAnswer(3)"></button>
         </div>
     </div>
+    <!-- <div id="render-for-elena">
+        <script>
+            const element = document.querySelector('#render-for-elena');
+            Object.entries(questionsByCountry).forEach(([country, questions]) => {
+                element.innerHTML += `
+                    <h1>${country}</h1>
+                    <ul>
+                        ${questions.map((question, index) => (`
+                                <li>
+                                    <h2>${question.question}</h2>
+                                    <ul>
+                                        ${question.answers.map((answer, answerIndex) => (`
+                                                <li>
+                                                    ${answerIndex === question.correctAnswer ? `<strong>${answer}</strong>` : answer}
+                                                </li>
+                                        `)).join('')}
+                                    </ul>
+                                </li>
+                        `)).join('')}
+                    </ul >
+                `;
+            });
+        </script>
+    </div> -->
 </body>
 
 </html>

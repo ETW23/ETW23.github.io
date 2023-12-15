@@ -144,6 +144,10 @@ img {
     display: block;
 }
 
+body:has(.flags) {
+    overflow: hidden;
+}
+
 .flags {
     position: absolute;
     top: 50%;
@@ -173,6 +177,10 @@ img {
     transform: translate(calc(var(--sin) * var(--radius)), calc(var(--cos) * var(--radius))) translate(-50%, -50%) scale(var(--scale));
 }
 
+.work-in-progress {
+    /* opacity: 0.25; */
+    border: .25rem solid red;
+}
 
 .flag img {
     width: 100%;
