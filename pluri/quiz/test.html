@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const questionsByCountry = {
+            ucrania: [
+                {
+                    question: "¿Qué pais no limita con Ucrania?",
+                    answers: [
+                        "Polonia",
+                        "Hungría",
+                        "Rumania",
+                        "Serbia"
+                    ],
+                    correctAnswer: 3
+                },
+                {
+                    question: "¿Durante qué evento fue completamente destruida la ciudad de Kiev?",
+                    answers: [
+                        "La Segunda Guerra Mundial",
+                        "La Guerra Civil Rusa",
+                        "La Invasion Mongola",
+                        "La Guerra de los Seis Días"
+                    ],
+                    correctAnswer: 2
+                },
+                {
+                    question: "¿Que no está declarado Patrimonio de la Humanidad por la UNESCO?",
+                    answers: [
+                        "Centro historico de Odesa",
+                        "La Iglesia de San Andrés",
+                        "Monasterio de las Cuevas de Kiev",
+                        "Biblioteca Nacional de Ucrania V. I. Vernadsky"
+                    ],
+                    correctAnswer: 3
+                },
+                {
+                    question: "¿Cuando se independizo Ucrania de la URSS?",
+                    answers: [
+                        "1990",
+                        "1991",
+                        "1992",
+                        "1993",
+                    ],
+                    correctAnswer: 1
+                },
+                {
+                    question: "¿Qué ciudad fue la primera capital de Ucrania Sovietica?",
+                    answers: [
+                        "Kharkiv (Járkov)",
+                        "Kyiv (Kiev)",
+                        "Odesa (Odessa)",
+                        "Lviv"
+                    ],
+                    correctAnswer: 0
+                },
+                {
+                    question: "¿Entre qué paises se dividia el territorio de Ucrania?",
+                    answers: [
+                        "Reino de Polonia y Principado de Moscú",
+                        "Mancomunidad de Polonia-Lituania y Zarato ruso",
+                        "Imperio austrohúngaro y Imperio ruso",
+                        "Todo lo anterior",
+                    ],
+                    correctAnswer: 3
+                },
+                {
+                    question: "¿Qué sistema político se utiliza en Ucrania?",
+                    answers: [
+                        "República parlementaria",
+                        "República semipresidencialista",
+                        "República presidencialista",
+                        "Monarquía",
+                    ],
+                    correctAnswer: 1
+                },
+                {
+                    question: "¿Qué es la moneda oficial de Ucrania?",
+                    answers: [
+                        "Dólar ucraniano",
+                        "Dólar estadounidense",
+                        "Hryvnia",
+                        "Euro",
+                    ],
+                    correctAnswer: 2
+                },
+                {
+                    question: "¿Qué religión predomina en Ucrania?",
+                    answers: [
+                        "Judaísmo",
+                        "Catolicismo",
+                        "Cristianismo ortodoxo",
+                        "Islam",
+                    ],
+                    correctAnswer: 2
+                }
+            ],
+            sahrawi: [
+                {
+                    question: "¿Qué significa la palabra \"sahára\"?",
+                    answers: [
+                        "Desierto",
+                        "Mar",
+                        "Montaña",
+                        "Río"
+                    ],
+                    correctAnswer: 0
+                },
+                {
+                    question: "¿Qué país limita con el Sáhara Occidental al sur y al este?",
+                    answers: [
+                        "Maruecos",
+                        "Mauritania",
+                        "Argelia",
+                        "Níger"
+                    ],
+                    correctAnswer: 1
+                },
+                {
+                    question: "¿Qué es la capital de la República Árabe Saharaui Democrática?",
+                    answers: [
+                        "Dajla",
+                        "Smara",
+                        "Bir Lehlu",
+                        "El Aaiún",
+                    ],
+                    correctAnswer: 3
+                },
+                {
+                    question: "¿Cuando España se retiró del Sáhara Occidental?",
+                    answers: [
+                        "1967",
+                        "1973",
+                        "1975",
+                        "1979",
+                    ],
+                    correctAnswer: 2
+                },
+                {
+                    question: "¿Qué es la moneda oficial de la República Árabe Saharaui Democrática?",
+                    answers: [
+                        "Uguiya saharaui",
+                        "Dinar saharaui",
+                        "Dirham saharaui",
+                        "Peseta saharaui",
+                    ],
+                    correctAnswer: 3
+                }
+            ],
+            argentina: [
+                {
+                    question: "¿Cuando se independizo Argentina?",
+                    answers: [
+                        "1810",
+                        "1816",
+                        "1820",
+                        "1825"
+                    ],
+                    correctAnswer: 1
+                },
+                {
+                    question: "¿Qué es la moneda oficial de Argentina?",
+                    answers: [
+                        "Peso argentino",
+                        "Dolar argentino",
+                        "Ducat argentino",
+                        "Dinar argentino"
+                    ],
+                    correctAnswer: 0
+                },
+                {
+                    question: "¿Cuándo estuvo Argentina gobernada por la dictadura militar?",
+                    answers: [
+                        "1970-1977",
+                        "1973-1980",
+                        "1976-1983",
+                        "1980-1987",
+                    ],
+                    correctAnswer: 2
+                },
+                {
+                    question: "¿Cuando Argentina y Gran Bretaña se enfrentaron en la Guerra de las Malvinas (Falkland)?",
+                    answers: [
+                        "1982",
+                        "1983",
+                        "1984",
+                        "1985",
+                    ],
+                    correctAnswer: 0
+                },
+                {
+                    question: "¿Qué ciudad de Argentina comparte el título de «Capital mundial del vino»?",
+                    answers: [
+                        "Buenos Aires",
+                        "Córdoba",
+                        "Rosario",
+                        "Mendoza",
+                    ],
+                    correctAnswer: 3
+                },
+                {
+                    question: "¿Qué es la provincia más fria de Argentina?",
+                    answers: [
+                        "Corrientes",
+                        "Tierra del Fuego",
+                        "Entre Ríos",
+                        "Gran Chaco",
+                    ],
+                    correctAnswer: 1
+                },
+                {
+                    question: "¿Qué es el clima en Buenos Aires?",
+                    answers: [
+                        "Tropical",
+                        "Subtropical",
+                        "Templado",
+                        "Subpolar",
+                    ],
+                    correctAnswer: 2
+                },
+            ],
+            nicaragua: [
+                {
+                    question: "¿Qué pais limita con Nicaragua al norte?",
+                    answers: [
+                        "Honduras",
+                        "Costa Rica",
+                        "Panamá",
+                        "El Salvador"
+                    ],
+                    correctAnswer: 0
+                },
+                {
+                    question: "¿Qué es la capital de Nicaragua?",
+                    answers: [
+                        "León",
+                        "Granada",
+                        "Managua",
+                        "Masaya",
+                    ],
+                    correctAnswer: 2
+                },
+                {
+                    question: "¿Qué es la moneda oficial de Nicaragua?",
+                    answers: [
+                        "Dólar nicaragüense",
+                        "Peso nicaragüense",
+                        "Rosario",
+                        "Córdoba",
+                    ],
+                    correctAnswer: 3
+                },
+                {
+                    question: "¿Qué es la mayor exportación de agricultura de Nicaragua?",
+                    answers: [
+                        "Ajonjolí (sesamo)",
+                        "Maní (cacahuete)",
+                        "Caña de azúcar",
+                        "Café",
+                    ],
+                    correctAnswer: 3
+                },
+                {
+                    question: "¿Como se llama la fiesta religiosa nicaragüense en honor a la Inmaculada Concepción de María?",
+                    answers: [
+                        "La Gritería",
+                        "La Conchita",
+                        "La Candelaria",
+                        "Las Posadas",
+                    ],
+                    correctAnswer: 0
+                }
+            ],
+            romania: [
+                {
+                    question: "¿Qué pais limita con Rumania al sur?",
+                    answers: [
+                        "Ucrania",
+                        "Moldavia",
+                        "Bulgaria",
+                        "Hungria"
+                    ],
+                    correctAnswer: 2
+                },
+                {
+                    question: "¿Qué es la capital de Romania?",
+                    answers: [
+                        "Bucarest",
+                        "Cluj-Napoca",
+                        "Timișoara",
+                        "Iași",
+                    ],
+                    correctAnswer: 0
+                },
+                {
+                    question: "¿Qué es la moneda oficial de Romania?",
+                    answers: [
+                        "Leu rumano",
+                        "Dólar rumano",
+                        "Peseta rumana",
+                        "Euro",
+                    ],
+                    correctAnswer: 0
+                },
+                {
+                    question: "¿Cuando Romania entró en la Unión Europea?",
+                    answers: [
+                        "2004",
+                        "2005",
+                        "2006",
+                        "2007",
+                    ],
+                    correctAnswer: 3
+                },
+                {
+                    question: "¿Quién gobernó la Romania comunista desde 1965?",
+                    answers: [
+                        "Ion Iliescu",
+                        "Traian Băsescu",
+                        "Nicolae Ceaușescu",
+                        "Klaus Iohannis",
+                    ],
+                    correctAnswer: 2
+                }
+            ]
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const country = urlParams.get('country');
+
+        if (!country || !questionsByCountry[country]) {
+            window.location.href = './';
+        }
+
+        const questions = questionsByCountry[country];
+
+        let currentQuestion = 0, correctAnswers = 0;
+        let hasAnswered = false;
+
+        function isAnswerCorrect(questionIndex, answerIndex) {
+            const correctAnswer = questions[questionIndex].correctAnswer;
+            return correctAnswer === answerIndex || Array.isArray(correctAnswer) && correctAnswer.includes(answerIndex);
+        }
+
+        function populateQuestionAndAnswers(idx) {
+            currentQuestion = idx;
+
+            const questionElement = document.querySelector('.question');
+            const answersElements = document.querySelectorAll('.answer');
+
+            if (idx >= 0 && idx < questions.length) {
+                const question = questions[idx].question;
+                const answers = questions[idx].answers;
+
+                questionElement.textContent = question;
+
+                answersElements.forEach((answerElement, index) => {
+                    answerElement.textContent = answers[index];
+                    answerElement.classList.remove('correct', 'incorrect');
+                });
+            }
+        }
+
+        function handleAnswer(selectedIdx) {
+            if (hasAnswered || currentQuestion >= questions.length) {
+                return;
+            }
+
+            hasAnswered = true;
+
+            const correctAnswer = questions[currentQuestion].correctAnswer;
+            const answersElements = document.querySelectorAll('.answer');
+
+            if (isAnswerCorrect(currentQuestion, selectedIdx)) {
+                correctAnswers++;
+            }
+
+            answersElements.forEach((button, buttonIdx) => {
+                button.classList.remove('correct', 'incorrect');
+                if (isAnswerCorrect(currentQuestion, buttonIdx)) {
+                    button.classList.add('correct');
+                } else if (buttonIdx === selectedIdx) {
+                    button.classList.add('incorrect');
+                }
+            });
+
+            setTimeout(() => {
+                hasAnswered = false;
+
+                if (currentQuestion + 1 < questions.length) {
+                    populateQuestionAndAnswers(currentQuestion + 1);
+                    return;
+                }
+                const quizElement = document.querySelector('.question');
+                quizElement.innerHTML = `
+                        Has acertado ${correctAnswers} de ${questions.length} preguntas
+                        <button onclick="window.location.href = './'" class="return">Volver</button>
+                    `;
+                document.querySelector('.answers').classList.add('none');
+            }, 1000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            populateQuestionAndAnswers(0);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="quiz">
+        <a class="header" href="./">
+            <img src="./logo.svg" alt="">
+            <h1>
+                Escuelas Taller Gijón Acompaña<br>
+                <span style="font-weight: 300">Pluriculturalidad Quiz</span>
+            </h1>
+        </a>
+        <div class="question">
+        </div>
+        <div class="answers">
+            <button class="answer" onclick="handleAnswer(0)"></button>
+            <button class="answer" onclick="handleAnswer(1)"></button>
+            <button class="answer" onclick="handleAnswer(2)"></button>
+            <button class="answer" onclick="handleAnswer(3)"></button>
+        </div>
+    </div>
+</body>
+
+</html>
