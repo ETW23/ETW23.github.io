@@ -38,7 +38,7 @@ figuras.forEach((figura) => {
 // funciones paises
 //argentina
 document.querySelector("#arg").ondblclick = function () {
-  window.location.href = "SANTI/index.html";
+  window.location.href = "argentina/index.html";
 };
 document.querySelector("#arg").onclick = function (e) {
   e.preventDefault();
@@ -46,7 +46,7 @@ document.querySelector("#arg").onclick = function (e) {
 };
 //nicaragua
 document.querySelector("#nic").ondblclick = function () {
-  window.location.href = "https://www.google.com";
+  window.location.href = "nicaragua/index.html";
 };
 document.querySelector("#nic").onclick = function (e) {
   e.preventDefault();
@@ -54,7 +54,7 @@ document.querySelector("#nic").onclick = function (e) {
 };
 //rumania
 document.querySelector("#rom").ondblclick = function () {
-  window.location.href = "Gabriel/index.html";
+  window.location.href = "rumania/index.html";
 };
 document.querySelector("#rom").onclick = function (e) {
   e.preventDefault();
@@ -62,7 +62,7 @@ document.querySelector("#rom").onclick = function (e) {
 };
 //ucrania
 document.querySelector("#ucr").ondblclick = function () {
-  window.location.href = "https://www.google.com";
+  window.location.href = "ucrania/index.html";
 };
 document.querySelector("#ucr").onclick = function (e) {
   e.preventDefault();
@@ -70,7 +70,7 @@ document.querySelector("#ucr").onclick = function (e) {
 };
 //etnia gitana
 document.querySelector("#git").ondblclick = function () {
-  window.location.href = "https://www.google.com";
+  window.location.href = "etnia_gitana/index.html";
 };
 document.querySelector("#git").onclick = function (e) {
   e.preventDefault();
@@ -80,7 +80,7 @@ document.querySelector("#git").onclick = function (e) {
 };
 //venezuela
 document.querySelector("#ven").ondblclick = function () {
-  window.location.href = "https://www.google.com";
+  window.location.href = "venezuela/index.html";
 };
 document.querySelector("#ven").onclick = function (e) {
   e.preventDefault();
@@ -88,7 +88,7 @@ document.querySelector("#ven").onclick = function (e) {
 };
 //afganistan
 document.querySelector("#afg").ondblclick = function () {
-  window.location.href = "https://www.google.com";
+  window.location.href = "afganistan/index.html";
 };
 document.querySelector("#afg").onclick = function (e) {
   e.preventDefault();
@@ -96,7 +96,7 @@ document.querySelector("#afg").onclick = function (e) {
 };
 //sahara
 document.querySelector("#sah").ondblclick = function () {
-  window.location.href = "https://www.google.com";
+  window.location.href = "sahara/index.html";
 };
 document.querySelector("#sah").onclick = function (e) {
   e.preventDefault();
@@ -104,7 +104,7 @@ document.querySelector("#sah").onclick = function (e) {
 };
 //congo
 document.querySelector("#con").ondblclick = function () {
-  window.location.href = "https://www.google.com";
+  window.location.href = "congo/index.html";
 };
 document.querySelector("#con").onclick = function (e) {
   e.preventDefault();
@@ -112,7 +112,7 @@ document.querySelector("#con").onclick = function (e) {
 };
 //marruecos
 document.querySelector("#mar").ondblclick = function () {
-  window.location.href = "rd_congo/index.html";
+  window.location.href = "marruecos/index.html";
 };
 document.querySelector("#mar").onclick = function (e) {
   e.preventDefault();
@@ -120,7 +120,7 @@ document.querySelector("#mar").onclick = function (e) {
 };
 //colombia
 document.querySelector("#col").ondblclick = function () {
-  window.location.href = "rd_congo/index.html";
+  window.location.href = "colombia/index.html";
 };
 document.querySelector("#col").onclick = function (e) {
   e.preventDefault();

@@ -1,0 +1,889 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body    {
+    min-width: 1903px;
+    max-width: 1903px;
+    margin: auto;
+    background-image: url(imagenes/fondoweb.jpg);
+    background-size: cover;
+}
+.cajaindex  {
+    background-color: white;
+}
+.situaciongeografica, .poblacionycapital, .historia, .politica, .sanidad, .educacion, .economia, .idioma, .religion, .experienciapersonal, .subpolidch, .hrpolimedio, footer, li, .idisecundario, .clear, .image-gallery, .portada  {
+    clear: both;
+}
+.cincuentadiv, .cincuentadiv2, .tresdivimg, .tresdivtext, .tresdivtext2, .politizq, .politdch, .president1, .textdch, .textizq, .tampolhist, .hispolimgs, .hispoltxts, .sanidtxt, .saniimg, .eduimgizq, .econoizq, .econodch, .economia3, .txtidiprinci, .imgidiprinci, .idirumh2, .religion-info, .imgporta, .personal1, .personal3      {
+    float: left;
+}
+.president2, .edutextdch, .econogif, .imgrelicrono, .personal2, .personal4 {
+    float: right;
+}
+.txtresalt {
+    color: #ff4500;  /* Color de resaltado naranja */
+    font-weight: bold;
+}
+.txtresalt2 {
+    font-weight:bolder;
+    color: #000000;
+    font-style: oblique;
+    font-size: 1.1em;
+    text-decoration:underline wavy rgb(28, 114, 167);
+}
+.txtresalt3 {
+    display: contents;
+    font-weight: bolder;
+    color: #000000;
+    font-style: oblique;
+    font-size: 1.1em;
+}
+.txtresalt4 {
+    font-weight:bolder;
+    color: #000000;
+    font-style: oblique;
+    font-size: 1em;
+    text-decoration:underline wavy rgb(28, 114, 167);
+}
+.txtresalt5 {
+    font-weight:bolder;
+    color: #000000;
+    font-style: oblique;
+}
+.txtresaltpobl  {
+    color:#0000FF;
+}
+.txtresaltcap  {
+    color: rgba(255, 0, 0, 0.849);
+}
+.idih2  {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 1em;
+}
+header {
+    display: block;
+    height: auto;
+    background-image: url(imagenes/header.jpg);
+    background-size: auto 100%;
+    position: relative;
+    text-align: center;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(red, yellow, blue);
+    opacity: 0.65;
+}
+header img {
+    border: 0.4em solid black;
+    box-sizing: border-box;
+    margin: 2em auto 2em auto;
+    zoom: 60%;
+    position: relative;
+}
+nav {
+    text-align: center;
+    background-color: #FF5252;
+    border: 0.2em solid rgba(0, 0, 0, 0.618);
+    color: #19338a;
+    font-weight: bolder;
+    font-size: 1.4em;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    display: inline-block;
+    padding: 0em 1em 0em 1em;
+    vertical-align: middle;
+}
+nav li:hover {
+    background-color: rgba(255, 255, 0, 0.75);
+    cursor: pointer;
+    padding-top: 1.32em;
+    padding-bottom: 1.31em;
+}
+.h1 {
+    text-align: center;
+    margin: 0.5em auto auto auto;
+    font-size: 3em;
+}
+.imggeog, .textimggeo {
+    display: block;
+    margin: 1em auto;
+}
+.textimggeo {
+    text-align: center;
+    font-size: 2.5em;
+    width: 100%;
+    clear: both;
+}
+#sitGeoImg, #sitGeoMap  {
+    width: 50%;
+    float: left;
+}
+.cincuentadiv, .cincuentadiv2 {
+    width: 50%;
+}
+.cincuentadiv2 {
+    margin-bottom: 2em;
+}
+.imgcapit{
+    border: 0.12em solid black;
+    display: block;
+    margin: 0em auto 1em auto;
+}
+.ulcentr    {
+    margin-left: 5em;
+}
+.region {
+    font-size: 80%;
+}
+.ciudad {
+    text-align: justify;
+    max-width: 50%;
+    margin: 0.5em auto 0.8em 4em;
+    list-style: none;
+}
+.situaciongeografica, .poblacionycapital, .educacion, .idioma, .politica, .sanidad, .religion  {
+    margin-top: 2em;
+}
+.situaciongeografica, .poblacionycapital, .educacion, .idioma, .h1, .historia, .politica, .sanidad, .economia, .religion, .experienciapersonal, .language-info, 
+.personal1:hover .ppersonal1, .personal1:hover::before,
+.personal2:hover .ppersonal2, .personal2:hover::before, 
+.personal3:hover .ppersonal3, .personal3:hover::before, 
+.personal4:hover .ppersonal4, .personal4:hover::before   {
+    display: none;
+}
+.historia {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+.politica   {
+    width: 90%;
+    margin: auto;
+}
+.sanidad    {
+    margin-bottom: 49em;
+}
+.economia   {
+    margin: 2em auto 27em auto;
+    width: 80%;
+}
+.religion {
+    animation: fadeIn 1s ease;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3em;
+}
+.experienciapersonal    {
+    width: 80%;
+    margin: 2em auto auto auto;
+}
+.active {
+    display: block;
+}
+.activeFlex {
+    display:flex;
+    flex-wrap: nowrap;
+}
+.tresdivtext, .tresdivtext2 {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+.tresdivimg {
+    flex: 1;
+    margin: 0 20px;
+}
+.tresdivimg img {
+    width: 100%;
+    border-radius: 10px;
+}
+.espacioli {
+    margin-bottom: 10px;
+}
+.espacioli:hover {
+    background-color: #ffeadb;  /* Fondo claro al pasar el ratón */
+    transition: background-color 0.3s ease;
+}
+.espacioli {
+    margin-bottom: 15px;
+}
+
+.espacioli:hover {
+    background-color: #ff9966;  /* Naranja claro al pasar el ratón */
+    transition: background-color 0.3s ease;
+}
+.politizq   {
+    width: 70%;
+    text-align: justify;
+    padding: 2em 1em 0 0;
+}
+.politdch   {
+    width: 30%;
+    zoom: 80%;
+    margin-bottom: 1em;
+}
+.subpolidch {
+    width: 100%;
+}
+.president1 {
+    width: 30%;
+}
+.imagen-redonda{
+    border-radius: 30%;
+}
+.hrpolimedio {
+    margin: 5em auto 1em auto;
+    width: 60%;
+}
+.textdch    {
+    width: 50%;
+    text-align: center;
+    padding: 3em 0 0 0;
+}
+.president2 {
+    width: 50%;
+}
+.textizq    {
+    width: 50%;
+    text-align: center;
+    padding: 3em 0 0 0;
+}
+.poliact    {
+    font-weight: bolder;
+    font-size: 2em;
+}
+.politext   {
+    padding: 1.5em 3em 0 0;
+}
+.polihisto  {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2em;
+}
+.tampolhist{
+    width: 50%;
+}
+.polihislist{
+    margin: 1em 0 0 0;
+}
+.hispolimgs {
+    width: 42%;
+    margin: 1em 0 1em 0;
+}
+.hispoltxts {
+    width: 50%;
+    height: 229px;
+    margin: 1em 0 1em 0;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+}
+.nostyle    {
+    list-style: none;
+}
+.sanidtxt   {
+    width: 40%;
+    text-align: justify;
+    font-size: 1.3em;
+}
+.saniimg    {
+    width: 30%;
+}
+.imgsaniizq{
+    margin: 0 0 0 13em;
+    text-align: center;
+}
+.imgsaniizq > img   {
+    border-radius: 20%;
+    border: solid 0.2em;
+    border-color: rgb(205, 205, 0) blue rgb(205, 205, 0) red;
+}
+.imgsanidch {
+    margin: 0 15em 0 0;
+    text-align: center;
+}
+.imgsanidch > img   {
+    border-radius: 20%;
+    border: solid 0.2em;
+    border-color: rgb(205, 205, 0) blue rgb(205, 205, 0) red;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+.image {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+.animate-text {
+    animation: fadeInUp 1s ease-out;
+    margin-top: 1em;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.education-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+}
+.sub-section {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.sub-section .subtitle {
+    color: #3498db;
+}
+.eduimgizq  {
+    width: 50%;
+}
+.edutextdch{
+    width: 40%;
+}
+.econoh2{
+    margin: auto 0 0.8em 0;
+    text-align: center;
+}
+.lirol  {
+    list-style: none;
+    margin-left: 2em;
+    padding-top: 0.2em;
+    font-style: oblique;
+}
+.econoizq   {
+    width: 40%;
+    padding-right: 5em;
+    text-align: justify;
+}
+.econodch   {
+    width: 50%;
+}
+.econoul    {
+    margin-left: 3em;
+}
+.econoul > li   {
+    margin-left: 3em;
+}
+.econogif   {
+    zoom: 60%;
+    margin: 3em 8em auto auto;
+}
+.economia3   {
+    zoom: 60%;
+    margin: 3em auto auto 8em;
+}
+.economia3  > img, .econogif  > img  {
+    border-radius: 10%;
+    border: solid 0.35em black;
+}
+@keyframes giro-infinito {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+#img-giratoria {
+    animation: giro-infinito 20s linear infinite;
+    margin: auto auto auto 2em;
+}
+.container2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.language {
+    text-align: center;
+    cursor: pointer;
+}
+.language img {
+    width: 120px;
+    height: 80px;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+.language-name {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #000;
+}
+.language-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 10px auto auto auto;
+}
+.language-info p {
+    color: #000;
+    line-height: 1.5;
+}
+#aleman-info {
+    border: 2px solid black;
+    color: black;
+}
+#hungaro-info {
+    border: 2px solid #456D4E;
+    color: #456D4E;
+}
+#turco-info {
+    border: 2px solid #DD0612;
+    color: #DD0612;
+}
+#ruso-info {
+    border: 2px solid blue;
+    color: blue;
+}
+#bulgaro-info {
+    border: 2px solid green;
+    color: green;
+}
+#romani-info {
+    border: 2px solid rgb(195, 1, 1);
+    color: rgb(195, 1, 1);
+}
+.idiprincipal {
+    width: 80%;
+    margin: auto;
+}
+.idisecundario    {
+    width: 60%;
+    margin: auto;
+    height: 18em;
+}
+.txtidiprinci {
+    width: 20%;
+    text-align: justify;
+    margin: 2em 2em auto 15em;
+}
+.imgidiprinci {
+    width: 50%;
+    text-align: justify;
+    padding-bottom: 2em;
+}
+.idirumh2 {
+    text-align: center;
+    font-size: 2em;
+    width: 35%;
+    padding: 0 8em 0 6.5em;
+}
+.frases-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.titulo-frases {
+    color: #333;
+    text-align: center;
+}
+
+.frases-list {
+    list-style: none;
+    padding: 0;
+}
+
+.frase-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.rumano {
+    font-style: italic;
+    color: #0066cc; /* Color azul para las frases en rumano */
+}
+.intro, .religion-info, .imgrelicrono {
+    flex: 1;
+}
+.intro {
+    background-color: #3399ff;
+    text-align: center;
+    border: solid 0.3em #000;
+    border-radius: 1em;
+    padding: 2em;
+    margin: 1em;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.religion-info {
+    background-color: #ff6666; /* Rojo claro */
+    padding: 2em;
+    margin: 2em 1em;
+    border-radius: 1em;
+    border: 3px solid #ffea00; /* Amarillo brillante */
+}
+.religion-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333; /* Texto más oscuro para mayor contraste */
+}
+.religion-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #444; /* Texto más oscuro para mayor contraste */
+}
+.celebrations {
+    background-color: #ffe4b5; /* Color Melocotón claro */
+    padding: 1.5em;
+    margin: 2em auto;
+    border-radius: 1em;
+    border: 3px solid #ff4500; /* Naranja oscuro */
+}
+
+.celebrations h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333; /* Texto más oscuro para mayor contraste */
+}
+.celebrations ul {
+    list-style-type: none;
+    padding: 0;
+}
+.celebrations li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #444; /* Texto más oscuro para mayor contraste */
+}
+.image-gallery {
+    display: flex;
+    gap: 10px;
+}
+.image-item {
+    background-color: rgba(0, 0, 255, 0.817);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 1em;
+}
+.image-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+.image-item p {
+    font-size: 1.2em;
+    margin: 0;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.imgrelicrono {
+    width: 35em;
+    margin: auto;
+}
+.imgrelicrono > img {
+    border: 5px ridge #cdcd00; /* Amarillo más oscuro */
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 2em;
+}
+.portada {
+    position: relative;
+    display: block;
+}
+.capa-superficial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+}
+.capa-superficial2  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    zoom: 50%;
+}
+.linone:hover {
+    cursor: pointer;
+    padding: 1em;
+    background-color: #FF5252;
+    padding: 0em 1em 0em 1em;
+}
+.imgporta   {
+    width: 12.5%;
+    height: 237.88px;
+    border: groove 2.5px black;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+/*footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-column {
+    text-align: center;
+}
+.footer-left {
+    flex: 1;
+}
+.footer-center {
+    flex: 2;
+}
+.footer-right {
+    flex: 1;
+}
+.footer-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.aaa    {
+    font-weight: normal;
+    font-size: 1em;
+    color: yellowgreen;
+}
+.footer-text {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.html-icons {
+    display: flex;
+    justify-content: center;
+}
+.html-icons > img {
+    margin-right: 1em;
+    border-radius: 1em;
+}
+/* enlaces footer */
+.enlacepluriculturali, .enlacepluriculturali:visited {
+    color: yellow;
+}
+.enlacepluriculturali:hover, .enlacepluriculturali:active {
+    color: red;
+}
+.personal1  {
+    position: relative;
+    border: solid 0.3em black;
+    border-radius: 100% 1em 1em 1em;
+    width: 35%;
+    height: 30em;
+    margin: auto 0 1em 13em;
+    background-image: url(imagenes/experiencia/personal1.jpg);
+    background-size: 100% 100%;
+}
+.personal1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100% 0.7em 0.7em 0.7em;
+    background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+.personal2  {
+    position: relative;
+    border: solid 0.3em black;
+    border-radius: 1em 100% 1em 1em;
+    width: 35%;
+    height: 30em;
+    margin: auto 13em 1em 0;
+    background-image: url(imagenes/experiencia/personal2.jpg);
+    background-size: 75% 90%;
+}
+.personal2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7em 100% 0.7em 0.7em;
+    background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+.personal3  {
+    position: relative;
+    border: solid 0.3em black;
+    border-radius: 1em 1em 1em 100%;
+    width: 35%;
+    height: 30em;
+    margin: 1em 0 3em 13em;
+    background-image: url(imagenes/experiencia/personal3.jpg);
+    background-size: 100% 100%;
+}
+.personal3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7em 0.7em 0.7em 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+.personal4  {
+    position: relative;
+    border: solid 0.3em black;
+    border-radius: 1em 1em 100% 1em;
+    width: 35%;
+    height: 30em;
+    margin: 1em 13em 3em 0;
+    background-image: url(imagenes/experiencia/personal4.jpg);
+    background-size: 90% 100%;
+}
+.personal4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7em 0.7em 100% 0.7em;
+    background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+    display: block;
+}
+.flechapng  {
+    position: absolute;
+    margin-left: 21em;
+    margin-top: 45em;
+    top: 0;
+}
+.experienciapersonal > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+/* Media @media */
+@media (max-width: 1746px) and (min-width: 1280px) {
+    nav {
+      font-size: 1.2vw; /* Ejemplo de ajuste con unidades vw */
+      padding: 0.5em;
+    }
+  
+    nav ul {
+      margin: 0;
+      padding: 0;
+    }
+  
+    nav li {
+      padding: 0.2em 0.5em;
+    }
+  
+    .nav-logo {
+      max-width: 80px;
+    }
+}
+.ppersonal1 {
+    margin: 7em auto auto 6em;
+    font-weight: bolder;
+    font-size: 2em;
+    background-color: wheat;
+    border: solid 0.15em black;
+    border-radius: 1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    z-index: 1;
+}
+.ppersonal2 {
+    margin: 6.5em 4em auto 2em;
+    font-weight: bolder;
+    font-size: 2em;
+    background-color: wheat;
+    border: solid 0.15em black;
+    border-radius: 1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    z-index: 1;
+}
+.ppersonal3 {
+    margin: 5em auto auto 6em;
+    font-weight: bolder;
+    font-size: 2em;
+    background-color: wheat;
+    border: solid 0.15em black;
+    border-radius: 1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    z-index: 1;
+}
+.ppersonal4 {
+    margin: 5em 4em auto auto;
+    font-weight: bolder;
+    font-size: 2em;
+    background-color: wheat;
+    border: solid 0.15em black;
+    border-radius: 1em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    z-index: 1;
+}
