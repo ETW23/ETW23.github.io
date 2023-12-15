@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exposición sobre Venezuela</title>
+  <style>
+      @font-face {
+            font-family: 'Lilita';
+            src: url(../../fonts/Lilita/LilitaOne-Regular.ttf);
+
+        }
+        @font-face {
+            font-family:'Lumanosimo' ;
+            src: url(../../fonts/Lumanosimo/);
+        }
+        @font-face {
+            font-family:'Bangers';
+            src: url(../../fonts/Bangers/Bangers-Regular.ttf);
+        }
+        @font-face {
+            font-family:'CarterOne' ;
+            src: url(../../fonts/Carter_One/CarterOne-Regular.ttf);
+        }
+        @font-face {
+            font-family: 'Chela_One' ;
+            src: url(../../fonts/Chela_One/);
+        }
+        @font-face {
+            font-family:'Chewy' ;
+            src: url(../../fonts/Chewy/Chewy-Regular.ttf);
+        }
+        @font-face {
+            font-family:'Courgette' ;
+            src: url(../../fonts/Courgette/Courgette-Regular.ttf);
+        }
+        @font-face {
+            font-family:'Luckiest' ;
+            src: url(../../fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf);
+        }
+        @font-face {
+            font-family: 'Monoton';
+            src: url(../../fonts/Monoton/Monoton-Regular.ttf);
+        }
+        @font-face {
+            font-family:'Pacifico';
+            src: url(../../fonts/Pacifico/Pacifico-Regular.ttf);
+        }
+        @font-face {
+            font-family: 'Permanent';
+            src: url(../../fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
+        }
+        @font-face {
+            font-family:'Rubik' ;
+            src: url(../../fonts/Rubik_Dirt/RubikDirt-Regular.ttf);
+        }
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Courgette', Arial, Helvetica, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    /* Flexbox layout for responsive design */
+
+    .container img {
+      max-width: 100%;
+      height: auto;
+    }
+    .container h1, .container h2 {
+      width: 100%;
+      text-align: center;
+      font-family: 'Pacifico', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2c3e50;
+      padding: 20px 0;
+    }
+    .container p {
+      width: 100%;
+      padding: 0 20px 20px;
+    }
+    /* Responsive design for smaller screens */
+    @media (min-width: 768px) {
+      .container h1, .container h2 {
+        width: 50%;
+      }
+      .container p {
+        width: 50%;
+      }
+    }
+
+
+    .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-top: 20px;
+}
+
+
+
+ /*...your style code remains the same here...*/
+ .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .section img {
+    width: 45%;
+    max-width: 500px;
+    height: auto;
+    margin-right: 20px;
+  }
+  .section div {
+    width: 45%;
+  }
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+    }
+    .section img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    .section div {
+      width: 100%;
+    }
+  }
+
+    #title{
+        letter-spacing: 1rem;
+        margin:2rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .divtexto{
+        padding-left: 10rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 10px;
+      margin: 20px 0;
+    }
+    .gallery img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      transition: transform 1s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+
+  <h1 id="title">
+     Explorando Venezuela
+  </h1>
+  <div class="container">
+
+    <div class="gallery">
+      <img src="bandera-venezuela-ST.jpg" alt="Bandera de Venezuela"  id="banderica" width="40%" height="auto">
+    </div>
+  
+    
+    
+ <p>
+    Venezuela es un país con una importante herencia inmigrante,una gran diversidad de personas, culturas, música, comida y deportes, con una amplia variedad de climas, paisajes y terrenos imaginables. Sus veintitrés estados y un Distrito Capital cubren una vasta sección de América del Sur, con el estado Zulia en el noroeste y el estado Nueva Esparta extendiendo la presencia de la nación en el Mar Caribe. Desde los horizontes de Caracas y Maracaibo hasta la majestuosidad del Salto Ángel, ciudadanos de todo el mundo han estado acudiendo a Venezuela durante muchas generaciones para perseguir sus sueños. La cultura popular está en todas partes, los deportes y las noticias dominan muchas conversaciones, y la cultura y las tradiciones venezolanas varían mucho según la región, la etnia y la religión.
+ </p>
+  
+ <div class="section">
+  <div class="gallery">
+<img src="Tradiciones-Venezolanas.jpg" alt="Imagen cultura venezolana">
+</div>
+<div class="divtexto">
+
+
+ <h2>Cultura de Venezuela</h2> 
+<p>
+   La cultura venezolana es una mezcla de influencias indígenas, europeas y africanas. Esta diversidad se refleja en la música, la comida, la danza y la literatura del país. La música es una parte integral de la vida venezolana y es muy variada, desde la música folklórica tradicional hasta la música moderna. Los festivales coloridos son una parte importante de la cultura de Venezuela, como el Carnaval de Caracas, que es uno de los más grandes y famosos de América Latina. La comida venezolana es muy variada y deliciosa, con platos como la arepa, el pabellón criollo y el asado negro. Además, la cultura venezolana es muy rica en arte y literatura, con escritores y artistas notables como Arturo Uslar Pietri, Teresa Carreño y Armando Reverón.   
+</p>
+  
+ </div>
+  
+</div>
+ <div class="section">
+  <div class="gallery">
+      <img src="bolivarsoberano.png" alt="Imagen economía de Venezuela">
+      </div>
+      <div class="divtexto">
+
+      
+  <h2>Economía de Venezuela</h2> 
+  <p>
+     Venezuela es conocida por ser uno de los principales productores de petróleo del mundo, con una gran cantidad de reservas de petróleo. Además del petróleo, el país también exporta otros productos agrícolas como café, cacao, plátanos, azúcar y otros. La economía de Venezuela ha sido históricamente dependiente del petróleo y ha experimentado altibajos debido a la volatilidad del mercado petrolero. En los últimos años, la economía del país ha sufrido una grave crisis debido a la mala gestión gubernamental y la corrupción, lo que ha llevado a una inflación galopante y a una escasez de productos básicos. 
+  </p>
+</div>
+
+
+</div>
+
+ <div class="section">
+  <div class="gallery">
+    <img src="Rosario-James-Coleman-Unsplash_0210.png" alt="Imagen religión en Venezuela">
+    </div>
+    <div class="divtexto">
+
+    
+  <h2>Religión en Venezuela</h2> 
+  <p>
+     La religión mayoritaria en Venezuela es el cristianismo, con la Iglesia Católica Romana como la más practicada. También hay presencia de otras religiones como el protestantismo y el espiritismo. La religión ha desempeñado un papel importante en la historia y la cultura de Venezuela, y muchos santuarios y lugares sagrados son visitados por peregrinos de todo el país. La Semana Santa es una celebración importante en Venezuela, con procesiones y ceremonias religiosas en todo el país. 
+  </p>
+ 
+ 
+  
+ </div>
+</div>
+  <div class="section">
+    <div class="gallery">
+      <img src="Coat_of_arms_of_Venezuela_(1954-2006).svg.png" alt="Imagen política en Venezuela">
+      </div>
+        <div class="divtexto">
+
+       
+  <h2>Política en Venezuela</h2> 
+  <p> Venezuela es una república presidencialista, con un presidente como jefe de estado y jefe de gobierno. El país ha experimentado cambios políticos significativos en los últimos años, con la elección del presidente Hugo Chávez en 1998 y la posterior elección de Nicolás Maduro en 2013. La política en Venezuela ha sido históricamente polarizada y ha llevado a una gran cantidad de conflictos y tensiones. En los últimos años, la situación política en Venezuela ha sido muy tensa, con la oposición denunciando la falta de democracia y la represión de la libertad de expresión. 
+
+  </p>
+
+
+ </div> 
+</div>
+ <div class="section">
+  <div class="gallery">
+    <img src="petroleo.jpg" alt="Imagen principales productos y exportaciones">
+    </div>
+    <div class="divtexto">
+
+   
+  <h2>Principales productos y exportaciones</h2> 
+  <p>
+      Además del petróleo, Venezuela también es reconocida por su producción y exportación de café, cacao, plátanos, azúcar y otros productos agrícolas. Estos productos son importantes para la economía del país y para la alimentación de su población. La producción de café en Venezuela es muy valorada en todo el mundo debido a su alta calidad y sabor único. El cacao venezolano también es muy apreciado por su sabor y se utiliza en la producción de algunos de los mejores chocolates del mundo. 
+  </p>
+
+
+  
+ </div> 
+</div>
+ <div class="section">
+  <div class="gallery">
+     <img src="Frio_Vzla.jpg" alt="Imagen Caracas">  
+     </div>
+     <div class="divtexto">
+
+    
+    <h2>Principales ciudades - Caracas</h2> 
+  <p>
+     Caracas es la capital de Venezuela y es una ciudad vibrante y cosmopolita. Es el centro político y económico del país, con una arquitectura impresionante y una animada vida nocturna. La ciudad cuenta con numerosos museos, parques y monumentos históricos, como el Panteón Nacional y la Plaza Bolívar. Caracas también es conocida por su gastronomía y sus mercados de comida, donde se pueden encontrar platos tradicionales y productos locales. 
+  </p>
+
+  </div>
+ </div>
+ <div class="section">
+  <div class="gallery">
+    <img src="constitucion-y-cinismo-politico.jpg" alt="Imagen historia de la constitución"> 
+    </div>
+    <div class="divtexto">
+
+    
+    <h2>Historia de la Constitución</h2> 
+  <p>
+      La historia constitucional de Venezuela es rica y compleja. La primera constitución del país se promulgó en 1811, siendo una de las primeras constituciones escritas en América Latina. Desde entonces, Venezuela ha tenido varias constituciones, cada una reflejando los cambios políticos y sociales del país. La actual Constitución de Venezuela se promulgó en 1999, durante el mandato del presidente Hugo Chávez. La Constitución establece un sistema político democrático y participativo, y ha sido objeto de controversia debido a las reformas políticas y las tensiones políticas en el país.
+  </p>
+
+  
+</div>
+</div>
+ 
+</div>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+  </div>
