@@ -158,8 +158,8 @@ body:has(.flags) {
 
 .flag {
     display: block;
-    width: 18rem;
-    height: 12rem;
+    width: min(30vw, 30vh);
+    height: min(20vw, 20vh);
     border-radius: 0.5rem;
     overflow: hidden;
 
@@ -168,7 +168,7 @@ body:has(.flags) {
     top: -50%;
     left: -50%;
 
-    --radius: 28rem;
+    --radius: min(45vw, 45vh);
     --scale: 1;
     --count: 9;
 
