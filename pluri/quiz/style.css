@@ -158,8 +158,8 @@ body:has(.flags) {
 
 .flag {
     display: block;
-    width: min(30vw, 30vh);
-    height: min(20vw, 20vh);
+    width: 18rem;
+    height: 12rem;
     border-radius: 0.5rem;
     overflow: hidden;
 
@@ -175,6 +175,7 @@ body:has(.flags) {
     --sin: calc(sin(var(--idx) * 2 * 3.14 / var(--count) + var(--time)));
     --cos: calc(cos(var(--idx) * 2 * 3.14 / var(--count) + var(--time)));
     transform: translate(calc(var(--sin) * var(--radius)), calc(var(--cos) * var(--radius))) translate(-50%, -50%) scale(var(--scale));
+    /* transition: 0.5s; */
 }
 
 .work-in-progress {
@@ -208,7 +209,7 @@ body:has(.flags) {
 
 @keyframes select {
     0% {
-        --radius: 28rem;
+        --radius: min(45vw, 45vh);
         --scale: 1
     }
 
@@ -225,7 +226,7 @@ body:has(.flags) {
     }
 
     100% {
-        --radius: 28rem;
+        --radius: min(45vw, 45vh);
         --scale: 1
     }
 }
