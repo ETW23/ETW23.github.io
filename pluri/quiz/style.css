@@ -38,12 +38,24 @@ a {
     text-wrap: balance;
 }
 
+@media (max-width: 767px) {
+    .question {
+        font-size: 3rem;
+    }
+}
+
 .answers {
     flex-grow: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    .answers {
+        grid-template-columns: 1fr;
+    }
 }
 
 .answer {
@@ -100,6 +112,14 @@ a {
     justify-content: center;
     flex-flow: row wrap;
     gap: 1rem;
+}
+
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .quiz h1 {
