@@ -38,12 +38,24 @@ a {
     text-wrap: balance;
 }
 
+@media (max-width: 767px) {
+    .question {
+        font-size: 3rem;
+    }
+}
+
 .answers {
     flex-grow: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    .answers {
+        grid-template-columns: 1fr;
+    }
 }
 
 .answer {
@@ -100,6 +112,14 @@ a {
     justify-content: center;
     flex-flow: row wrap;
     gap: 1rem;
+}
+
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .quiz h1 {
@@ -168,13 +188,14 @@ body:has(.flags) {
     top: -50%;
     left: -50%;
 
-    --radius: 28rem;
+    --radius: min(45vw, 45vh);
     --scale: 1;
     --count: 9;
 
     --sin: calc(sin(var(--idx) * 2 * 3.14 / var(--count) + var(--time)));
     --cos: calc(cos(var(--idx) * 2 * 3.14 / var(--count) + var(--time)));
     transform: translate(calc(var(--sin) * var(--radius)), calc(var(--cos) * var(--radius))) translate(-50%, -50%) scale(var(--scale));
+    /* transition: 0.5s; */
 }
 
 .work-in-progress {
@@ -208,7 +229,7 @@ body:has(.flags) {
 
 @keyframes select {
     0% {
-        --radius: 28rem;
+        --radius: min(45vw, 45vh);
         --scale: 1
     }
 
@@ -225,7 +246,7 @@ body:has(.flags) {
     }
 
     100% {
-        --radius: 28rem;
+        --radius: min(45vw, 45vh);
         --scale: 1
     }
 }

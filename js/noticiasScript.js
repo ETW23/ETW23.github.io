@@ -9,9 +9,11 @@ peticion.onreadystatechange = function () {
             //Lo transformo a HTML
             var raiz = new DOMParser().parseFromString(doc, "text/html");
             //
-            let titulos = raiz.querySelectorAll('h2.tituloNoti');
-            let contenidos = raiz.querySelectorAll('p.textoNoti');
-            let foto = raiz.querySelectorAll('img.fotoNoti');
+            let noticias = raiz.querySelectorAll('div.news-container');
+
+            let titulos = Array.from(noticias).map(x => x.querySelector('h2'));
+            let contenidos = Array.from(noticias).map(x => x.querySelector('p'));
+            let foto = Array.from(noticias).map(x => x.querySelector('img'));
 
             let fotos = [];
             fotos[0] = document.getElementById('primeraFotoNoti');
