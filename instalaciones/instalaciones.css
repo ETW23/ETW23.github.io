@@ -70,7 +70,7 @@ a {
 
 .instalaciones p {
     max-width: 35em;
-    margin-top: 1em;
+    /*margin-top: 1em;*/
 }
 
 .instalaciones img {
@@ -130,4 +130,7 @@ a {
 
 .mt-2rem {
     margin-top: 2rem;
+}
+.aprendizaje{
+    width: 180%;
 }

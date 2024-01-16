@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usos de tarjetas ciudadanas</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Marvel"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="img/logogijon.svg"
+          alt="logogijon"
+          width="300px"
+          height="auto"
+          id="logogijon"
+        />
+      </div>
+      <h1>Usos de tarjetas ciudadanas por a&ntilde;o</h1>
+    </header>
+    <main>
+      <div class="button-container" id="button-container">
+        <button class="btn-1" id="botonTabla" onclick="cambia(this)">
+          <span class="spanbotones">Versi&oacute;n Tabla</span>
+        </button>
+        <button class="btn-1" id="botonBarras" onclick="cambia(this)">
+          <span class="spanbotones"
+            >Versi&oacute;n Gr&aacute;fico de barras</span
+          >
+        </button>
+        <button class="btn-1" id="botonLineas" onclick="cambia(this)">
+          <span class="spanbotones"
+            >Versi&oacute;n Gr&aacute;fico de l&iacute;neas</span
+          >
+        </button>
+      </div>
+      <div class="container">
+        <div>
+          <select
+            name="ano"
+            id="ano"
+            onload="traerFichero()"
+            onchange="traerFichero()"
+          >
+            <option value="587">2003</option>
+            <option value="586">2004</option>
+            <option value="585">2005</option>
+            <option value="584">2006</option>
+            <option value="583">2007</option>
+            <option value="582">2008</option>
+            <option value="581">2009</option>
+            <option value="580">2010</option>
+            <option value="579">2011</option>
+            <option value="578">2012</option>
+            <option value="577">2013</option>
+            <option value="576">2014</option>
+            <option value="541">2015</option>
+            <option value="571">2016</option>
+            <option value="588">2017</option>
+            <option value="727">2018</option>
+            <option value="884">2019</option>
+            <option value="591">2020</option>
+            <option value="932">2021</option>
+          </select>
+        </div>
+        <div>
+          <select name="mes" id="mes" onchange="traerMes()">
+            <option value="-1">- Seleccione un mes -</option>
+            <option value="01">Enero</option>
+            <option value="02">Febrero</option>
+            <option value="03">Marzo</option>
+            <option value="04">Abril</option>
+            <option value="05">Mayo</option>
+            <option value="06">Junio</option>
+            <option value="07">Julio</option>
+            <option value="08">Agosto</option>
+            <option value="09">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+          </select>
+        </div>
+      </div>
+    </main>
+    <div id="containerTabla"></div>
+    <div id="containerBarras"></div>
+    <div class="containerLineas"></div>
+  </body>
+  <script src="js/script.js"></script>
+</html>

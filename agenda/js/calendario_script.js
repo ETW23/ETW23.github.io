@@ -40,7 +40,7 @@ const renderCalendar = () => {
     for (let i = 1; i < lastDateofMonth+1; i++) {
         let isToday = i === date.getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear() ? "active" : "";
         let isBlue = shouldHaveBlueBackground(currYear, currMonth, i) ? "blue" : "";
-        let blueId = shouldHaveBlueBackground(currYear, currMonth, i) ? `element${i}` : "";
+        let blueId = shouldHaveBlueBackground(currYear, currMonth, i) ? `${currYear}${currMonth.toString().padStart(2, '0')}${i.toString().padStart(2, '0')}` : "";
 
         liTag += `<li class="${isToday} ${isBlue}" id="${blueId}" onclick="handleElementClick('${blueId}')">${i}</li>`;
         liCount++;
@@ -59,60 +59,136 @@ const renderCalendar = () => {
     daysTag.innerHTML = liTag;
 
 }
-
 // Función para manejar el clic en los elementos con IDs "elementX"
-let clickCount = 0;
+
+var elementNumEx;
+
 function handleElementClick(elementId) {
     const elementNumber = parseInt(elementId.replace("element", ""));
-    const event1 = document.getElementById("event1");
-    const event2 = document.getElementById("event2");
-    const event3 = document.getElementById("event3");
-    const event4 = document.getElementById("event4");
+    var events = Array.from(document.querySelectorAll('[id^="event"]'));
     const preport = document.getElementById("preportadaid");
     const notita = document.getElementById("notitas");
+    var clickedElement = document.getElementById(elementId);
 
-    clickCount++; // Incrementar el contador de clics en cada clic
+    function prepoNotita() {
+        preport.classList.add("novisible");
+        preport.classList.remove("preportada");
+        notita.classList.add("notitas");
+        notita.classList.remove("notitnovisible");
+    }
 
-    if (clickCount % 2 === 1) { // Si el número de clics es impar
-        if (elementNumber === 1) {
-            event1.classList.add("diactive");
-            event2.classList.add("diactive");
-            event3.classList.remove("diactive");
-            event4.classList.remove("diactive");
-            preport.classList.add("novisible");
-            preport.classList.remove("preportada");
-            notita.classList.add("notitas");
-            notita.classList.remove("notitnovisible");
-        } else if (elementNumber === 2) {
-            event1.classList.remove("diactive");
-            event2.classList.remove("diactive");
-            event3.classList.add("diactive");
-            event4.classList.remove("diactive");
-            preport.classList.add("novisible");
-            preport.classList.remove("preportada");
-            notita.classList.add("notitas");
-            notita.classList.remove("notitnovisible");
-        } else if (elementNumber === 4) {
-            event1.classList.remove("diactive");
-            event2.classList.remove("diactive");
-            event3.classList.remove("diactive");
-            event4.classList.add("diactive");
-            preport.classList.add("novisible");
-            preport.classList.remove("preportada");
-            notita.classList.add("notitas");
-            notita.classList.remove("notitnovisible");
+    if ( clickedElement != null) {
+        if (elementNumber === 20230501) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event1 || event === event2) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20230502) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event3) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20230604) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event4) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20230909) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event5) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20231006) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event6) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20231016) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event7) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20231020) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event8) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20231028) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event9) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20231101) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event10) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20231112) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event11) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20231122) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event12) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
         }
-    } else { // Si el número de clics es par
-        event1.classList.remove("diactive");
-        event2.classList.remove("diactive");
-        event3.classList.remove("diactive");
-        event4.classList.remove("diactive");
+    } else { 
+        events.forEach(event => {
+            event.classList.remove("diactive");
+        });
         preport.classList.remove("novisible");
         preport.classList.add("preportada");
         notita.classList.add("notitnovisible");
         notita.classList.remove("notitas");
     }
 }
+
 
 renderCalendar();
 
@@ -253,6 +329,14 @@ function shouldHaveBlueBackground(year, month, day) {
         { year: 2023, month: 5, day: 1 }, // 01-06-2023
         { year: 2023, month: 5, day: 2 }, // 02-06-2023
         { year: 2023, month: 6, day: 4 }, // 04-07-2023
+        { year: 2023, month: 9, day: 9 }, // 09-10-2023
+        { year: 2023, month: 10, day: 6 }, // 06-11-2023
+        { year: 2023, month: 10, day: 16 }, // 16-11-2023
+        { year: 2023, month: 10, day: 20 }, // 20-11-2023
+        { year: 2023, month: 10, day: 28 }, // 28-11-2023
+        { year: 2023, month: 11, day: 1 }, // 01-12-2023
+        { year: 2023, month: 11, day: 12 }, // 12-12-2023
+        { year: 2023, month: 11, day: 22 }, // 22-12-2023
     ];
 
     return blueDates.some(date => date.year === year && date.month === month && date.day === day);

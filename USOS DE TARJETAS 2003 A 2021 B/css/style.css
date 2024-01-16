@@ -1,0 +1,385 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-color: whitesmoke;
+}
+header {
+  background: #162944;
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding-left: 2vw;
+  box-shadow: 0 0 5px 5px #162944;
+}
+h1 {
+  color: #f5f5f5;
+  text-align: center;
+  width: 80%;
+  line-height: 6vh;
+  font-size: 3.5rem;
+  letter-spacing: 0.1rem;
+}
+#logogijon {
+  width: 7.5vw;
+  height: auto;
+}
+main {
+  margin-top: 2rem;
+  text-align: center;
+  /* display: flex; */
+}
+
+#containerTabla {
+  text-align: center;
+}
+th,
+td,
+table,
+tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+  width: 75%;
+  margin: auto;
+  margin-top: 5vh;
+}
+/* .pintame1 {
+  background-color: #ebaeae;
+  background-color: #f54627c7;
+  color: white;
+  height: 4vh;
+  font-family: Marvel;
+  font-weight: bolder;
+  font-size: larger;
+}
+.pintame2 {
+  background-color: #ece0e0;
+  height: 4vh;
+  font-family: Marvel;
+  font-weight: bold;
+  font-size: larger;
+} */
+th {
+  background-color: #162944;
+  color: rgb(255, 255, 255);
+  height: 4vh;
+  font-size: larger;
+}
+select {
+  color: #fff;
+  width: 10vw;
+  height: 6vh;
+  background-color: #c0392b;
+  text-align: center;
+  transition: 0.75s;
+  font-size: 0.9vw;
+  margin-right: 0.25em;
+}
+
+.container {
+  margin: auto;
+  margin-top: 5vh;
+  background-color: #e74c3c;
+  height: 12vh;
+  width: 25vw;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 1px grey;
+
+  display: flex;
+  justify-content: center;
+  line-height: 12vh;
+}
+select:hover {
+  background-color: #9e3023;
+}
+/* 
+.containerBotones {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.containerBotones > button {
+  width: 12vw;
+} */
+
+/* Esto es el inicio del boton del lateral  */
+button {
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: Marvel;
+  font-size: 20pt;
+  position: relative;
+  border: solid #bbb 2px;
+  color: #bbb;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+.btn-1 {
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: Marvel;
+  font-size: 14pt;
+  width: 300px;
+  height: 45px;
+  position: relative;
+  border: solid #777 2px;
+  color: #777;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+  background: transparent;
+  padding: 0;
+  background-color: #162944;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.btn-1 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 5px;
+  transition: 0.5s ease-in-out;
+  color: white;
+  font-weight: bold;
+  line-height: 30px;
+}
+/* 
+.btn-1:before,
+.btn-1:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: red;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-1:before {
+  height: 0%;
+  width: 2px;
+  top: 50%;
+}
+
+.btn-1:after {
+  width: 0%;
+  height: 2px;
+  left: 50%;
+} */
+
+/* .btn-1:hover:before {
+  height: 100%;
+  top: 0%;
+  background: red;
+}
+
+.btn-1:hover:after {
+  width: 100%;
+  left: 0%;
+  background: red;
+}
+
+.btn-1:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+.btn-1 span:hover {
+  color: red;
+} */
+
+/* .btn-1 span:before,
+.btn-1 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #333;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-1 span:before {
+  width: 2px;
+  height: 0%;
+  top: 50%;
+}
+
+.btn-1 span:after {
+  height: 2px;
+  width: 0%;
+  left: 50%;
+} */
+
+/* .btn-1 span:hover:before {
+  height: 41px;
+  top: 0%;
+  background: red;
+}
+
+.btn-1 span:hover:after {
+  width: 100%;
+  left: 0%;
+  background: red;
+} */
+
+.btn-1.active {
+  border-color: black;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #e74c3c;
+  box-shadow: inset 0 0 0 50px #e74c3c;
+}
+/* .btn-1.active > span {
+  color: white;
+} */
+/*
+.btn-1:active:before,
+.btn-1:active:after {
+  background-color: #00a7fc;
+}
+
+.btn-1 span:active {
+  color: #333;
+}
+
+
+
+.btn-1:focus {
+  outline: none;
+} */
+/* .btn-1 span:active:before,
+.btn-1 span:active:after {
+  background-color: #00a7fc;
+} */
+/* .button-container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+} */
+
+/* Fin de las cosas del boton */
+
+/* AQUI EMPIEZAN LAS MEDIAS PARA AJUSTAR LA WEB A CUALQUIER DISPOSITIVO */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #logogijon {
+    min-width: 25vw;
+    height: auto;
+    margin-top: 3vh;
+  }
+  h1 {
+    width: 80%;
+    line-height: 7.5vh;
+    font-size: 7vw;
+    padding-left: 5vw;
+  }
+  select {
+    size: 8;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #logogijon {
+    min-width: 20vw;
+    height: auto;
+    margin-top: 3vh;
+  }
+  h1 {
+    width: 80%;
+    line-height: 7.5vh;
+    font-size: 7vw;
+    padding-left: 5vw;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #logogijon {
+    min-width: 15vw;
+    height: auto;
+    margin-top: 3vh;
+  }
+  h1 {
+    width: 80%;
+    line-height: 7.5vh;
+    font-size: 6vw;
+    padding-left: 5vw;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #logogijon {
+    min-width: 13vw;
+    height: auto;
+    margin-top: 3vh;
+  }
+  h1 {
+    width: 80%;
+    line-height: 15vh;
+    font-size: 4vw;
+    padding-left: 5vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #logogijon {
+    min-width: 10vw;
+    height: auto;
+  }
+  h1 {
+    width: 80%;
+    line-height: 13vh;
+    font-size: 4vw;
+    padding-left: 5vw;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1450px) {
+  #logogijon {
+    min-width: 7.5vw;
+    height: auto;
+  }
+  h1 {
+    width: 80%;
+    line-height: 13vh;
+    font-size: 3vw;
+    padding-left: 5vw;
+  }
+}
+#flechicas {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+tbody > tr {
+  height: 4vh;
+  font-family: Marvel;
+  font-weight: bold;
+  font-size: larger;
+}
+
+tbody > tr:nth-child(2n) {
+  background-color: #f54627c7;
+}
+
+tbody > tr:nth-child(2n + 1) {
+  background-color: #ece0e0;
+}
+.button-container {
+  visibility: hidden;
+}
