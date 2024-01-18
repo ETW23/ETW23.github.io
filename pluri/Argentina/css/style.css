@@ -1,0 +1,622 @@
+* {
+    box-sizing: border-box;
+    margin: 0em;
+    padding: 0em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/portadaArg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 40px 1px black;
+}
+
+#titulo {
+    width: 25vw;
+    height: 10vh;
+    position: absolute;
+    left: 2vw;
+    top: 3vh;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 4vw;
+    color: white;
+    text-shadow: 0px 0px 20px black;
+}
+
+#titulo p {
+    color: rgb(54 144 234);
+    text-shadow: 0px 0px 0px white;
+    font-size: 1.2vw;
+}
+
+/**********************fin Header********************************/
+
+/*****************selectorrs************************/
+.botonesInicio {
+    width: 100%;
+    height: 6vh;
+    line-height: 3vh;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #53a4ec;
+    position: sticky;
+    text-transform: uppercase;
+    top: 0px;
+    z-index: 1;
+}
+
+.selectores>a {
+    text-decoration: none;
+    color: white;
+}
+
+.selectores {
+    color: white;
+    text-decoration: none;
+    margin: 0em 1em;
+    padding: 0.5em 0.5em;
+    border-radius: 0.4em;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 1.5vw;
+    font-weight: 900;
+    border: none;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.selectores::before,
+.selectores::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--red);
+    transition: 0.5s ease;
+}
+
+.selectores::before {
+    top: -1em;
+    left: -1em;
+}
+
+.selectores::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.selectores:hover::before,
+.selectores:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.selectores:hover {
+    color: rgb(247, 246, 246);
+}
+
+.selectores:active {
+    filter: brightness(.8);
+}
+
+/***************fin selectores*********************/
+
+main {
+    box-shadow: 0px 0px 40px 1px black;
+}
+
+/*********************************HISTORIA*****************************************/
+#historia {
+    position: relative;
+    background-image: url(../images/fondo.jpg);
+    background-size: contain;
+    width: 99vw;
+    height: 330vh;
+    box-shadow: inset 0px -20px 30px -15px #000;
+}
+
+.bandera {
+    position: absolute;
+    left: 10vw;
+    height: 99%;
+    width: 20vh;
+    background-image: url(../images/bandera.png);
+    background-size: contain;
+    box-shadow: 0px 0px 40px 1px black;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.bandizq {
+    left: 80vw;
+}
+
+/* Timeline Container */
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+    text-shadow: 0px 0px 20px black;
+    width: 100%;
+    border-bottom: 5px solid rgb(54 144 234);
+}
+
+.timeline {
+    margin: auto;
+    padding: 20px;
+    width: 35vw;
+}
+
+/* Card container */
+.card {
+    position: relative;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+    padding: 30px 0 30px 30px;
+}
+
+.card:nth-child(even) {
+    padding: 30px 30px 30px 0;
+}
+
+/* Global ::before */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid #3690ea;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+    right: 0;
+    top: -1px;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+    display: flex;
+    flex-direction: column;
+    background: #333;
+    color: gray;
+    border-radius: 10px;
+    padding: 10px;
+    height: auto;
+}
+
+/* Title of the card */
+.title {
+    color: #89efff;
+    position: relative;
+    font-size: 1.3vw;
+}
+
+/* Timeline dot  */
+.title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid #89efff;
+}
+
+.fotosHisto {
+    padding-top: 10px;
+    width: 100%;
+    height: 70%;
+    margin: auto;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even)>.info>.title {
+    text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd)>.info>.title::before {
+    left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even)>.info>.title::before {
+    right: -45px;
+}
+
+/*********************************FIN HISTORIA*****************************************/
+
+/**********************************POLITICA*******************************************/
+#politica {
+    width: 99vw;
+    height: 80vh;
+    background-color: #81818162;
+    background-image: url(../images/fondopoli.jpg);
+    padding-top: 10vh;
+    box-shadow: inset 0px 0px 40px 1px black;
+}
+
+#politica h2 {
+    width: 20vw;
+    border-bottom: 6px solid #3690ea;
+}
+
+.contepoli {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding-top: 2.5vh;
+}
+
+.cajasPoli {
+    padding-top: 1em;
+    width: 25vw;
+    height: 45vh;
+    border-radius: 10px;
+    background-color: aliceblue;
+    border: 0.125em solid black;
+    transition: 0.5s all;
+    background-image: url(../images/politica.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cajasPoli:hover {
+    background-size: 105% 105%;
+}
+
+/*Ideas politicas*/
+.cajasPoli p {
+    text-align: center;
+    width: 10vw;
+    background-color: white;
+    font-weight: 700;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.ideas:hover {
+    background-image: url(../images/milei-alberto.jpg);
+    border: 0.15em solid #3690ea;
+}
+
+/*Educacion y Sanidad*/
+.edusani {
+    background-image: url(../images/educacion.jpg);
+}
+
+.edusani p {
+    width: 15vw;
+}
+
+.edusani:hover {
+    background-image: url(../images/sanidad.jpg);
+    border: 0.15em solid #3690ea;
+}
+
+/*Seguridad*/
+
+.segur {
+    background-image: url(../images/seguridad.jpg);
+}
+
+.segur:hover {
+    border: 0.15em solid #3690ea;
+}
+
+/*--------------------------FIN POLITICA-------------------------------*/
+
+/*------------------------ECONOMIA-------------------------------------*/
+#economia {
+    width: 99vw;
+    height: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-image: url(../images/fondoeco.jpg);
+    box-shadow: inset 0px 0px 40px 1px black;
+}
+
+#economia h2 {
+    float: right;
+    width: 25vw;
+    border-bottom: 6px solid #3690ea;
+}
+
+.conteeco {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+    clear: both;
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#inflacion {
+    background-image: url(../images/inflaciontotal.png);
+    background-size: 100% 100%;
+    width: 50vw;
+    height: 60vh;
+    border: 6px solid #3690ea;
+    margin-bottom: 5vh;
+}
+
+#textoinfla {
+    width: 30vw;
+    height: 40vh;
+    padding: 2em;
+    color: white;
+    background-color: #818181e0;
+    border-radius: 10px;
+}
+
+#textodolar {
+    width: 40vw;
+    height: 40vh;
+    color: white;
+    padding: 2em;
+    background-color: #818181e0;
+    border-radius: 10px;
+}
+
+#dolar {
+    background-image: url(../images/dolares.jpg);
+    background-size: 100% 100%;
+    width: 40vw;
+    height: 60vh;
+    border: 6px solid #3690ea;
+    margin-bottom: 5vh;
+}
+
+/********************Sector Primario*****************************/
+#textoPrim {
+    width: 50vw;
+    height: 18vh;
+    padding: 2em;
+    color: white;
+    background-color: #818181e0;
+    border-radius: 10px;
+    text-align: justify;
+    margin-bottom: 3vh;
+}
+
+#textoPrim strong {
+    text-transform: uppercase;
+    font-size: 1.3vw;
+}
+
+#secPrim {
+    width: 60vw;
+    height: 80vh;
+    margin: auto;
+    border-radius: 10px;
+    border: 6px solid #3690ea;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fotoSecPrim {
+    width: 50%;
+    height: 50%;
+    filter: blur(1px) grayscale(0.5);
+    transition: 0.5s all;
+}
+
+.fotoSecPrim:hover {
+    filter: blur(0px) grayscale(0);
+}
+
+/*--------------------FIN ECONOMIA------------------------*/
+
+/*--------------------GEOGRAFIA-------------------------*/
+#geo {
+    width: 99vw;
+    height: auto;
+    padding-top: 10vh;
+    background-image: linear-gradient(rgb(255 93 0 / 84%), rgb(148 251 63 / 50%), rgb(36 187 250 / 80%));
+    box-shadow: inset 0px 0px 40px 1px black;
+}
+
+#geo h2 {
+    width: 20vw;
+    border-bottom: 6px solid #3690ea;
+    margin-bottom: 5vh;
+}
+
+.conteGeo {
+    width: 95%;
+    margin: auto;
+    height: auto;
+    padding-bottom: 5vh;
+    display: flex;
+}
+
+.conteGeo>img {
+    width: 30%;
+    height: 100%;
+}
+
+#textoGeo {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+}
+
+.cajasGeo {
+    width: 40%;
+    height: 25vh;
+    margin-bottom: 3vh;
+    border: 5px solid white;
+    transition: 0.5s all;
+}
+
+.cajasGeo img {
+    transition: 1.5s all;
+    width: 100%;
+    height: 100%;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.descriClima {
+    width: 35%;
+    height: auto;
+    padding: 2em;
+    color: white;
+    background-color: #818181e0;
+    border-radius: 10px;
+    margin-bottom: 3vh;
+}
+
+/*---------------------FIN GEOGRAFIA----------------------*/
+/*---------------------INFO----------------------------*/
+.selectorInfo {
+    width: 65vw;
+    height: 85vh;
+    margin: auto;
+    background-color: rgb(248, 248, 239);
+    overflow: scroll;
+    scroll-behavior: smooth;
+    box-shadow: 0px 0px 20px -6px black;
+    border-radius: 15px;
+    margin-top: 5vh;
+}
+
+.botonesInfo {
+    width: 100%;
+    height: 6vh;
+    line-height: 3vh;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    text-transform: uppercase;
+    top: 0px;
+    background-color: #7ebaee;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 0;
+}
+
+.selectorInfo::-webkit-scrollbar {
+    display: none;
+}
+
+hr {
+    border-color: #2ba0ff
+}
+
+h3 {
+    text-align: center;
+    font-size: 6vh;
+}
+
+.selectores>a {
+    text-decoration: none;
+    color: white;
+}
+
+.informacionAdicional {
+    width: 80%;
+    margin: auto;
+    font-size: 3.5vh;
+}
+
+/*----------------------fin INFO-----------------*/
+
+/*-------------FOOTER--------------*/
+footer {
+    clear: both;
+    display: flex;
+    color: #000000;
+    background-color: #2ba0ff;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15vh;
+    font-size: 1.3em;
+    line-height: 2em;
+    text-align: center;
+    width: 100%;
+    margin-top: 7vh;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    width: 50%;
+}
+
+
+footer img {
+    width: 6vw;
+}
+
+#ht5 {
+    height: 10vh;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*------------Fin FOOTER------------*/
