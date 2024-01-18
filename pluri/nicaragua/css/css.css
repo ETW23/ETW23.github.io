@@ -1,0 +1,492 @@
+body    {margin: 0;
+         min-width: 59em;
+         background-color: #f1f1f1;
+         background-image: url(../img/nic2.jpg);
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+}
+
+.hh1  {color: transparent;
+       background: linear-gradient(#00f, #fff, #00f);
+       -webkit-background-clip: text;
+       font-size: 600%;
+       text-align: center;
+       margin: 0;
+       -webkit-text-stroke: .2px #ffe600;
+}
+
+.h1   {box-shadow: 0 0 0 0;
+}
+
+.hh1 {background: -webkit-linear-gradient(#00f,#fff, #00f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+       color: #0066ff;
+       font-weight: bolder;
+       line-height: 7rem;
+       -webkit-text-stroke: .2px #000;
+       position: absolute;
+       top: 6rem;
+       left: 46rem;
+       text-align: center;
+}
+
+h2  {text-align: center;
+     font-size: 250%;
+     font-style: italic;
+     color: #ff7600;
+     -webkit-text-stroke: 2.125px #000;
+     box-shadow: 0.25em 0.25em 0.25em 0.25em #000;
+     width: 50%;
+     margin: auto;
+}
+
+#tituprin   {position: absolute;
+             top: 13rem;
+             left: 30rem;
+}
+
+.portada  {width: 100%;
+}
+
+.geografía  {display: none;
+             clear: both;
+             background-color: #fff;
+             margin: auto;
+             margin-top: 2em;
+             border: .25em #000 solid;
+             border-radius: 0.5em;
+}
+.poblaciones  {display: none;
+               clear: both;
+               background-color: #fff;
+               margin: auto;
+               margin-top: 2em;
+               border: .25em #000 solid;
+               border-radius: 0.5em;
+}
+.historia   {display: none;
+             clear: both;
+             background-color: #fff;
+             margin: auto;
+             margin-top: 2em;
+             border: .25em #000 solid;
+             border-radius: 0.5em;
+}
+.historia ul li   {display: block;
+                   line-height: 4rem;
+                   text-decoration: underline;
+                   font-size: 200%;
+                   width: 70%;
+}
+.politica   {display: none;
+             clear: both;
+             background-color: #fff;
+             margin: auto;
+             margin-top: 2em;
+             border: .25em #000 solid;
+             border-radius: 0.5em;
+}
+.sanidad    {display: none;
+             clear: both;
+             background-color: #fff;
+             margin: auto;
+             margin-top: 2em;
+             border: .25em #000 solid;
+             border-radius: 0.5em;
+}
+.estudios  {display: none;
+            clear: both;
+            background-color: #fff;
+            margin: auto;
+            margin-top: 2em;
+            border: .25em #000 solid;
+            border-radius: 0.5em;
+}
+.economía   {display: none;
+             clear: both;
+             background-color: #fff;
+             margin: auto;
+             margin-top: 2em;
+             border: .25em #000 solid;
+             border-radius: 0.5em;
+}
+.idioma     {display: none;
+             clear: both;
+             background-color: #fff;
+             margin: auto;
+             margin-top: 2em;
+             border: .25em #000 solid;
+             border-radius: 0.5em;
+}
+.religiones   {display: none;
+               clear: both;
+               background-color: #fff;
+               margin: auto;
+               margin-top: 2em;
+               border: .25em #000 solid;
+               border-radius: 0.5em;
+}
+
+.active   {display: block;
+           width: 80%;
+           margin-bottom: .75em;
+}
+
+
+.maintext   {text-align: center;
+             color: #11b29b;
+             display: block;
+             font-size: 300%;
+}
+
+header  {background-image: url(../img/san-juan-del-sur.jpg);
+         height: 58.5rem;
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+         border-radius: .5em;
+}
+
+#vid {position: absolute;
+      bottom: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: auto;
+      overflow: hidden;
+      margin-bottom: 1rem;
+}
+
+nav  {width: 99.5%;
+      background: linear-gradient(45deg, #1f48ff, #fff);
+      border-radius: 1em;
+      border: #000 solid;
+      margin: auto;
+      margin-bottom: 1em;
+}
+
+.navimg   {width: 14%;
+}
+
+nav .navimg img   {width: 73%;
+                   height: 5rem;
+                   margin: 0;
+                   padding: 0;
+                   float: left;
+                   margin-top: 2.5rem;
+                   margin-bottom: 0.75rem;
+                   margin-left: 1.5rem;
+}
+
+ul   {margin: 0;
+      margin-left: 13rem;
+      list-style: none;
+}
+
+li   {display: inline-block;
+      width: 19.5%;
+      line-height: 4.5rem;
+}
+
+nav button[type="button"]     {width: 100%;
+                               background-color: transparent;
+                               height: 5rem;
+                               transition: height 0.5s, background-color 1s;
+                               font-size: 175%;
+                               border: 0;
+                               
+}
+
+nav button[type="button"]:hover     {width: 100%;
+                                     background-color: transparent;
+                                     height: 7rem;
+                                     transition: height 0.5s, background-color 1s;
+                                     font-size: 175%;
+}
+
+#geo button:hover   {background-color: #faeb66;
+                     background-image: url(../img/Nicaragua-map.png);
+                     background-position: center;
+                     background-repeat: no-repeat;
+                     background-size: 8.5rem;
+                     height: 12.5rem;
+                     border: 0.25em #52a339 solid;
+                     border-radius: 0.5em;
+                     color: #095313;
+                     font-weight: bold;
+                     text-decoration: underline;
+                    -webkit-text-stroke: 2.125px #000;
+}
+
+#pob button:hover   {background-color: #faeb66;
+                     background-image: url(../img/poblacion.jpg);
+                     background-position: center;
+                     background-repeat: no-repeat;
+                     background-size: 18.5rem;
+                     height: 12.5rem;
+                     border: 0.25em #41f09e solid;
+                     border-radius: 0.5em;
+                     color: #e9e93d;
+                     font-weight: bold;
+                     text-decoration: underline;
+                    -webkit-text-stroke: 2.125px #000;
+}
+
+#hist button:hover   {background-color: #faeb66;
+                      background-image: url(../img/A_Somoza-Garcia_1936.png);
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-size: 8rem;
+                      height: 12.5rem;
+                      border: 0.25em #aa1d1d solid;
+                      border-radius: 0.5em;
+                      color: #9c1a03;
+                      font-weight: bold;
+                      text-decoration: underline;
+                      -webkit-text-stroke: 2.125px #000;
+}
+
+#polit button:hover   {background-color: #faeb66;
+                       background-image: url(../img/Casa_Naranja.jpg);
+                       background-position: center;
+                       background-repeat: no-repeat;
+                       background-size: 14rem;
+                       height: 12.5rem;
+                       border: 0.25em #4d4e04 solid;
+                       border-radius: 0.5em;
+                       color: #00ff40;
+                       font-weight: bold;
+                       text-decoration: underline;
+                       -webkit-text-stroke: 2.125px #000;
+}
+
+#san button:hover   {background-color: #faeb66;
+                     background-image: url(../img/medicina.jpg);
+                     background-position: center;
+                     background-repeat: no-repeat;
+                     background-size: 15rem;
+                     height: 12.5rem;
+                     border: 0.25em #ff1f0f solid;
+                     border-radius: 0.5em;
+                     color: #00f;
+                     font-weight: bold;
+                     text-decoration: underline;
+                    -webkit-text-stroke: 2.125px #000;
+}
+
+#ed button:hover   {background-color: #faeb66;
+                    background-image: url(../img/estudios.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 14.5rem;
+                    height: 12.5rem;
+                    border: 0.25em #006eff solid;
+                    border-radius: 0.5em;
+                    font-weight: bold;
+                    color: #fffb00;
+                    -webkit-text-stroke: 2.125px #000;
+                    text-decoration: underline;
+}
+
+#econ button:hover   {background-color: #faeb66;
+                      background-image: url(../img/Economya.JPG);
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-size: 10rem;
+                      height: 12.5rem;
+                      border: 0.25em #6283f1 solid;
+                      border-radius: 0.5em;
+                      font-weight: bold;
+                      text-decoration: underline;
+                      -webkit-text-stroke: 2.125px #000;
+}
+
+#idi button:hover   {background-color: #faeb66;
+                     background-image: url(../img/idiomas.jpg);
+                     background-position: center;
+                     background-repeat: no-repeat;
+                     background-size: 15rem;
+                     height: 12.5rem;
+                     border: 0.25em #00ff37 solid;
+                     border-radius: 0.5em;
+                     font-weight: bold;
+                     color: #ffd900;
+                     text-decoration: underline;
+                     -webkit-text-stroke: 2.125px #000;
+}
+
+#rel button:hover   {background-color: #faeb66;
+                     background-image: url(../img/Virgen_de_la_Concepción_del_Trono.jpg);
+                     background-position: center;
+                     background-repeat: no-repeat;
+                     background-size: 9.5rem;
+                     height: 12.5rem;
+                     border: 0.25em #ffae00 solid;
+                     border-radius: 0.5em;
+                     font-weight: bold;
+                     color: rgb(0, 175, 9);
+                     text-decoration: underline;
+                     -webkit-text-stroke: 2.125px #000;
+}
+
+main #mainflag img    {width: 100%;
+                       height: 30rem;
+                       border-radius: 2em;
+                       box-shadow: 0.25em 0.5em 0.5em 0.25em #000;
+                       margin: auto;
+}
+
+#mainflag   {width: 70%;
+             height: 30rem;
+             margin: auto;
+             margin-top: 2em;
+}
+
+p     {font-size: 150%;
+       width: 90%;
+       margin: auto;
+       margin-top: 1em;
+       margin-bottom: 1em;
+       text-align: justify;
+}
+
+.mapa1      {width: 70%;
+             margin: auto;
+             text-align: center;
+             overflow: hidden;
+}
+
+#secondp    {text-decoration: underline;
+             text-align: center;
+             color: #fff;
+             font-style: oblique;
+}
+
+hr    {border: .25rem #fff solid;
+       margin: 0;
+}
+
+.div1ft    {width: 70%;
+                   font-size: large;
+                   text-decoration: underline;
+                   font-weight: bolder;
+                   text-align: center;
+                   float: left;
+                   color: #fff;
+                   background-color: #000;
+}
+
+.div2ft    {width: 29%;
+            font-size: large;
+            text-decoration: underline;
+            font-weight: bolder;
+            text-align: center;
+            float: left;
+            color: #fff;
+            background-color: #000;
+}
+
+.div1ft img   {width: 10%;
+               height: 7rem;
+               border: .125em #000 solid;
+               margin-top: .25em;
+               margin-left: 4.5rem;
+}
+
+.div1ft    {line-height: 2rem;
+             text-align: left;
+}
+.div1ft p,
+.div2ft p  {font-size: 110%;
+            margin-top: .5rem;
+            text-align: center;
+            margin-bottom: .25rem;
+}
+.div1ft p   {margin-left: 1rem;
+             text-align: justify;
+}
+footer      {background-color: #000;
+             margin: 0;
+             height: 12rem;
+             line-height: 3rem;
+}
+
+li img      {display: none;
+}
+
+li img:hover      {display: inline-block;
+                   text-align: center;
+}
+
+.vid1geo    {width: 95%;
+             margin: auto;
+}
+.vid1geo video    {width: 100%;
+                   height: 100%;
+                   margin: auto;
+                   margin-top: 1em;
+}
+
+#prinpob    {width: 80%;
+             margin-top: 2em;
+             text-align: justify;
+}
+
+.poblaciones p    {width: 80%;
+                   margin-top: 2em;
+                   text-align: center;
+}
+.poblaciones p img {width: 50%;
+                    height: 30rem;
+}
+
+ul img      {width: 20rem;
+             height: 8rem;
+}
+
+#bande1, #bande2,
+#map18, #jz, #asg, #revcw   {width: 80%;
+                             height: 20rem;
+                             margin: auto;
+                             margin-top: 2em;
+                             margin-bottom: 2em;
+                             text-align: center;
+}
+
+#bande1 img, #bande2 img,
+#map18 img, #jz img, #asg img,
+#revcw img    {width: 26%;
+               height: 20rem;
+}
+
+.polimg,
+#sanimg,
+.estimg,
+.econimg,
+.idimg,
+.relimg     {text-align: center;
+             font-size: 100%;
+}
+.estimg img {border: .125em #000 solid;
+}
+.esimg      {width: 50%;
+             height: 30rem;
+}
+.textcen    {text-align: center;
+             text-decoration: underline;
+}
+
+.economía p img   {width: 40%;
+                   height: 30rem;
+}
+#virimg     {width: 30%;
+             height: 35rem;
+}
+
+.textcen iframe   {width: 560px;
+                   height: 315px;
+}
