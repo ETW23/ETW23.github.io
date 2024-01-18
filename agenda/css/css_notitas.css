@@ -1,12 +1,32 @@
 .notitas    {
     float: left;
-    width: 30%;
+    width: 40%;
     margin: auto;
-    margin-top: 6rem;
-    display: block;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     margin-left: 5.25em;
-    margin-right: 14.25em;
 }
+#eventos    {
+    width: 70%;
+    margin-top: 2em;
+}
+#buttonVolver {
+    margin: 1em;
+    padding: 0.75em 1.5em;
+    background-color: #d7f4ff;
+    border: black 0.1em solid;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#buttonVolver:hover {
+    background-color: #5CACEE; /* Cambio de color al pasar el mouse */
+    color:white;
+}
+
 .dias_uno   {width: 60%;
              height: auto;
              margin: auto;
@@ -24,6 +44,8 @@
                    height: auto;
 }
 .diactive   {display: block;
+             width: auto;
+             max-width: 24em;
 }
 .novisible  {
     display: none;
@@ -31,11 +53,19 @@
 .notitnovisible {
     display: none;
 }
+#listtema   {
+    padding-left: 1em;
+}
+#spnaol {
+    margin: 5em;
+    font-weight: 900;
+}
 .titudia    {text-align: center;
-             font-size: 140%;
+             font-size: 1.4rem;
              font-weight: bold;
              font-style: italic;
              text-decoration: underline;
+             padding: 0.2em;
 }
 .textcont   {width: 90%;
              text-align: justify;
@@ -43,7 +73,7 @@
              font-size: .1px;
              transition: font-size 1.5s ease;
 }
-.textout    {font-size: 1rem;
+.textout    {font-size: 0.8rem;
              animation: font-size 1.5s ease;
 }
 .fechass    {width: 95%;
@@ -55,20 +85,27 @@
     float: right;
     height: auto;
     margin: auto;
-    margin-top: 5em;
-    margin-right: 30em;
+    margin-top: 1em;
+    margin-right: 9em;
 }
 .ulpreportada   {
     list-style: circle;
     list-style-type: circle;
     overflow: visible;
+    display: flex;
+    width: 40em;
+    height: 22em;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 .ulfecha    {
     width: 100%;
     text-align: right;
     font-style: oblique;
     font-size: 0.8em;
-    padding-top: 0.5em;
+    padding-top: 0.1em;
+    padding-bottom: 1em;
 }
 .divpreportada  {
     clear: both;
@@ -82,8 +119,8 @@
     border-radius: 1em;
     margin: 0 0.2em 0 0.2em;
 }
-@media (width<= 767px) {.dias_uno    {width: 60%;
-                                      height: auto;
+
+@media (width<= 767px) {.dias_uno    {height: auto;
                                       margin: auto;
 }
                         .dias_uno.girado  {transform: rotate(360deg);
@@ -96,6 +133,11 @@
                                     margin-bottom: 1rem;
                                     height: auto;
                                     padding-bottom: 2em;
+}
+                        .ulpreportada   {
+                            display: block;
+                            width: auto;
+                            height: auto;
 }
                         .preportada {
                             display: block;
@@ -116,6 +158,15 @@
                             margin-left: 7rem;
                             padding-bottom: 2em;
 }
+                        .ulpreportada   {
+                            display: block;
+                            width: auto;
+                            height: auto;
+}
                         .notitas    {
                             padding-bottom: 2em;
+}}
+@media(width<=1295px){
+                        .dias_uno.girado {
+                            width: auto;
 }}

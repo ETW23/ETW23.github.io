@@ -18,10 +18,10 @@
     <!--Logo de Gijon -->
     <div class="portadaLogo">
       <div>
-        <img class="logo" src="../images/Logo Gijon.png" alt="Ayto Gijón" title="Ayto Gijón" />
+        <img class="logo" src="imagenes/Logo_Gijon.png" alt="Ayto Gijón" title="Ayto Gijón">
       </div>
       <div>
-        <img class="logo" src="../images/logoet2.png" alt="Escuela Taller" title="Escuela Taller" id="et" />
+        <img class="logo" src="imagenes/logoet.png" alt="Escuela Taller" title="Escuela Taller" id="et">
       </div>
     </div>
     <!--Hamburguesa desplegable-->
@@ -109,6 +109,30 @@
           <li>Agencia Local de Empleo
             <div class="ulfecha">04/07/2023</div>
           </li>
+          <li>Taller de Ingl&eacute;s (Grupo Web)
+            <div class="ulfecha">09/10/2023</div>
+          </li>
+          <li>Formaci&oacute;n IoT - Nivel Avanzado
+            <div class="ulfecha">06/11/2023 - 21/12/2023</div>
+          </li>
+          <li>Visita a la Feria de Empleo - PICE
+            <div class="ulfecha">16/11/2023</div>
+          </li>
+          <li>Formaci&oacute;n PRL grupos Web y Datos
+            <div class="ulfecha">20/11/2023 - 24/11/2023</div>
+          </li>
+          <li>Visita al CTIC P&eacute;on - Grupo Web
+            <div class="ulfecha">28/11/2023</div>
+          </li>
+          <li>Visita a la Exposici&oacute;n del Cambio Clim&aacute;tico
+            <div class="ulfecha">01/12/2023</div>
+          </li>
+          <li>Visita del Grupo ATU - Grupo Web
+            <div class="ulfecha">12/12/2023</div>
+          </li>
+          <li>Formaci&oacute;n "Stand Up" (acoso en la calle)
+            <div class="ulfecha">22/12/2023</div>
+          </li>
         </ul>
         <div class="divpreportada">
           Para saber m&aacute;s presione el <div class="circlepreport"></div> en el "Calendario".<br>
@@ -117,59 +141,178 @@
         </div>
       </div>
       <div class="notitnovisible" id="notitas">
-        <div class="dias_uno" id="event1">
-          <p class="titudia">Conceyu de la Moced&aacute; (CMX).</p>
-          <br>
-          <p class="textcont">
-            Visita al CMX a Compa&ntilde;&iacute;a para conocer las instalaciones y tareas que realiza.
-            <br><br>
-            Tambi&eacute;n asistieron a la Exposici&oacute;n "Desplegando Alas" en el espacio Astragal.
-          </p>
-          <br>
-          <p class="fechass">
-            Fecha: 01/06/2023
-          </p>
-        </div>
-        <br>
-        <div class="dias_uno" id="event2">
-          <p class="titudia">COGERSA.</p>
-          <br>
-          <p class="textcont">
-            Visita a la Compa&ntilde;&iacute;a para la Gesti&oacute;n de los Residuos S&oacute;lidos
-            en Asturias para conocer los principios b&aacute;sicos de un sistema de gesti&oacute;n
-            de residuos eficiente, p&uacute;blico y &uacute;til para el desarrollo sostenible.
-          </p>
-          <br>
-          <p class="fechass">
-            Fecha: 01/06/2023
-          </p>
-        </div>
-        <div class="dias_uno" id="event3">
-          <p class="titudia">Antigua Escuela de Comercio de Gij&oacute;n.</p>
-          <br>
-          <p class="textcont">
-            Visita a la Oficina de la Juventud de Gij&oacute;n, para conocer las funciones y
-            tareas que realiza, as&iacute; como el apoyo que puede aportar al alumnado.
-          </p>
-          <br>
-          <p class="fechass">
-            Fecha: 02/06/2023
-          </p>
-        </div>
-        <div class="dias_uno" id="event4">
-          <p class="titudia">Agencia Local de Empleo.</p>
-          <br>
-          <p class="textcont">
-            Desde las 9 hasta las 12 recibieron formaci&oacute;n en Prevenci&oacute;n de Riesgos
-            Laborales en el Aula 2 de la Agencia Local de Empleo.
-            <br><br>
-            Posteriormente recibieron informaci&oacute;n del Convenio Colectivo del
-            Ayuntamiento de Gij&oacute;n, por parte de la Coordinadora de Escuela Taller, Marian Artola.
-          </p>
-          <br>
-          <p class="fechass">
-            Fecha: 04/07/2023
-          </p>
+        <button type="button" id="buttonVolver" onclick="handleElementClick('')">Volver Atr&aacute;s</button>
+        <div id="eventos">
+          <div class="dias_uno" id="event1">
+            <p class="titudia">Conceyu de la Moced&aacute; (CMX).</p>
+            <br>
+            <p class="textcont">
+              Visita al CMX a Compa&ntilde;&iacute;a para conocer las instalaciones y tareas que realiza.
+            </p><br>
+            <p class="textcont">
+              Tambi&eacute;n asistieron a la Exposici&oacute;n "Desplegando Alas" en el espacio Astragal.
+            </p><br>
+            <p class="fechass">
+              Fecha: 01/06/2023
+            </p>
+          </div><br>
+          <div class="dias_uno" id="event2">
+            <p class="titudia">COGERSA.</p><br>
+            <p class="textcont">
+              Visita a la Compa&ntilde;&iacute;a para la Gesti&oacute;n de los Residuos S&oacute;lidos
+              en Asturias para conocer los principios b&aacute;sicos de un sistema de gesti&oacute;n
+              de residuos eficiente, p&uacute;blico y &uacute;til para el desarrollo sostenible.
+            </p><br>
+            <p class="fechass">
+              Fecha: 01/06/2023
+            </p>
+          </div>
+          <div class="dias_uno" id="event3">
+            <p class="titudia">Antigua Escuela de Comercio de Gij&oacute;n.</p>
+            <br>
+            <p class="textcont">
+              Visita a la Oficina de la Juventud de Gij&oacute;n, para conocer las funciones y
+              tareas que realiza, as&iacute; como el apoyo que puede aportar al alumnado.
+            </p>
+            <br>
+            <p class="fechass">
+              Fecha: 02/06/2023
+            </p>
+          </div>
+          <div class="dias_uno" id="event4">
+            <p class="titudia">Agencia Local de Empleo.</p>
+            <br>
+            <p class="textcont">
+              Desde las 9am hasta las 12pm recibieron formaci&oacute;n en Prevenci&oacute;n de Riesgos
+              Laborales en el Aula 2 de la Agencia Local de Empleo.
+              <br><br>
+              Posteriormente recibieron informaci&oacute;n del Convenio Colectivo del
+              Ayuntamiento de Gij&oacute;n, por parte de la Coordinadora de Escuela Taller, Marian Artola.
+            </p>
+            <br>
+            <p class="fechass">
+              Fecha: 04/07/2023
+            </p>
+          </div>
+          <div class="dias_uno" id="event5">
+            <p class="titudia">Taller de Ingl&eacute;s <br> (Grupo Web)</p>
+            <br>
+            <p class="textcont">
+              Práctica de conversación en Ingl&eacute;s,
+              con Aleksandva Ma&iacute;eche y Lilli Mart&iacute;n Dom&iacute;nguez del Conseyu de la Moced&aacute;.
+            </p>
+            <br>
+            <p class="fechass">
+              Fecha: 09/10/2023
+            </p>
+          </div>
+          <div class="dias_uno" id="event6">
+            <p class="titudia">Formaci&oacute;n IoT - Nivel Avanzado</p>
+            <br>
+            <p class="textcont">
+              Formaci&oacute;n Internet de las Cosas (IoT). Nivel avanzado.
+              Impartido en la centro de innovaci&oacute;n social de LUCE Gij&oacute;n en la Antigua
+              Escuela de Comercio de Gij&oacute;n (Calle Francisco Tom&aacute;s y Valiente, 33201 Gij&oacute;n).
+            </p>
+            <br>
+            <p class="fechass">
+              Fecha: 06/11/2023 - 21/12/2023
+            </p>
+          </div>
+          <div class="dias_uno" id="event7">
+            <p class="titudia">Visita a la Feria de Empleo - PICE</p>
+            <br>
+            <p class="textcont">
+              Visita a la Feria de Empleo. PICE. Pabell&oacute;n de Exposiciones y
+              Congresos de La Magdalena de Avil&eacute;s. Se pretende informar, formar y
+              asesorar a los asistentes y relacionarlos con el tejido empresarial,
+              las C&aacute;maras de Comercio y los agentes vinculados al empleo.
+              De esta forma habr&aacute; varias charlas, talleres y orientaciones laborales,
+              as&iacute; como 39 empresas en las cuales podr&aacute;n dejar su CV y ver las opciones
+              de empleo que tienen cada una de ellas.
+            </p>
+            <br>
+            <p class="fechass">
+              Fecha: 16/11/2023
+            </p>
+          </div>
+          <div class="dias_uno" id="event8">
+            <p class="titudia">Formaci&oacute;n PRL grupos Web y Datos</p>
+            <br>
+            <p class="textcont">
+              Curso de Prevenci&oacute;n de Riesgos Laborales.</p>
+            <ol class="textcont" id="listtema"><span id="spnaol">Temario: </span>
+              <li>Conceptos b&aacute;sicos de seguridad y salud</li>
+              <li>Riesgos generales y su prevenci&oacute;n</li>
+              <li>Elementos b&aacute;sicos de la gesti&oacute;n de la prevenci&oacute;n</li>
+              <li>Primeros auxilios</li>
+            </ol>
+            <br>
+            <p class="fechass">
+              Fecha: 20/11/2023 - 24/11/2023
+            </p>
+          </div>
+          <div class="dias_uno" id="event9">
+            <p class="titudia">Visita al CTIC P&eacute;o - Grupo Web</p>
+            <br>
+            <p class="textcont">
+              Visita al CTIC Pe&oacute;n. Presentaci&oacute;n del CTIC Rural Tech sita en el Valle de
+              Pe&oacute;n como un centro extendido para probar, experimentar y pilotar proyectos
+              tecnol&oacute;gicos y socialmente innovadores impartida por Lidia Parra y
+              posteriormente explicaci&oacute;n pr&aacute;ctica en el invernadero por Claudia Fuente
+              Garc&iacute;a como t&eacute;cnica del CTIC.
+            </p>
+            <br>
+            <p class="fechass">
+              Fecha: 28/11/2023
+            </p>
+          </div>
+          <div class="dias_uno" id="event10">
+            <p class="titudia">
+              Visita a la Exposici&oacute;n del Cambio Clim&aacute;tico
+            </p><br>
+            <p class="textcont">
+              Visita a la Laboral Centro Arte.
+            </p><br>
+            <p class="textcont">
+              Exposici&oacute;n de Cambio clim&aacute;tico.
+            </p><br>
+            <p class="textcont">
+              Taller sobre la realizaci&oacute;n de un volc&aacute;n como protector de los rayos ultravioletas.
+            </p>
+            <br>
+            <p class="fechass">
+              Fecha: 01/12/2023
+            </p>
+          </div>
+          <div class="dias_uno" id="event11">
+            <p class="titudia">Visita del Grupo ATU - Grupo Web</p>
+            <br>
+            <p class="textcont">
+              Visita de la responsable de formaci&oacute;n de la zona norte,
+              Isabel Garc&iacute;a &Aacute;lvarez del Grupo ATU Digitalizaci&oacute;n y Formaci&oacute;n para informar
+              sobre el Programa de GENERACI&Oacute;N DIGITAL AGENTES DEL CAMBIO que se basa en
+              acciones de formaci&oacute;n de vanguardia, partiendo de un riguroso plan de formaci&oacute;n
+              diseñado y supervisado en su ejecución en todo momento por
+              Escuela de Organizaci&oacute;n Industrial.
+            </p>
+            <br>
+            <p class="fechass">
+              Fecha: 12/12/2023
+            </p>
+          </div>
+          <div class="dias_uno" id="event12">
+            <p class="titudia">Formaci&oacute;n "Stand Up" (acoso en la calle)</p>
+            <br>
+            <p class="textcont">
+              Visita de Montserrat de Fundaci&oacute;n Mujeres para impartir una conferencia
+              sobre Stand up, acoso en la calle.
+            </p>
+            <br>
+            <p class="fechass">
+              Fecha: 22/12/2023
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -182,7 +325,7 @@
     </section>
     <section class="f2">
       <p><a href="../legal/" class="links">Aviso legal</a></p>
-      <p><a href="../proteccion_datos/index.html" class="links">Proteccion de datos</a></p>
+      <p><a href="../proteccion_datos/index.html" class="links">Protecci&oacute;n de datos</a></p>
       <p><a href="../ubicacion/index.html" class="links">Ubicaci&oacute;n</a> </p>
     </section>
 
@@ -196,5 +339,4 @@
   <script src="js/index_script.js"></script>
   <script src="js/notitas_script.js" defer></script>
 </body>
-
 </html>

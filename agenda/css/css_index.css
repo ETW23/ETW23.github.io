@@ -131,7 +131,7 @@ ul {
 /*----------------------------------------FIN Menu------------------------------------------------*/
 /*-------------------------------ULTIMAS NOTICIAS----------------------------------------*/
 .noticias {
-  height: 45.5rem;
+  height: 45.9rem;
 }
 
 .fondo {
@@ -172,6 +172,7 @@ footer {
   box-shadow: 0 0 10px 10px #252525;
   font-size: 1.3em;
   text-align: center;
+  padding-bottom: 0.5em;
 }
 
 footer section a {
