@@ -38,6 +38,10 @@
         var currentCountry = null;
 
         function toggleSelected(el, country) {
+            if (window.innerWidth < 768) {
+                window.location.href = `./test.html?country=${country}`;
+            }
+
             const prev = document.querySelector('.flag.selected');
             if (prev) {
                 currentCountry = null;
@@ -122,7 +126,8 @@
                 alt="Bandera de la República Democrática del Congo" title="República Democrática del Congo">
         </a>
         <a href="#" class="flag" style="--idx: 8" onclick="toggleSelected(this, 'sahrawi')">
-            <img src="./Flag_of_the_Sahrawi_Arab_Democratic_Republic_(proposal).svg" alt="Bandera de Sahara Occidental" title="Sahara Occidental">
+            <img src="./Flag_of_the_Sahrawi_Arab_Democratic_Republic_(proposal).svg" alt="Bandera de Sahara Occidental"
+                title="Sahara Occidental">
         </a>
         <a href="#" class="flag" style="--idx: 9" onclick="toggleSelected(this, 'etnia_gitana')">
             <img src="./Flag_of_the_Romani_people.svg" alt="Bandera de la etnia gitana" title="Etnia Gitana">
