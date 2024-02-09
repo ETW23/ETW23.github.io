@@ -38,7 +38,7 @@
         var currentCountry = null;
 
         function toggleSelected(el, country) {
-            if (window.innerWidth < 768) {
+            if (window.matchMedia("(max-width: 768px)")) {
                 window.location.href = `./test.html?country=${country}`;
             }
 
