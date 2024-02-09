@@ -620,3 +620,206 @@ footer div {
 }
 
 /*------------Fin FOOTER------------*/
+
+@media (max-width: 440px) {
+    body {
+        max-width: 99vw;
+    }
+
+    /********************************/
+    #titulo {
+        left: 36vw;
+    }
+
+    #titulo p {
+        font-size: 5vw;
+    }
+
+    #titulo h1 {
+        font-size: 10vw;
+    }
+
+    /**************************************/
+    .botonesInicio {
+        height: 5vh;
+        line-height: 4vh;
+    }
+
+    .botonesInicio .selectores {
+        font-size: 2.1vw;
+    }
+
+    /**************************************/
+    #historia {
+        height: auto;
+    }
+
+    .bandera {
+        width: 5vw;
+    }
+
+    .bandizq {
+        left: 83vw;
+    }
+
+    .timeline {
+        width: 47vw;
+        padding: 0;
+    }
+
+    .timeline h2 {
+        font-size: 4vw;
+    }
+
+    .card {
+        width: 50vw;
+    }
+
+    .title {
+        font-size: 2.5vw;
+    }
+
+    .info p {
+        font-size: 2vw;
+    }
+
+    /***********************************/
+    #politica {
+        height: auto;
+        padding-bottom: 2vh;
+        padding-top: 5vh;
+    }
+
+    #politica h2 {
+        width: 45vw;
+        font-size: 5vw;
+    }
+
+    .contepoli {
+        flex-direction: column;
+    }
+
+    .cajasPoli {
+        width: 83vw;
+        height: 25vh;
+        margin-bottom: 2vh;
+    }
+
+    .ideas p {
+        width: 21vw;
+    }
+
+    .edusani p {
+        width: 29vw;
+    }
+
+    .segur p {
+        width: 27vw;
+    }
+
+    /*********************************/
+    #economia {
+        height: auto;
+        padding-bottom: 5vh;
+        padding-top: 5vh;
+    }
+
+    #economia h2 {
+        width: 45vw;
+        font-size: 5vw;
+    }
+
+    .conteeco {
+        flex-direction: column;
+    }
+
+    #inflacion,
+    #textoinfla,
+    #textodolar,
+    #dolar,
+    #textoPrim {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 1vh;
+        height: 30vh;
+    }
+
+    #textoinfla,
+    #dolar {
+        margin-bottom: 10vh;
+    }
+
+    #textoinfla,
+    #textodolar,
+    #textoPrim {
+        height: auto;
+    }
+
+    #textoPrim strong {
+        font-size: 3vw;
+    }
+
+    #secPrim {
+        width: 95%;
+        height: 40vh;
+    }
+
+    /*******************************/
+
+    #geo {
+        height: auto;
+    }
+
+    #geo h2 {
+        width: 45vw;
+        font-size: 5vw;
+    }
+
+    .conteGeo {
+        flex-direction: column;
+    }
+
+    .conteGeo>img {
+        margin: auto;
+        height: 60vh;
+        width: 70vw;
+        margin-bottom: 3vh;
+    }
+
+    .cajasGeo {
+        width: 55vw;
+    }
+
+    .descriClima {
+        width: 55vh;
+        height: auto;
+    }
+
+    /*****************************/
+
+    .selectorInfo {
+        width: 80%;
+    }
+
+    .botonesInfo .selectores {
+        font-size: 2vw;
+    }
+
+    .botonesInfo {
+        height: 4vh;
+    }
+
+    /****************/
+
+    #ht5 {
+        width: 20vw;
+    }
+
+    #acce {
+        width: 20vw;
+    }
+
+    #logoET {
+        width: 20vW;
+    }
+}
