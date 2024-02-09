@@ -134,11 +134,11 @@ h1 {
 }
 
 .menuAbierto .botonMenu .hamburguer .linea-1 {
-  transform: rotate(45deg) translate3d(0, -1, 0);
+  transform: rotate(45deg) translate(9px, 9px);
 }
 
 .menuAbierto .botonMenu .hamburguer .linea-2 {
-  opacity: 0;
+  transform: rotate(135deg) translate(7px, -7px);
 }
 
 .menuAbierto .botonMenu .hamburguer .linea-3 {
@@ -361,3 +361,74 @@ footer {
   width: 40%; /* Misma anchura que las columnas laterales */
   margin: 1em;
 }
+
+/* ---------------- Adaptacion a dispositivos moviles ---------------------- */
+
+@media screen and (max-width: 767px) {
+  .contenido{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contenido p{
+    font-size: small;
+  }
+  .controAudio{
+    width: 15%;
+    height: 15%;
+  }
+  #muteador {
+    margin-left: 16vh;
+  }
+  .contenido img {
+    height: 12em;
+    margin: 0em;
+}
+  .mapa {
+    flex-wrap: wrap;
+
+  }
+
+  .elemento1{
+    order: 2;
+    width: 80%;
+  }
+  .elemento2{
+    order: 1;
+    width: 80%;
+  }
+  .elemento3{
+    order: 3;
+    width: 80%;
+  }
+  .banderaCentral{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 5em;
+    padding: 0em;
+  }
+  .congo{
+    background-color: #003b49;
+     border-radius: 5px; 
+     margin-bottom: 0em; 
+     height: 75%; 
+     transition: auto; 
+     width: 75%; 
+     margin: 1em;
+  }
+  figure p{
+    font-size: small;
+  }
+  h1{
+    font-size: 2em;
+  }
+  footer p {
+    font-size: 0.5em;
+  }
+  .tituloDos{
+    font-size: 1.5em;
+  }
+}
+
