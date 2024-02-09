@@ -499,7 +499,7 @@ footer section a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(5px);
   font-size: 1rem;
@@ -511,6 +511,8 @@ footer section a {
 
 #popup {
   position: absolute;
+  height: auto;
+  overflow-y: scroll;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
