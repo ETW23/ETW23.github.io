@@ -197,7 +197,7 @@ body:has(.flags) {
     /* transition: 0.5s; */
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 1050px) {
     body:has(.flags) {
         overflow: auto;
         overflow-x: hidden;
@@ -279,7 +279,7 @@ body:has(.flags) {
     text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 1050px) {
     .logo {
         position: relative;
         top: 0;
