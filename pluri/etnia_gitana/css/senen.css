@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none !important;
 }
 #contenedor {
   width: 100%;
@@ -15,14 +16,14 @@ list-style: none;
 
 body {
 font-family: Arial, sans-serif;
-line-height: 1.42vw;
+line-height: 1.2vw;
 }
 
 h1 {  
-  font-size: 1.9vw;
+  font-size: 1.8vw;
   color: black;
   text-align: center;
-  padding: 20px;
+  padding: 1.6vw;
   text-shadow: -1px -1px 0 rgba(66, 66, 66, 0.75);
   
 }
@@ -30,47 +31,50 @@ h1 {
 .ori {
   width: 100%;
   text-align: center;
-  padding-bottom: 5px;
-  margin-top: 6%;
-  font-size: 2.5em;
+  padding-bottom: 0.5vw;
+  font-size: 3vw;
+  
   
 }
 
 h2 {
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
   text-decoration: none;
   color: white;
-  font-size: 1.75em;
+  font-size: 2.2vw;
   
 }
 
 a {
-  text-decoration: none;
-  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
+
 
 h3 {
   text-align: center;
+  color: white;
 }
 
 .h3-contenedor {
   position: relative;
-  top: 10px;
-  padding-bottom: 10px;
-  font-size: 1.5em;
+  top: 1vw;
+  padding-bottom: 1vw;
+  font-size: 2vw;
 }
 
 p {
-  width: 81%;
+  width: 85%;
   text-align: justify;
-  font-size: 1.27em;
+  font-size: 1.1vw;
   margin-left: 7.5%;
   margin-bottom: 2vw;
   margin-top: 1vw;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 2.5vw;
+  padding-bottom: 3vw;
   
 }
 
@@ -80,7 +84,7 @@ p {
   text-align: center;
   background-color:  rgba(66, 66, 66, 0.75);
   color:  rgb(245 245 245);
-  border-radius: 1em;
+  border-radius: 1.4vw;
   font-style: italic;
 }
 
@@ -94,29 +98,31 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 17em;
+  height: 15vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-nav.enlaces {
-text-align: center;
-padding: 20px;
-margin-bottom: 4.5vw; 
+nav {
+  width: 70%;
+  height: 3rem;
+  line-height: 3rem;
+  margin: auto;
+  text-align: center;
+}
+nav>ul>li {
+  display: inline-block;
+  width: 32%;
+  height: auto;                
 }
 
-nav.enlaces li {
-  display: inline; 
-}
-
-nav.enlaces li a.activa1, a.activa2, a.activa3 {
+nav li a.activa1, a.activa2, a.activa3 {
   text-decoration: none; 
   color: black; 
-  padding: 20px 70px; 
   border: 5px solid black; 
   border-radius: 5px; 
   font-weight: bold;
+  padding: 0.7vw;
 }
 
 li a.activa1{
@@ -137,11 +143,10 @@ nav.enlaces li a:hover {
 
 /*INICIO*/
 .li1 {
-  list-style: none;
+  width: 32%;
   display: inline-block;
-  width: 100%;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.3vw;
 }
 
 .li1 a.a2 {
@@ -181,11 +186,12 @@ text-decoration-line: none;
   box-sizing: content-box;
 }
 
+
 .boton {
   background-color: black;
   color: rgb(245 245 245);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
   text-align: center;
   font-size: 1.22em;
 }
@@ -207,7 +213,11 @@ img {
 .div11 {
   width: 17%;
   display: inline-block;
-  white-space: nowrap; 
+  white-space: nowrap;
+  
+}
+.div1{
+  margin-top: 8vw;
 }
 
 .contacto span {
@@ -231,7 +241,7 @@ span:hover {
 
 
 .enlaces .des {
-  width: 10%;
+  width: 60%;
   border-bottom: 0.125em solid black;
   height: 1.5em;
   line-height: 1.5em;
@@ -239,10 +249,9 @@ span:hover {
 }
 
 
-li ul {
-  width: 100%;
+ li ul {
   display: none;
-}
+} 
 
 li ul li {
   display: block;
@@ -264,7 +273,7 @@ ul .des {
 li .des {
   display: block;
   text-align: center;
-  margin-right: 25%; 
+  margin-right: 15%; 
 }
 
 /*Fotos*/
@@ -294,7 +303,7 @@ li .des {
 }
 
 .fotones2{
-  width: 27%;
+  width: 30%;
   border-radius: 1em;
 }
 
@@ -306,16 +315,13 @@ li .des {
   border-radius: 1em;
 }
 .foto2 {
-  width: 95%;
-  margin: 1.5%;
-  margin-top: 2.5%;
-  
+  margin: 2.5%; 
 }
 .fotones3{
   width: 40%;
   margin-top: 2%;
   margin-bottom: 2%;
-  border-radius: 1em;
+  border-radius: 1.6vw;
 }
 .fotones4{
   width: 40%;
@@ -328,7 +334,7 @@ li .des {
 
 
 h4{
-  font-size: 1.35em;
+  font-size: 1.6vw;
   text-align: left;
   margin-left: 7%;
   color: white;
@@ -336,8 +342,8 @@ h4{
   
 }
 .titulo4{
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 
 }
 
@@ -345,22 +351,22 @@ h4{
 .texSeccion, .textSeccion {
   margin-left: 6%;
   width: 90%;
-  letter-spacing: 0.12em;
-  font-size: 1.1em;
+  letter-spacing: 0.15vw;
+  font-size: 1.5vw;
   color: rgb(255, 255, 255);
   background-color: rgba(37, 37, 37, 0.75); 
-  border-radius: 1em;
+  border-radius: 1.6vw;
 }
 .textSeccion {
 
   width: 70%;
 }
-.submenu{
+/* .submenu{
   margin-top: 20px;
-}
+} */
 
 hr{
-  border: 5px solid  rgba(66, 66, 66, 0.75);
+  border: 0.2vw solid  rgba(66, 66, 66, 0.75);
 }
 .fondo1{
   background-image: url(repeat.webp);
@@ -368,6 +374,63 @@ hr{
   background-size: auto;
 
 }
-h3{
-  color: white;
+
+
+.enlaces ul {
+  list-style-type: none;
+  /* margin: 0;
+  padding: 0; */
+  overflow: hidden;
 }
+
+.enlaces li {
+  float: none;
+  display: inline-block;
+}
+
+.enlaces a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.enlaces a:hover {
+  background-color: #111;
+}
+
+.submenu {
+  display: none;
+ 
+}
+
+.submenu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu a:hover {
+  background-color: #ddd;
+}
+
+.enlaces li:hover .submenu {
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+
+@media screen and (max-width: 600px) {
+  .enlaces li {
+      float: none;
+      display: block;
+      text-align: center;
+  }
+
+}
+
+.acce{
+  width: 7vw;
+}
+

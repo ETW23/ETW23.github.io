@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi-Proyecto</title>
     <link rel="stylesheet" href="css/senen.css">
+    <script src="script.js"></script>
 </head>
-<body>
+<body >
 <div id="contenedor">
     <div class="portada"> 
         <h1>Etnia Gitana</h1>                 
@@ -22,29 +23,28 @@
                 <li><a class="des" id="empleo5" href="#empleo">Empleo</a></li>
                 <li><a class="des"  id="costumbre6" href="#costumbres">Costumbres</a></li>
             </ul>
-        </li>
         </ul>
     </nav>
     <div class="div1">
     <h2 class="ori">Or&iacute;genes</h2>
     
 <div class="texSeccion">
-<p>Los gitanos, roman&eacute;s, c&iacute;ngaros o rom son una comunidad o etnia 
-originaria del subcontinente indio. Más que en la certeza del 
+<p>Los gitanos, roman&iacute;s, c&iacute;ngaros o rom son una comunidad o etnia 
+originaria del subcontinente indio. M&aacute;s que en la certeza del 
 origen, en lo que s&iacute; coinciden los estudiosos y estudiosas, es que
 el punto de partida de los gitanos es la India.<br><br>
-Fueron los lingüistas quienes descubrieron su procedencia 
+Fueron los ling&uuml;istas quienes descubrieron su procedencia 
 ya que la lengua que hablan los gitanos, la lengua Roman&iacute;, 
 es una lengua de la familia indoeuropea y su vocabulario y 
 gram&aacute;tica est&eacute;n estrechamente relacionadas con algunas de las 
 lenguas vivas actuales de la India. 
-Igualmente a trav&eacute;s de los pr&eacute;stamos lingü&iacute;sticos que iban 
+Igualmente a trav&eacute;s de los pr&eacute;stamos ling&uuml;&iacute;sticos que iban 
 adquiriendo se ha ido descubriendo los lugares de estancia y
 viaje de los gitanos por Asia y Europa.</p> 
 </div>
 
     <figure class="foto2">
-        <img src="IMG/images1.jpg" alt="imagenes"  class="fotones2">
+        <img src="IMG/images1.jpg" alt="imagenes"  class="fotones2" onclick="ampliarImagen(this)">
     </figure>
 
 <div class="texSeccion">
@@ -75,7 +75,7 @@ finalizar el siglo XIX.</p>
 </div>
 <div class="gitano">
     <figure class="foto2" >
-        <img src="IMG/imagenes2.png" alt="primera" class="fotones">
+        <img src="IMG/imagenes2.png" alt="primera" class="fotones" onclick="ampliarImagen(this)">
     </figure>
 </div>
 <div class="textSeccion">
@@ -83,7 +83,7 @@ finalizar el siglo XIX.</p>
 hermanos e hijos, de los que venimos muchos de los gitanos 
 asturianos actuales. M&aacute;s tarde, la poblaci&oacute;n gitana aument&oacute;
 gracias a la llegada de otras familias, aprovechando el auge 
-económico de la d&eacute;cada de los sesenta. <br><br>
+econ&oacute;mico de la d&eacute;cada de los sesenta. <br><br>
 Antes del a&ntilde;o 1936, casi todos los gitanos &eacute;ramos n&oacute;madas;
 s&oacute;lo algunas familias viv&iacute;an de forma sedentaria, pero poco a 
 poco todas las familias gitanas nos hemos ido volviendo 
@@ -110,7 +110,7 @@ construcci&oacute;n de carreteras y, en general, trabajos pesados.
 </div>
 
 <figure class="foto2">
-    <img src="IMG/bandera.jpg" alt="primera" class="fotones2">
+    <img src="IMG/bandera.jpg" alt="primera" class="fotones2" onclick="ampliarImagen(this)">
 </figure>
 
 <div class="texSeccion">
@@ -139,7 +139,7 @@ problemas, con la cultura mayoritaria.
 
 <br>
 <div class="div3"> 
-<a href="#segundo2" id="segundo"><h2>La persecucion de los Gitanos</h2></a>
+<a href="#segundo2" id="segundo"><h2>La persecuci&oacute;n de los Gitanos</h2></a>
 </div>
 <hr>
 <div class="texSeccion">
@@ -167,7 +167,7 @@ su desaparici&oacute;n como cultura.
 </div>
 
 <figure class="foto2">
-    <img src="IMG/dphe-gitanos.jpg.jpg" alt="salvoconducto" class="fotones2">
+    <img src="IMG/dphe-gitanos.jpg.jpg" alt="salvoconducto" class="fotones2" onclick="ampliarImagen(this)">
     <p class="parrafo">"SALVOCONDUCTO DE ALFONSO V DE ARAGON 
     AL CONDE JUAN DE EGIPTO MENOR, 1425"</p>
 </figure>
@@ -195,7 +195,7 @@ con todos los derechos para los Gitanos.
 </div>
 
 <figure class="foto2">
-    <img src="IMG/pragmatica.jpg" alt="pragmatica" class="fotones2">
+    <img src="IMG/pragmatica.jpg" alt="pragmatica" class="fotones2" onclick="ampliarImagen(this)">
     <p class="parrafo">"LA PRAGM&Aacute;TICA DE LOS REYES CAT&Oacute;LICOS,
     30 DE JULIO DE 1749"</p>
 </figure>
@@ -219,7 +219,7 @@ literatura y otras muchas artes.
 </div>
 <div class="gitano">
 <figure class="foto2">
-    <img src="IMG/gente.jpg" alt="gente" class="fotones">
+    <img src="IMG/gente.jpg" alt="gente" class="fotones" onclick="ampliarImagen(this)">
 </figure>
 </div>
 <div class="textSeccion">
@@ -262,7 +262,7 @@ educadores, inform&aacute;ticos, m&eacute;dicos, enfermeros, etc.
 </p>
 </div>
 <figure class="foto2">
- <img src="IMG/estudios.jpg" alt="estudio" class="fotones2">  
+ <img src="IMG/estudios.jpg" alt="estudio" class="fotones2" onclick="ampliarImagen(this)">  
 </figure>
 
 
@@ -274,10 +274,10 @@ escolar en Secundaria Obligatoria. Y aunque se aprecia un incremento
 en el n&uacute;mero de alumnos y alumnas gitanos en 
 Bachiller y Universidad, los porcentajes siguen siendo todav&iacute;a 
 muy inferiores a la media. <br> <br>
-Aún estamos lejos de conseguir una situaci&oacute;n de normalizaci&oacute;n 
+A&uacute;n estamos lejos de conseguir una situaci&oacute;n de normalizaci&oacute;n 
 educativa del alumnado gitano en Espa&ntilde;a. Como bot&oacute;n de muestra, 
 basta se&ntilde;alar que del conjunto del alumnado gitano que comienza la
-E.S.O., s&oacute;lo la finaliza el 20%, frente a mas del 80% de alumnos en general.
+E.S.O., s&oacute;lo la finaliza el 20%, frente a m&aacute;s del 80% de alumnos en general.
 </p>
 </div>
 <br>
@@ -300,7 +300,7 @@ media.
 </div>
 
 <figure class="foto2">
-    <img src="IMG/mercado.jpg" alt="trabajo" class="fotones2">  
+    <img src="IMG/mercado.jpg" alt="trabajo" class="fotones2" onclick="ampliarImagen(this)">  
 </figure>
 
 <div class="texSeccion">
@@ -328,17 +328,17 @@ incorporaci&oacute;n de los gitanos y gitanas al empleo.
 </div>
 <div class="gitano">
 <figure class="foto2">
-    <img src="IMG/gitano.jpg" alt="gitano" class="fotones">  
+    <img src="IMG/gitano.jpg" alt="gitano" class="fotones" onclick="ampliarImagen(this)">  
 </figure>
 </div>
-<div class="textSeccion">
+<div class="textSeccion" >
 <p>
 La leyes gitanas son orales, lo que significa que no figuran en
 ning&uacute;n tipo de libro de culto o c&oacute;digo de derecho escrito. Lo 
 normal si se produce alg&uacute;n tipo de conflicto entre gitanos es, que 
 quienes deber&aacute;n decidir el destino final de dicha disputa ser&aacute;n los 
 gitanos de respeto o t&iacute;os de la zona (No tiene por que ser familiares, sino 
-tambien personas mayores a las que se respeta por su edad  o antiguedad de la
+tambien personas mayores a las que se respeta por su edad  o antig&uuml;edad de la
 zona). 
 </p>
 </div>
@@ -421,8 +421,8 @@ ya que su presencia es constante y casi diaria en las familias
 gitanas. El pueblo gitano ha hecho un gran aporte al flamenco 
 espa&ntilde;ol. Ejemplos de ello son cantantes de la talla de 
 Antonio Flores, Camar&oacute;n, Paco de Luc&iacute;a, Navajita 
-Plate&aacute; y actualmente también hay cantantes de gran renombre como Israel Fernández,
-Vicente del Castro Giménez (parrita) o los banis.
+Plate&aacute; y actualmente tambi&eacute;n hay cantantes de gran renombre como Israel Fern&aacute;ndez,
+Vicente del Castro Gim&eacute;nez (parrita) o los banis.
 </p>
 
 </div>
@@ -430,12 +430,19 @@ Vicente del Castro Giménez (parrita) o los banis.
 
 <br>
 
-<footer>
-    <ul class="boton">
-        <li class="li1"><a class="a2" href="#cuarto">
+<footer class="boton">
+
+   
+    
+    <ul>
+        <li class="li1">Accesibilidad: <br> AAA HTML5</li>
+        <li class="li1"><a class="a2" href="https://etw23.github.io/pluri/index.html">
         Escuelas Taller 'Gij&oacute;n Acompa&ntilde;a'
         </a></li>
+        <li class="li1"><img class="acce" src="IMG/logo2.png"></li>
     </ul>
+
+  
 </footer>
 
 
