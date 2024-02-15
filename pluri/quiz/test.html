@@ -1,581 +1,590 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <script>
-      const questionsByCountry = {
-        ucrania: [
-          {
-            question: "¿Qué pais no limita con Ucrania?",
-            answers: ["Polonia", "Hungría", "Rumania", "Serbia"],
-            correctAnswer: 3,
-          },
-          // {
-          //     question: "¿Durante qué evento fue completamente destruida la ciudad de Kiev?",
-          //     answers: [
-          //         "La Segunda Guerra Mundial",
-          //         "La Guerra Civil Rusa",
-          //         "La Invasion Mongola",
-          //         "La Guerra de los Seis Días"
-          //     ],
-          //     correctAnswer: 2
-          // },
-          {
-            question: "¿Qué ciudad se llaman «la Madre de las ciudades rusas»?",
-            answers: ["Lviv", "Odesa", "Kyiv", "Kharkiv"],
-            correctAnswer: 2,
-          },
-          // {
-          //     question: "¿Que no está declarado Patrimonio de la Humanidad por la UNESCO?",
-          //     answers: [
-          //         "Centro historico de Odesa",
-          //         "La Iglesia de San Andrés",
-          //         "Monasterio de las Cuevas de Kiev",
-          //         "Biblioteca Nacional de Ucrania V. I. Vernadsky"
-          //     ],
-          //     correctAnswer: 3
-          // },
-          {
-            question: "¿Cuándo se independizó Ucrania de la URSS?",
-            answers: ["1990", "1991", "1992", "1993"],
-            correctAnswer: 1,
-          },
-          {
-            question:
-              "¿Qué ciudad fue la primera capital de Ucrania Soviética?",
-            answers: [
-              "Kharkiv (Járkov)",
-              "Kyiv (Kiev)",
-              "Odesa (Odessa)",
-              "Lviv",
+        const questionsByCountry = {
+            ucrania: [
+                {
+                    question: "¿Qué pais no limita con Ucrania?",
+                    answers: ["Polonia", "Hungría", "Rumania", "Serbia"],
+                    correctAnswer: 3,
+                },
+                // {
+                //     question: "¿Durante qué evento fue completamente destruida la ciudad de Kiev?",
+                //     answers: [
+                //         "La Segunda Guerra Mundial",
+                //         "La Guerra Civil Rusa",
+                //         "La Invasion Mongola",
+                //         "La Guerra de los Seis Días"
+                //     ],
+                //     correctAnswer: 2
+                // },
+                {
+                    question: "¿Qué ciudad se llaman «la Madre de las ciudades rusas»?",
+                    answers: ["Lviv", "Odesa", "Kyiv", "Kharkiv"],
+                    correctAnswer: 2,
+                },
+                // {
+                //     question: "¿Que no está declarado Patrimonio de la Humanidad por la UNESCO?",
+                //     answers: [
+                //         "Centro historico de Odesa",
+                //         "La Iglesia de San Andrés",
+                //         "Monasterio de las Cuevas de Kiev",
+                //         "Biblioteca Nacional de Ucrania V. I. Vernadsky"
+                //     ],
+                //     correctAnswer: 3
+                // },
+                {
+                    question: "¿Cuándo se independizó Ucrania de la URSS?",
+                    answers: ["1990", "1991", "1992", "1993"],
+                    correctAnswer: 1,
+                },
+                {
+                    question:
+                        "¿Qué ciudad fue la primera capital de Ucrania Soviética?",
+                    answers: [
+                        "Kharkiv (Járkov)",
+                        "Kyiv (Kiev)",
+                        "Odesa (Odessa)",
+                        "Lviv",
+                    ],
+                    correctAnswer: 0,
+                },
+                {
+                    question:
+                        "¿Qué añadió la UNESCO a la lista de Patrimonio de la Humanidad en Peligro en 2023?",
+                    answers: [
+                        "La Iglesia de San Andrés",
+                        "Monasterio de las Cuevas de Kiev",
+                        "Centro historico de Odesa",
+                        "Biblioteca Nacional de Ucrania V. I. Vernadsky",
+                    ],
+                    correctAnswer: 2,
+                },
+                {
+                    question:
+                        "¿Cómo se llaman las comunidades autónomas que se formaron en las estepas ucrainianas en los siglos XIV-XV?",
+                    answers: ["Hussites", "Cosacos", "Tártaros", "Lollards"],
+                    correctAnswer: 1,
+                },
+                {
+                    question: "¿Entre qué paises se dividía el territorio de Ucrania?",
+                    answers: [
+                        "Reino de Polonia y Principado de Moscú",
+                        "Mancomunidad de Polonia-Lituania y Zarato ruso",
+                        "Imperio austrohúngaro y Imperio ruso",
+                        "Todo lo anterior",
+                    ],
+                    correctAnswer: 3,
+                },
+                // {
+                //     question: "¿Qué sistema político se utiliza en Ucrania?",
+                //     answers: [
+                //         "República parlementaria",
+                //         "República semipresidencialista",
+                //         "República presidencialista",
+                //         "Monarquía",
+                //     ],
+                //     correctAnswer: 1
+                // },
+                {
+                    question:
+                        "¿Cuál es el sector más importante de la industria pesada de Ucrania?",
+                    answers: [
+                        "Producción de hierro y acero",
+                        "Producción química",
+                        "Construcción naval",
+                        "Producción de metales no ferrosos",
+                    ],
+                    correctAnswer: 0,
+                },
+                {
+                    question: "¿Cuál es el símbolo de la moneda oficial de Ucrania?",
+                    answers: ["₲", "₮", "₴", "ϟ"],
+                    correctAnswer: 2,
+                },
+                // {
+                //     question: "¿Qué religión predomina en Ucrania?",
+                //     answers: [
+                //         "Judaísmo",
+                //         "Catolicismo",
+                //         "Cristianismo ortodoxo",
+                //         "Islam",
+                //     ],
+                //     correctAnswer: 2
+                // }
             ],
-            correctAnswer: 0,
-          },
-          {
-            question:
-              "¿Qué añadió la UNESCO a la lista de Patrimonio de la Humanidad en Peligro en 2023?",
-            answers: [
-              "La Iglesia de San Andrés",
-              "Monasterio de las Cuevas de Kiev",
-              "Centro historico de Odesa",
-              "Biblioteca Nacional de Ucrania V. I. Vernadsky",
+            sahrawi: [
+                {
+                    question: '¿Qué significa la palabra "sahára"?',
+                    answers: ["Desierto", "Mar", "Montaña", "Río"],
+                    correctAnswer: 0,
+                },
+                {
+                    question:
+                        "¿Qué país limita con el Sáhara Occidental al sur y al este?",
+                    answers: ["Marruecos", "Mauritania", "Argelia", "Níger"],
+                    correctAnswer: 1,
+                },
+                {
+                    question:
+                        "¿Qué es la capital de la República Árabe Saharaui Democrática?",
+                    answers: ["Dajla", "Smara", "Bir Lehlu", "El Aaiún"],
+                    correctAnswer: 3,
+                },
+                {
+                    question: "¿Cuándo se retiró España del Sáhara Occidental?",
+                    answers: ["1967", "1973", "1975", "1979"],
+                    correctAnswer: 2,
+                },
+                {
+                    question:
+                        "¿Cuál es la moneda oficial de la República Árabe Saharaui Democrática?",
+                    answers: [
+                        "Uguiya saharaui",
+                        "Dinar saharaui",
+                        "Dirham saharaui",
+                        "Peseta saharaui",
+                    ],
+                    correctAnswer: 3,
+                },
             ],
-            correctAnswer: 2,
-          },
-          {
-            question:
-              "¿Cómo se llaman las comunidades autónomas que se formaron en las estepas ucrainianas en los siglos XIV-XV?",
-            answers: ["Hussites", "Cosacos", "Tártaros", "Lollards"],
-            correctAnswer: 1,
-          },
-          {
-            question: "¿Entre qué paises se dividía el territorio de Ucrania?",
-            answers: [
-              "Reino de Polonia y Principado de Moscú",
-              "Mancomunidad de Polonia-Lituania y Zarato ruso",
-              "Imperio austrohúngaro y Imperio ruso",
-              "Todo lo anterior",
+            argentina: [
+                {
+                    question: "¿Cuál es la moneda oficial de Argentina?",
+                    answers: [
+                        "Peso argentino",
+                        "Dolar argentino",
+                        "Ducat argentino",
+                        "Dinar argentino",
+                    ],
+                    correctAnswer: 0,
+                },
+                {
+                    question:
+                        "¿Cuándo estuvo Argentina gobernada por la dictadura militar?",
+                    answers: ["1970-1977", "1973-1980", "1976-1983", "1980-1987"],
+                    correctAnswer: 2,
+                },
+                {
+                    question:
+                        "¿Cuando se enfrentaron Argentina y Gran Bretaña en la Guerra de las Malvinas (Falkland)?",
+                    answers: ["1982", "1983", "1984", "1985"],
+                    correctAnswer: 0,
+                },
+                {
+                    question:
+                        "¿Qué ciudad de Argentina comparte el título de «Capital mundial del vino»?",
+                    answers: ["Buenos Aires", "Córdoba", "Rosario", "Mendoza"],
+                    correctAnswer: 3,
+                },
+                {
+                    question: "¿Cuál es la provincia más fria de Argentina?",
+                    answers: [
+                        "Corrientes",
+                        "Tierra del Fuego",
+                        "Entre Ríos",
+                        "Gran Chaco",
+                    ],
+                    correctAnswer: 1,
+                },
             ],
-            correctAnswer: 3,
-          },
-          // {
-          //     question: "¿Qué sistema político se utiliza en Ucrania?",
-          //     answers: [
-          //         "República parlementaria",
-          //         "República semipresidencialista",
-          //         "República presidencialista",
-          //         "Monarquía",
-          //     ],
-          //     correctAnswer: 1
-          // },
-          {
-            question:
-              "¿Cuál es el sector más importante de la industria pesada de Ucrania?",
-            answers: [
-              "Producción de hierro y acero",
-              "Producción química",
-              "Construcción naval",
-              "Producción de metales no ferrosos",
+            nicaragua: [
+                {
+                    question: "¿Qué país limita con Nicaragua al norte?",
+                    answers: ["Honduras", "Costa Rica", "Panamá", "El Salvador"],
+                    correctAnswer: 0,
+                },
+                {
+                    question: "¿Qué es la capital de Nicaragua?",
+                    answers: ["León", "Granada", "Managua", "Masaya"],
+                    correctAnswer: 2,
+                },
+                {
+                    question: "¿Qué es la moneda oficial de Nicaragua?",
+                    answers: [
+                        "Dólar nicaragüense",
+                        "Peso nicaragüense",
+                        "Rosario",
+                        "Córdoba",
+                    ],
+                    correctAnswer: 3,
+                },
+                {
+                    question: "¿Cuando Nicaragua independizó de España?",
+                    answers: ["1810", "1821", "1825", "1830"],
+                    correctAnswer: 1,
+                },
+                {
+                    question: "¿Qué es la idioma oficial de Nicaragua?",
+                    answers: ["Español", "Inglés", "Francés", "Portugués"],
+                    correctAnswer: 0,
+                },
+                {
+                    question:
+                        "¿Cuál es la mayor exportación de agricultura de Nicaragua?",
+                    answers: [
+                        "Ajonjolí (sesamo)",
+                        "Maní (cacahuete)",
+                        "Caña de azúcar",
+                        "Café",
+                    ],
+                    correctAnswer: 3,
+                },
+                {
+                    question:
+                        "¿Cómo se llama la fiesta religiosa nicaragüense en honor a la Inmaculada Concepción de María?",
+                    answers: [
+                        "La Gritería",
+                        "La Conchita",
+                        "La Candelaria",
+                        "Las Posadas",
+                    ],
+                    correctAnswer: 0,
+                },
             ],
-            correctAnswer: 0,
-          },
-          {
-            question: "¿Cuál es el símbolo de la moneda oficial de Ucrania?",
-            answers: ["₲", "₮", "₴", "ϟ"],
-            correctAnswer: 2,
-          },
-          // {
-          //     question: "¿Qué religión predomina en Ucrania?",
-          //     answers: [
-          //         "Judaísmo",
-          //         "Catolicismo",
-          //         "Cristianismo ortodoxo",
-          //         "Islam",
-          //     ],
-          //     correctAnswer: 2
-          // }
-        ],
-        sahrawi: [
-          {
-            question: '¿Qué significa la palabra "sahára"?',
-            answers: ["Desierto", "Mar", "Montaña", "Río"],
-            correctAnswer: 0,
-          },
-          {
-            question:
-              "¿Qué país limita con el Sáhara Occidental al sur y al este?",
-            answers: ["Marruecos", "Mauritania", "Argelia", "Níger"],
-            correctAnswer: 1,
-          },
-          {
-            question:
-              "¿Qué es la capital de la República Árabe Saharaui Democrática?",
-            answers: ["Dajla", "Smara", "Bir Lehlu", "El Aaiún"],
-            correctAnswer: 3,
-          },
-          {
-            question: "¿Cuándo se retiró España del Sáhara Occidental?",
-            answers: ["1967", "1973", "1975", "1979"],
-            correctAnswer: 2,
-          },
-          {
-            question:
-              "¿Cuál es la moneda oficial de la República Árabe Saharaui Democrática?",
-            answers: [
-              "Uguiya saharaui",
-              "Dinar saharaui",
-              "Dirham saharaui",
-              "Peseta saharaui",
+            rumania: [
+                {
+                    question: "¿Qué pais limita con Rumanía al sur?",
+                    answers: ["Ucrania", "Moldavia", "Bulgaria", "Hungría"],
+                    correctAnswer: 2,
+                },
+                {
+                    question: "¿Cuál es la capital de Rumanía?",
+                    answers: ["Bucarest", "Cluj-Napoca", "Timișoara", "Iași"],
+                    correctAnswer: 0,
+                },
+                {
+                    question: "¿Cuál es la moneda oficial de Rumanía?",
+                    answers: ["Leu rumano", "Dólar rumano", "Peseta rumana", "Euro"],
+                    correctAnswer: 0,
+                },
+                {
+                    question: "¿Cuándo entró Rumanía en la Unión Europea?",
+                    answers: ["2004", "2005", "2006", "2007"],
+                    correctAnswer: 3,
+                },
+                {
+                    question: "¿Quién gobernó la Rumanía comunista desde 1965?",
+                    answers: [
+                        "Ion Iliescu",
+                        "Traian Băsescu",
+                        "Nicolae Ceaușescu",
+                        "Klaus Iohannis",
+                    ],
+                    correctAnswer: 2,
+                },
             ],
-            correctAnswer: 3,
-          },
-        ],
-        argentina: [
-          {
-            question: "¿Cuál es la moneda oficial de Argentina?",
-            answers: [
-              "Peso argentino",
-              "Dolar argentino",
-              "Ducat argentino",
-              "Dinar argentino",
+            etnia_gitana: [
+                {
+                    question: "Según los estudios, ¿de dónde proviene la etnia gitana?",
+                    answers: ["India", "Egipto", "Rumanía", "España"],
+                    correctAnswer: 0,
+                },
+                {
+                    question: "¿Qué estilo musical proviene de la cultura gitana?",
+                    answers: ["Rumba", "Bolero", "Tango", "Flamenco"],
+                    correctAnswer: 3,
+                },
+                {
+                    question:
+                        "¿Qué término se refiere a la discriminación o prejucio contra la gente gitana?",
+                    answers: [
+                        "Aporofobia",
+                        "Porraimos",
+                        "Antigitanismo",
+                        "Mestizofobia",
+                    ],
+                    correctAnswer: 2,
+                },
+                {
+                    question:
+                        "¿Comó se llama un variante del idioma romaní con influencias españolas?",
+                    answers: ["Erromintxela", "Romanés", "Caló", "Sinti"],
+                    correctAnswer: 2,
+                },
+                {
+                    question: "¿Qué palabra se originó en la lengua romaní?",
+                    answers: ["chungo", "currar", "molar", "chaval"],
+                    correctAnswer: [0, 1, 2, 3],
+                },
             ],
-            correctAnswer: 0,
-          },
-          {
-            question:
-              "¿Cuándo estuvo Argentina gobernada por la dictadura militar?",
-            answers: ["1970-1977", "1973-1980", "1976-1983", "1980-1987"],
-            correctAnswer: 2,
-          },
-          {
-            question:
-              "¿Cuando se enfrentaron Argentina y Gran Bretaña en la Guerra de las Malvinas (Falkland)?",
-            answers: ["1982", "1983", "1984", "1985"],
-            correctAnswer: 0,
-          },
-          {
-            question:
-              "¿Qué ciudad de Argentina comparte el título de «Capital mundial del vino»?",
-            answers: ["Buenos Aires", "Córdoba", "Rosario", "Mendoza"],
-            correctAnswer: 3,
-          },
-          {
-            question: "¿Cuál es la provincia más fria de Argentina?",
-            answers: [
-              "Corrientes",
-              "Tierra del Fuego",
-              "Entre Ríos",
-              "Gran Chaco",
+            venezuela: [
+                {
+                    question: "¿Qué país no limita con Venezuela?",
+                    answers: ["Colombia", "Brasil", "Guyana", "Panama"],
+                    correctAnswer: 3,
+                },
+                {
+                    question: "¿Cuál es la capital de Venezuela?",
+                    answers: ["Caracas", "Maracaibo", "Valencia", "Barquisimeto"],
+                    correctAnswer: 0,
+                },
+                {
+                    question:
+                        "¿Cuál es la cascada más alta del mundo, ubicada en el Parque Nacional Canaima de Venezuela?",
+                    answers: [
+                        "Cataratas del Iguazú",
+                        "Salto Ángel",
+                        "Cataratas Victoria",
+                        "Cataratas del Niágara",
+                    ],
+                    correctAnswer: 1,
+                },
+                {
+                    question:
+                        "¿Cuál es el plato nacional venezolano, hecho de carne de res picada, frijoles negros, arroz, plátanos fritos y queso?",
+                    answers: ["Arepas", "Pabellón Criollo", "Cachapa", "Tequeños"],
+                    correctAnswer: 1,
+                },
+                {
+                    question: "¿Cuál es la moneda oficial en Venezuela?",
+                    answers: ["Dolar", "Peso", "Bolívar", "Euro"],
+                    correctAnswer: 2,
+                },
+                {
+                    question:
+                        "¿Cuál es el nombre del estilo tradicional de música y baile venezolano a menudo interpretado durante festivales y celebraciones?",
+                    answers: ["Salsa", "Merengue", "Joropo", "Mejorana"],
+                    correctAnswer: 2,
+                },
+                {
+                    question:
+                        "¿Cuál es el nombre de manifestaciones religiosas populares de Venezuela durante el Corpus Christi?",
+                    answers: [
+                        "Los Diablos Danzantes",
+                        "La Patum",
+                        "La Fiesta del Septenario",
+                        "Los Negritos",
+                    ],
+                    correctAnswer: 0,
+                },
             ],
-            correctAnswer: 1,
-          },
-        ],
-        nicaragua: [
-          {
-            question: "¿Qué país limita con Nicaragua al norte?",
-            answers: ["Honduras", "Costa Rica", "Panamá", "El Salvador"],
-            correctAnswer: 0,
-          },
-          {
-            question: "¿Qué es la capital de Nicaragua?",
-            answers: ["León", "Granada", "Managua", "Masaya"],
-            correctAnswer: 2,
-          },
-          {
-            question: "¿Qué es la moneda oficial de Nicaragua?",
-            answers: [
-              "Dólar nicaragüense",
-              "Peso nicaragüense",
-              "Rosario",
-              "Córdoba",
+            congo: [
+                {
+                    question: "¿Quiénes fueron los habitantes primeros conocidos del territorio de la República Democrática del Congo?",
+                    answers: [
+                        "Bantúes",
+                        "Tribus pigmeas",
+                        "Nilosaharianos",
+                        "Austronesios"
+                    ],
+                    correctAnswer: 1,
+                },
+                {
+                    question: "¿Qué técnicas trajeron los bantúes a la región desde el África Occidental?",
+                    answers: [
+                        "Agricultura y metalurgia",
+                        "Caza y pesca",
+                        "Cerámica y tejido",
+                        "Construcción de barcos y navegación"
+                    ],
+                    correctAnswer: 0,
+                },
+                {
+                    question: "¿En colonia de qué país se convirtió El Estado Libre del Congo en 1908?",
+                    answers: ["Francia", "Alemanía", "Bélgica", "Portugal"],
+                    correctAnswer: 2,
+                },
+                {
+                    question: "¿Cuál es la capital de la República Democrática del Congo?",
+                    answers: ["Kinsasa", "Lubumbashi", "Mbuji-Mayi", "Kananga"],
+                    correctAnswer: 0,
+                },
+                {
+                    question: "¿Cuál es la moneda oficial de la República Democrática del Congo?",
+                    answers: [
+                        "Dólar congoleño",
+                        "Franco congoleño",
+                        "Euro",
+                        "Peso congoleño",
+                    ],
+                    correctAnswer: 1,
+                },
+                {
+                    question: "La República Democrática del Congo tiene casi mitad de las reservas mundiales conocidas de...",
+                    answers: ["Oro", "Cobre", "Diamantes", "Cobalto"],
+                    correctAnswer: 3,
+                },
             ],
-            correctAnswer: 3,
-          },
-          {
-            question: "¿Cuando Nicaragua independizó de España?",
-            answers: ["1810", "1821", "1825", "1830"],
-            correctAnswer: 1,
-          },
-          {
-            question: "¿Qué es la idioma oficial de Nicaragua?",
-            answers: ["Español", "Inglés", "Francés", "Portugués"],
-            correctAnswer: 0,
-          },
-          {
-            question:
-              "¿Cuál es la mayor exportación de agricultura de Nicaragua?",
-            answers: [
-              "Ajonjolí (sesamo)",
-              "Maní (cacahuete)",
-              "Caña de azúcar",
-              "Café",
+            afganistan: [
+                {
+                    question: "¿Cuál es la capital de Afganistán?",
+                    answers: ["Islamabad", "Dushanbe", "Kabul", "Tehran"],
+                    correctAnswer: 2,
+                },
+                {
+                    question: "¿En qué cordillera está situada gran parte de Afganistán?",
+                    answers: ["Montes Elburz", "Hindu Kush", "Karakórum", "Tian Shan"],
+                    correctAnswer: 1,
+                },
+                {
+                    question: "¿Cómo se llama la vestimenta tradicional para hombres en Afganistán?",
+                    answers: ["Chapan", "Thawb", "Dhoti", "Kurta"],
+                    correctAnswer: 0,
+                },
+                {
+                    question: "¿Cómo se llama el pan tradicional afgano hecho en un horno de barro?",
+                    answers: ["Naan", "Pita", "Roti", "Lavash"],
+                    correctAnswer: 0,
+                },
             ],
-            correctAnswer: 3,
-          },
-          {
-            question:
-              "¿Cómo se llama la fiesta religiosa nicaragüense en honor a la Inmaculada Concepción de María?",
-            answers: [
-              "La Gritería",
-              "La Conchita",
-              "La Candelaria",
-              "Las Posadas",
-            ],
-            correctAnswer: 0,
-          },
-        ],
-        rumania: [
-          {
-            question: "¿Qué pais limita con Rumanía al sur?",
-            answers: ["Ucrania", "Moldavia", "Bulgaria", "Hungría"],
-            correctAnswer: 2,
-          },
-          {
-            question: "¿Cuál es la capital de Rumanía?",
-            answers: ["Bucarest", "Cluj-Napoca", "Timișoara", "Iași"],
-            correctAnswer: 0,
-          },
-          {
-            question: "¿Cuál es la moneda oficial de Rumanía?",
-            answers: ["Leu rumano", "Dólar rumano", "Peseta rumana", "Euro"],
-            correctAnswer: 0,
-          },
-          {
-            question: "¿Cuándo entró Rumanía en la Unión Europea?",
-            answers: ["2004", "2005", "2006", "2007"],
-            correctAnswer: 3,
-          },
-          {
-            question: "¿Quién gobernó la Rumanía comunista desde 1965?",
-            answers: [
-              "Ion Iliescu",
-              "Traian Băsescu",
-              "Nicolae Ceaușescu",
-              "Klaus Iohannis",
-            ],
-            correctAnswer: 2,
-          },
-        ],
-        etnia_gitana: [
-          {
-            question: "Según los estudios, ¿de dónde proviene la etnia gitana?",
-            answers: ["India", "Egipto", "Rumanía", "España"],
-            correctAnswer: 0,
-          },
-          {
-            question: "¿Qué estilo musical proviene de la cultura gitana?",
-            answers: ["Rumba", "Bolero", "Tango", "Flamenco"],
-            correctAnswer: 3,
-          },
-          {
-            question:
-              "¿Qué término se refiere a la discriminación o prejucio contra la gente gitana?",
-            answers: [
-              "Aporofobia",
-              "Porraimos",
-              "Antigitanismo",
-              "Mestizofobia",
-            ],
-            correctAnswer: 2,
-          },
-          {
-            question:
-              "¿Comó se llama un variante del idioma romaní con influencias españolas?",
-            answers: ["Erromintxela", "Romanés", "Caló", "Sinti"],
-            correctAnswer: 2,
-          },
-          {
-            question: "¿Qué palabra se originó en la lengua romaní?",
-            answers: ["chungo", "currar", "molar", "chaval"],
-            correctAnswer: [0, 1, 2, 3],
-          },
-        ],
-        venezuela: [
-          {
-            question: "¿Qué país no limita con Venezuela?",
-            answers: ["Colombia", "Brasil", "Guyana", "Panama"],
-            correctAnswer: 3,
-          },
-          {
-            question: "¿Cuál es la capital de Venezuela?",
-            answers: ["Caracas", "Maracaibo", "Valencia", "Barquisimeto"],
-            correctAnswer: 0,
-          },
-          {
-            question:
-              "¿Cuál es la cascada más alta del mundo, ubicada en el Parque Nacional Canaima de Venezuela?",
-            answers: [
-              "Cataratas del Iguazú",
-              "Salto Ángel",
-              "Cataratas Victoria",
-              "Cataratas del Niágara",
-            ],
-            correctAnswer: 1,
-          },
-          {
-            question:
-              "¿Cuál es el plato nacional venezolano, hecho de carne de res picada, frijoles negros, arroz, plátanos fritos y queso?",
-            answers: ["Arepas", "Pabellón Criollo", "Cachapa", "Tequeños"],
-            correctAnswer: 1,
-          },
-          {
-            question: "¿Cuál es la moneda oficial en Venezuela?",
-            answers: ["Dolar", "Peso", "Bolívar", "Euro"],
-            correctAnswer: 2,
-          },
-          {
-            question:
-              "¿Cuál es el nombre del estilo tradicional de música y baile venezolano a menudo interpretado durante festivales y celebraciones?",
-            answers: ["Salsa", "Merengue", "Joropo", "Mejorana"],
-            correctAnswer: 2,
-          },
-          {
-            question:
-              "¿Cuál es el nombre de manifestaciones religiosas populares de Venezuela durante el Corpus Christi?",
-            answers: [
-              "Los Diablos Danzantes",
-              "La Patum",
-              "La Fiesta del Septenario",
-              "Los Negritos",
-            ],
-            correctAnswer: 0,
-          },
-        ],
-        congo: [
-          {
-            question: "¿Cuándo se independizó el Congo de Bélgica?",
-            answers: ["1950", "1960", "1970", "1980"],
-            correctAnswer: 1,
-          },
-          {
-            question:
-              "¿Cuál es la capital de la República Democrática del Congo?",
-            answers: ["Kinsasa", "Lubumbashi", "Mbuji-Mayi", "Kananga"],
-            correctAnswer: 0,
-          },
-          {
-            question:
-              "¿Cuál es el idioma oficial de la República Democrática del Congo?",
-            answers: ["Portugués", "Español", "Francés", "Inglés"],
-            correctAnswer: 2,
-          },
-          {
-            question:
-              "¿Cuál es la moneda oficial de la República Democrática del Congo?",
-            answers: [
-              "Dólar congoleño",
-              "Franco congoleño",
-              "Euro",
-              "Peso congoleño",
-            ],
-            correctAnswer: 1,
-          },
-          {
-            question:
-              "La República Democrática del Congo tiene casi mitad de las reservas mundiales conocidas de...",
-            answers: ["Oro", "Cobre", "Diamantes", "Cobalto"],
-            correctAnswer: 3,
-          },
-        ],
-        afganistan: [
-          {
-            question: "¿Cuál es la capital de Afganistán?",
-            answers: ["Islamabad", "Dushanbe", "Kabul", "Tehran"],
-            correctAnswer: 2,
-          },
-          {
-            question:
-              "¿En qué cordillera está situada gran parte de Afganistán?",
-            answers: ["Montes Elburz", "Hindu Kush", "Karakórum", "Tian Shan"],
-            correctAnswer: 1,
-          },
-          {
-            question:
-              "¿Cómo se llama la vestimenta tradicional para hombres en Afganistán?",
-            answers: ["Chapan", "Thawb", "Dhoti", "Kurta"],
-            correctAnswer: 0,
-          },
-          {
-            question:
-              "¿Cómo se llama el pan tradicional afgano hecho en un horno de barro?",
-            answers: ["Naan", "Pita", "Roti", "Lavash"],
-            correctAnswer: 0,
-          },
-        ],
-      };
+        };
 
-      const urlParams = new URLSearchParams(window.location.search);
-      const country = urlParams.get("country");
+        const urlParams = new URLSearchParams(window.location.search);
+        const country = urlParams.get("country");
 
-      if (!country || !questionsByCountry[country]) {
-        window.location.href = "./";
-      }
-
-      const questions = questionsByCountry[country];
-
-      let currentQuestion = 0,
-        correctAnswers = 0;
-      let hasAnswered = false;
-
-      function isAnswerCorrect(questionIndex, answerIndex) {
-        const correctAnswer = questions[questionIndex].correctAnswer;
-        return (
-          correctAnswer === answerIndex ||
-          (Array.isArray(correctAnswer) && correctAnswer.includes(answerIndex))
-        );
-      }
-
-      function populateQuestionAndAnswers(idx) {
-        currentQuestion = idx;
-
-        const questionElement = document.querySelector(".question");
-        const answersElements = document.querySelectorAll(".answer");
-
-        if (idx >= 0 && idx < questions.length) {
-          const question = questions[idx].question;
-          const answers = questions[idx].answers;
-
-          questionElement.textContent = question;
-
-          answersElements.forEach((answerElement, index) => {
-            answerElement.textContent = answers[index];
-            answerElement.classList.remove("correct", "incorrect");
-          });
-        }
-      }
-
-      function handleAnswer(selectedIdx) {
-        if (hasAnswered || currentQuestion >= questions.length) {
-          return;
+        if (!country || !questionsByCountry[country]) {
+            window.location.href = "./";
         }
 
-        hasAnswered = true;
+        const questions = questionsByCountry[country];
 
-        const correctAnswer = questions[currentQuestion].correctAnswer;
-        const answersElements = document.querySelectorAll(".answer");
+        let currentQuestion = 0,
+            correctAnswers = 0;
+        let hasAnswered = false;
 
-        if (isAnswerCorrect(currentQuestion, selectedIdx)) {
-          correctAnswers++;
+        function isAnswerCorrect(questionIndex, answerIndex) {
+            const correctAnswer = questions[questionIndex].correctAnswer;
+            return (
+                correctAnswer === answerIndex ||
+                (Array.isArray(correctAnswer) && correctAnswer.includes(answerIndex))
+            );
         }
 
-        answersElements.forEach((button, buttonIdx) => {
-          button.classList.remove("correct", "incorrect");
-          if (isAnswerCorrect(currentQuestion, buttonIdx)) {
-            button.classList.add("correct");
-          } else if (buttonIdx === selectedIdx) {
-            button.classList.add("incorrect");
-          }
-        });
+        function populateQuestionAndAnswers(idx) {
+            currentQuestion = idx;
 
-        setTimeout(() => {
-          hasAnswered = false;
+            const questionElement = document.querySelector(".question");
+            const answersElements = document.querySelectorAll(".answer");
 
-          if (currentQuestion + 1 < questions.length) {
-            populateQuestionAndAnswers(currentQuestion + 1);
-            return;
-          }
-          const quizElement = document.querySelector(".question");
-          quizElement.innerHTML = `
+            if (idx >= 0 && idx < questions.length) {
+                const question = questions[idx].question;
+                const answers = questions[idx].answers;
+
+                questionElement.textContent = question;
+
+                answersElements.forEach((answerElement, index) => {
+                    answerElement.textContent = answers[index];
+                    answerElement.classList.remove("correct", "incorrect");
+                });
+            }
+        }
+
+        function handleAnswer(selectedIdx) {
+            if (hasAnswered || currentQuestion >= questions.length) {
+                return;
+            }
+
+            hasAnswered = true;
+
+            const correctAnswer = questions[currentQuestion].correctAnswer;
+            const answersElements = document.querySelectorAll(".answer");
+
+            if (isAnswerCorrect(currentQuestion, selectedIdx)) {
+                correctAnswers++;
+            }
+
+            answersElements.forEach((button, buttonIdx) => {
+                button.classList.remove("correct", "incorrect");
+                if (isAnswerCorrect(currentQuestion, buttonIdx)) {
+                    button.classList.add("correct");
+                } else if (buttonIdx === selectedIdx) {
+                    button.classList.add("incorrect");
+                }
+            });
+
+            setTimeout(() => {
+                hasAnswered = false;
+
+                if (currentQuestion + 1 < questions.length) {
+                    populateQuestionAndAnswers(currentQuestion + 1);
+                    return;
+                }
+                const quizElement = document.querySelector(".question");
+                quizElement.innerHTML = `
                         Has acertado ${correctAnswers} de ${questions.length} preguntas
                         <button onclick="window.location.href = './'" class="return">Volver</button>
                     `;
-          document.querySelector(".answers").classList.add("none");
-        }, 1000);
-      }
+                document.querySelector(".answers").classList.add("none");
+            }, 1000);
+        }
 
-      document.addEventListener("DOMContentLoaded", () => {
-        populateQuestionAndAnswers(0);
-      });
+        document.addEventListener("DOMContentLoaded", () => {
+            populateQuestionAndAnswers(0);
+        });
 
-      function renderAnswers() {
-        document.body.innerHTML = "";
+        function renderAnswers() {
+            document.body.innerHTML = "";
 
-        const element = document.createElement("div");
-        element.id = "answers-for-print";
+            const element = document.createElement("div");
+            element.id = "answers-for-print";
 
-        Object.entries(questionsByCountry).forEach(([country, questions]) => {
-          element.innerHTML += `
+            Object.entries(questionsByCountry).forEach(([country, questions]) => {
+                element.innerHTML += `
                     <h1>${country}</h1>
                     <ul>
                         ${questions
-                          .map(
+                        .map(
                             (question, questionIndex) => `
                                 <li>
                                     <h2>${question.question}</h2>
                                     <ul>
                                         ${question.answers
-                                          .map(
-                                            (answer, answerIndex) => `
+                                    .map(
+                                        (answer, answerIndex) => `
                                                 <li>
-                                                    ${
-                                                      answerIndex ===
-                                                        question.correctAnswer ||
-                                                      (Array.isArray(
-                                                        question.correctAnswer
-                                                      ) &&
-                                                        question.correctAnswer.includes(
-                                                          answerIndex
-                                                        ))
-                                                        ? `<b>${answer}</b>`
-                                                        : answer
-                                                    }
+                                                    ${answerIndex ===
+                                                question.correctAnswer ||
+                                                (Array.isArray(
+                                                    question.correctAnswer
+                                                ) &&
+                                                    question.correctAnswer.includes(
+                                                        answerIndex
+                                                    ))
+                                                ? `<b>${answer}</b>`
+                                                : answer
+                                            }
                                                 </li>
                                         `
-                                          )
-                                          .join("")}
+                                    )
+                                    .join("")}
                                     </ul>
                                 </li>
                         `
-                          )
-                          .join("")}
+                        )
+                        .join("")}
                     </ul>
                 `;
-        });
+            });
 
-        document.body.appendChild(element);
-      }
+            document.body.appendChild(element);
+        }
     </script>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="quiz">
-      <a class="header" href="./">
-        <img src="./logo.svg" alt="" />
-        <h1>
-          Escuelas Taller Gijón Acompaña<br />
-          <span style="font-weight: 300">Pluriculturalidad Quiz</span>
-        </h1>
-      </a>
-      <div class="question"></div>
-      <div class="answers">
-        <button class="answer" onclick="handleAnswer(0)"></button>
-        <button class="answer" onclick="handleAnswer(1)"></button>
-        <button class="answer" onclick="handleAnswer(2)"></button>
-        <button class="answer" onclick="handleAnswer(3)"></button>
-      </div>
+        <a class="header" href="./">
+            <img src="./logo.svg" alt="" />
+            <h1>
+                Escuelas Taller Gijón Acompaña<br />
+                <span style="font-weight: 300">Pluriculturalidad Quiz</span>
+            </h1>
+        </a>
+        <div class="question"></div>
+        <div class="answers">
+            <button class="answer" onclick="handleAnswer(0)"></button>
+            <button class="answer" onclick="handleAnswer(1)"></button>
+            <button class="answer" onclick="handleAnswer(2)"></button>
+            <button class="answer" onclick="handleAnswer(3)"></button>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
