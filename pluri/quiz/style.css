@@ -223,11 +223,6 @@ body:has(.flags) {
     }
 }
 
-.work-in-progress {
-    /* opacity: 0.25; */
-    border: .25rem solid red;
-}
-
 .flag img {
     width: 100%;
     height: 100%;
