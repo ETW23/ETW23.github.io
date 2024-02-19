@@ -3,7 +3,7 @@ const tarjetas = document.querySelectorAll(".tarjeta");
 
 // Agregar un evento de clic a cada tarjeta
 tarjetas.forEach((tarjeta) => {
-  tarjeta.addEventListener("click", function () {
+  tarjeta.addEventListener("click", function (e) {
     // Remover la clase "activa" de todas las tarjetas
     tarjetas.forEach((tarjeta) => {
       tarjeta.classList.remove("activa");
@@ -11,5 +11,7 @@ tarjetas.forEach((tarjeta) => {
 
     // Agregar la clase "activa" a la tarjeta actual
     this.classList.add("activa");
+    e.preventDefault();
+    e.stopPropagation();
   });
 });
