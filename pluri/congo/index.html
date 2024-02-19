@@ -62,12 +62,39 @@
       background-image: url("imag/puerto-kinshasa.jpg");
     }
 
+    #tj4 {
+      background-image: url("imag/nyiragongo.jpg");
+    }
+
     #tj5 {
       background-image: url("imag/refugiados.jpg");
     }
 
     .b0 {
+      position: relative;
       background-image: url("imag/drc-salonga.jpg");
+    }
+
+    .b1 {
+      position: relative;
+      background-image: url("imag/tanganika.jpg");
+    }
+
+    .b2 {
+      position: relative;
+      background-image: url("imag/kinsasa-noche.jpg");
+    }
+
+    .bg-license {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      max-width: 30rem;
+    }
+
+    .bg-license a,
+    .tarjeta a {
+      color: rgba(64, 196, 255);
     }
 
     p {
@@ -88,6 +115,11 @@
     nav button:hover {
       background-color: var(--color-dark);
       outline: 1px solid rgba(0, 0, 0, .25);
+    }
+
+    .tarjetaPequena,
+    .tarjetaRectangular {
+      height: 100%;
     }
   </style>
 </head>
@@ -116,6 +148,10 @@
   </nav>
   <main>
     <section class="b0">
+      <small class="bg-license">
+        Fondo: <a href="https://flic.kr/p/2aQJaXt">2014 DRC Salonga by Cody Pope</a> por <a
+          href="https://www.flickr.com/photos/usaiddrc/">USAID Democratic Republic of Congo</a>
+      </small>
       <div class="titSeccion">Ubicación Geográfica</div>
       <hr />
       <div class="texSeccion">
@@ -172,7 +208,13 @@
             </p>
           </div>
           <div class="tarjeta" id="tj4">
-            <p>Hospital</p>
+            <p>
+              Cratea del Nyiragongo
+              <br>
+              <a href="https://flic.kr/p/CYnqjR">Virunga National Park, DR Congo: Two guards of the Virunga National
+                Park contemplate the lava of Nyiragongo crater, which rises to 3470 meters</a> by <a
+                href="https://www.flickr.com/photos/monusco/">MONUSCO Photos</a>, en Flickr
+            </p>
           </div>
           <div class="tarjeta" id="tj5">
             <p>Refugiados
@@ -187,6 +229,13 @@
     </section>
     <!-- introducir imagen panoramica -->
     <section class="b1">
+      <small class="bg-license">
+        Fondo:
+        <a href="https://flic.kr/p/GZdzj">Lake Tanganyika</a> por <a
+          href="https://www.flickr.com/photos/deepphoto/">Dave
+          Proffer</a>, en Flickr
+      </small>
+
       <div class="titSeccion">Historia</div>
       <hr />
       <div class="texSeccion">
@@ -237,31 +286,12 @@
           </p>
         </div>
       </div>
-      <br>
-
-      <section class="bloque">
-        <div class="tarjetaCuadrada">
-          <img src="imag/patrice lumumba.jpg" alt="">
-        </div>
-
-        <div class="tarjetaCuadrada">
-          <img src="imag/historia2.jpg" alt="" />
-        </div>
-
-        <!-- <div class="tarjetaTexto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-              cupiditate voluptates, repellat dolorem at nobis totam quis ipsam
-              soluta, exercitationem beatae blanditiis quo culpa earum deserunt
-              iure sapiente mollitia. Tempora blanditiis neque quasi
-              necessitatibus reiciendis! Sed corrupti amet adipisci deserunt
-              facere aut quis est quidem. Culpa reiciendis architecto ratione
-              consequuntur consequatur blanditiis dicta quis. Maiores voluptas
-              aut sunt laboriosam porro!
-            </div> -->
-        </div>
-      </section>
     </section>
     <section class="b2">
+      <small class="bg-license">
+        Fondo: <a href="https://flic.kr/p/CdtqgG">Kinshasa by night</a> por <a
+          href="https://www.flickr.com/photos/monusco/">MONUSCO Photos</a>, en Flickr
+      </small>
       <div class="titSeccion">Situacion actual</div>
       <hr />
       <!-- <div class="texSeccion">
@@ -273,7 +303,7 @@
         </div> -->
 
       <section class="bloque">
-        <div class="tarjetaCuadrada">
+        <div class="tarjetaPequena">
           <div class="titSeccion titArtic">Politica</div>
           <div>
             <p>
@@ -294,9 +324,9 @@
           </div>
         </div>
 
-        <div class="tarjetaCuadrada">
+        <!-- <div class="tarjetaCuadrada">
           <img src="imag/presidente.jpg" alt="" />
-        </div>
+        </div> -->
 
         <div class="tarjetaPequena">
           <div class="titSeccion titArtic">Sanidad</div>
@@ -317,11 +347,12 @@
               En 2018, se agravó una violencia ya de por sí extrema y los brotes de enfermedades fueron más frecuentes.
             </p>
           </div>
+        </div>
 
-        </div>
-        <div class="tarjetaCuadrada">
+        <!-- <div class="tarjetaCuadrada">
           <img src="imag/sanidad.jpeg" alt="" />
-        </div>
+        </div> -->
+
         <div class="tarjetaPequena">
           <div class="titSeccion titArtic">Educación</div>
           <p>
@@ -333,9 +364,9 @@
           </p>
         </div>
 
-        <div class="tarjetaCuadrada">
+        <!-- <div class="tarjetaCuadrada">
           <img src="imag/educacion.jpg" alt="" />
-        </div>
+        </div> -->
 
         <div class="tarjetaPequena">
           <div class="titSeccion titArtic">Economía</div>
@@ -353,10 +384,10 @@
           </div>
         </div>
 
-        <div class="tarjetaCuadrada">
+        <!-- <div class="tarjetaCuadrada">
           <img src="imag/economia.jpg" alt="" />
-        </div>
-        <div class="tarjetaCuadrada">
+        </div> -->
+        <div class="tarjetaPequena">
           <div class="titSeccion titArtic">Religión</div>
 
           <p>
@@ -368,28 +399,23 @@
           </p>
         </div>
 
-        <div class="tarjetaCuadrada">
+        <!-- <div class="tarjetaCuadrada">
           <img src="imag/religion.jpg" alt="" />
-        </div>
+        </div> -->
 
         <div class="tarjetaPequena">
           <div class="titSeccion titArtic">Idioma</div>
           <div>
             <p>
-              El idioma oficial es el francés. Además, hay cuatro idiomas nacionales: Lingala, Swahili, Tshiluba y
-              Kikongo.
-              Existen decenas de dialectos e idiomas locales.
-            </p>
-            <p>
-              El lingala es una lengua bantú hablada en el noroeste de la República Democrática del Congo y en una gran
-              parte de la República del Congo.
+              Hay más de 200 lenguas en la República Democrática del Congo. El lingala, el kikongo, el swahili y
+              el tshiluba, son lenguas nacionales. El francés es el idioma oficial y la lengua franca del país.
             </p>
           </div>
         </div>
 
-        <div class="tarjetaCuadrada">
+        <!-- <div class="tarjetaCuadrada">
           <img src="imag/idioma.jpg" alt="" />
-        </div>
+        </div> -->
         <!-- <section class="bloque">
           <div class="tarjetaPequena tarjetaTexto">
             <div class="titSeccion titArtic">Idioma</div>
