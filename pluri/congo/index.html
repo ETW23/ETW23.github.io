@@ -6,6 +6,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E.T. República Democrática del Congo</title>
+  <style>
+    :root {
+      --color-dark: rgba(17, 25, 40, .5);
+      --color-dark-opaque: rgba(17, 25, 40);
+    }
+
+    .vertical-timeline {
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .vertical-timeline::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 2px;
+      background: rgba(255, 255, 255, .5);
+    }
+
+    .vertical-timeline-dot {
+      position: relative;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-block: 1rem .5rem;
+    }
+
+    .vertical-timeline-dot::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -1rem;
+      width: .5rem;
+      height: .5rem;
+      transform: translate(calc(-.25rem - 1px), -.5rem);
+      background: var(--color-dark-opaque);
+      border: 2px solid rgba(255, 255, 255, .5);
+      border-radius: 50%;
+    }
+
+    .vertical-timeline>p+p {
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <link rel="stylesheet" href="css/style.css" />
 
@@ -93,103 +136,52 @@
       <div class="titSeccion">Historia</div>
       <hr />
       <div class="texSeccion">
-
-        <p>
-          El territorio de la República Democrática del Congo fue inicialmente habitado por tribus pigmeas, que fueron
-          reemplazadas por las naciones bantúes durante las Migraciones Bantúes, desde aproximadamente el 2000 a.C.
-          hasta el 500 d.C. Las migraciones posteriores de las regiones sudanesas y del este de África llevaron a una
-          mezcla de grupos étnicos. Los bantúes fueron el grupo principal y su idioma se convirtió en la lengua franca
-          del Congo, además de contribuir a avances en agricultura y metalurgia.
-
-        </p>
-        En el siglo XV, el Imperio del Congo era la potencia dominante en la región, abarcando áreas en la actual nación
-        del Congo, partes de Angola y Cabinda. Los europeos se interesaron en este país debido a su elaborado sistema
-        impositivo y su vasto territorio que se extendía desde el Océano Atlántico hasta los ríos Kwango, Congo y Loje.
-        El imperio estaba gobernado por el Manikongo desde su capital en M'banza-Kongo (hoy Sao Salvador). Establecieron
-        una red comercial que incluía esclavos y recursos minerales. Sin embargo, las ventas masivas de esclavos
-        debilitaron al reino, al igual que los conflictos con los portugueses.
-        <p>
-          En el período de exploración y colonización europea en África (1870-1920), el explorador occidental Henry
-          Morton Stanley, financiado por el rey Leopoldo II de Bélgica, trazó mapas de la región para su posterior
-          colonización. Leopoldo II estableció el Estado Libre del Congo, explotando brutalmente a los nativos en
-          plantaciones de hule para enriquecerse. La explotación terminó con la muerte de millones de africanos debido a
-          la esclavitud y enfermedades.
-        </p>
-        Con el fin de reforzar las cuotas de producción de hule se creó la Force Publique un ejército que no se
-        encontraba destinado a defender la colonia si no que a aterrorizar a la población. Las atrocidades fueron
-        condenadas internacionalmente, y el Congo pasó de ser el Estado Libre del Congo a ser una colonia directamente
-        gobernada por Bélgica.
-        <p>
-          En 1959, se realizaron elecciones libres ganadas por el Movimiento Nacional Congolés dirigido por Patrice
-          Lumumba. Sin embargo, las autoridades belgas reprimieron movimientos independentistas, provocando violencia y
-          arrestos, incluyendo a Lumumba, quien fue encarcelado en enero de 1960.
-
-        </p>
-        En 1960, tras la independencia del Congo, Patrice Lumumba fue nombrado primer ministro y Joseph Kasavubu
-        presidente. Sin embargo, las tensiones internas y la secesión de provincias ricas en recursos como Katanga y
-        Kasai del Sur provocaron una crisis. Lumumba solicitó ayuda estadounidense, pero al no recibirla, se volcó hacia
-        la Unión Soviética. Las provincias rebeldes recibieron apoyo belga, lo que llevó a una intervención militar en
-        el país, violando su soberanía.
-        <p>
-          Las Naciones Unidas intervinieron, pero su respuesta fue contradictoria y poco efectiva. Bélgica firmó un
-          acuerdo con Katanga, reconociendo su independencia de inmediato. Lumumba intentó reaccionar enviando tropas,
-          pero la ONU impuso un alto el fuego que evitó la entrada de las fuerzas congoleñas en Katanga.
-        </p>
-        Lumumba fue arrestado y, finalmente ejecutado en 1961. En los años siguientes, el Congo enfrentó más conflictos,
-        incluyendo un motín en 1964 liderado por un mercenario europeo y la participación del guerrillero Che Guevara en
-        una guerra de guerrillas que terminó en fracaso.
-        <p>
-          En 1965, Mobutu Sese Seko llegó al poder respaldado por occidente, instaurando una dictadura de partido único
-          que prohibió todos los partidos excepto el oficial. Esta era de autoritarismo perduró por tres décadas.
-          Durante esos años, el ébola, una enfermedad altamente letal para la cual no existe cura ni vacuna, hizo su
-          aparición en la República Democrática del Congo en 1976. Esta enfermedad persiste en la actualidad y ha
-          representado una amenaza constante para la población.
-        </p>
-        La Primera Guerra del Congo fue desencadenada por el genocidio ruandés, que provocó una gran ola de refugiados
-        hacia el Congo. Las fuerzas guerrilleras lideradas por Kabila, con el respaldo de Ruanda y Uganda, lograron el
-        éxito en 1997, expulsando a Mobutu del poder. En ese momento, el país cambió su nombre a República Democrática
-        del Congo. Sin embargo, Kabila trató de consolidar su poder, lo que generó tensiones con minorías étnicas y
-        antiguos aliados. Uganda y Ruanda retiraron su apoyo, lo que desencadenó una rebelión en 1998. El gobierno
-        expulsó a los tutsis del gobierno y luchó contra fuerzas extranjeras, recibiendo apoyo de tropas de países como
-        Zimbabwe, Angola, Namibia, Chad y Sudán en un conflicto que perduró en el tiempo.
-
-        <p>
-          La Segunda Guerra del Congo, también conocida como la Guerra Mundial Africana, fue el conflicto armado más
-          grande en el continente africano. Ocurrió entre 1998 y oficialmente terminó en 2002. Involucró a más de 9
-          países y acabó con la muerte de aproximadamente 3.8 millones de personas, convirtiéndolo en uno de los
-          conflictos más graves desde la Segunda Guerra Mundial.
-        </p>
-        A pesar de varios intentos de alto al fuego y acuerdos de paz, la situación siguió siendo inestable. Tres
-        tratados
-        de paz, el Acuerdo de Sun City, el Acuerdo de Pretoria y el Acuerdo de Luanda, se firmaron para estabilizar la
-        paz en la región. Estos tratados tenían como objetivo establecer un gobierno democrático en la República
-        Democrática del Congo y regular la retirada de las tropas extranjeras, aunque el cumplimiento de estos acuerdos
-        fue inconsistente y muchas violaciones ocurrieron a lo largo del conflicto.
-        <p>
-          Durante el gobierno de Joseph Kabila en la República Democrática del Congo (2006-2016), a pesar de acuerdos
-          previos, hubo violencia y enfrentamientos políticos en el país. En 2006, se implementó una nueva constitución
-          y se llevaron a cabo las primeras elecciones multipartidistas, donde Kabila fue elegido presidente.
-        </p>
-        En 2011, Kabila fue reelegido para un segundo mandato, lo que provocó disturbios y controversias debido a la
-        falta de credibilidad en los resultados electorales. Hubo protestas y enfrentamientos violentos en 2015 y 2016
-        debido a intentos de Kabila de permanecer en el poder, lo que terminó con numerosas muertes y arrestos.
-        <p>
-          En diciembre de 2018, se llevaron a cabo elecciones presidenciales en la República Democrática del Congo para
-          suceder a Kabila. Félix Tshisekedi, candidato opositor, fue declarado ganador en enero de 2019 y asumió la
-          presidencia el 24 de enero. A pesar de que los aliados políticos del expresidente Kabila mantenían el control
-          en varios sectores del gobierno, Tshisekedi logró fortalecer su poder al ganar el apoyo de la mayoría de los
-          legisladores y formar un nuevo gobierno en abril de 2021, excluyendo a los partidarios de Kabila.
-        </p>
-        En la actualidad, la falta de seguridad ha llevado al surgimiento de numerosos grupos rebeldes, alcanzando un
-        total de 120 en 2018, posiblemente la mayor cantidad en el mundo. Estos grupos, acusados a menudo de tener
-        vínculos con gobiernos regionales interesados en los recursos minerales del este del Congo, atacan a civiles por
-        motivos étnicos. La incapacidad del estado y de la fuerza de paz de la ONU para brindar seguridad ha exacerbado
-        la situación.
-
-        <p></p>
-        <p></p>
-
-        <p></p>
+        <div class="vertical-timeline">
+          <h3 class="vertical-timeline-dot">
+            Historia Temprana</h3>
+          <p>
+            El territorio de la República Democrática del Congo fue habitado inicialmente por tribus pigmeas,
+            luego reemplazadas por las naciones bantúes durante las Migraciones Bantúes (2000 a.C. - 500 d.C.).
+            Esto resultó en una mezcla étnica, con los bantúes como grupo principal, contribuyendo
+            significativamente a la agricultura y metalurgia.
+          </p>
+          <h3 class="vertical-timeline-dot">Imperio del Congo y Colonialismo</h3>
+          <p>
+            En el siglo XV, el Imperio del Congo fue la potencia dominante, pero la explotación europea,
+            especialmente por parte de los portugueses, debilitó al reino. Durante la colonización belga en el
+            período 1870-1920, el Estado Libre del Congo, dirigido por Leopoldo II, explotó brutalmente a los
+            nativos, culminando en atrocidades internacionalmente condenadas.
+          </p>
+          <h3 class="vertical-timeline-dot">Independencia y Crisis</h3>
+          <p>
+            Tras la independencia en 1960, el Congo experimentó tensiones internas, secesiones de provincias y
+            una intervención militar extranjera. Patrice Lumumba, el primer ministro, fue arrestado y ejecutado
+            en 1961, seguido de décadas bajo Mobutu Sese Seko.
+          </p>
+          <p>
+            Mobutu instaló en Congo, rebautizado como Zaire, un régimen dictatorial marcado por culto de personalidad,
+            corrupción, una inflación descontrolada y violaciones generalizadas de los derechos humanos.
+          </p>
+          <h3 class="vertical-timeline-dot">Guerras del Congo</h3>
+          <p>
+            Las guerras en la década de 1990 involucraron genocidio ruandés, rebeliones internas y conflictos
+            regionales. La Segunda Guerra del Congo (1998-2002), la "Guerra Mundial Africana", resultó en
+            millones de muertes y persistente inestabilidad.
+          </p>
+          <h3 class="vertical-timeline-dot">Período Post-Guerra</h3>
+          <p>
+            A pesar de tratados de paz, la inestabilidad continuó. En 2006, Joseph Kabila asumió la presidencia,
+            enfrentando violencia política. Las elecciones de 2018 llevaron a Félix Tshisekedi al poder, aunque
+            los partidarios de Kabila mantuvieron influencia en el gobierno.
+          </p>
+          <h3 class="vertical-timeline-dot">Estado Actual</h3>
+          <p>
+            La actual falta de seguridad ha propiciado la proliferación de numerosos grupos rebeldes, con hasta
+            120 en 2018. La incapacidad del estado y de la fuerza de paz de la ONU para proporcionar seguridad
+            ha exacerbado la situación, a menudo ligada a conflictos étnicos y al interés regional en los
+            recursos minerales del este del Congo.
+          </p>
+        </div>
       </div>
       <br>
 
