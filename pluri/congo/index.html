@@ -16,6 +16,7 @@
     .vertical-timeline {
       position: relative;
       padding-left: 1rem;
+      margin-left: -1rem;
     }
 
     .vertical-timeline::before {
@@ -48,6 +49,11 @@
 
     .vertical-timeline>p+p {
       margin-top: 1rem;
+    }
+
+    .vertical-timeline-title {
+      font-variant: small-caps;
+      margin-left: -1.75rem;
     }
 
     #tj1 {
@@ -102,14 +108,26 @@
       line-height: 1.5;
     }
 
+    .texSeccion,
+    .tarjetaPequena {
+      letter-spacing: normal;
+      backdrop-filter: blur(5px) saturate(150%);
+    }
+
     .texSeccion {
-      letter-spacing: normal
+      padding: 1rem 5rem;
+      max-width: 70rem;
+    }
+
+    .titSeccion,
+    .titArtic {
+      text-shadow: none;
     }
 
     nav button {
       background-color: transparent;
       border-radius: .5rem;
-      outline: 1px solid rgba(0, 0, 0, .125);
+      outline: 1px solid rgba(255, 255, 255, .125);
     }
 
     nav button:hover {
@@ -244,14 +262,15 @@
     <!-- introducir imagen panoramica -->
     <section class="b1">
       <small class="bg-license">
-        Fondo:
+        Fondo: Lago Tanganica -
         <a href="https://flic.kr/p/GZdzj">Lake Tanganyika</a> por <a
           href="https://www.flickr.com/photos/deepphoto/">Dave
           Proffer</a>, en Flickr
       </small>
 
-      <div class="titSeccion">Historia</div>
+      <!-- <div class="titSeccion">Historia</div> -->
       <div class="texSeccion">
+        <h2 class="vertical-timeline-title">Historia</h2>
         <div class="vertical-timeline">
           <h3 class="vertical-timeline-dot">
             Historia Temprana</h3>
@@ -316,11 +335,12 @@
 
       <section class="bloque">
         <div class="tarjetaPequena">
-          <div class="titSeccion titArtic">Politica</div>
+          <div class="titSeccion titArtic">Política</div>
           <div>
             <p>
               En 2022, la República Democrática del Congo ocupó el sexto peor lugar en el Índice de Democracia de la
-              Economist Intelligence Unit. Freedom House lo califica en derechos políticos con un 4/40.
+              <abbr lang="en" title="Economist Intelligence Unit">EIU</abbr>. Freedom House lo califica en derechos
+              políticos con un 4/40.
             </p>
             <p>
               Según Freedom House, el sistema político de la República Democrática del Congo está paralizado
@@ -340,19 +360,21 @@
           <div class="titSeccion titArtic">Sanidad</div>
           <div>
             <p>
-              Las condiciones sanitarias del país en general son muy deficientes. La mayoría de los hospitales exigen el
-              pago anticipado o confirmación del seguro antes del tratamiento, sino puedes pagarlo no tienes ningún tipo
-              de derecho a una cobertura médica.
+              La infraestructura sanitaria en la República Democrática del Congo es inadecuada, carece del equipamiento
+              adecuado y tiene dificultades para prestar servicios esenciales de atención primaria de salud, prevención
+              y tratamiento de enfermedades transmisibles y servicios de salud sexual y reproductiva. Numerosas
+              epidemias mortales, incluidos ébola, malaria, cólera, peste bubónica, fiebre amarilla
+              y sarampión, han perdido millones de vidas y muchas más han sido afectadas.
+            </p>
+            <p>En 2023, CARE Internacional ha llamado el este del Congo "uno de los lugares más peligrosos del
+              mundo." Mientras más de 6.9 millones de personas en la República Democrática del Congo están actualmente
+              desplazadas, y más huyen de la violencia en curso, el sector de la salud en el país sigue desmoronándose.
             </p>
             <p>
-              La población de República Democrática del Congo (RDC) lleva décadas soportando crisis y graves
-              limitaciones
-              en la capacidad médica del país. Ha experimentado diez brotes de la mortal enfermedad del ébola desde
-              1976,
-              lo que ha sumido todavía más a las comunidades vulnerables en la pobreza.
-            </p>
-            <p>
-              En 2018, se agravó una violencia ya de por sí extrema y los brotes de enfermedades fueron más frecuentes.
+              Dicho esto, el país pudo lograr unos avances medibles. En los últimos años, el país logró erradicar la
+              polio. Recientemente, un ensayo controlado aleatorio, llevado a cabo en el este de la República
+              Democrática del Congo, en sí mismo un logro notable en una zona de conflicto, estableció un tratamiento
+              específico para el ébola y llevó a una disminución en su tasa de letalidad.
             </p>
           </div>
         </div>
@@ -372,9 +394,8 @@
             </p>
             <p>
               Persisten importantes disparidades entre zonas geográficas, grupos socioeconómicos y géneros.
-              Además, las tasas de repetición y deserción en el nivel de educación primaria sin duda tienen
-              repercusiones
-              en el nivel secundario.
+              Además, las tasas de repetición y deserción en el nivel de educación primaria tienen
+              repercusiones en el nivel secundario.
             </p>
           </div>
         </div>
@@ -424,8 +445,10 @@
           <div class="titSeccion titArtic">Idioma</div>
           <div>
             <p>
-              Hay más de 200 lenguas en la República Democrática del Congo. El lingala, el kikongo, el swahili y
-              el tshiluba, son lenguas nacionales. El francés es el idioma oficial y la lengua franca del país.
+              El francés es el idioma oficial y la lengua franca del país. El lingala, el kikongo, el swahili y el
+              tshiluba, son lenguas nacionales. Hay más de 200 lenguas hablados en la República Democrática del Congo,
+              17 de las cuales están susceptibles de extinción según <abbr title="Endangered Languages Project"
+                lang="en">ELP</abbr>.
             </p>
           </div>
         </div>
