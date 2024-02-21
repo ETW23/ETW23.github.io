@@ -53,12 +53,13 @@
 .notitnovisible {
     display: none;
 }
-#listtema   {
+#listtema  {
     padding-left: 1em;
 }
 #spnaol {
     margin: 5em;
     font-weight: 900;
+    padding-left: 2em;
 }
 .titudia    {text-align: center;
              font-size: 1.4rem;

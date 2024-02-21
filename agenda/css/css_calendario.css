@@ -240,6 +240,9 @@
          margin: auto auto auto 14em;
 }
 }
+.labNada  {
+  display: none;
+}
 /*dias eventos*/
 .days li.blue {
   color: white;
