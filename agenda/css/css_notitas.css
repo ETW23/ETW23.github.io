@@ -93,8 +93,8 @@
     list-style-type: circle;
     overflow: visible;
     display: flex;
-    width: 40em;
-    height: 22em;
+    width: 43em;
+    height: 25em;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;
