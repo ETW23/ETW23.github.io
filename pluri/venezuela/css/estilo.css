@@ -249,9 +249,7 @@ footer {
   background-image: url("../VenezuelaImg/veneFondo5.jpg");
   background-size: cover;
 }
-.b6 {
-  background-image: url("../VenezuelaImg/veneFondo1.jpg");
-}
+
 @media screen and (max-width: 600px) {
   body {
     font-size: 14px;
