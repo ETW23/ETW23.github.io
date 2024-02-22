@@ -4,9 +4,6 @@
 *::after {
     margin: 0;
     padding: 0;
-    font-size: inherit;
-    font-weight: inherit;
-    text-decoration: inherit;
 }
 
 b,
@@ -380,4 +377,3 @@ figure {
         display: none;
     }
 }
-
