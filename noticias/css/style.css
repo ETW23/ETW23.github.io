@@ -181,7 +181,7 @@ ul {
 }
 
 .containerTextoYFoto p::first-letter {
-  font-size: 2rem;
+  font-size: 5rem;
   margin-right: 0.1em;
   font-family: Manuale, sans-serif;
   font-weight: 300;
