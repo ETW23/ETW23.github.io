@@ -171,6 +171,9 @@
 .days li.inactive{
   color: #aaa;
 }
+.days li.inactive:hover{
+  color: #A80000;
+}
 .days li.active{
   color: #fff;
 }
