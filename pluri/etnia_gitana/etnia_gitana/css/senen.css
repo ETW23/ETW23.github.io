@@ -1,0 +1,431 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  
+}
+
+#contenedor {
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+}
+
+body, h1, h2, h3, p, ul, li {
+list-style: none;
+}
+
+body {
+font-family: Arial, sans-serif;
+/* line-height: 1.2vw; */
+}
+
+h1 {  
+  font-size: 1.8vw;
+  color: black;
+  text-align: center;
+  padding: 1.6vw;
+  text-shadow: -1px -1px 0 rgba(66, 66, 66, 0.75);
+  
+}
+
+.ori {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0.5vw;
+  font-size: 4vw;
+  
+  
+}
+
+h2 {
+  text-align: center;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  text-decoration: none;
+  color: white;
+  font-size: 3.5vw;
+  
+}
+
+a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+h3 {
+  text-align: center;
+  color: white;
+  font-size: 3vw;
+}
+
+.h3-contenedor {
+  position: relative;
+  top: 1vw;
+  padding-bottom: 1vw;
+  font-size: 2vw;
+}
+
+p {
+  width: 85%;
+  text-align: justify;
+  font-size: 1.4vw;
+  margin-left: 7.5%;
+  margin-bottom: 2vw;
+  margin-top: 1vw;
+  padding-top: 2.5vw;
+  padding-bottom: 3vw;
+  
+}
+
+.parrafo {
+  width: 63%;
+  margin-left: 18%;
+  text-align: center;
+  background-color:  rgba(66, 66, 66, 0.75);
+  color:  rgb(245 245 245);
+  border-radius: 1.4vw;
+  font-style: italic;
+}
+
+.div1, .div2, .div3, .div4{
+  text-align: center;
+}
+
+.portada {
+  width: 100%;
+  background-image: url('../IMG/bandera6.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  /* width: 70%; */
+  height: 3rem;
+  line-height: 2rem;
+  margin: auto;
+  text-align: center;
+}
+nav>ul>li {
+  display: inline-block;
+  width: 32%;
+  height: auto;                
+}
+
+nav li a.activa1, a.activa2, a.activa3 {
+  text-decoration: none; 
+  color: black; 
+  border: 0.3em solid black; 
+  border-radius: 0.3em; 
+  font-weight: bold;
+  padding: 0.7vw;
+}
+
+li a.activa1{
+  background-color: rgb(70, 135, 255); 
+}
+
+li a.activa2 {
+  background-color: red; 
+}
+
+li a.activa3 {
+  background-color: rgb(1, 144, 1); 
+}
+
+nav.enlaces li a:hover {
+  background-color: rgb(245 245 245); 
+}
+
+/*INICIO*/
+.li1 {
+  width: 32%;
+  display: inline-block;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.li1 a.a2 {
+  text-decoration: none;
+  color: white;
+  transition: color 0.4s;
+}
+
+.li1 a.a2:hover {
+  color: rgb(187, 171, 0); 
+  font-weight: bold; 
+}
+
+.a2 {
+color: white;
+text-decoration-line: none;
+}
+
+/*INICIO*/
+.submenu li {
+  list-style: none;
+}
+
+.des {
+  text-decoration: none;
+  color: black;
+  padding: 0.3em 2.25em;
+  border: 0.1em solid black;
+  border-radius: 0.1em;
+  font-weight: bold;
+  display: block;
+  background-color: silver; 
+  width: 100%;
+  height: 2em;
+  line-height: 2em;
+  box-sizing: content-box;
+}
+
+
+.boton {
+  background-color: black;
+  color: rgb(245 245 245);
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  text-align: center;
+  font-size: 1.22em;
+}
+
+.texto{
+  text-align: center;
+  float: right;
+  width: 30%;
+}
+
+img {
+  width: 50%;
+}
+
+.h33 {
+  font-size: 1.4em;
+}
+
+.div11 {
+  width: 17%;
+  display: inline-block;
+  white-space: nowrap;
+  
+}
+.div1{
+  margin-top: 8vw;
+}
+
+.contacto span {
+  display: block;
+  margin-bottom: 0.6em;
+  width: 32%;
+}
+
+span:hover {
+  color: white;
+}
+
+.letra {
+  font-size: 1.2em;
+}
+
+.acce {
+  width: 82%;
+  text-align: right;
+}
+
+
+.enlaces .des {
+  width: 60%;
+  border-bottom: 0.125em solid black;
+  height: 1em;
+  line-height: 1em;
+  box-sizing: content-box;
+}
+
+
+ li ul {
+  display: none;
+} 
+
+li ul li {
+  display: block;
+  width: 100%;
+}
+
+li:hover ul {
+  display: block;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+
+ul .des {
+  width: 50%;
+  margin: 0.125em auto;
+}
+
+li .des {
+  display: block;
+  text-align: center;
+
+}
+
+/*Fotos*/
+.foto1:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.foto2:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.foto3:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.fotones{
+  width: 65%; 
+  border-radius: 1em;
+}
+
+.fotones2{
+  width: 30%;
+  border-radius: 1em;
+}
+
+.gitano{
+  float: right;
+  width: 29%;
+  margin-top: 0.5vw;
+  padding-left: 6%;
+  border-radius: 1em;
+}
+.foto2 {
+  margin: 2.5%; 
+}
+.fotones3{
+  width: 40%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 1.6vw;
+}
+.fotones4{
+  width: 40%;
+  margin-left: 6%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 1em;
+  
+}
+
+
+h4{
+  font-size: 2vw;
+  text-align: left;
+  margin-left: 7%;
+  color: white;
+  
+  
+}
+.titulo4{
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+
+}
+
+
+.texSeccion, .textSeccion {
+  margin-left: 6%;
+  width: 90%;
+  letter-spacing: 0.125vw;
+  font-size: 1.5vw;
+  color: rgb(255, 255, 255);
+  background-color: rgba(37, 37, 37, 0.75); 
+  border-radius: 1.6vw;
+}
+.textSeccion {
+  width: 70%;
+}
+
+hr{
+  border: 0.2vw solid  rgba(66, 66, 66, 0.75);
+}
+.fondo1{
+  background-image: url(repeat.webp);
+  background-repeat: repeat;
+  background-size: auto;
+
+}
+
+
+.enlaces ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.enlaces li {
+  float: none;
+  display: inline-block;
+}
+
+.enlaces a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.enlaces a:hover {
+  background-color: #111;
+}
+
+.submenu {
+  display: none;
+ 
+}
+
+.submenu a {
+  color: black;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu a:hover {
+  background-color: #ddd;
+}
+
+.enlaces li:hover .submenu {
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+
+@media screen and (max-width: 600px) {
+  .enlaces li {
+      float: none;
+      text-align: center;
+  }
+
+}
+
+.acce{
+  width: 10vw;
+}
+

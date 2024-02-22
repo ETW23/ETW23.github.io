@@ -42,7 +42,7 @@ function cambiarTitulo(titulo) {
 var seccionMostrar = document.querySelector(`.${titulo.replace(/\s/g, '').toLowerCase()}`);
 
 if (seccionMostrar) {
-  if (seccionMostrar.classList.contains('historia') || seccionMostrar.classList.contains('religion')) {
+  if (seccionMostrar.classList.contains('historia') || seccionMostrar.classList.contains('religion') || seccionMostrar.classList.contains('influenciarumana')) {
     seccionMostrar.classList.add('activeFlex');
   } else {
     seccionMostrar.classList.add('active');

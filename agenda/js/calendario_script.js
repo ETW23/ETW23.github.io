@@ -177,6 +177,33 @@ function handleElementClick(elementId) {
                     event.classList.remove("diactive");
                 }
             });
+        } else if (elementNumber === 20240018) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event13) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20240025) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event14) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20240108) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event15) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
         }
     } else { 
         events.forEach(event => {
@@ -337,6 +364,9 @@ function shouldHaveBlueBackground(year, month, day) {
         { year: 2023, month: 11, day: 1 }, // 01-12-2023
         { year: 2023, month: 11, day: 12 }, // 12-12-2023
         { year: 2023, month: 11, day: 22 }, // 22-12-2023
+        { year: 2024, month: 0, day: 18 }, // 18-01-2024
+        { year: 2024, month: 0, day: 25 }, // 25-01-2024
+        { year: 2024, month: 1, day: 8 }, // 08-02-2024
     ];
 
     return blueDates.some(date => date.year === year && date.month === month && date.day === day);

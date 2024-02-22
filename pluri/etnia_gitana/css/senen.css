@@ -3,7 +3,9 @@
   margin: 0;
   padding: 0;
   text-decoration: none !important;
+  
 }
+
 #contenedor {
   width: 100%;
   height: auto;
@@ -16,7 +18,7 @@ list-style: none;
 
 body {
 font-family: Arial, sans-serif;
-line-height: 1.2vw;
+/* line-height: 1.2vw; */
 }
 
 h1 {  
@@ -32,7 +34,7 @@ h1 {
   width: 100%;
   text-align: center;
   padding-bottom: 0.5vw;
-  font-size: 3vw;
+  font-size: 4vw;
   
   
 }
@@ -43,7 +45,7 @@ h2 {
   padding-bottom: 1vw;
   text-decoration: none;
   color: white;
-  font-size: 2.2vw;
+  font-size: 3.5vw;
   
 }
 
@@ -57,6 +59,7 @@ a {
 h3 {
   text-align: center;
   color: white;
+  font-size: 3vw;
 }
 
 .h3-contenedor {
@@ -69,7 +72,7 @@ h3 {
 p {
   width: 85%;
   text-align: justify;
-  font-size: 1.1vw;
+  font-size: 1.4vw;
   margin-left: 7.5%;
   margin-bottom: 2vw;
   margin-top: 1vw;
@@ -104,9 +107,9 @@ p {
   align-items: center;
 }
 nav {
-  width: 70%;
+  /* width: 70%; */
   height: 3rem;
-  line-height: 3rem;
+  line-height: 2rem;
   margin: auto;
   text-align: center;
 }
@@ -119,8 +122,8 @@ nav>ul>li {
 nav li a.activa1, a.activa2, a.activa3 {
   text-decoration: none; 
   color: black; 
-  border: 5px solid black; 
-  border-radius: 5px; 
+  border: 0.3em solid black; 
+  border-radius: 0.3em; 
   font-weight: bold;
   padding: 0.7vw;
 }
@@ -146,7 +149,7 @@ nav.enlaces li a:hover {
   width: 32%;
   display: inline-block;
   text-align: center;
-  font-size: 1.3vw;
+  font-size: 2vw;
 }
 
 .li1 a.a2 {
@@ -173,16 +176,15 @@ text-decoration-line: none;
 .des {
   text-decoration: none;
   color: black;
-  padding: 4px 36px;
-  border: 2px solid black;
-  border-radius: 3px;
+  padding: 0.3em 2.25em;
+  border: 0.1em solid black;
+  border-radius: 0.1em;
   font-weight: bold;
   display: block;
   background-color: silver; 
   width: 100%;
   height: 2em;
   line-height: 2em;
-  text-transform: uppercase;
   box-sizing: content-box;
 }
 
@@ -222,7 +224,7 @@ img {
 
 .contacto span {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 0.6em;
   width: 32%;
 }
 
@@ -243,8 +245,8 @@ span:hover {
 .enlaces .des {
   width: 60%;
   border-bottom: 0.125em solid black;
-  height: 1.5em;
-  line-height: 1.5em;
+  height: 1em;
+  line-height: 1em;
   box-sizing: content-box;
 }
 
@@ -273,7 +275,7 @@ ul .des {
 li .des {
   display: block;
   text-align: center;
-  margin-right: 15%; 
+
 }
 
 /*Fotos*/
@@ -334,7 +336,7 @@ li .des {
 
 
 h4{
-  font-size: 1.6vw;
+  font-size: 2vw;
   text-align: left;
   margin-left: 7%;
   color: white;
@@ -351,19 +353,15 @@ h4{
 .texSeccion, .textSeccion {
   margin-left: 6%;
   width: 90%;
-  letter-spacing: 0.15vw;
+  letter-spacing: 0.125vw;
   font-size: 1.5vw;
   color: rgb(255, 255, 255);
   background-color: rgba(37, 37, 37, 0.75); 
   border-radius: 1.6vw;
 }
 .textSeccion {
-
   width: 70%;
 }
-/* .submenu{
-  margin-top: 20px;
-} */
 
 hr{
   border: 0.2vw solid  rgba(66, 66, 66, 0.75);
@@ -378,8 +376,6 @@ hr{
 
 .enlaces ul {
   list-style-type: none;
-  /* margin: 0;
-  padding: 0; */
   overflow: hidden;
 }
 
@@ -392,7 +388,7 @@ hr{
   display: block;
   text-align: center;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .enlaces a:hover {
@@ -406,7 +402,7 @@ hr{
 
 .submenu a {
   color: black;
-  padding: 12px 16px;
+  padding: 0.5em 1em;
   text-decoration: none;
   display: block;
 }
@@ -424,13 +420,12 @@ hr{
 @media screen and (max-width: 600px) {
   .enlaces li {
       float: none;
-      display: block;
       text-align: center;
   }
 
 }
 
 .acce{
-  width: 7vw;
+  width: 10vw;
 }
 
