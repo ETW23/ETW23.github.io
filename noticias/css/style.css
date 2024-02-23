@@ -285,6 +285,11 @@ footer section a {
   line-height: 1.5;
   font-family: Manuale, sans-serif;
   font-weight: 300;
+  display: flex;
+    flex-wrap: wrap;
+}
+.textoNoti {
+  width: 50%;
 }
 .fotoNoticia {
   width: 40%;
