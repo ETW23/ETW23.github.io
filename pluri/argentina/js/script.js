@@ -105,9 +105,9 @@ var selectores = document.getElementsByClassName('selectores');
 
 function colorSelectores() {
     for (let i = 0; i < selectores.length; i++) {
-        selectores[i].style.color = 'white';
+        selectores[i].style.textShadow = '0px 0px 0px';
     }
-    this.style.color = 'black'
+    this.style.textShadow = '0px 0px 20px yellow';
 }
 
 poliHisto.onclick = colorSelectores;
@@ -118,9 +118,10 @@ poliGeo.onclick = colorSelectores;
 
 function resaltarSelector(selectorInfo) {
     for (let i = 0; i < selectores.length; i++) {
-        selectores[i].style.color = 'white';
+        selectores[i].style.textShadow = '0px 0px 0px';
     }
-    selectorInfo.style.color = 'black';
+    selectorInfo.style.textShadow = '0px 0px 20px yellow';
+
 }
 
 infoAdHisto.onmouseover = function () {

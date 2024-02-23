@@ -49,7 +49,7 @@ h1 {
     line-height: 3vh;
     display: flex;
     justify-content: space-evenly;
-    background-color: #53a4ec;
+    background-color: #115B9B;
     position: sticky;
     text-transform: uppercase;
     top: 0px;
@@ -129,7 +129,7 @@ main {
     background-image: url(../images/fondo.jpg);
     background-size: contain;
     width: 99vw;
-    height: 330vh;
+    height: auto;
     box-shadow: inset 0px -20px 30px -15px #000;
 }
 
@@ -229,7 +229,7 @@ h2 {
     display: flex;
     flex-direction: column;
     background: #333;
-    color: gray;
+    color: #CFCFCF;
     border-radius: 10px;
     padding: 10px;
     height: auto;
@@ -550,7 +550,7 @@ h2 {
     position: sticky;
     text-transform: uppercase;
     top: 0px;
-    background-color: #7ebaee;
+    background-color: #115B9B;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
     z-index: 0;
