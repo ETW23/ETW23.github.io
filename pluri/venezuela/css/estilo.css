@@ -242,6 +242,7 @@ footer {
   padding-bottom: 3em;
   background-image: url("../VenezuelaImg/veneFondo4.jpg");
   background-size: cover;
+  background-position: calc(30% + 20px) top;
 }
 .b3 {
   padding-top: 3em;

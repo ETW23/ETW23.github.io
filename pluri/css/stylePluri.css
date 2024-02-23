@@ -81,6 +81,7 @@ h1 {
   height: 30px;
   transition: 0.2s;
   background-color: #003b49;
+  filter: none;
 }
 
 .botonMenu:hover,
@@ -135,10 +136,12 @@ h1 {
 
 .menuAbierto .botonMenu .hamburguer .linea-1 {
   transform: rotate(45deg) translate(9px, 9px);
+  filter: none;
 }
 
 .menuAbierto .botonMenu .hamburguer .linea-2 {
   transform: rotate(135deg) translate(7px, -7px);
+  filter: none;
 }
 
 .menuAbierto .botonMenu .hamburguer .linea-3 {
@@ -146,6 +149,7 @@ h1 {
 }
 
 .navegador {
+  display: none;
   position: absolute;
   right: -15em;
   top: 0em;
@@ -154,12 +158,13 @@ h1 {
 }
 
 .navegadorAbierto {
+  display: block;
   position: absolute;
   right: 0em;
   top: 0em;
   width: 15em;
   transition: 0.5s;
-  box-shadow: 0px 0px 20px 2px #5e5e5e;
+  /* box-shadow: 0px 0px 20px 2px #5e5e5e; */
 }
 
 .lista {
@@ -169,7 +174,7 @@ h1 {
   width: 100%;
   margin: 0%;
   padding: 0%;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   text-align: center;
   line-height: 3em;
@@ -365,14 +370,14 @@ footer {
 /* ---------------- Adaptacion a dispositivos moviles ---------------------- */
 
 @media screen and (max-width: 767px) {
-  .contenido{
+  .contenido {
     display: flex;
     flex-wrap: wrap;
   }
-  .contenido p{
+  .contenido p {
     font-size: small;
   }
-  .controAudio{
+  .controAudio {
     width: 15%;
     height: 15%;
   }
@@ -382,25 +387,24 @@ footer {
   .contenido img {
     height: 12em;
     margin: 0em;
-}
+  }
   .mapa {
     flex-wrap: wrap;
-
   }
 
-  .elemento1{
+  .elemento1 {
     order: 2;
     width: 80%;
   }
-  .elemento2{
+  .elemento2 {
     order: 1;
     width: 80%;
   }
-  .elemento3{
+  .elemento3 {
     order: 3;
     width: 80%;
   }
-  .banderaCentral{
+  .banderaCentral {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -409,26 +413,25 @@ footer {
     margin-top: 5em;
     padding: 0em;
   }
-  .congo{
+  .congo {
     background-color: #003b49;
-     border-radius: 5px; 
-     margin-bottom: 0em; 
-     height: 75%; 
-     transition: auto; 
-     width: 75%; 
-     margin: 1em;
+    border-radius: 5px;
+    margin-bottom: 0em;
+    height: 75%;
+    transition: auto;
+    width: 75%;
+    margin: 1em;
   }
-  figure p{
+  figure p {
     font-size: small;
   }
-  h1{
+  h1 {
     font-size: 2em;
   }
   footer p {
     font-size: 0.5em;
   }
-  .tituloDos{
+  .tituloDos {
     font-size: 1.5em;
   }
 }
-
