@@ -277,6 +277,20 @@ footer section a {
   font-family: Manuale, sans-serif;
   font-weight: 300;
 }
+.textoNoticia2 {
+  width: 80%;
+  margin: auto;
+  font-size: 1.28vw;
+  text-align: left;
+  line-height: 1.5;
+  font-family: Manuale, sans-serif;
+  font-weight: 300;
+  display: flex;
+    flex-wrap: wrap;
+}
+.textoNoti1 {
+  width: 50%;
+}
 .fotoNoticia {
   width: 40%;
   margin: 0;
