@@ -77,3 +77,9 @@ mostrar.addEventListener('click', function () {
 });
 ////////////////////////////////////////////////
 
+////////////////////////////////////////////
+
+botonNotis.onclick = function () {
+    open('noticias/', "_self")
+}
+
