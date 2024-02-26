@@ -341,17 +341,17 @@ footer {
 
 .b0 {
   position: relative;
-  background-image: url("imag/drc-salonga.jpg");
+  background-image: url("../imag/drc-salonga.jpg");
 }
 
 .b1 {
   position: relative;
-  background-image: url("imag/tanganika.jpg");
+  background-image: url("../imag/tanganika.jpg");
 }
 
 .b2 {
   position: relative;
-  background-image: url("imag/kinsasa-noche.jpg");
+  background-image: url("../imag/kinsasa-noche.jpg");
 }
 
 .bg-license {
