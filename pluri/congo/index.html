@@ -1,331 +1,346 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E.T. Rep&uacute;blica Democr&aacute;tica del Congo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <style>
+      :root {
+        --color-dark: rgba(17, 25, 40, 0.5);
+        --color-dark-opaque: rgba(17, 25, 40);
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E.T. República Democrática del Congo</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <style>
-    :root {
-      --color-dark: rgba(17, 25, 40, .5);
-      --color-dark-opaque: rgba(17, 25, 40);
-    }
+      .vertical-timeline {
+        position: relative;
+        padding-left: 1rem;
+        margin-left: -1rem;
+      }
 
-    .vertical-timeline {
-      position: relative;
-      padding-left: 1rem;
-      margin-left: -1rem;
-    }
+      .vertical-timeline::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.5);
+      }
 
-    .vertical-timeline::before {
-      content: '';
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 1px;
-      background: rgba(255, 255, 255, .5);
-    }
+      .vertical-timeline-dot {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-block: 1rem 0.5rem;
+      }
 
-    .vertical-timeline-dot {
-      position: relative;
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-block: 1rem .5rem;
-    }
+      .vertical-timeline-dot::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -1rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        transform: translate(calc(-0.25rem - 0.5px), -0.375rem);
+        background: var(--color-dark-opaque);
+        border: 1px solid rgba(255, 255, 255);
+        border-radius: 50%;
+      }
 
-    .vertical-timeline-dot::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: -1rem;
-      width: .5rem;
-      height: .5rem;
-      transform: translate(calc(-.25rem - .5px), -.375rem);
-      background: var(--color-dark-opaque);
-      border: 1px solid rgba(255, 255, 255);
-      border-radius: 50%;
-    }
+      .vertical-timeline > p + p {
+        margin-top: 1rem;
+      }
 
-    .vertical-timeline>p+p {
-      margin-top: 1rem;
-    }
+      .vertical-timeline-title {
+        font-variant: small-caps;
+        margin-left: -1.75rem;
+      }
 
-    .vertical-timeline-title {
-      font-variant: small-caps;
-      margin-left: -1.75rem;
-    }
+      /* #tj1 {
+        background-image: url("imag/bandera.jpg");
+      }
 
-    #tj1 {
-      background-image: url("imag/bandera-congo.svg");
-    }
+      #tj2 {
+        background-image: url("imag/kinshasa.jpg");
+      }
 
-    #tj2 {
-      background-image: url("imag/kinshasa.jpg");
-    }
+      #tj3 {
+        background-image: url("imag/puerto-kinshasa.jpg");
+      }
 
-    #tj3 {
-      background-image: url("imag/puerto-kinshasa.jpg");
-    }
+      #tj4 {
+        background-image: url("imag/nyiragongo.jpg");
+      }
 
-    #tj4 {
-      background-image: url("imag/nyiragongo.jpg");
-    }
+      #tj5 {
+        background-image: url("imag/refugiados.jpg");
+      } */
 
-    #tj5 {
-      background-image: url("imag/refugiados.jpg");
-    }
+      .b0 {
+        position: relative;
+        background-image: url("imag/drc-salonga.jpg");
+      }
 
-    .b0 {
-      position: relative;
-      background-image: url("imag/drc-salonga.jpg");
-    }
+      .b1 {
+        position: relative;
+        background-image: url("imag/tanganika.jpg");
+      }
 
-    .b1 {
-      position: relative;
-      background-image: url("imag/tanganika.jpg");
-    }
+      .b2 {
+        position: relative;
+        background-image: url("imag/kinsasa-noche.jpg");
+      }
 
-    .b2 {
-      position: relative;
-      background-image: url("imag/kinsasa-noche.jpg");
-    }
+      .bg-license {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        max-width: 30rem;
+      }
 
-    .bg-license {
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      max-width: 30rem;
-    }
+      .bg-license a,
+      .tarjeta a {
+        color: rgba(64, 196, 255);
+      }
 
-    .bg-license a,
-    .tarjeta a {
-      color: rgba(64, 196, 255);
-    }
+      p {
+        letter-spacing: 0.03175em;
+        line-height: 1.5;
+      }
 
-    p {
-      letter-spacing: 0.03175em;
-      line-height: 1.5;
-    }
+      .texSeccion,
+      .tarjetaPequena {
+        letter-spacing: normal;
+        backdrop-filter: blur(5px) saturate(150%);
+      }
 
-    .texSeccion,
-    .tarjetaPequena {
-      letter-spacing: normal;
-      backdrop-filter: blur(5px) saturate(150%);
-    }
+      .texSeccion {
+        padding: 1rem 5rem;
+        /* max-width: 80rem; */
+      }
 
-    .texSeccion {
-      padding: 1rem 5rem;
-      max-width: 70rem;
-    }
+      .titSeccion,
+      .titArtic {
+        text-shadow: none;
+      }
 
-    .titSeccion,
-    .titArtic {
-      text-shadow: none;
-    }
+      nav button {
+        background-color: transparent;
+        border-radius: 0.5rem;
+        outline: 1px solid rgba(255, 255, 255, 0.125);
+      }
 
-    nav button {
-      background-color: transparent;
-      border-radius: .5rem;
-      outline: 1px solid rgba(255, 255, 255, .125);
-    }
+      nav button:hover {
+        background-color: var(--color-dark);
+        outline: 1px solid rgba(0, 0, 0, 0.25);
+      }
 
-    nav button:hover {
-      background-color: var(--color-dark);
-      outline: 1px solid rgba(0, 0, 0, .25);
-    }
+      .tarjetaPequena,
+      .tarjetaRectangular {
+        height: 100%;
+      }
 
-    .tarjetaPequena,
-    .tarjetaRectangular {
-      height: 100%;
-    }
+      .activa p {
+        overflow-wrap: normal;
+        white-space: wrap;
+        font-variant: normal;
+        min-width: 378px;
+        margin-bottom: 0;
+        line-height: 1.15;
+        letter-spacing: normal;
+      }
 
-    .activa p {
-      overflow-wrap: normal;
-      white-space: wrap;
-      font-variant: normal;
-      min-width: 378px;
-      margin-bottom: 0;
-      line-height: 1.15;
-      letter-spacing: normal;
-    }
+      .small-caps {
+        font-variant: small-caps;
+        letter-spacing: 0.1em;
+      }
+    </style> -->
+  </head>
 
-    .small-caps {
-      font-variant: small-caps;
-      letter-spacing: 0.10em;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- 
+  <body>
+    <!-- 
     cambiar el bg color en body con https://cssgradient.io/
     zonas en azul imagenes
     zonas con foto ya marcadas
     texto de seccion titSeccion
     texto de tarjeta tarjetaTexto
      -->
-  <nav>
-    <div>
-      <div class="navE">
-        <img src="imag/logo.svg" alt="Logo escuelas taller gijon" />
+    <nav>
+      <div>
+        <div class="navE">
+          <img src="imag/logo.svg" alt="Logo escuelas taller gijon" />
+        </div>
+        <h1 class="et">Escuelas Taller</h1>
       </div>
-      <div class="et">Escuelas Taller</div>
-    </div>
 
-    <div class="navE">
-      <button>
-        <a href="../index.html"><img src="imag/home.png" alt="Boton de inicio" /></a>
-      </button>
-    </div>
-  </nav>
-  <main>
-    <section class="b0">
-      <small class="bg-license">
-        Fondo: <a href="https://flic.kr/p/2aQJaXt">2014 DRC Salonga by Cody Pope</a> por <a
-          href="https://www.flickr.com/photos/usaiddrc/">USAID Democratic Republic of Congo</a>
-      </small>
-      <div class="titSeccion">Ubicación Geográfica</div>
-      <div class="texSeccion">
-        <p>
-          La mayor parte del país se encuentra en la cuenca del río Congo, uno de los más grandes del mundo.
-          Al norte y al oeste, el río y su afluente más grande, el río Ubangi, actúan como frontera con un
-          pequeño exclave de Angola y con la República del Congo, un país
-          diferente que estuvo bajo dominio francés.
-        </p>
-        <p>
-          Al sur y al norte, el país está rodeado de sabanas, con la República Controafricana y Sudán del Sur
-          al norte, Angola y Zambia al sur.
-        </p>
-        <p>
-          Al este se encuentra el Rift Albertino, una rama del Rift del África Oriental, donde el continente
-          se ha ido separando en dos desde hace 22-25 millones de años.
-          Cuenta con numerosas cadenas montañosas, volcanos y lagos, incluyendo el sugundo lago del mundo en
-          volumen y profundidad, el lago Tanganica.
-          Estas caracteristicas geográficas separan el Congo de sus vecinos orientales, Uganda, Ruanda,
-          Burundi y Tanzania.
-        </p>
+      <div class="navE">
+        <button>
+          <a href="../index.html" target="_self"
+            ><img src="imag/home.png" alt="Boton de inicio"
+          /></a>
+        </button>
       </div>
-      <br>
+    </nav>
+    <main>
+      <section class="b0">
+        <small class="bg-license">
+          Fondo:
+          <a href="https://flic.kr/p/2aQJaXt" target="_self">2014 DRC Salonga by Cody Pope</a>
+          por
+          <a href="https://www.flickr.com/photos/usaiddrc/" target="_self"
+            >USAID Democratic Republic of Congo</a
+          >
+        </small>
+        <h1 class="titSeccion">Ubicaci&oacute;n Geogr&aacute;fica</h1>
+        <div class="texSeccion">
+          <p>
+            La mayor parte del pa&iacute;s se encuentra en la cuenca del r&iacute;o Congo, uno
+            de los m&aacute;s grandes del mundo. Al norte y al oeste, el r&iacute;o y su
+            afluente m&aacute;s grande, el r&iacute;o Ubangi, act&uacute;an como frontera con un
+            pequeño exclave de Angola y con la Rep&uacute;blica del Congo, un pa&iacute;s
+            diferente que estuvo bajo dominio franc&eacute;s.
+          </p>
+          <p>
+            Al sur y al norte, el pa&iacute;s est&aacute; rodeado de sabanas, con la Rep&uacute;blica
+            Controafricana y Sud&aacute;n del Sur al norte, Angola y Zambia al sur.
+          </p>
+          <p>
+            Al este se encuentra el Rift Albertino, una rama del Rift del &aacute;frica
+            Oriental, donde el continente se ha ido separando en dos desde hace
+            22-25 millones de años. Cuenta con numerosas cadenas montañosas,
+            volcanos y lagos, incluyendo el sugundo lago del mundo en volumen y
+            profundidad, el lago Tanganica. Estas caracteristicas geogr&aacute;ficas
+            separan el Congo de sus vecinos orientales, Uganda, Ruanda, Burundi
+            y Tanzania.
+          </p>
+        </div>
+        <br />
+
+        <section class="bloque">
+          <div class="tarjetaCuadrada primeraTarjeta">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8151641.4867606675!2d11.60114192643329!3d-3.9597836875855195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1979facf9a7546bd%3A0x4c63e5eac93f141!2sRep%C3%BAblica%20Democr%C3%A1tica%20del%20Congo!5e0!3m2!1ses!2ses!4v1697711597287!5m2!1ses!2ses"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="imagenes">
+            <div class="tarjeta activa" id="tj1">
+              <p><span class="small-caps">Bandera</span></p>
+            </div>
+            <div class="tarjeta" id="tj2">
+              <p>
+                <span class="small-caps">R&iacute;o Zambeze</span>
+              </p>
+            </div>
+            <div class="tarjeta" id="tj3">
+              <p>
+                <span class="small-caps">Capital (Kisasa)</span>
+              </p>
+            </div>
+            <div class="tarjeta" id="tj4"></div>
+            <div class="tarjeta" id="tj5"></div>
+          </div>
+        </section>
+      </section>
+      <!-- introducir imagen panoramica -->
+      <section class="b1">
+        <small class="bg-license">
+          Fondo: Lago Tanganica -
+          <a href="https://flic.kr/p/GZdzj" target="_self">Lake Tanganyika</a> por
+          <a href="https://www.flickr.com/photos/deepphoto/" target="_self">Dave Proffer</a>,
+          en Flickr
+        </small>
+
+        <!-- <div class="titSeccion">Historia</div> -->
+        <div class="texSeccion">
+          <h2 class="vertical-timeline-title">Historia</h2>
+          <div class="vertical-timeline">
+            <h3 class="vertical-timeline-dot">Historia Temprana</h3>
+            <p>
+              El territorio de la Rep&uacute;blica Democr&aacute;tica del Congo fue habitado
+              inicialmente por tribus pigmeas, luego reemplazadas por las
+              naciones bant&uacute;es durante las Migraciones Bant&uacute;es (2000 a.C. - 500
+              d.C.). Esto result&oacute; en una mezcla &eacute;tnica, con los bant&uacute;es como
+              grupo principal, contribuyendo significativamente a la agricultura
+              y metalurgia.
+            </p>
+            <h3 class="vertical-timeline-dot">
+              Imperio del Congo y Colonialismo
+            </h3>
+            <p>
+              En el siglo XV, el Imperio del Congo fue la potencia dominante,
+              pero la explotaci&oacute;n europea, especialmente por parte de los
+              portugueses, debilit&oacute; al reino. Durante la colonizaci&oacute;n belga en
+              el per&iacute;odo 1870-1920, el Estado Libre del Congo, dirigido por
+              Leopoldo II, explot&oacute; brutalmente a los nativos, culminando en
+              atrocidades internacionalmente condenadas.
+            </p>
+            <h3 class="vertical-timeline-dot">Independencia y Crisis</h3>
+            <p>
+              Tras la independencia en 1960, el Congo experiment&oacute; tensiones
+              internas, secesiones de provincias y una intervenci&oacute;n militar
+              extranjera. Patrice Lumumba, el primer ministro, fue arrestado y
+              ejecutado en 1961, seguido de d&eacute;cadas bajo Mobutu Sese Seko.
+            </p>
+            <p>
+              Mobutu instal&oacute; en Congo, rebautizado como Zaire, un r&eacute;gimen
+              dictatorial marcado por culto de personalidad, corrupci&oacute;n, una
+              inflaci&oacute;n descontrolada y violaciones generalizadas de los
+              derechos humanos.
+            </p>
+            <h3 class="vertical-timeline-dot">Guerras del Congo</h3>
+            <p>
+              Las guerras en la d&eacute;cada de 1990 involucraron genocidio ruand&eacute;s,
+              rebeliones internas y conflictos regionales. La Segunda Guerra del
+              Congo (1998-2002), la "Guerra Mundial Africana", result&oacute; en
+              millones de muertes y persistente inestabilidad.
+            </p>
+            <h3 class="vertical-timeline-dot">Per&iacute;odo Post-Guerra</h3>
+            <p>
+              A pesar de tratados de paz, la inestabilidad continu&oacute;. En 2006,
+              Joseph Kabila asumi&oacute; la presidencia, enfrentando violencia
+              pol&iacute;tica. Las elecciones de 2018 llevaron a F&eacute;lix Tshisekedi al
+              poder, aunque los partidarios de Kabila mantuvieron influencia en
+              el gobierno.
+            </p>
+            <h3 class="vertical-timeline-dot">Estado Actual</h3>
+            <p>
+              La actual falta de seguridad ha propiciado la proliferaci&oacute;n de
+              numerosos grupos rebeldes, con hasta 120 en 2018. La incapacidad
+              del estado y de la fuerza de paz de la ONU para proporcionar
+              seguridad ha exacerbado la situaci&oacute;n, a menudo ligada a conflictos
+              &eacute;tnicos y al inter&eacute;s regional en los recursos minerales del este
+              del Congo.
+            </p>
+          </div>
+          <br>
 
       <section class="bloque">
-        <div class="tarjetaCuadrada primeraTarjeta">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8151641.4867606675!2d11.60114192643329!3d-3.9597836875855195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1979facf9a7546bd%3A0x4c63e5eac93f141!2sRep%C3%BAblica%20Democr%C3%A1tica%20del%20Congo!5e0!3m2!1ses!2ses!4v1697711597287!5m2!1ses!2ses"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+        <div class="tarjetaCuadrada">
+          <img src="imag/historia congo.jpg" alt="historiardc">
         </div>
-        <div class="imagenes">
-          <div class="tarjeta activa" id="tj1">
-            <p><span class="small-caps">Bandera</span></p>
-          </div>
-          <div class="tarjeta" id="tj2">
 
-            <p><span class="small-caps">Capital (Kisasa)</span>
-              <br>
-              <a href="https://commons.wikimedia.org/wiki/File:Kinshasa_-_Boulevard_du_30_juin.jpg">Cedrick ngalula</a>,
-              <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
-            </p>
-          </div>
-          <div class="tarjeta" id="tj3">
-            <p><span class="small-caps">Puerte en Kinsasa</span>
-              <br>
-              <a href="https://commons.wikimedia.org/wiki/File:View_of_the_Port_from_another_Angle-Kinshasa,_DRC.jpg">Rahul
-                Tilak</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
-            </p>
-          </div>
-          <div class="tarjeta" id="tj4">
-            <p>
-              <span class="small-caps">Cratea del Nyiragongo</span>
-              <br>
-              <a href="https://flic.kr/p/CYnqjR">Virunga National Park, DR Congo: Two guards of the Virunga National
-                Park contemplate the lava of Nyiragongo crater, which rises to 3470 meters</a> by <a
-                href="https://www.flickr.com/photos/monusco/">MONUSCO Photos</a>, en Flickr
-            </p>
-          </div>
-          <div class="tarjeta" id="tj5">
-            <p><span class="small-caps">Refugiados</span>
-              <br>
-              <a href="https://flic.kr/p/eQYko9">Refugees in transit from the border with DRC to Rwamwanja, Uganda</a>
-              por
-              <a href="https://www.flickr.com/photos/dfid/">DFID - UK Department for International Development</a>
-            </p>
-          </div>
+        <div class="tarjetaCuadrada">
+          <img src="imag/historiaa.jpg" alt="histordc" />
+        </div>
         </div>
       </section>
-    </section>
-    <!-- introducir imagen panoramica -->
-    <section class="b1">
-      <small class="bg-license">
-        Fondo: Lago Tanganica -
-        <a href="https://flic.kr/p/GZdzj">Lake Tanganyika</a> por <a
-          href="https://www.flickr.com/photos/deepphoto/">Dave
-          Proffer</a>, en Flickr
-      </small>
-
-      <!-- <div class="titSeccion">Historia</div> -->
-      <div class="texSeccion">
-        <h2 class="vertical-timeline-title">Historia</h2>
-        <div class="vertical-timeline">
-          <h3 class="vertical-timeline-dot">
-            Historia Temprana</h3>
-          <p>
-            El territorio de la República Democrática del Congo fue habitado inicialmente por tribus pigmeas,
-            luego reemplazadas por las naciones bantúes durante las Migraciones Bantúes (2000 a.C. - 500 d.C.).
-            Esto resultó en una mezcla étnica, con los bantúes como grupo principal, contribuyendo
-            significativamente a la agricultura y metalurgia.
-          </p>
-          <h3 class="vertical-timeline-dot">Imperio del Congo y Colonialismo</h3>
-          <p>
-            En el siglo XV, el Imperio del Congo fue la potencia dominante, pero la explotación europea,
-            especialmente por parte de los portugueses, debilitó al reino. Durante la colonización belga en el
-            período 1870-1920, el Estado Libre del Congo, dirigido por Leopoldo II, explotó brutalmente a los
-            nativos, culminando en atrocidades internacionalmente condenadas.
-          </p>
-          <h3 class="vertical-timeline-dot">Independencia y Crisis</h3>
-          <p>
-            Tras la independencia en 1960, el Congo experimentó tensiones internas, secesiones de provincias y
-            una intervención militar extranjera. Patrice Lumumba, el primer ministro, fue arrestado y ejecutado
-            en 1961, seguido de décadas bajo Mobutu Sese Seko.
-          </p>
-          <p>
-            Mobutu instaló en Congo, rebautizado como Zaire, un régimen dictatorial marcado por culto de personalidad,
-            corrupción, una inflación descontrolada y violaciones generalizadas de los derechos humanos.
-          </p>
-          <h3 class="vertical-timeline-dot">Guerras del Congo</h3>
-          <p>
-            Las guerras en la década de 1990 involucraron genocidio ruandés, rebeliones internas y conflictos
-            regionales. La Segunda Guerra del Congo (1998-2002), la "Guerra Mundial Africana", resultó en
-            millones de muertes y persistente inestabilidad.
-          </p>
-          <h3 class="vertical-timeline-dot">Período Post-Guerra</h3>
-          <p>
-            A pesar de tratados de paz, la inestabilidad continuó. En 2006, Joseph Kabila asumió la presidencia,
-            enfrentando violencia política. Las elecciones de 2018 llevaron a Félix Tshisekedi al poder, aunque
-            los partidarios de Kabila mantuvieron influencia en el gobierno.
-          </p>
-          <h3 class="vertical-timeline-dot">Estado Actual</h3>
-          <p>
-            La actual falta de seguridad ha propiciado la proliferación de numerosos grupos rebeldes, con hasta
-            120 en 2018. La incapacidad del estado y de la fuerza de paz de la ONU para proporcionar seguridad
-            ha exacerbado la situación, a menudo ligada a conflictos étnicos y al interés regional en los
-            recursos minerales del este del Congo.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="b2">
-      <small class="bg-license">
-        Fondo: <a href="https://flic.kr/p/CdtqgG">Kinshasa by night</a> por <a
-          href="https://www.flickr.com/photos/monusco/">MONUSCO Photos</a>, en Flickr
-      </small>
-      <div class="titSeccion">Situacion actual</div>
-      <!-- <div class="texSeccion">
+      <section class="b2">
+        <small class="bg-license">
+          Fondo: <a href="https://flic.kr/p/CdtqgG" target="_self">Kinshasa by night</a> por
+          <a href="https://www.flickr.com/photos/monusco/" target="_self">MONUSCO Photos</a>,
+          en Flickr
+        </small>
+        <h1 class="titSeccion">Situacion actual</h1>
+        <!-- <div class="texSeccion">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, libero
           earum omnis laudantium accusamus veritatis quidem aut eaque neque.
           Atque omnis at impedit facilis adipisci repellendus, aliquam mollitia
@@ -333,153 +348,169 @@
           repudiandae, quidem quaerat laboriosam neque corrupti eum magni!
         </div> -->
 
-      <section class="bloque">
-        <div class="tarjetaPequena">
-          <div class="titSeccion titArtic">Política</div>
-          <div>
-            <p>
-              En 2022, la República Democrática del Congo ocupó el sexto peor lugar en el Índice de Democracia de la
-              <abbr lang="en" title="Economist Intelligence Unit">EIU</abbr>. Freedom House lo califica en derechos
-              políticos con un 4/40.
-            </p>
-            <p>
-              Según Freedom House, el sistema político de la República Democrática del Congo está paralizado
-              debido a la manipulación del proceso electoral por parte de las élites políticas. Los ciudadanos no pueden
-              ejercer libremente las libertades civiles básicas y la corrupción es endémica. La seguridad física es
-              frágil debido a la violencia y los abusos contra los derechos humanos cometidos por las fuerzas
-              gubernamentales, así como por los grupos rebeldes armados y las milicias en muchas zonas del país.
-            </p>
+        <section class="bloque">
+          <div class="tarjetaPequena">
+            <h1 class="titSeccion titArtic">Pol&iacute;tica</h1>
+            <div>
+              <p>
+                En 2022, la Rep&uacute;blica Democr&aacute;tica del Congo ocup&oacute; el sexto peor
+                lugar en el &iacute;ndice de Democracia de la
+                <abbr lang="en" title="Economist Intelligence Unit">EIU</abbr>.
+                Freedom House lo califica en derechos pol&iacute;ticos con un 4/40.
+              </p>
+              <p>
+                Seg&uacute;n Freedom House, el sistema pol&iacute;tico de la Rep&uacute;blica
+                Democr&aacute;tica del Congo est&aacute; paralizado debido a la manipulaci&oacute;n
+                del proceso electoral por parte de las &eacute;lites pol&iacute;ticas. Los
+                ciudadanos no pueden ejercer libremente las libertades civiles
+                b&aacute;sicas y la corrupci&oacute;n es end&eacute;mica. La seguridad f&iacute;sica es
+                fr&aacute;gil debido a la violencia y los abusos contra los derechos
+                humanos cometidos por las fuerzas gubernamentales, as&iacute; como por
+                los grupos rebeldes armados y las milicias en muchas zonas del
+                pa&iacute;s.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- <div class="tarjetaCuadrada">
-          <img src="imag/presidente.jpg" alt="" />
-        </div> -->
-
-        <div class="tarjetaPequena">
-          <div class="titSeccion titArtic">Sanidad</div>
-          <div>
-            <p>
-              La infraestructura sanitaria en la República Democrática del Congo es inadecuada, carece del equipamiento
-              adecuado y tiene dificultades para prestar servicios esenciales de atención primaria de salud, prevención
-              y tratamiento de enfermedades transmisibles y servicios de salud sexual y reproductiva. Numerosas
-              epidemias mortales, incluidos ébola, malaria, cólera, peste bubónica, fiebre amarilla
-              y sarampión, han perdido millones de vidas y muchas más han sido afectadas.
-            </p>
-            <p>En 2023, CARE Internacional ha llamado el este del Congo "uno de los lugares más peligrosos del
-              mundo." Destacan que mientras más de 6.9 millones de personas en la República Democrática del Congo están
-              actualmente desplazadas, y más huyen de la violencia en curso, el sector de la salud en el país sigue
-              desmoronándose.
-            </p>
-            <p>
-              Dicho esto, el país pudo lograr unos avances medibles. En los últimos años, el país logró erradicar la
-              polio. Recientemente, un ensayo controlado aleatorio, llevado a cabo en el este de la República
-              Democrática del Congo, en sí mismo un logro notable en una zona de conflicto, estableció un tratamiento
-              específico para el ébola y llevó a una disminución en su tasa de letalidad.
-            </p>
+          <div class="tarjetaCuadrada">
+            <img src="imag/politica.jpg" alt="politica" />
           </div>
-        </div>
 
-        <!-- <div class="tarjetaCuadrada">
-          <img src="imag/sanidad.jpeg" alt="" />
-        </div> -->
-
-        <div class="tarjetaPequena">
-          <div class="titSeccion titArtic">Educación</div>
-          <div>
-            <p>
-              El país ha logrado avances significativos en acceso a la educación primaria, pero 7,6 millones de niños
-              todavía no van a la escuela, según UNICEF. Los costes directos (matriculación) e indirectos (material
-              escolar, uniformes, etc.) quedan un obstáculo importante a la escolarización de los niños a pesar de
-              la política de educación primaria gratuita promulgada en 2010.
-            </p>
-            <p>
-              Persisten importantes disparidades entre zonas geográficas, grupos socioeconómicos y géneros.
-              Además, las tasas de repetición y deserción en el nivel de educación primaria tienen
-              repercusiones en el nivel secundario.
-            </p>
+          <div class="tarjetaPequena">
+            <h1 class="titSeccion titArtic">Sanidad</h1>
+            <div>
+              <p>
+                Las infraestructuras sanitarias en la Rep&uacute;blica Democr&aacute;tica del
+                Congo son inadecuadas, carecen de equipamiento y tienen
+                dificultades para prestar servicios esenciales de atenci&oacute;n
+                primaria y el tratamiento de enfermedades.
+              </p>
+              <p>
+                La poblaci&oacute;n ha experimentado diez brotes de la mortal
+                enfermedad del &eacute;bola desde 1976, lo que ha sumido
+                todav&iacute;a m&aacute;s a las comunidades vulnerables en la
+                pobreza.
+              </p>
+              <p>
+                En los &uacute;ltimos años, el pa&iacute;s logr&oacute; erradicar la polio.
+                Recientemente, un ensayo controlado aleatorio, estableci&oacute; un
+                tratamiento espec&iacute;fico para el &eacute;bola y llev&oacute; a una disminuci&oacute;n
+                en su tasa de letalidad.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- <div class="tarjetaCuadrada">
-          <img src="imag/educacion.jpg" alt="" />
-        </div> -->
-
-        <div class="tarjetaPequena">
-          <div class="titSeccion titArtic">Economía</div>
-          <div>
-            <p>
-              A pesar de ser un país de África más desarrollado después Sudáfrica en el momento de su independencia, la
-              República Democrática de Congo se ha convertido en uno de los países más pobres del mundo. La economía del
-              país depende principalmente de las exportaciones de cobre y cobalto, que representan más del 70% de sus
-              exportaciones.
-            </p>
-            <p>
-              La moneda oficial es el franco congoleño. Un euro cuesta alrededor de 2700 francos.
-            </p>
+          <div class="tarjetaCuadrada">
+            <img src="imag/sanidad.jpg" alt="sanidad" />
           </div>
-        </div>
 
-        <!-- <div class="tarjetaCuadrada">
+          <div class="tarjetaPequena">
+            <h1 class="titSeccion titArtic">Econom&iacute;a</h1>
+            <div>
+              <p>
+                A pesar de ser un pa&iacute;s de &aacute;frica m&aacute;s desarrollado despu&eacute;s
+                Sud&aacute;frica en el momento de su independencia, la Rep&uacute;blica
+                Democr&aacute;tica de Congo se ha convertido en uno de los pa&iacute;ses m&aacute;s
+                pobres del mundo. La econom&iacute;a del pa&iacute;s depende principalmente de
+                las exportaciones de cobre y cobalto, que representan m&aacute;s del
+                70% de sus exportaciones.
+              </p>
+              <p>
+                La moneda oficial es el franco congoleño. Un euro equivale
+                aproximadamente 2700 francos.
+              </p>
+            </div>
+          </div>
+
+          <!-- <div class="tarjetaCuadrada">
           <img src="imag/economia.jpg" alt="" />
         </div> -->
-        <div class="tarjetaPequena">
-          <div class="titSeccion titArtic">Religión</div>
-          <div>
-            <p>
-              La mayoría de la población congoleña es cristiana, predominantemente católica: representan el 50% de la
-              población. Hay protestantes, varios cultos evangélicos y iglesias africanas, como el
-              kimbanguismo, un movimiento fundado en Congo por el llamado profeta Simon Kimbangu.
-            </p>
-            <p>
-              Existen también comunidades musulmanas concentradas en el este del país y estimadas hasta el 10% de la
-              población.
-            </p>
+          <div class="tarjetaPequena">
+            <h1 class="titSeccion titArtic">Religi&oacute;n</h1>
+            <div>
+              <p>
+                La mayor&iacute;a de la poblaci&oacute;n congoleña es cristiana,
+                predominantemente cat&oacute;lica: representan el 50% de la poblaci&oacute;n.
+                Hay protestantes, varios cultos evang&eacute;licos y iglesias
+                africanas, como el kimbanguismo, un movimiento fundado en Congo
+                por el llamado profeta Simon Kimbangu.
+              </p>
+              <p>
+                Existen tambi&eacute;n comunidades musulmanas concentradas en el este
+                del pa&iacute;s y estimadas hasta el 10% de la poblaci&oacute;n.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- <div class="tarjetaCuadrada">
+          <div class="tarjetaPequena">
+            <h1 class="titSeccion titArtic">Educaci&oacute;n</h1>
+            <div>
+              <p>
+                El pa&iacute;s ha logrado avances significativos en acceso a la
+                educaci&oacute;n primaria, pero 7,6 millones de niños todav&iacute;a no van a
+                la escuela, seg&uacute;n UNICEF. Los costes directos (matriculaci&oacute;n) e
+                indirectos (material escolar, uniformes, etc.) crean un
+                obst&aacute;culo importante en la escolarizaci&oacute;n de los niños a pesar
+                de la pol&iacute;tica de educaci&oacute;n primaria gratuita promulgada en
+                2010.
+              </p>
+              <p>
+                Persisten importantes disparidades entre zonas geogr&aacute;ficas,
+                grupos socioecon&oacute;micos y g&eacute;neros. Adem&aacute;s, las tasas de
+                repetici&oacute;n y deserci&oacute;n en el nivel de educaci&oacute;n primaria tienen
+                repercusiones en el nivel secundario.
+              </p>
+            </div>
+          </div>
+
+          <div class="tarjetaCuadrada">
+            <img src="imag/educacion.webp" alt="educacion" />
+          </div>
+
+          <!-- <div class="tarjetaCuadrada">
           <img src="imag/religion.jpg" alt="" />
         </div> -->
 
-        <div class="tarjetaPequena">
-          <div class="titSeccion titArtic">Idioma</div>
-          <div>
-            <p>
-              El francés es el idioma oficial y la lengua franca del país. El lingala, el kikongo, el swahili y el
-              tshiluba, son lenguas nacionales. Hay más de 200 lenguas hablados en la República Democrática del Congo,
-              17 de las cuales están susceptibles de extinción según <abbr title="Endangered Languages Project"
-                lang="en">ELP</abbr>.
-            </p>
+          <div class="tarjetaPequena">
+            <h1 class="titSeccion titArtic">Idioma</h1>
+            <div>
+              <p>
+                El franc&eacute;s es el idioma oficial y la lengua materna del pa&iacute;s. El
+                lingala, el kikongo, el swahili y el tshiluba, son lenguas
+                nacionales. Hay m&aacute;s de 200 lenguas hablados en la Rep&uacute;blica
+                Democr&aacute;tica del Congo, 17 de las cuales est&aacute;n susceptibles de
+                extinci&oacute;n seg&uacute;n
+                <abbr title="Endangered Languages Project" lang="en">ELP</abbr>.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <!-- <div class="tarjetaCuadrada">
+          <!-- <div class="tarjetaCuadrada">
           <img src="imag/idioma.jpg" alt="" />
         </div> -->
-        <!-- <section class="bloque">
+          <!-- <section class="bloque">
           <div class="tarjetaPequena tarjetaTexto">
             <div class="titSeccion titArtic">Idioma</div>
             <p>
-              El idioma oficial es el francés. Además, hay cuatro idiomas nacionales: Lingala, Swahili, Tshiluba y
+              El idioma oficial es el franc&eacute;s. Adem&aacute;s, hay cuatro idiomas nacionales: Lingala, Swahili, Tshiluba y
               Kikongo.
               Existen decenas de dialectos e idiomas locales.
             </p>
             <p>
-              El lingala es una lengua bantú hablada en el noroeste de la República Democrática del Congo y en una gran
-              parte de la República del Congo.
+              El lingala es una lengua bant&uacute; hablada en el noroeste de la Rep&uacute;blica Democr&aacute;tica del Congo y en una gran
+              parte de la Rep&uacute;blica del Congo.
             </p>
           </div> -->
+        </section>
       </section>
-    </section>
-    <!-- <section class="b3">
+      <!-- <section class="b3">
       <div class="titSeccion">Experiencia personal</div>
       <hr />
       <section class="bloque">
 
         </div>
         <div class="tarjetaPequena tarjetaTexto">
-          <div class="titSeccion titArtic">¿Cómo vivias en tu país?</div>
+          <div class="titSeccion titArtic">¿C&oacute;mo vivias en tu pa&iacute;s?</div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
           molestiae distinctio numquam aspernatur corrupti dicta earum
           sapiente amet deserunt, eaque ad sequi, dolor iusto dolorum
@@ -505,14 +536,13 @@
         </div>
       </section>
     </section> -->
-  </main>
-  <footer>
-    <p>
-      Escuelas Taller "Gijón Acompaña" 2023 - C. Río de Oro, 15B, 33209 Gijón,
-      Asturias
-    </p>
-  </footer>
-  <script src="js/script.js"></script>
-</body>
-
+    </main>
+    <footer>
+      <p>
+        Escuelas Taller "Gij&oacute;n Acompaña" 2023 - C. R&iacute;o de Oro, 15B, 33209 Gij&oacute;n,
+        Asturias
+      </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
