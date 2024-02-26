@@ -7,7 +7,7 @@ function verPortada() {
   }
   var secciones = document.querySelectorAll('.portada');
   secciones.forEach(function(seccion) {
-    seccion.style.display = 'block';
+    seccion.style.display = 'flex';
   });
   var h1 = document.querySelectorAll('.h1');
   h1.forEach(function(seccion) {
@@ -42,7 +42,9 @@ function cambiarTitulo(titulo) {
 var seccionMostrar = document.querySelector(`.${titulo.replace(/\s/g, '').toLowerCase()}`);
 
 if (seccionMostrar) {
-  if (seccionMostrar.classList.contains('historia') || seccionMostrar.classList.contains('religion') || seccionMostrar.classList.contains('influenciarumana')) {
+  if (seccionMostrar.classList.contains('historia') || seccionMostrar.classList.contains('religion') 
+    || seccionMostrar.classList.contains('influenciarumana') || seccionMostrar.classList.contains('situaciongeografica')
+    || seccionMostrar.classList.contains('poblacionycapital')) {
     seccionMostrar.classList.add('activeFlex');
   } else {
     seccionMostrar.classList.add('active');
@@ -127,5 +129,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Establecer el intervalo para cambiar la imagen de un div aleatorio //
   setInterval(changeBackground, 2000);
+});
+
+// TabIndex con flechas del teclado
+document.addEventListener('DOMContentLoaded', function () {
+    var menuList = document.getElementById('menuList');
+    var menuItems = menuList.querySelectorAll('li');
+
+    menuList.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+            e.preventDefault(); // Evitar el comportamiento predeterminado del desplazamiento
+
+            var currentIndex = Array.from(menuItems).indexOf(document.activeElement);
+
+            if (e.key === 'ArrowLeft') {
+                // Flecha hacia arriba
+                var newIndex = (currentIndex - 1 + menuItems.length) % menuItems.length;
+            } else {
+                // Flecha hacia abajo
+                var newIndex = (currentIndex + 1) % menuItems.length;
+            }
+
+            menuItems[newIndex].focus();
+        } else if (e.key === 'Enter') {
+            // Manejar la tecla Enter
+            e.preventDefault(); // Evitar el comportamiento predeterminado del Enter
+            document.activeElement.click(); // Simular un clic en el elemento activo
+        }
+    });
 });
 

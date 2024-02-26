@@ -10,21 +10,175 @@ body    {
     background-image: url(imagenes/fondoweb.jpg);
     background-size: cover;
 }
+/* Header*/
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background-image: url(imagenes/header.jpg);
+        background-size: auto 100%;
+        position: relative;
+        text-align: center;
+    }
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(red, yellow, blue);
+        opacity: 0.65;
+    }
+    header img {
+        border: 0.4em solid black;
+        box-sizing: border-box;
+        margin: 2em auto 2em auto;
+        zoom: 60%;
+        position: relative;
+    }
+/* FIN Header*/
+/* Barra NAV */
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        background-color: #FF5252;
+        border: 0.2em solid rgba(0, 0, 0, 0.618);
+        color: #19338a;
+        font-weight: bolder;
+        font-size: 1.4em;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    nav li {
+        height: 4em;
+        vertical-align: middle;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 1em 0 1em;
+    }
+    nav li:hover {
+        background-color: rgba(255, 255, 0, 0.75);
+        cursor: pointer;
+    }
+    .linone:hover {
+        cursor: pointer;
+        background-color: #FF5252;
+    }
+    nav li:focus {
+        background-color: rgba(255, 255, 0, 0.75);
+    }
+/* FIN BARRA NAV */
+/* PORTADA */
+    .portada {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .imgporta {
+        width: 10%;
+        height: 237.88px;
+        border: groove 2.5px black;
+        background-size: 100% 100%;
+    }
+/* FIN portada */
+/* Situacion Geografica */
+    #sitGeoImg, #sitGeoMap  {
+        width: 50%;
+        float: left;
+    }
+    .imggeog, .textimggeo {
+        display: block;
+        margin: 1em auto;
+    }
+    .textimggeo {
+        text-align: center;
+        font-size: 2.5em;
+        width: 100%;
+        clear: both;
+    }
+    .situaciongeografica    {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+/* FIN Situacion Geografica */
+/* Poblacion y Capital */
+    .poblacionycapital  {
+        align-items: center;
+    }
+    .cincuentadiv, .cincuentadiv2 {
+        width: 50%;
+    }
+    .cincuentadiv2 {
+        margin-bottom: 2em;
+    }
+    .imgcapit{
+        border: 0.12em solid black;
+        margin: auto;
+        display: flex;
+    }
+    .ulcentr    {
+        margin-left: 5em;
+    }
+    .region {
+        font-size: 80%;
+    }
+    .ciudad {
+        text-align: justify;
+        max-width: 50%;
+        margin: 0.5em auto 0.8em 4em;
+        list-style: none;
+    }
+/* FIN Poblacion y Capital */
+/* Historia */
+    .historia {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+    }
+    .tresdivtext, .tresdivtext2 {
+        flex: 1;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .espacioli:hover {
+        background-color: #ffeadb;  /* Fondo claro al pasar el ratón */
+        transition: background-color 1s ease;
+    }
+    .espacioli {
+        margin-left: 1em;
+        padding: 0.5em 0 0.5em 0.5em;
+    }
+    .txtresalt {
+        color: #ff4500;  /* Color de resaltado naranja */
+        font-weight: bold;
+    }
+/* FIN Historia */
 .cajaindex  {
     background-color: white;
 }
 .situaciongeografica, .poblacionycapital, .historia, .politica, .sanidad, .educacion, .economia, .idioma, .religion, .influenciarumana, .subpolidch, .hrpolimedio, footer, li, .idisecundario, .clear, .image-gallery, .portada  {
     clear: both;
 }
-.cincuentadiv, .cincuentadiv2, .tresdivimg, .tresdivtext, .tresdivtext2, .politizq, .politdch, .president1, .textdch, .textizq, .tampolhist, .hispolimgs, .hispoltxts, .sanidtxt, .saniimg, .eduimgizq, .econoizq, .econodch, .economia3, .txtidiprinci, .imgidiprinci, .idirumh2, .religion-info, .imgporta, .personal3      {
+.tresdivimg, .politizq, .politdch, .president1, .textdch, .textizq, .tampolhist, .hispolimgs, .hispoltxts, .sanidtxt, .saniimg, .eduimgizq, .econoizq, .econodch, .economia3, .txtidiprinci, .imgidiprinci, .idirumh2, .religion-info, .personal3      {
     float: left;
 }
 .president2, .edutextdch, .econogif, .imgrelicrono, .personal2, .personal4 {
     float: right;
-}
-.txtresalt {
-    color: #ff4500;  /* Color de resaltado naranja */
-    font-weight: bold;
 }
 .txtresalt2 {
     font-weight:bolder;
@@ -63,96 +217,10 @@ body    {
     margin: auto;
     padding-bottom: 1em;
 }
-header {
-    display: block;
-    height: auto;
-    background-image: url(imagenes/header.jpg);
-    background-size: auto 100%;
-    position: relative;
-    text-align: center;
-}
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(red, yellow, blue);
-    opacity: 0.65;
-}
-header img {
-    border: 0.4em solid black;
-    box-sizing: border-box;
-    margin: 2em auto 2em auto;
-    zoom: 60%;
-    position: relative;
-}
-nav {
-    text-align: center;
-    background-color: #FF5252;
-    border: 0.2em solid rgba(0, 0, 0, 0.618);
-    color: #19338a;
-    font-weight: bolder;
-    font-size: 1.4em;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-nav li {
-    display: inline-block;
-    padding: 0em 1em 0em 1em;
-    vertical-align: middle;
-}
-nav li:hover {
-    background-color: rgba(255, 255, 0, 0.75);
-    cursor: pointer;
-    padding-top: 1.32em;
-    padding-bottom: 1.31em;
-}
 .h1 {
     text-align: center;
     margin: 0.5em auto auto auto;
     font-size: 3em;
-}
-.imggeog, .textimggeo {
-    display: block;
-    margin: 1em auto;
-}
-.textimggeo {
-    text-align: center;
-    font-size: 2.5em;
-    width: 100%;
-    clear: both;
-}
-#sitGeoImg, #sitGeoMap  {
-    width: 50%;
-    float: left;
-}
-.cincuentadiv, .cincuentadiv2 {
-    width: 50%;
-}
-.cincuentadiv2 {
-    margin-bottom: 2em;
-}
-.imgcapit{
-    border: 0.12em solid black;
-    display: block;
-    margin: 0em auto 1em auto;
-}
-.ulcentr    {
-    margin-left: 5em;
-}
-.region {
-    font-size: 80%;
-}
-.ciudad {
-    text-align: justify;
-    max-width: 50%;
-    margin: 0.5em auto 0.8em 4em;
-    list-style: none;
 }
 .situaciongeografica, .poblacionycapital, .educacion, .idioma, .politica, .sanidad, .religion  {
     margin-top: 2em;
@@ -161,12 +229,7 @@ nav li:hover {
    {
     display: none;
 }
-.historia {
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-}
+
 .politica   {
     width: 90%;
     margin: auto;
@@ -186,19 +249,13 @@ nav li:hover {
     width: 80%;
     margin: auto;
     margin-bottom: 3em;
+    flex-wrap: nowrap;
 }
 .active {
     display: block;
 }
 .activeFlex {
     display:flex;
-    flex-wrap: nowrap;
-}
-.tresdivtext, .tresdivtext2 {
-    flex: 1;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
 }
 .tresdivimg {
     flex: 1;
@@ -207,21 +264,6 @@ nav li:hover {
 .tresdivimg img {
     width: 100%;
     border-radius: 10px;
-}
-.espacioli {
-    margin-bottom: 10px;
-}
-.espacioli:hover {
-    background-color: #ffeadb;  /* Fondo claro al pasar el ratón */
-    transition: background-color 0.3s ease;
-}
-.espacioli {
-    margin-bottom: 15px;
-}
-
-.espacioli:hover {
-    background-color: #ff9966;  /* Naranja claro al pasar el ratón */
-    transition: background-color 0.3s ease;
 }
 .politizq   {
     width: 70%;
@@ -636,10 +678,6 @@ nav li:hover {
     width: 100%;
     margin-bottom: 2em;
 }
-.portada {
-    position: relative;
-    display: block;
-}
 .capa-superficial {
     position: absolute;
     top: 0;
@@ -652,19 +690,6 @@ nav li:hover {
     left: 0;
     opacity: 0.6;
     zoom: 50%;
-}
-.linone:hover {
-    cursor: pointer;
-    padding: 1em;
-    background-color: #FF5252;
-    padding: 0em 1em 0em 1em;
-}
-.imgporta   {
-    width: 12.5%;
-    height: 237.88px;
-    border: groove 2.5px black;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
 }
 /*footer */
 .footer {
@@ -728,10 +753,10 @@ nav li:hover {
     top: 0;
 }
 
-/* Media @media */
+/* media antiguo
 @media (max-width: 1746px) and (min-width: 1280px) {
     nav {
-      font-size: 1.2vw; /* Ejemplo de ajuste con unidades vw */
+      font-size: 1.2vw;
       padding: 0.5em;
     }
   
@@ -747,7 +772,7 @@ nav li:hover {
     .nav-logo {
       max-width: 80px;
     }
-}
+}*/
 
 .influenciarumana {
     width: 80%;
