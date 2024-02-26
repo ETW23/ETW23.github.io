@@ -279,7 +279,7 @@ footer section a {
 
 .textoNoticia {
   width: 40%;
-  font-size: 1.28vw;
+  font-size: max(1rem, 1.28vw);
   text-align: left;
   line-height: 1.5;
   font-family: Manuale, sans-serif;
@@ -288,7 +288,7 @@ footer section a {
 .textoNoticia2 {
   width: 90%;
   margin-bottom: 1em;
-  font-size: 1.28vw;
+  font-size: max(1rem, 1.28vw);
   text-align: left;
   line-height: 1.5;
   font-family: Manuale, sans-serif;
