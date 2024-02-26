@@ -171,7 +171,8 @@ ul {
   text-align: left;
 }
 .news-container img {
-  width: 45%;
+  /* width: 45%; */
+  flex-basis: 45%;
   height: auto;
   margin-bottom: 1rem;
   object-fit: contain;
@@ -186,8 +187,8 @@ ul {
 }
 
 .containerTextoYFoto p:first-child:first-letter {
-  font-size: 5rem;
-
+  font-size: max(3rem, 3.84vw);
+  line-height: 1rem;
   font-family: Manuale, sans-serif;
   font-weight: 300;
 }
@@ -278,8 +279,9 @@ footer section a {
 }
 
 .textoNoticia {
-  width: 40%;
-  font-size: 1.28vw;
+  /* width: 40%; */
+  flex-basis: 40%;
+  font-size: max(1rem, 1.28vw);
   text-align: left;
   line-height: 1.5;
   font-family: Manuale, sans-serif;
@@ -288,7 +290,7 @@ footer section a {
 .textoNoticia2 {
   width: 90%;
   margin-bottom: 1em;
-  font-size: 1.28vw;
+  font-size: max(1rem, 1.28vw);
   text-align: left;
   line-height: 1.5;
   font-family: Manuale, sans-serif;
@@ -298,7 +300,8 @@ footer section a {
   flex-wrap: wrap;
 }
 .fotoNoticia {
-  width: 40%;
+  /* width: 40%; */
+  flex-basis: 40%;
   margin: 0;
   padding: 0%;
 }
@@ -357,7 +360,7 @@ footer section a {
     padding: 0%;
   }
   .textoNoticia {
-    width: 40%;
+    /* width: 40%; */
     font-size: 3vw;
     text-align: left;
     line-height: 1.5;
