@@ -18,7 +18,6 @@ list-style: none;
 
 body {
 font-family: Arial, sans-serif;
-/* line-height: 1.2vw; */
 }
 
 h1 {  
@@ -73,7 +72,7 @@ h3 {
 p {
   width: 85%;
   text-align: justify;
-  font-size: 1.6vw;
+  font-size: 1.7vw;
   margin-left: 7.5%;
   margin-bottom: 2vw;
   margin-top: 2vw;
@@ -108,8 +107,6 @@ p {
   align-items: center;
 }
 nav {
-  /* width: 70%; */
-  /* height: 3vw;  */
   margin: auto;
   text-align: center;
 }
@@ -180,54 +177,14 @@ text-decoration-line: none;
   font-size: 1.22em;
 }
 
-.texto{
-  text-align: center;
-  float: right;
-  width: 30%;
-}
-
 img {
   width: 50%;
-}
-
-.div11 {
-  width: 17%;
-  display: inline-block;
-  white-space: nowrap;
-  
-}
-/* .div1{
-  margin-top: 8vw;
-} */
-
-.contacto span {
-  display: block;
-  margin-bottom: 0.6em;
-  width: 32%;
-}
-
-span:hover {
-  color: white;
-}
-
-.letra {
-  font-size: 1.2em;
 }
 
 .acce {
   width: 82%;
   text-align: right;
 }
-
-
-.enlaces .des {
-  width: 64%;
-  border-bottom: 0.125em solid black;
-  height: 1em;
-  line-height: 1em;
-  box-sizing: content-box;
-}
-
 
  li ul {
   display: none;
@@ -243,17 +200,6 @@ li:hover ul {
   width: 100%;
   position: relative;
   float: left;
-}
-
-ul .des {
-  width: 50%;
-  margin: 0.125em auto;
-}
-
-li .des {
-  display: block;
-  text-align: center;
-
 }
 
 /*Fotos*/
@@ -277,13 +223,26 @@ li .des {
   position: relative;
   overflow: hidden;
 }
+.foto4:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.foto5:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
 .fotones{
-  width: 65%; 
+  width: 85%; 
   border-radius: 1em;
 }
 
 .fotones2{
-  width: 30%;
+  width: 35%;
   border-radius: 1em;
 }
 
@@ -296,6 +255,16 @@ li .des {
 }
 .foto2 {
   margin: 2.5%; 
+}
+.foto3{
+  margin: 20% 2.5% 2.5% 2.5%;
+  
+}
+.foto4{
+  margin: 28% 2.5% 2.5% 2.5%;
+}
+.foto5{
+  margin: 15% 2.5% 2.5% 2.5%;
 }
 .fotones3{
   width: 40%;
@@ -331,7 +300,6 @@ span {
 
 }
 
-
 .texSeccion, .textSeccion {
   margin-left: 6%;
   width: 90%;
@@ -355,7 +323,6 @@ hr{
 
 }
 
-
 .enlaces ul {
   list-style-type: none;
   overflow: hidden;
@@ -370,36 +337,14 @@ hr{
   display: block;
   text-align: center;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 2vw;
 }
 
 .enlaces a:hover {
   background-color: #111;
 }
 
-.submenu {
-  display: none;
- 
-}
-
-.submenu a {
-  color: black;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  display: block;
-}
-
-.submenu a:hover {
-  background-color: #ddd;
-}
-
-.enlaces li:hover .submenu {
-  display: block;
-  position: relative;
-  z-index: 5;
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .enlaces li {
       float: none;
       text-align: center;
@@ -410,4 +355,3 @@ hr{
 .acce{
   width: 10vw;
 }
-
