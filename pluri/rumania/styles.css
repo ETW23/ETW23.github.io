@@ -86,7 +86,6 @@ body    {
         flex-direction: row;
         justify-content: center;
     }
-
     .imgporta {
         width: 10%;
         height: 237.88px;
@@ -168,16 +167,86 @@ body    {
         font-weight: bold;
     }
 /* FIN Historia */
+/* Politica */
+    .politica   {
+        width: 90%;
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .politizq   {
+        width: 70%;
+        text-align: justify;
+        padding: 2em 1em 0 0;
+    }
+    .politdch   {
+        width: 30%;
+        zoom: 80%;
+        margin-bottom: 1em;
+    }
+    .hrpolimedio {
+        margin: 5em auto 1em auto;
+        width: 60%;
+    }
+    .polihisto  {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 2em;
+    }
+    .polihislist{
+        margin: 1em 0 0 0;
+        display: flex;
+    }
+    .tampolhist{
+        width: 50%;
+    }
+/* FIN Politica */
+/* Sanidad */
+    .sanidad    {
+        margin-bottom: 2em;
+    }
+    .saniimg    {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+    }
+/* FIN Sanidad */
+/* Economia */
+    .economia   {
+        margin: 2em auto 2em auto;
+        width: 80%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+    }
+    .economia3   {
+        zoom: 60%;
+        margin: 3em auto auto 8em;
+        width: 60%;
+        text-align: right;
+    }
+/* FIN Economia */
+/* Idioma */
+    .idioma {
+        flex-direction: column;
+    }
+    .flechapng  {
+        position: absolute;
+        margin-left: 21em;
+        margin-top: 50em;
+        top: 0;
+    }
+/* FIN Idioma */
 .cajaindex  {
     background-color: white;
 }
 .situaciongeografica, .poblacionycapital, .historia, .politica, .sanidad, .educacion, .economia, .idioma, .religion, .influenciarumana, .subpolidch, .hrpolimedio, footer, li, .idisecundario, .clear, .image-gallery, .portada  {
     clear: both;
 }
-.tresdivimg, .politizq, .politdch, .president1, .textdch, .textizq, .tampolhist, .hispolimgs, .hispoltxts, .sanidtxt, .saniimg, .eduimgizq, .econoizq, .econodch, .economia3, .txtidiprinci, .imgidiprinci, .idirumh2, .religion-info, .personal3      {
+.tresdivimg, .president1, .textdch, .textizq, .hispolimgs, .hispoltxts, .sanidtxt, .eduimgizq, .econoizq, .econodch, .economia3, .txtidiprinci, .imgidiprinci, .idirumh2, .religion-info, .personal3      {
     float: left;
 }
-.president2, .edutextdch, .econogif, .imgrelicrono, .personal2, .personal4 {
+.president2, .edutextdch, .imgrelicrono, .personal2, .personal4 {
     float: right;
 }
 .txtresalt2 {
@@ -229,18 +298,6 @@ body    {
    {
     display: none;
 }
-
-.politica   {
-    width: 90%;
-    margin: auto;
-}
-.sanidad    {
-    margin-bottom: 49em;
-}
-.economia   {
-    margin: 2em auto 27em auto;
-    width: 80%;
-}
 .religion {
     animation: fadeIn 1s ease;
     display: none;
@@ -265,16 +322,6 @@ body    {
     width: 100%;
     border-radius: 10px;
 }
-.politizq   {
-    width: 70%;
-    text-align: justify;
-    padding: 2em 1em 0 0;
-}
-.politdch   {
-    width: 30%;
-    zoom: 80%;
-    margin-bottom: 1em;
-}
 .subpolidch {
     width: 100%;
 }
@@ -283,10 +330,6 @@ body    {
 }
 .imagen-redonda{
     border-radius: 30%;
-}
-.hrpolimedio {
-    margin: 5em auto 1em auto;
-    width: 60%;
 }
 .textdch    {
     width: 50%;
@@ -308,17 +351,6 @@ body    {
 .politext   {
     padding: 1.5em 3em 0 0;
 }
-.polihisto  {
-    text-align: center;
-    font-weight: bolder;
-    font-size: 2em;
-}
-.tampolhist{
-    width: 50%;
-}
-.polihislist{
-    margin: 1em 0 0 0;
-}
 .hispolimgs {
     width: 42%;
     margin: 1em 0 1em 0;
@@ -338,9 +370,6 @@ body    {
     width: 40%;
     text-align: justify;
     font-size: 1.3em;
-}
-.saniimg    {
-    width: 30%;
 }
 .imgsaniizq{
     margin: 0 0 0 13em;
@@ -443,10 +472,6 @@ body    {
 .econogif   {
     zoom: 60%;
     margin: 3em 8em auto auto;
-}
-.economia3   {
-    zoom: 60%;
-    margin: 3em auto auto 8em;
 }
 .economia3  > img, .econogif  > img  {
     border-radius: 10%;
@@ -745,12 +770,6 @@ body    {
 }
 .enlacepluriculturali:hover, .enlacepluriculturali:active {
     color: red;
-}
-.flechapng  {
-    position: absolute;
-    margin-left: 21em;
-    margin-top: 45em;
-    top: 0;
 }
 
 /* media antiguo
