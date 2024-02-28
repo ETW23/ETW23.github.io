@@ -21,12 +21,12 @@ font-family: Arial, sans-serif;
 }
 
 h1 {  
-  font-size: 7.35vw;
+  font-size: 7vw;
   color: black;
   background-color: #dddddd59;
   text-align: center;
-  padding: 0.5vw;
-  border-radius: 0.4em;
+  padding: 1.5vw;
+  border-radius: 0.7em;
   text-shadow: -1px -1px 0 rgba(66, 66, 66, 0.75);
   
 }
@@ -70,10 +70,10 @@ h3 {
 }
 
 p {
-  width: 85%;
   text-align: justify;
-  font-size: 1.7vw;
-  margin-left: 7.5%;
+  font-size: 2vw;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-bottom: 2vw;
   margin-top: 2vw;
   padding-top: 2.5vw;
@@ -82,8 +82,9 @@ p {
 }
 
 .parrafo {
-  width: 63%;
-  margin-left: 18%;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-bottom: 2.5%;
   text-align: center;
   background-color:  rgba(66, 66, 66, 0.75);
   color:  rgb(245 245 245);
@@ -253,18 +254,16 @@ li:hover ul {
   padding-left: 6%;
   border-radius: 1em;
 }
-.foto2 {
-  margin: 2.5%; 
-}
+
 .foto3{
-  margin: 20% 2.5% 2.5% 2.5%;
+  margin: 40% 2.5% 2.5% 2.5%;
   
 }
 .foto4{
-  margin: 28% 2.5% 2.5% 2.5%;
+  margin: 50% 2.5% 2.5% 2.5%;
 }
 .foto5{
-  margin: 15% 2.5% 2.5% 2.5%;
+  margin: 41% 2.5% 2.5% 2.5%;
 }
 .fotones3{
   width: 40%;
@@ -310,7 +309,7 @@ span {
   border-radius: 1.6vw;
 }
 .textSeccion {
-  width: 70%;
+  width: 68%;
 }
 
 hr{
@@ -337,7 +336,7 @@ hr{
   display: block;
   text-align: center;
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 2.1vw;
 }
 
 .enlaces a:hover {
