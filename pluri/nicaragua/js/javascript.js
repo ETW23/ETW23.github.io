@@ -1,49 +1,40 @@
 function cambiarTitulo(titulo) {
 document.querySelector('.h1').textContent= titulo;
 
-// Ocultar portada
+//Ocultar portada
 var secciones= document.querySelectorAll('.portada');
 secciones.forEach(function(seccion) {
     seccion.style.display= 'none';
 });
 
-// Mostrar h1
+//Mostrar h1
 var secciones= document.querySelectorAll('.h1');
 secciones.forEach(function(seccion) {
 seccion.style.display= 'block';
 });
 
-// Ocultar todas las secciones
+//Ocultar todas las secciones
 var secciones= document.querySelectorAll('main>div');
 for (var i= 0; i< secciones.length; i++) {
     var seccion= secciones[i];
     seccion.classList.remove('active');
 }
 
-// Mostrar solo la sección activa
+//Mostrar solo la sección activa
 var seccionMostrar= document.querySelector(`.${titulo.replace(/\s/g, '').toLowerCase()}`);
 seccionMostrar.classList.add('active');
 }
 
-/*
-document.getElementById("vid").onended = function () {
-  document.getElementById("mp4")= function () {
-    for (let i= 0; i < 3; i++) {
-        this.src= 'vid/headernic'+i+'.mp4'
-    }
-  }
-}
-*/
+/*Script para los videos "Header"*/
 
-for (let i = 1; i < 3; i++) {
-  document.getElementById("vid").onended = function () {
-    this.src =  'vid/headernic'+i+'.mp4'
-    while (i==2) {
-      --i;
-      break
-    }
-  }
+const videoHeader= document.getElementById("vid")
+let i= 1
+
+videoHeader.onended= function () {
+  i= (i % 2) + 1; //Alterna entre 1 y 2
+  this.src= 'vid/headernic'+ i +'.mp4'
 }
+
 
 document.getElementById('menuprinc').onclick= function () {
   history.back()

@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 body    {
-    min-width: 1903px;
-    max-width: 1903px;
+    /*min-width: 1903px;*/
+    /*max-width: 1903px;*/
     margin: auto;
     background-image: url(imagenes/fondoweb.jpg);
     background-size: cover;
@@ -35,8 +36,10 @@ body    {
         border: 0.4em solid black;
         box-sizing: border-box;
         margin: 2em auto 2em auto;
-        zoom: 60%;
         position: relative;
+        max-width: 100%; /* La imagen no puede ser más ancha que su contenedor */
+        height: auto; /* Mantener la proporción original de la imagen */
+        zoom: 60%;
     }
 /* FIN Header*/
 /* Barra NAV */
@@ -57,7 +60,7 @@ body    {
         margin: 0;
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
     nav li {
         height: 4em;
@@ -84,41 +87,67 @@ body    {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: center;
+        align-content: space-around;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #333333;
     }
     .imgporta {
-        width: 10%;
-        height: 237.88px;
+        width: 9.9vw;
+        height: 22vh;
         border: groove 2.5px black;
         background-size: 100% 100%;
+        min-width: 10em;
+        background-color: white;
     }
 /* FIN portada */
 /* Situacion Geografica */
     #sitGeoImg, #sitGeoMap  {
-        width: 50%;
+        width: auto;
         float: left;
+        height: auto;
+        min-width: 17em;
     }
-    .imggeog, .textimggeo {
+    .imggeog {
         display: block;
         margin: 1em auto;
+        width: 30vw;
+        height: auto;
+        min-width: 17em;
     }
     .textimggeo {
+        display: block;
+        margin: 1em auto;
         text-align: center;
         font-size: 2.5em;
         width: 100%;
         clear: both;
     }
     .situaciongeografica    {
-        flex-wrap: wrap;
-        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    }
+    #mapaFrame  {
+        display: block;
+        margin: 1em auto;
+        width: 30vw;
+        height: 83vh;
+        max-height: 30vw;
+        border: none;
+        min-width: 16em;
+        min-height: 16em;
     }
 /* FIN Situacion Geografica */
 /* Poblacion y Capital */
     .poblacionycapital  {
         align-items: center;
+        justify-content: center;
     }
     .cincuentadiv, .cincuentadiv2 {
         width: 50%;
+        min-width: 20em;
+        margin-bottom: 1em;
     }
     .cincuentadiv2 {
         margin-bottom: 2em;
@@ -127,6 +156,9 @@ body    {
         border: 0.12em solid black;
         margin: auto;
         display: flex;
+        height: 54vh;
+        width: 30vw;
+        min-width: 19em;
     }
     .ulcentr    {
         margin-left: 5em;
@@ -166,6 +198,13 @@ body    {
         color: #ff4500;  /* Color de resaltado naranja */
         font-weight: bold;
     }
+    .tresdivimg {
+        margin: 1em;
+    }
+    .tresdivimg img {
+        width: 100%;
+        border-radius: 10px;
+    }
 /* FIN Historia */
 /* Politica */
     .politica   {
@@ -173,19 +212,39 @@ body    {
         margin: auto;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .politizq   {
         width: 70%;
         text-align: justify;
-        padding: 2em 1em 0 0;
+        min-width: 19em;
+    }
+    .poliact    {
+        font-weight: bolder;
+        font-size: 2em;
+        margin: 2em 1em 0 0;
+    }
+    .politext   {
+        margin: 1.5em 3em 0 0;
     }
     .politdch   {
         width: 30%;
         zoom: 80%;
         margin-bottom: 1em;
+        display: flex;
+        min-width: 22em;
+        margin-top: 1em;
+    }
+    .subpolidch {
+        width: 100%;
+        min-width: 23em;
     }
     .hrpolimedio {
         margin: 5em auto 1em auto;
+        width: 100%;
+    }
+    .hridioma {
+        margin: 2em auto 1em auto;
         width: 60%;
     }
     .polihisto  {
@@ -199,6 +258,14 @@ body    {
     }
     .tampolhist{
         width: 50%;
+        min-width: 18em;
+    }
+    #imgRevol   {
+        width: 90vw;
+        max-width: 21em;
+    }
+    #imgOtan{
+        max-width: 18em;
     }
 /* FIN Politica */
 /* Sanidad */
@@ -209,6 +276,7 @@ body    {
         width: 30%;
         display: flex;
         flex-direction: column;
+        min-width: 20em;
     }
 /* FIN Sanidad */
 /* Economia */
@@ -218,6 +286,7 @@ body    {
         flex-direction: row;
         flex-wrap: wrap;
         align-content: stretch;
+        justify-content: center;
     }
     .economia3   {
         zoom: 60%;
@@ -229,12 +298,6 @@ body    {
 /* Idioma */
     .idioma {
         flex-direction: column;
-    }
-    .flechapng  {
-        position: absolute;
-        margin-left: 21em;
-        margin-top: 50em;
-        top: 0;
     }
 /* FIN Idioma */
 .cajaindex  {
@@ -301,12 +364,9 @@ body    {
 .religion {
     animation: fadeIn 1s ease;
     display: none;
-    flex-wrap: wrap;
-    justify-content: space-between;
     width: 80%;
     margin: auto;
     margin-bottom: 3em;
-    flex-wrap: nowrap;
 }
 .active {
     display: block;
@@ -314,19 +374,8 @@ body    {
 .activeFlex {
     display:flex;
 }
-.tresdivimg {
-    flex: 1;
-    margin: 0 20px;
-}
-.tresdivimg img {
-    width: 100%;
-    border-radius: 10px;
-}
-.subpolidch {
-    width: 100%;
-}
 .president1 {
-    width: 30%;
+    width: 40%;
 }
 .imagen-redonda{
     border-radius: 30%;
@@ -338,30 +387,27 @@ body    {
 }
 .president2 {
     width: 50%;
+    min-width: 20em;
 }
 .textizq    {
     width: 50%;
     text-align: center;
     padding: 3em 0 0 0;
-}
-.poliact    {
-    font-weight: bolder;
-    font-size: 2em;
-}
-.politext   {
-    padding: 1.5em 3em 0 0;
+    min-width: 20em;
 }
 .hispolimgs {
     width: 42%;
     margin: 1em 0 1em 0;
+    min-width: 9.2em;
 }
 .hispoltxts {
     width: 50%;
     height: 229px;
-    margin: 1em 0 1em 0;
+    margin: 1em 0 5em 0;
     text-align: justify;
     display: flex;
     align-items: center;
+    min-width: 17em;
 }
 .nostyle    {
     list-style: none;
@@ -370,9 +416,10 @@ body    {
     width: 40%;
     text-align: justify;
     font-size: 1.3em;
+    min-width: 14em;
+    margin: 1em auto 1em auto;
 }
 .imgsaniizq{
-    margin: 0 0 0 13em;
     text-align: center;
 }
 .imgsaniizq > img   {
@@ -381,7 +428,6 @@ body    {
     border-color: rgb(205, 205, 0) blue rgb(205, 205, 0) red;
 }
 .imgsanidch {
-    margin: 0 15em 0 0;
     text-align: center;
 }
 .imgsanidch > img   {
@@ -410,6 +456,8 @@ body    {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.5rem;
+    width: 20vw;
+    min-width: 16em;
 }
 .animate-text {
     animation: fadeInUp 1s ease-out;
@@ -436,14 +484,23 @@ body    {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.sub-section .subtitle {
+.sub-section3 {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 15em;
+}
+.sub-section .subtitle, .sub-section3 .subtitle {
     color: #3498db;
+    zoom: 92%;
 }
 .eduimgizq  {
     width: 50%;
 }
 .edutextdch{
     width: 40%;
+    min-width: 16em;
 }
 .econoh2{
     margin: auto 0 0.8em 0;
@@ -457,11 +514,14 @@ body    {
 }
 .econoizq   {
     width: 40%;
-    padding-right: 5em;
+    padding-right: 3vw;
     text-align: justify;
+    min-width: 16em;
 }
 .econodch   {
     width: 50%;
+    margin-top: 5vh;
+    min-width: 17em;
 }
 .econoul    {
     margin-left: 3em;
@@ -471,7 +531,7 @@ body    {
 }
 .econogif   {
     zoom: 60%;
-    margin: 3em 8em auto auto;
+    margin: 3em auto auto auto;
 }
 .economia3  > img, .econogif  > img  {
     border-radius: 10%;
@@ -487,7 +547,19 @@ body    {
 }
 #img-giratoria {
     animation: giro-infinito 20s linear infinite;
-    margin: auto auto auto 2em;
+    margin: 2em auto auto 2em;
+}
+#nada-info  {
+    height: 18em;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+#p-info-idiomas {
+    font-size: x-large;
+    text-align: center;
+    font-weight: 900;
+    width: 60em;
 }
 .container2 {
     display: flex;
@@ -549,35 +621,37 @@ body    {
 .idiprincipal {
     width: 80%;
     margin: auto;
+    display: flex;
+    justify-content: space-evenly;
 }
 .idisecundario    {
     width: 60%;
     margin: auto;
-    height: 18em;
 }
 .txtidiprinci {
     width: 20%;
     text-align: justify;
-    margin: 2em 2em auto 15em;
+    min-width: 17em;
 }
 .imgidiprinci {
     width: 50%;
     text-align: justify;
-    padding-bottom: 2em;
+    min-width: 18em;
+    padding-top: 1em;
 }
 .idirumh2 {
-    text-align: center;
+    text-align: left;
     font-size: 2em;
-    width: 35%;
-    padding: 0 8em 0 6.5em;
+    width: 60%;
+    margin: auto auto 1em auto;
 }
 .frases-container {
     max-width: 600px;
-    margin: 20px auto;
+    margin: 1em auto 1em auto;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 2em;
 }
 
 .titulo-frases {
@@ -620,11 +694,13 @@ body    {
     align-items: center;
 }
 .religion-info {
-    background-color: #ff6666; /* Rojo claro */
+    background-color: #ff6666;
     padding: 2em;
-    margin: 2em 1em;
+    margin: 2em auto 2em auto;
     border-radius: 1em;
-    border: 3px solid #ffea00; /* Amarillo brillante */
+    border: 3px solid #ffea00;
+    width: 65vw;
+    min-width: 16em;
 }
 .religion-info h2 {
     font-size: 32px;
@@ -639,11 +715,13 @@ body    {
     color: #444; /* Texto más oscuro para mayor contraste */
 }
 .celebrations {
-    background-color: #ffe4b5; /* Color Melocotón claro */
+    background-color: #ffe4b5;
     padding: 1.5em;
-    margin: 2em auto;
+    margin: 2em auto 2em auto;
     border-radius: 1em;
-    border: 3px solid #ff4500; /* Naranja oscuro */
+    border: 3px solid #ff4500;
+    width: 65vw;
+    min-width: 16em;
 }
 
 .celebrations h2 {
@@ -666,6 +744,7 @@ body    {
 .image-gallery {
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 .image-item {
     background-color: rgba(0, 0, 255, 0.817);
@@ -676,10 +755,11 @@ body    {
 }
 .image-item img {
     width: 100%;
-    max-height: 200px;
+    max-height: 150px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1em;
+    min-width: 14em;
 }
 .image-item p {
     font-size: 1.2em;
@@ -694,14 +774,14 @@ body    {
     }
 }
 .imgrelicrono {
-    width: 35em;
     margin: auto;
 }
-.imgrelicrono > img {
-    border: 5px ridge #cdcd00; /* Amarillo más oscuro */
+#imgramificacion    {
+    border: 3px ridge #cdcd00;
     border-radius: 10px;
-    width: 100%;
+    width: 30vw;
     margin-bottom: 2em;
+    min-width: 17.5em;
 }
 .capa-superficial {
     position: absolute;
@@ -819,18 +899,24 @@ body    {
     background-color: #FDD8D8; /* Tono rojo claro para la sección Popular */
     padding: 0.5em;
     width: 33%;
+    min-width: 14em;
+    margin: 0.5em auto 0.5em auto;
 }
 
 #deporte {
     background-color: #FFE79E; /* Tono amarillo claro para la sección Deporte */
     padding: 0.5em;
     width: 33%;
+    min-width: 14em;
+    margin: 0.5em auto 0.5em auto;
 }
 
 #audiovisual {
     background-color: #CCEBFF; /* Tono azul claro para la sección Audiovisual */
     padding: 0.5em;
     width: 33%;
+    min-width: 14em;
+    margin: 0.5em auto 0.5em auto;
 }
 
 .subtit {
@@ -862,3 +948,7 @@ body    {
     text-align: center;
     padding-bottom: 0.2em;
 }
+
+/* Media */
+/* Nav */
+

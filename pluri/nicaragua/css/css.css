@@ -1,5 +1,5 @@
 body    {margin: 0;
-         min-width: 59em;
+         min-width: 15.625em;
          background-color: #f1f1f1;
          background-image: url(../img/nic2.jpg);
          background-position: center;
@@ -42,6 +42,13 @@ h2  {text-align: center;
      margin: auto;
 }
 
+h3    {text-align: center;
+       font-size: 130%;
+       text-decoration: underline;
+}
+.tituh3     {font-size: 150%;
+}
+
 #tituprin   {position: absolute;
              top: 13rem;
              left: 30rem;
@@ -74,11 +81,15 @@ h2  {text-align: center;
              border: .25em #000 solid;
              border-radius: 0.5em;
 }
-.historia ul li   {display: block;
+.historia ol li   {display: list-item;
                    line-height: 4rem;
                    text-decoration: underline;
                    font-size: 200%;
-                   width: 70%;
+                   width: 65%;
+                   margin: auto;
+                   margin-bottom: 1.5rem;
+}
+.historia img     {border: .125em #0066ff solid;
 }
 .politica   {display: none;
              clear: both;
@@ -141,60 +152,78 @@ h2  {text-align: center;
              font-size: 300%;
 }
 
-header  {background-image: url(../img/san-juan-del-sur.jpg);
-         height: 58.5rem;
-         background-position: center;
-         background-size: cover;
-         background-repeat: no-repeat;
-         border-radius: .5em;
+header  {background-color: #808080;
 }
 
-#vid {position: absolute;
-      bottom: 0;
-      right: 0;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: auto;
-      overflow: hidden;
-      margin-bottom: 1rem;
+.paraelvideo {position: relative;
+             width: 100%;
+             height: 60rem;
+             overflow: hidden;
+             border-radius: .5em;
+}
+  
+.bgimg {position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+}
+  
+#vid {width: 99.75%;
+      border: 0.125em #00ccff solid;
+      position: absolute;
+      z-index: 0;
 }
 
-nav  {width: 99.5%;
+
+nav  {display: flex;
+      width: 99.5%;
       background: linear-gradient(45deg, #1f48ff, #fff);
       border-radius: 1em;
-      border: #000 solid;
+      border: 0.125em #000 solid;
       margin: auto;
       margin-bottom: 1em;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
 }
 
-.navimg   {width: 14%;
+.navimg   {width: 12%;
+           height: 10rem;
+           text-align: center;
 }
 
-nav .navimg img   {width: 73%;
-                   height: 5rem;
-                   margin: 0;
-                   padding: 0;
-                   float: left;
-                   margin-top: 2.5rem;
-                   margin-bottom: 0.75rem;
-                   margin-left: 1.5rem;
+nav .navimg img   {width: 50%;
+                   height: 8rem;
+                   margin-top: 1rem;
+                   margin-bottom: 1rem;
 }
-
-ul   {margin: 0;
+/*
+nav ul   {margin: 0;
       margin-left: 13rem;
       list-style: none;
 }
 
-li   {display: inline-block;
-      width: 19.5%;
-      line-height: 4.5rem;
+nav ul li   {display: inline-block;
+             width: 19.5%;
+             line-height: 4.5rem;
+}
+*/
+
+#elnavsito  {display: flex;
+             width: 88%;
+             justify-content: space-evenly;
+             flex-wrap: wrap;
+             align-items: center;
+}
+
+#elnavsito div    {width: 9.1%;
 }
 
 nav button[type="button"]     {width: 100%;
                                background-color: transparent;
-                               height: 5rem;
+                               height: 9rem;
                                transition: height 0.5s, background-color 1s;
                                font-size: 175%;
                                border: 0;
@@ -218,6 +247,7 @@ nav button[type="button"]:hover     {width: 100%;
                      border-radius: 0.5em;
                      color: #095313;
                      font-weight: bold;
+                     font-size: 145%;
                      text-decoration: underline;
                     -webkit-text-stroke: 2.125px #000;
 }
@@ -232,6 +262,7 @@ nav button[type="button"]:hover     {width: 100%;
                      border-radius: 0.5em;
                      color: #e9e93d;
                      font-weight: bold;
+                     font-size: 145%;
                      text-decoration: underline;
                     -webkit-text-stroke: 2.125px #000;
 }
@@ -246,6 +277,7 @@ nav button[type="button"]:hover     {width: 100%;
                       border-radius: 0.5em;
                       color: #9c1a03;
                       font-weight: bold;
+                      font-size: 145%;
                       text-decoration: underline;
                       -webkit-text-stroke: 2.125px #000;
 }
@@ -260,6 +292,7 @@ nav button[type="button"]:hover     {width: 100%;
                        border-radius: 0.5em;
                        color: #00ff40;
                        font-weight: bold;
+                       font-size: 145%;
                        text-decoration: underline;
                        -webkit-text-stroke: 2.125px #000;
 }
@@ -274,6 +307,7 @@ nav button[type="button"]:hover     {width: 100%;
                      border-radius: 0.5em;
                      color: #00f;
                      font-weight: bold;
+                     font-size: 145%;
                      text-decoration: underline;
                     -webkit-text-stroke: 2.125px #000;
 }
@@ -287,6 +321,7 @@ nav button[type="button"]:hover     {width: 100%;
                     border: 0.25em #006eff solid;
                     border-radius: 0.5em;
                     font-weight: bold;
+                    font-size: 145%;
                     color: #fffb00;
                     -webkit-text-stroke: 2.125px #000;
                     text-decoration: underline;
@@ -301,6 +336,7 @@ nav button[type="button"]:hover     {width: 100%;
                       border: 0.25em #6283f1 solid;
                       border-radius: 0.5em;
                       font-weight: bold;
+                      font-size: 145%;
                       text-decoration: underline;
                       -webkit-text-stroke: 2.125px #000;
 }
@@ -314,6 +350,7 @@ nav button[type="button"]:hover     {width: 100%;
                      border: 0.25em #00ff37 solid;
                      border-radius: 0.5em;
                      font-weight: bold;
+                     font-size: 145%;
                      color: #ffd900;
                      text-decoration: underline;
                      -webkit-text-stroke: 2.125px #000;
@@ -328,7 +365,8 @@ nav button[type="button"]:hover     {width: 100%;
                      border: 0.25em #ffae00 solid;
                      border-radius: 0.5em;
                      font-weight: bold;
-                     color: rgb(0, 175, 9);
+                     font-size: 145%;
+                     color: #fff;
                      text-decoration: underline;
                      -webkit-text-stroke: 2.125px #000;
 }
@@ -359,6 +397,8 @@ p     {font-size: 150%;
              text-align: center;
              overflow: hidden;
 }
+div.mapa1>iframe  {border: .25em #10f510 solid;
+}
 
 #secondp    {text-decoration: underline;
              text-align: center;
@@ -370,49 +410,37 @@ hr    {border: .25rem #fff solid;
        margin: 0;
 }
 
-.div1ft    {width: 70%;
-                   font-size: large;
-                   text-decoration: underline;
-                   font-weight: bolder;
-                   text-align: center;
-                   float: left;
-                   color: #fff;
-                   background-color: #000;
-}
-
-.div2ft    {width: 29%;
-            font-size: large;
+.div1ft,
+.div2ft    {width: 33%;
+            font-size: 120%;
             text-decoration: underline;
             font-weight: bolder;
             text-align: center;
-            float: left;
             color: #fff;
             background-color: #000;
 }
 
-.div1ft img   {width: 10%;
-               height: 7rem;
+.div1ft img   {width: 15%;
+               height: 5rem;
                border: .125em #000 solid;
-               margin-top: .25em;
-               margin-left: 4.5rem;
 }
 
-.div1ft    {line-height: 2rem;
-             text-align: left;
+.div1ft    {line-height: 1rem;
 }
 .div1ft p,
 .div2ft p  {font-size: 110%;
-            margin-top: .5rem;
+            margin-top: 0;
             text-align: center;
             margin-bottom: .25rem;
 }
-.div1ft p   {margin-left: 1rem;
-             text-align: justify;
-}
-footer      {background-color: #000;
+
+footer      {display: flex;
+             background-color: #000;
              margin: 0;
-             height: 12rem;
-             line-height: 3rem;
+             height: 9rem;
+             line-height: 2.5rem;
+             flex-wrap: wrap;
+             justify-content: space-between;
 }
 
 li img      {display: none;
@@ -429,6 +457,7 @@ li img:hover      {display: inline-block;
                    height: 100%;
                    margin: auto;
                    margin-top: 1em;
+                   border: .25em #008000 solid;
 }
 
 #prinpob    {width: 80%;
@@ -442,6 +471,7 @@ li img:hover      {display: inline-block;
 }
 .poblaciones p img {width: 50%;
                     height: 30rem;
+                    border: 0.175em #ffa500 solid;
 }
 
 ul img      {width: 20rem;
@@ -449,18 +479,23 @@ ul img      {width: 20rem;
 }
 
 #bande1, #bande2,
-#map18, #jz, #asg, #revcw   {width: 80%;
-                             height: 20rem;
-                             margin: auto;
-                             margin-top: 2em;
-                             margin-bottom: 2em;
-                             text-align: center;
+#map18, #jz, #acs, #asg, #revcw   {width: 70%;
+                                   height: 20rem;
+                                   margin: auto;
+                                   margin-top: 2em;
+                                   margin-bottom: 2em;
+                                   text-align: center;
 }
 
-#bande1 img, #bande2 img,
-#map18 img, #jz img, #asg img,
-#revcw img    {width: 26%;
-               height: 20rem;
+#bande1 img,
+#bande2 img,
+#map18 img,
+#revcw img      {width: 35%;
+                 height: 20rem;
+}
+
+#jz img, #acs img, #asg img {width: 26%;
+                             height: 20rem;
 }
 
 .polimg,
@@ -476,17 +511,1188 @@ ul img      {width: 20rem;
 .esimg      {width: 50%;
              height: 30rem;
 }
+p#sanimg>img      {border: .175em #00f solid;
+                   border-radius: .5em .5em .5em .5em;
+}
 .textcen    {text-align: center;
              text-decoration: underline;
 }
 
 .economía p img   {width: 40%;
                    height: 30rem;
+                   border: .125em #008000 solid;
+}
+
+.idimg img {border: .125em #00a9af solid;
 }
 #virimg     {width: 30%;
              height: 35rem;
 }
+.religiones img {border: .125em #ebdb00 solid;
+}
 
 .textcen iframe   {width: 560px;
                    height: 315px;
+}
+
+/*Revision -- Revisado, implementar mejoras y dada por hecha*/
+/*****************************************/
+
+/*940 a 1710*/
+@media (min-width: 58.75em) and (max-width: 106.875em) {
+       .paraelvideo {position: relative;
+                     width: 100%;
+                     height: 33rem;
+                     overflow: hidden;
+                     border-radius: 0.5em;
+       }
+
+        .hh1 {top: 6rem;
+              left: 23rem;
+        }
+
+        #tituprin {top: 13rem;
+                   left: 16rem;
+        }
+
+       h2     {font-size: 200%;
+               width: 60%;
+       }
+
+       nav    {height: 8rem;
+       }
+
+       .navimg {width: 7rem;
+                height: 6rem;
+                text-align: center;
+       }
+
+       .navimg {width: 7rem;
+                height: 6rem;
+                text-align: center;
+       }
+
+       nav .navimg img {width: 7em;
+                        height: 5rem;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+       }
+
+       #elnavsito {display: flex;
+                   width: 88%;
+                   height: 8rem;
+                   justify-content: space-around;
+                   align-items: stretch;
+       }
+
+       nav button[type="button"] {width: 100%;
+                                  height: 8rem;
+                                  font-size: 100%;
+                                  font-weight: bold;
+       }
+
+       #geo button:hover,
+       #pob button:hover,
+       #hist button:hover,
+       #polit button:hover,
+       #san button:hover,
+       #ed button:hover,
+       #econ button:hover,
+       #idi button:hover,
+       #rel button:hover {background-size: 3.5rem;
+                          height: 8.5rem;
+                          font-weight: bold;
+                          font-size: 100%;
+       }
+
+        .maintext {text-align: center;
+                   font-size: 170%;
+       }
+
+       main #mainflag img {width: 100%;
+                           height: 20rem;
+       }
+
+       #mainflag {width: 70%;
+                  height: 20rem;
+       }
+
+       p      {font-size: 110%;
+       }
+
+
+       div.mapa1>iframe {border: 0.25em #10f510 solid;
+                         width: 29em;
+                         height: 20em;
+       }
+
+
+       /*Poblaciones*/
+       .poblaciones p img {width: 20rem;
+                           height: 13rem;
+       }
+       .textcen iframe {width: 13em;
+                        height: 12em;
+       }
+
+       /*Historia*/
+        .historia ol li {display: list-item;
+                         line-height: 4rem;
+                         font-size: 160%;
+                         width: 85%;
+        }
+       #bande1,
+       #bande2, #map18, #jz,
+       #acs, #asg, #revcw {width: 80%;
+                           height: 15rem;
+                           margin: auto;
+                           font-size: 50%;
+       }
+       #bande1 img, #bande2 img,
+       #map18 img, #revcw img {width: 22rem;
+                               height: 14rem;
+       }
+       #jz img, #acs img, #asg img {width: 12rem;
+                                    height: 15rem;
+       }
+
+
+       /*Politica*/
+       .polimg       {text-align: center;
+       }
+       .polimg img {width: 40rem;
+                    height: 22rem;
+       }
+
+
+       /*Sanidad*/
+       p#sanimg>img {width: 36rem;
+                     height: 24rem;
+       }
+
+
+       /*Educacion*/
+       .estimg img {border: 0.125em #000 solid;
+                    width:30rem;
+                    height: 22rem;
+       }
+       .polimg, #sanimg, .estimg,
+       .econimg, .idimg, .relimg {text-align: center;
+                                   font-size: 75%;
+       }
+
+
+       /*Economia*/
+       .economía p img {width: 28rem;
+                        height: 20rem;
+       }
+
+
+       /*Idioma*/
+       .idimg img {width: 28rem;
+                   height: 22rem;
+                   border: .125em #008000 solid;
+       }
+
+
+       /*Religion*/
+       #virimg {width: 18rem;
+                height: 24rem;
+                border: 0.125em #008000 solid;
+       }
+       .relimg img   {width: 32rem;
+                      height: 22rem;
+                      border: 0.125em #008000 solid;
+       }
+
+       footer {display: flex;
+               background-color: #000;
+               margin: 0;
+               height: 9rem;
+               line-height: 2.5rem;
+               flex-wrap: wrap;
+               justify-content: space-between;
+       }
+
+       .div1ft, .div2ft     {width: 45%;
+                             font-size: 110%;
+       }
+}
+
+/*Todo bien hasta aqui, en Una Pieza*/
+/*****************************************/
+
+/*640 a 940*/
+@media (min-width: 40em) and (max-width: 58.75em) {
+
+       .paraelvideo {position: relative;
+                     width: 100%;
+                     height: 22rem;
+                     overflow: hidden;
+                     border-radius: 0.5em;
+       }
+
+       .hh1   {top: 6rem;
+               left: 0rem;
+       }
+
+       #tituprin     {top: 13rem;
+                      left: 5rem;
+       }
+
+       h2     {font-size: 170%;
+               width: 85%;
+       }
+
+       nav    {height: 8rem;
+       }
+
+       .navimg {width: 7rem;
+                height: 6rem;
+                text-align: center;
+       }
+
+       .navimg {width: 6rem;
+                height: 5rem;
+                text-align: center;
+       }
+
+       nav .navimg img {width: 5em;
+                        height: 4rem;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+       }
+
+       #elnavsito {display: flex;
+                   width: 86%;
+                   height: 6rem;
+                   justify-content: space-between;
+                   align-items: stretch;
+                   align-content: center;
+       }
+
+       nav button[type="button"] {width: 100%;
+                                  height: 6rem;
+                                  font-size: 58%;
+                                  font-weight: bold;
+       }
+
+       #geo button:hover,
+       #pob button:hover,
+       #hist button:hover,
+       #polit button:hover,
+       #san button:hover,
+       #ed button:hover,
+       #econ button:hover,
+       #idi button:hover,
+       #rel button:hover {background-size: 2.5rem;
+                          height: 6.5rem;
+                          font-weight: bold;
+                          font-size: 50%;
+       }
+
+              .maintext {text-align: center;
+                  font-size: 135%;
+       }
+
+       main #mainflag img {width: 100%;
+                           height: 20rem;
+       }
+
+       #mainflag {width: 70%;
+                  height: 20rem;
+       }
+
+       p      {font-size: 110%;
+       }
+
+
+       /*Geografia*/
+       .vid1geo {width: 85%;
+       }
+       .vid1geo video {width: 95%;
+       }
+       div.mapa1>iframe {border: 0.25em #10f510 solid;
+                         width: 20em;
+                         height: 15em;
+       }
+
+
+       /*Poblaciones*/
+       .poblaciones p img {width: 20rem;
+                           height: 13rem;
+       }
+       .textcen iframe {width: 13em;
+                        height: 12em;
+       }
+
+       /*Historia*/
+       .historia ol li {display: list-item;
+                        line-height: 2rem;
+                        font-size: 85%;
+                        width: 85%;
+       }
+       #bande1,
+       #bande2, #map18, #jz,
+       #acs, #asg, #revcw {width: 80%;
+                           height: 10rem;
+                           margin: auto;
+                           font-size: 50%;
+       }
+       #bande1 img, #bande2 img,
+       #map18 img, #revcw img {width: 13rem;
+                               height: 9rem;
+       }
+       #jz img, #acs img, #asg img {width: 7rem;
+                                    height: 9rem;
+       }
+
+
+       /*Politica*/
+       .polimg       {text-align: center;
+       }
+       .polimg img {width: 24rem;
+                    height: 12rem;
+       }
+
+
+       /*Sanidad*/
+       p#sanimg>img {width: 18rem;
+                     height: 14rem;
+       }
+
+
+       /*Educacion*/
+       .estimg img {border: 0.125em #000 solid;
+                    width: 18rem;
+                    height: 14rem;
+       }
+       .polimg, #sanimg, .estimg,
+       .econimg, .idimg, .relimg {text-align: center;
+                                   font-size: 75%;
+       }
+
+
+       /*Economia*/
+       .economía p img {width: 18rem;
+                        height: 14rem;
+       }
+
+
+       /*Idioma*/
+       .idimg img {width: 18rem;
+                   height: 14rem;
+                   border: .125em #008000 solid;
+       }
+
+
+       /*Religion*/
+       #virimg {width: 14rem;
+                height: 20rem;
+                border: 0.125em #008000 solid;
+       }
+       .relimg img   {width: 16rem;
+                      height: 12rem;
+                      border: 0.125em #008000 solid;
+       }
+
+       footer {display: flex;
+               background-color: #000;
+               margin: 0;
+               height: 9rem;
+               line-height: 2.5rem;
+               flex-wrap: wrap;
+               justify-content: space-between;
+       }
+
+       .div1ft, .div2ft {width: 50%;
+                         font-size: 80%;
+       }
+}
+
+/*570 a 640*/
+@media (min-width: 35.625em) and (max-width: 40em) {
+
+       .paraelvideo {position: relative;
+                     width: 100%;
+                     height: 16rem;
+                     overflow: hidden;
+                     border-radius: 0.5em;
+       }
+
+       .hh1 {top: 0rem;
+             left: 0rem;
+       }
+
+       #tituprin {top: 7rem;
+                  left: 3rem;
+                  width: 22rem;
+       }
+
+       h2     {font-size: 170%;
+               width: 85%;
+       }
+
+       nav {height: 4rem;
+       }
+
+       .navimg {width: 4rem;
+                height: 3rem;
+                text-align: center;
+       }
+
+       nav .navimg img {width: 3em;
+                        height: 2rem;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+       }
+
+       #elnavsito {display: flex;
+                   width: 86%;
+                   height: 4rem;
+                   justify-content: space-between;
+                   align-items: stretch;
+                   align-content: center;
+       }
+
+       nav button[type="button"] {width: 100%;
+                                  height: 6rem;
+                                  font-size: 58%;
+                                  font-weight: bold;
+       }
+
+       #geo button:hover,
+       #pob button:hover,
+       #hist button:hover,
+       #polit button:hover,
+       #san button:hover,
+       #ed button:hover,
+       #econ button:hover,
+       #idi button:hover,
+       #rel button:hover {background-size: 1.5rem;
+                          height: 4.5rem;
+                          font-weight: bold;
+                          font-size: 25%;
+       }
+
+              .maintext {text-align: center;
+                  font-size: 135%;
+       }
+
+       main #mainflag img {width: 100%;
+                           height: 20rem;
+       }
+
+       #mainflag {width: 70%;
+                  height: 20rem;
+       }
+
+       p      {font-size: 110%;
+       }
+
+       .vid1geo {width: 85%;
+       }
+       .vid1geo video {width: 95%;
+       }
+       div.mapa1>iframe {border: 0.25em #10f510 solid;
+                         width: 14em;
+                         height: 15em;
+       }
+
+
+       /*Poblaciones*/
+       .poblaciones p img {width: 14rem;
+                           height: 10rem;
+       }
+       .textcen iframe {width: 13em;
+                        height: 12em;
+       }
+
+       /*Historia*/
+       .historia ol li {display: list-item;
+                        line-height: 2rem;
+                        font-size: 85%;
+                        width: 85%;
+       }
+       #bande1,
+       #bande2, #map18, #jz,
+       #acs, #asg, #revcw {width: 80%;
+                     height: 10rem;
+                     margin: auto;
+                     font-size: 50%;
+       }
+       #bande1 img, #bande2 img,
+       #map18 img, #revcw img {width: 9rem;
+                               height: 8rem;
+       }
+       #jz img, #acs img, #asg img {width: 6rem;
+                                    height: 8rem;
+       }
+
+
+       /*Politica*/
+       .polimg       {text-align: center;
+       }
+       .polimg img {width: 11rem;
+                    height: 7rem;
+       }
+
+
+       /*Sanidad*/
+       p#sanimg>img {width: 10rem;
+                     height: 10rem;
+       }
+
+
+       /*Educacion*/
+       .estimg img {border: 0.125em #000 solid;
+                    width: 10rem;
+                    height: 10rem;
+       }
+       .polimg, #sanimg, .estimg,
+       .econimg, .idimg, .relimg {text-align: center;
+                                   font-size: 75%;
+       }
+
+
+       /*Economia*/
+       .economía p img {width: 10rem;
+                        height: 10rem;
+       }
+
+
+       /*Idioma*/
+       .idimg img {width: 10rem;
+                   height: 10rem;
+                   border: .125em #008000 solid;
+       }
+
+
+       /*Religion*/
+       #virimg {width: 10rem;
+                height: 15rem;
+                border: 0.125em #008000 solid;
+       }
+       .relimg img   {width: 10rem;
+                      height: 10rem;
+                      border: 0.125em #008000 solid;
+       }
+
+       footer {display: flex;
+               background-color: #000;
+               margin: 0;
+               height: 8rem;
+               line-height: 2.5rem;
+               flex-wrap: wrap;
+               justify-content: space-between;
+       }
+
+       .div1ft, .div2ft {width: 50%;
+                         font-size: 50%;
+       }
+
+       .div1ft img {width: 15%;
+                    height: 3rem;
+                    border: 0.125em #000 solid;
+       }
+
+       .div1ft p, .div2ft p {font-size: 100%;
+                             margin-top: 0;
+                             text-align: center;
+                             margin-bottom: 0.25rem;
+       }
+}
+
+/*450 a 570*/
+@media (min-width: 28.125em) and (max-width: 35.625em) {
+
+       .paraelvideo {position: relative;
+                     width: 100%;
+                     height: 16rem;
+                     overflow: hidden;
+                     border-radius: 0.5em;
+       }
+
+       .hh1 {top: 0rem;
+             left: 0rem;
+       }
+
+       #tituprin {top: 7rem;
+                  left: 3rem;
+                  width: 22rem;
+       }
+
+       h2     {font-size: 170%;
+               width: 85%;
+       }
+
+       nav {height: 7rem;
+            flex-wrap: wrap;
+       }
+
+       .navimg {width: 4rem;
+                height: 3rem;
+                text-align: center;
+       }
+
+       nav .navimg img {width: 3em;
+                        height: 2rem;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+       }
+
+       #elnavsito {display: flex;
+                   width: 98%;
+                   height: 4rem;
+                   justify-content: space-between;
+                   align-items: stretch;
+                   align-content: center;
+       }
+
+       nav button[type="button"] {width: 100%;
+                                  height: 4rem;
+                                  font-size: 50%;
+                                  font-weight: bold;
+       }
+
+       #geo button:hover,
+       #pob button:hover,
+       #hist button:hover,
+       #polit button:hover,
+       #san button:hover,
+       #ed button:hover,
+       #econ button:hover,
+       #idi button:hover,
+       #rel button:hover {background-size: 1.5rem;
+                          height: 4.5rem;
+                          font-weight: bold;
+                          font-size: 25%;
+       }
+
+       .maintext {text-align: center;
+                  font-size: 135%;
+       }
+
+       main #mainflag img {width: 100%;
+                           height: 20rem;
+       }
+
+       #mainflag {width: 70%;
+                  height: 20rem;
+       }
+
+       p      {font-size: 110%;
+       }
+
+       .vid1geo {width: 85%;
+       }
+       .vid1geo video {width: 95%;
+       }
+       div.mapa1>iframe {border: 0.25em #10f510 solid;
+                         width: 14em;
+                         height: 15em;
+       }
+
+
+       /*Poblaciones*/
+       .poblaciones p img {width: 60%;
+                           height: 6rem;
+       }
+       .textcen iframe {width: 13em;
+                        height: 12em;
+       }
+
+       /*Historia*/
+       .historia ol li {display: list-item;
+                        line-height: 2rem;
+                        font-size: 85%;
+                        width: 85%;
+       }
+       #bande1,
+       #bande2, #map18, #jz,
+       #acs, #asg, #revcw {width: 80%;
+                     height: 10rem;
+                     margin: auto;
+                     font-size: 50%;
+       }
+       #bande1 img, #bande2 img,
+       #map18 img, #revcw img {width: 9rem;
+                               height: 8rem;
+       }
+       #jz img, #acs img, #asg img {width: 6rem;
+                                    height: 8rem;
+       }
+
+
+       /*Politica*/
+       .polimg       {text-align: center;
+       }
+       .polimg img {width: 11rem;
+                    height: 7rem;
+       }
+
+
+       /*Sanidad*/
+       p#sanimg>img {width: 10rem;
+                     height: 10rem;
+       }
+
+
+       /*Educacion*/
+       .estimg img {border: 0.125em #000 solid;
+                    width: 10rem;
+                    height: 10rem;
+       }
+       .polimg, #sanimg, .estimg,
+       .econimg, .idimg, .relimg {text-align: center;
+                                   font-size: 75%;
+       }
+
+
+       /*Economia*/
+       .economía p img {width: 10rem;
+                        height: 10rem;
+       }
+
+
+       /*Idioma*/
+       .idimg img {width: 10rem;
+                   height: 10rem;
+                   border: .125em #008000 solid;
+       }
+
+
+       /*Religion*/
+       #virimg {width: 10rem;
+                height: 15rem;
+                border: 0.125em #008000 solid;
+       }
+       .relimg img   {width: 10rem;
+                      height: 10rem;
+                      border: 0.125em #008000 solid;
+       }
+
+       footer {display: flex;
+               background-color: #000;
+               margin: 0;
+               height: 8rem;
+               line-height: 2.5rem;
+               flex-wrap: wrap;
+               justify-content: space-between;
+       }
+
+       .div1ft, .div2ft {width: 50%;
+                         font-size: 50%;
+       }
+
+       .div1ft img {width: 15%;
+                    height: 3rem;
+                    border: 0.125em #000 solid;
+       }
+
+       .div1ft p, .div2ft p {font-size: 100%;
+                             margin-top: 0;
+                             text-align: center;
+                             margin-bottom: 0.25rem;
+       }
+}
+
+/*350 a 450*/
+@media (min-width: 21.875em) and (max-width: 28.125em) {
+
+       .paraelvideo {position: relative;
+                     width: 100%;
+                     height: 12rem;
+                     overflow: hidden;
+                     border-radius: 0.5em;
+       }
+
+       .hh1 {top: 0rem;
+             left: 0rem;
+             font-size: 4em;
+       }
+
+       #tituprin {top: 6rem;
+                  left: 1rem;
+                  width: 20rem;
+       }
+       
+
+       h2     {font-size: 170%;
+               width: 85%;
+       }
+
+       nav {height: 7rem;
+            flex-wrap: wrap;
+       }
+
+       .navimg {width: 4rem;
+                height: 3rem;
+                text-align: center;
+       }
+
+       nav .navimg img {width: 3em;
+                        height: 2rem;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+       }
+
+       #elnavsito {display: flex;
+                   width: 98%;
+                   height: 4rem;
+                   justify-content: space-between;
+                   align-items: stretch;
+                   align-content: center;
+       }
+
+       #elnavsito div {width: 11.1%;
+       }
+
+       nav button[type="button"] {width: 100%;
+                                  height: 4rem;
+                                  font-size: 45%;
+       }
+
+       #geo button:hover,
+       #pob button:hover,
+       #hist button:hover,
+       #polit button:hover,
+       #san button:hover,
+       #ed button:hover,
+       #econ button:hover,
+       #idi button:hover,
+       #rel button:hover {background-size: 1.5rem;
+                          height: 4.5rem;
+                          font-weight: bold;
+                          font-size: 25%;
+       }
+
+       .maintext {text-align: center;
+                  font-size: 135%;
+       }
+
+       main #mainflag img {width: 100%;
+                           height: 20rem;
+       }
+
+       #mainflag {width: 70%;
+                  height: 20rem;
+       }
+
+       p      {font-size: 110%;
+       }
+
+       .vid1geo {width: 85%;
+       }
+       .vid1geo video {width: 95%;
+       }
+       div.mapa1>iframe {border: 0.25em #10f510 solid;
+                         width: 12em;
+                         height: 15em;
+       }
+
+
+       /*Poblaciones*/
+       .poblaciones p img {width: 80%;
+                           height: 6rem;
+       }
+       .textcen iframe {width: 13em;
+                        height: 12em;
+       }
+
+       /*Historia*/
+       .historia ol li {display: list-item;
+                        line-height: 2rem;
+                        font-size: 85%;
+                        width: 85%;
+       }
+       #bande1,
+       #bande2, #map18, #jz,
+       #acs, #asg, #revcw {width: 80%;
+                           height: 10rem;
+                           margin: auto;
+                           font-size: 50%;
+       }
+       #bande1 img, #bande2 img,
+       #map18 img, #revcw img {width: 9rem;
+                               height: 8rem;
+       }
+       #jz img, #acs img, #asg img {width: 6rem;
+                                    height: 8rem;
+       }
+
+
+       /*Politica*/
+       .polimg       {text-align: center;
+       }
+       .polimg img {width: 11rem;
+                    height: 7rem;
+       }
+
+
+       /*Sanidad*/
+       p#sanimg>img {width: 10rem;
+                     height: 10rem;
+       }
+
+
+       /*Educacion*/
+       .estimg img {border: 0.125em #000 solid;
+                    width: 10rem;
+                    height: 10rem;
+       }
+       .polimg, #sanimg, .estimg,
+       .econimg, .idimg, .relimg {text-align: center;
+                                   font-size: 75%;
+       }
+
+
+       /*Economia*/
+       .economía p img {width: 10rem;
+                        height: 10rem;
+       }
+
+
+       /*Idioma*/
+       .idimg img {width: 10rem;
+                   height: 10rem;
+                   border: .125em #008000 solid;
+       }
+
+
+       /*Religion*/
+       #virimg {width: 10rem;
+                height: 15rem;
+                border: 0.125em #008000 solid;
+       }
+       .relimg img   {width: 10rem;
+                      height: 10rem;
+                      border: 0.125em #008000 solid;
+       }
+
+       footer {display: flex;
+               background-color: #000;
+               margin: 0;
+               height: 8rem;
+               line-height: 2.5rem;
+               flex-wrap: wrap;
+               justify-content: space-between;
+       }
+
+       .div1ft, .div2ft {width: 50%;
+                         font-size: 50%;
+       }
+
+       .div1ft img {width: 15%;
+                    height: 3rem;
+                    border: 0.125em #000 solid;
+       }
+
+       .div1ft p, .div2ft p {font-size: 100%;
+                             margin-top: 0;
+                             text-align: center;
+                             margin-bottom: 0.25rem;
+       }
+}
+
+/*250 a 350*/
+@media (min-width: 15.625em) and (max-width: 21.875em) {
+
+       .paraelvideo {position: relative;
+                     width: 100%;
+                     height: 9rem;
+                     overflow: hidden;
+                     border-radius: 0.5em;
+       }
+
+       .hh1 {top: 0rem;
+             left: 0rem;
+             font-size: 3em;
+       }
+
+       #tituprin {top: 5rem;
+                  left: 0rem;
+                  width: 15rem;
+       }
+
+       h2     {font-size: 170%;
+               width: 85%;
+       }
+
+       nav {height: 8rem;
+            flex-wrap: wrap;
+       }
+
+       .navimg {width: 4rem;
+                height: 2rem;
+                text-align: center;
+       }
+
+       nav .navimg img {width: 3em;
+                        height: 2rem;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+       }
+
+       #elnavsito {display: flex;
+                   width: 98%;
+                   height: 3rem;
+                   justify-content: space-between;
+                   align-items: stretch;
+                   align-content: center;
+       }
+
+       #elnavsito div {width: 19.1%;
+       }
+
+       nav button[type="button"] {width: 100%;
+                                  height: 3rem;
+                                  font-size: 40%;
+       }
+
+       #geo button:hover,
+       #pob button:hover,
+       #hist button:hover,
+       #polit button:hover,
+       #san button:hover,
+       #ed button:hover,
+       #econ button:hover,
+       #idi button:hover,
+       #rel button:hover {background-size: 1.5rem;
+                          height: 3.5rem;
+                          font-weight: bold;
+                          font-size: 25%;
+       }
+
+       /*Pagina Principal*/
+       .maintext {text-align: center;
+                  font-size: 135%;
+       }
+
+       main #mainflag img {width: 100%;
+                           height: 20rem;
+       }
+
+       #mainflag {width: 70%;
+                  height: 20rem;
+       }
+
+       p      {font-size: 75%;
+       }/*Toca todos los parrafos*/
+
+
+       /*Geografia*/
+       .vid1geo {width: 85%;
+       }
+       .vid1geo video {width: 95%;
+       }
+       div.mapa1>iframe {border: 0.25em #10f510 solid;
+                         width: 8em;
+                         height: 15em;
+       }
+
+
+       /*Poblaciones*/
+       .poblaciones p img {width: 80%;
+                           height: 6rem;
+       }
+       .textcen iframe {width: 13em;
+                        height: 12em;
+       }
+
+       /*Historia*/
+       .historia ol li {display: list-item;
+                        line-height: 2rem;
+                        font-size: 85%;
+                        width: 85%;
+       }
+       #bande1,
+       #bande2, #map18, #jz,
+       #acs, #asg, #revcw {width: 80%;
+                           height: 10rem;
+                           margin: auto;
+                           font-size: 50%;
+       }
+       #bande1 img, #bande2 img,
+       #map18 img, #revcw img {width: 9rem;
+                               height: 8rem;
+       }
+       #jz img, #acs img, #asg img {width: 6rem;
+                                    height: 8rem;
+       }
+
+
+       /*Politica*/
+       .polimg       {text-align: center;
+       }
+       .polimg img {width: 11rem;
+                    height: 7rem;
+       }
+
+
+       /*Sanidad*/
+       p#sanimg>img {width: 10rem;
+                     height: 10rem;
+       }
+
+
+       /*Educacion*/
+       .estimg img {border: 0.125em #000 solid;
+                    width: 10rem;
+                    height: 10rem;
+       }
+       .polimg, #sanimg, .estimg,
+       .econimg, .idimg, .relimg {text-align: center;
+                                   font-size: 75%;
+       }
+
+
+       /*Economia*/
+       .economía p img {width: 10rem;
+                        height: 10rem;
+       }
+
+
+       /*Idioma*/
+       .idimg img {width: 10rem;
+                   height: 10rem;
+                   border: .125em #008000 solid;
+       }
+
+
+       /*Religion*/
+       #virimg {width: 10rem;
+                height: 15rem;
+                border: 0.125em #008000 solid;
+       }
+       .relimg img   {width: 10rem;
+                      height: 10rem;
+                      border: 0.125em #008000 solid;
+       }
+
+
+       /*El footer*/
+       footer {display: flex;
+               background-color: #000;
+               margin: 0;
+               height: 8rem;
+               line-height: 2.5rem;
+               flex-wrap: wrap;
+               justify-content: space-between;
+       }
+
+       .div1ft, .div2ft {width: 50%;
+                         font-size: 35%;
+       }
+
+       .div1ft img {width: 15%;
+                    height: 3rem;
+                    border: 0.125em #000 solid;
+       }
+
+       .div1ft p, .div2ft p {font-size: 100%;
+                             margin-top: 0;
+                             text-align: center;
+                             margin-bottom: 0.25rem;
+       }
 }
