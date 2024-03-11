@@ -79,7 +79,7 @@ nav button {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  width: 95%;
+  width: 80%;
   margin: auto;
 }
 
@@ -230,6 +230,14 @@ footer {
   transition: 1s;
   filter: blur(0px);
   cursor: default;
+  height: 100%;
+  border-radius: 15px;
+  background-size: auto 100%;
+  background-color: black;
+  display: flex;
+  padding: 2em;
+  align-items: flex-end;
+  margin-bottom: 2em;
 }
 
 .activa p {
@@ -266,14 +274,16 @@ footer {
 .b0 {
   padding-top: 3em;
   padding-bottom: 3em;
-  background-image: url("../imag/Fondo\ Congo.jpeg");
+  position: relative;
+  background-image: url("../imag/FONDO1.jpg");
   background-size: cover;
 }
 
 .b1 {
   padding-top: 3em;
   padding-bottom: 3em;
-  background-image: url("../imag/CONGO\ PORTADA.jpg");
+  position: relative;
+  background-image: url("../imag/FONDO2.jpg");
   background-size: cover;
   background-position: bottom;
 }
@@ -281,7 +291,8 @@ footer {
 .b2 {
   padding-top: 3em;
   padding-bottom: 3em;
-  background-image: url("../imag/paisaje4.jpg");
+  position: relative;
+  background-image: url("../imag/FONDO3.jpg");
   background-size: cover;
 }
 
@@ -337,21 +348,6 @@ footer {
 .vertical-timeline-title {
   font-variant: small-caps;
   margin-left: -0.75rem;
-}
-
-.b0 {
-  position: relative;
-  background-image: url("../imag/drc-salonga.jpg");
-}
-
-.b1 {
-  position: relative;
-  background-image: url("../imag/tanganika.jpg");
-}
-
-.b2 {
-  position: relative;
-  background-image: url("../imag/kinsasa-noche.jpg");
 }
 
 .bg-license {
@@ -451,13 +447,20 @@ nav button:hover {
   }
   .activa {
     width: 80%;
-    height: 12em;
+    padding: 0%;
+    background-size: cover;
+    margin-bottom: 0.2em;
+    height: 190px;
+    transition: 1s;
+    border-radius: 15px;
   }
   .tarjeta {
     width: 80%;
     padding: 0%;
     background-size: cover;
     margin-bottom: 0.2em;
+    height: 64px;
+    transition: 1s;
   }
   .activa p {
     margin-left: 1em;

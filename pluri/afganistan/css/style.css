@@ -203,6 +203,17 @@ footer {
   transition: 1s;
   filter: blur(0px);
   cursor: default;
+  height: 100%;
+  border-radius: 15px;
+  background-size: auto 100%;
+  background-color: black;
+  cursor: pointer;
+  transition: 1s;
+  filter: blur(1px);
+  display: flex;
+  padding: 2em;
+  align-items: flex-end;
+  margin-bottom: 2em;
 }
 .activa p {
   font-weight: bolder;
@@ -292,13 +303,20 @@ footer {
   }
   .activa {
     width: 80%;
-    height: 12em;
+    padding: 0%;
+    background-size: cover;
+    margin-bottom: 0.2em;
+    height: 190px;
+    transition: 1s;
+    border-radius: 15px;
   }
   .tarjeta {
     width: 80%;
     padding: 0%;
     background-size: cover;
     margin-bottom: 0.2em;
+    height: 64px;
+    transition: 1s;
   }
   .activa p {
     margin-left: 1em;
