@@ -412,6 +412,8 @@ div.mapa1>iframe  {border: .25em #10f510 solid;
 hr    {border: .25rem #fff solid;
        margin: 0;
 }
+.hrhid  {visibility: hidden;
+}
 
 .div1ft,
 .div2ft    {width: 33%;
@@ -520,6 +522,8 @@ p#sanimg>img      {border: .175em #00f solid;
 .textcen    {text-align: center;
              text-decoration: underline;
 }
+.acl    {font-size: medium;
+}
 
 .economía p img   {width: 40%;
                    height: 30rem;
@@ -538,7 +542,7 @@ p#sanimg>img      {border: .175em #00f solid;
                    height: 315px;
 }
 
-/*Revision -- Revisado, implementar mejoras y dada por hecha*/
+/*Revision Completada*/
 /*****************************************/
 
 /*940 a 1710*/
@@ -686,8 +690,8 @@ p#sanimg>img      {border: .175em #00f solid;
 
 
        /*Economia*/
-       .economía p img {width: 28rem;
-                        height: 20rem;
+       .economía p img {width: 32rem;
+                        height: 30rem;
        }
 
 
@@ -877,8 +881,8 @@ p#sanimg>img      {border: .175em #00f solid;
 
 
        /*Economia*/
-       .economía p img {width: 18rem;
-                        height: 14rem;
+       .economía p img {width: 30rem;
+                        height: 30rem;
        }
 
 
@@ -1059,8 +1063,8 @@ p#sanimg>img      {border: .175em #00f solid;
 
 
        /*Economia*/
-       .economía p img {width: 10rem;
-                        height: 10rem;
+       .economía p img {width: 22rem;
+                        height: 20rem;
        }
 
 
@@ -1253,8 +1257,8 @@ p#sanimg>img      {border: .175em #00f solid;
 
 
        /*Economia*/
-       .economía p img {width: 10rem;
-                        height: 10rem;
+       .economía p img {width: 18rem;
+                        height: 20rem;
        }
 
 
@@ -1389,8 +1393,10 @@ p#sanimg>img      {border: .175em #00f solid;
        }
        .vid1geo video {width: 95%;
        }
+       .mapa1   {width: 85%;
+       }
        div.mapa1>iframe {border: 0.25em #10f510 solid;
-                         width: 12em;
+                         width: 14em;
                          height: 15em;
        }
 
@@ -1451,8 +1457,8 @@ p#sanimg>img      {border: .175em #00f solid;
 
 
        /*Economia*/
-       .economía p img {width: 10rem;
-                        height: 10rem;
+       .economía p img {width: 14rem;
+                        height: 14rem;
        }
 
 
@@ -1589,8 +1595,10 @@ p#sanimg>img      {border: .175em #00f solid;
        }
        .vid1geo video {width: 95%;
        }
+       .mapa1   {width: 90%;
+       }
        div.mapa1>iframe {border: 0.25em #10f510 solid;
-                         width: 8em;
+                         width: 14em;
                          height: 15em;
        }
 
@@ -1651,8 +1659,8 @@ p#sanimg>img      {border: .175em #00f solid;
 
 
        /*Economia*/
-       .economía p img {width: 10rem;
-                        height: 10rem;
+       .economía p img {width: 13rem;
+                        height: 14rem;
        }
 
 
