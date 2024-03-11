@@ -209,7 +209,6 @@ footer {
   background-color: black;
   cursor: pointer;
   transition: 1s;
-  filter: blur(1px);
   display: flex;
   padding: 2em;
   align-items: flex-end;
