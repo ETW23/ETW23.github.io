@@ -5,11 +5,11 @@ document.querySelector(".botonMenu").onclick = function (e) {
   document.querySelector(".navegador").classList.toggle("navegadorAbierto");
 };
 
-let figuras = document.querySelectorAll(".bande");
-let congo = document.getElementById("con");
+let imagenes = document.querySelectorAll(".bande img");
 
-figuras.forEach((figura) => {
-  figura.addEventListener("click", () => {
+imagenes.forEach((imagen) => {
+  imagen.addEventListener("click", (event) => {
+    const figura = event.target.closest(".bande");
     const texto = figura.querySelector(".texto");
 
     if (figura.id === "con") {
@@ -34,6 +34,45 @@ figuras.forEach((figura) => {
     }
   });
 });
+
+let enlaces = document.querySelectorAll(".bande a");
+
+enlaces.forEach((enlace) => {
+  enlace.addEventListener("click", (event) => {
+    // Detener la propagación del evento click para evitar que se active en el elemento figure
+    event.stopPropagation();
+  });
+});
+
+// let figuras = document.querySelectorAll(".bande");
+// let congo = document.getElementById("con");
+
+// figuras.forEach((figura) => {
+//   figura.addEventListener("click", () => {
+//     const texto = figura.querySelector(".texto");
+
+//     if (figura.id === "con") {
+//       // Verificar si ya está abierto
+//       const estaAbierto = figura.classList.contains("bandeAbierto");
+
+//       // Cambiar la clase y la altura
+//       figura.classList.toggle("bandeAbierto");
+//       texto.classList.toggle("textoAbierto");
+
+//       if (estaAbierto) {
+//         // Si ya estaba abierto, revertir la altura a 11.4
+//         figura.style.height = "11.8em";
+//       } else {
+//         // Si no estaba abierto, establecer la altura a "auto"
+//         figura.style.height = "auto";
+//       }
+//     } else {
+//       // Si no es el elemento con el ID "con", simplemente cambiar clases
+//       figura.classList.toggle("bandeAbierto");
+//       texto.classList.toggle("textoAbierto");
+//     }
+//   });
+// });
 
 // funciones paises
 //argentina
