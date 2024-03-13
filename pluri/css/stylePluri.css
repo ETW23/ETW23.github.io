@@ -295,7 +295,7 @@ figure img {
 
 .textoAbierto {
   color: #ffc845;
-  height: 400px;
+  height: 500px;
   transform: scale(1);
   line-height: 1.3em;
   font-family: "Lato";
@@ -366,7 +366,7 @@ footer {
   width: 40%; /* Misma anchura que las columnas laterales */
   margin: 1em;
 }
-figure p p {
+figure div div {
   color: #ffc845;
   text-aling: right;
 }
