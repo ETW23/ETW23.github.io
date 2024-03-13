@@ -368,6 +368,7 @@ footer {
 }
 figure a {
   color: #ffc845;
+  margin-left: 10em;
 }
 
 /* ---------------- Adaptacion a dispositivos moviles ---------------------- */
