@@ -366,7 +366,7 @@ footer {
   width: 40%; /* Misma anchura que las columnas laterales */
   margin: 1em;
 }
-figure div div {
+.enlace, .enlace a {
   color: #ffc845;
   text-aling: right;
 }
