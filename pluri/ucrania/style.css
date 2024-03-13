@@ -83,6 +83,13 @@ h1 {
     }
 }
 
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
 h2 {
     font-size: 5rem;
     margin-top: 1em;
