@@ -366,7 +366,7 @@ footer {
   width: 40%; /* Misma anchura que las columnas laterales */
   margin: 1em;
 }
-figure p a {
+figure p p {
   color: #ffc845;
   text-aling: right;
 }
