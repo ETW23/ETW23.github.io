@@ -366,9 +366,9 @@ footer {
   width: 40%; /* Misma anchura que las columnas laterales */
   margin: 1em;
 }
-figure a {
+figure p a {
   color: #ffc845;
-  margin-left: 10em;
+  text-aling: right;
 }
 
 /* ---------------- Adaptacion a dispositivos moviles ---------------------- */
