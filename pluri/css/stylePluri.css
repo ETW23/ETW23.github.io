@@ -303,6 +303,7 @@ figure img {
   word-spacing: 0.08em;
   transition: 1s;
   padding: 0em 1em 1em 1em;
+  
 }
 
 footer {
@@ -437,5 +438,8 @@ footer {
   }
   .tituloDos {
     font-size: 1.5em;
+  }
+  .textoAbierto {
+    font-size: 4vw;
   }
 }
