@@ -22,6 +22,11 @@ img {
     max-width: 100%;
 }
 
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 .quiz {
     display: flex;
     flex-direction: column;
@@ -68,7 +73,7 @@ img {
     --bg: var(--answer-initial);
 
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -179,6 +184,8 @@ body:has(.flags) {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
+    --count: 10;
+
 }
 
 .flag {
@@ -195,8 +202,6 @@ body:has(.flags) {
 
     --radius: min(45vw, 45vh);
     --scale: 1;
-    --count: 9;
-
     --sin: calc(sin(var(--idx) * 2 * 3.14 / var(--count) + var(--time)));
     --cos: calc(cos(var(--idx) * 2 * 3.14 / var(--count) + var(--time)));
     transform: translate(calc(var(--sin) * var(--radius)), calc(var(--cos) * var(--radius))) translate(-50%, -50%) scale(var(--scale));
