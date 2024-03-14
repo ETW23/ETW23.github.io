@@ -101,7 +101,7 @@ body    {
         background-color: white;
     }
 /* FIN portada */
-/* Situacion Geografica */
+/* situación geográfica */
     #sitGeoImg, #sitGeoMap  {
         width: auto;
         float: left;
@@ -123,7 +123,7 @@ body    {
         width: 100%;
         clear: both;
     }
-    .situaciongeografica    {
+    .situacióngeográfica    {
         justify-content: space-evenly;
         align-items: center;
         align-content: center;
@@ -138,9 +138,9 @@ body    {
         min-width: 16em;
         min-height: 16em;
     }
-/* FIN Situacion Geografica */
+/* FIN situación geográfica */
 /* Poblacion y Capital */
-    .poblacionycapital  {
+    .poblaciónycapital  {
         align-items: center;
         justify-content: center;
     }
@@ -206,8 +206,8 @@ body    {
         border-radius: 10px;
     }
 /* FIN Historia */
-/* Politica */
-    .politica   {
+/* política */
+    .política   {
         width: 90%;
         margin: auto;
         flex-direction: row;
@@ -267,7 +267,7 @@ body    {
     #imgOtan{
         max-width: 18em;
     }
-/* FIN Politica */
+/* FIN política */
 /* Sanidad */
     .sanidad    {
         margin-bottom: 2em;
@@ -279,8 +279,8 @@ body    {
         min-width: 20em;
     }
 /* FIN Sanidad */
-/* Economia */
-    .economia   {
+/* economía */
+    .economía   {
         margin: 2em auto 2em auto;
         width: 80%;
         flex-direction: row;
@@ -288,13 +288,13 @@ body    {
         align-content: stretch;
         justify-content: center;
     }
-    .economia3   {
+    .economía3   {
         zoom: 60%;
         margin: 3em auto auto 8em;
         width: 60%;
         text-align: right;
     }
-/* FIN Economia */
+/* FIN economía */
 /* Idioma */
     .idioma {
         flex-direction: column;
@@ -303,10 +303,10 @@ body    {
 .cajaindex  {
     background-color: white;
 }
-.situaciongeografica, .poblacionycapital, .historia, .politica, .sanidad, .educacion, .economia, .idioma, .religion, .influenciarumana, .subpolidch, .hrpolimedio, footer, li, .idisecundario, .clear, .image-gallery, .portada  {
+.situacióngeográfica, .poblaciónycapital, .historia, .política, .sanidad, .educación, .economía, .idioma, .religión, .influenciarumana, .subpolidch, .hrpolimedio, footer, li, .idisecundario, .clear, .image-gallery, .portada  {
     clear: both;
 }
-.tresdivimg, .president1, .textdch, .textizq, .hispolimgs, .hispoltxts, .sanidtxt, .eduimgizq, .econoizq, .econodch, .economia3, .txtidiprinci, .imgidiprinci, .idirumh2, .religion-info, .personal3      {
+.tresdivimg, .president1, .textdch, .textizq, .hispolimgs, .hispoltxts, .sanidtxt, .eduimgizq, .econoizq, .econodch, .economía3, .txtidiprinci, .imgidiprinci, .idirumh2, .religión-info, .personal3      {
     float: left;
 }
 .president2, .edutextdch, .imgrelicrono, .personal2, .personal4 {
@@ -354,14 +354,14 @@ body    {
     margin: 0.5em auto auto auto;
     font-size: 3em;
 }
-.situaciongeografica, .poblacionycapital, .educacion, .idioma, .politica, .sanidad, .religion  {
+.situacióngeográfica, .poblaciónycapital, .educación, .idioma, .política, .sanidad, .religión  {
     margin-top: 2em;
 }
-.situaciongeografica, .poblacionycapital, .educacion, .idioma, .h1, .historia, .politica, .sanidad, .economia, .religion, .influenciarumana, .language-info 
+.situacióngeográfica, .poblaciónycapital, .educación, .idioma, .h1, .historia, .política, .sanidad, .economía, .religión, .influenciarumana, .language-info 
    {
     display: none;
 }
-.religion {
+.religión {
     animation: fadeIn 1s ease;
     display: none;
     width: 80%;
@@ -533,7 +533,7 @@ body    {
     zoom: 60%;
     margin: 3em auto auto auto;
 }
-.economia3  > img, .econogif  > img  {
+.economía3  > img, .econogif  > img  {
     border-radius: 10%;
     border: solid 0.35em black;
 }
@@ -582,6 +582,7 @@ body    {
     margin-top: 5px;
     font-size: 16px;
     color: #000;
+    margin-bottom: 1em;
 }
 .language-info {
     background-color: #fff;
@@ -674,7 +675,7 @@ body    {
     font-style: italic;
     color: #0066cc; /* Color azul para las frases en rumano */
 }
-.intro, .religion-info, .imgrelicrono {
+.intro, .religión-info, .imgrelicrono {
     flex: 1;
 }
 .intro {
@@ -693,7 +694,7 @@ body    {
     flex-direction: column;
     align-items: center;
 }
-.religion-info {
+.religión-info {
     background-color: #ff6666;
     padding: 2em;
     margin: 2em auto 2em auto;
@@ -702,13 +703,13 @@ body    {
     width: 65vw;
     min-width: 16em;
 }
-.religion-info h2 {
+.religión-info h2 {
     font-size: 32px;
     margin-bottom: 15px;
     text-align: center;
     color: #333; /* Texto más oscuro para mayor contraste */
 }
-.religion-info p {
+.religión-info p {
     font-size: 18px;
     line-height: 1.6;
     text-align: justify;
