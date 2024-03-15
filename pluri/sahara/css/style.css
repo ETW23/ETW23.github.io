@@ -20,12 +20,6 @@ body {
   );
 }
 
-#frame{
-  width="600"
-  height="450"
-  style="border: 0"
-}
-
 nav {
   position: fixed;
   top: 0;
@@ -181,7 +175,7 @@ img:hover{
 
 #clima{
   padding-left: 4vw;
-  height: 35vh;
+  height: 38vh;
   padding-top: 2vh;
 }
 
