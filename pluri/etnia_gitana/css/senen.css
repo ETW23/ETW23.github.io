@@ -128,15 +128,15 @@ nav li a.activa1, a.activa2, a.activa3 {
 }
 
 li a.activa1{
-  background-color: rgb(70, 135, 255); 
+  background-color: rgb(70, 135, 255);
 }
 
 li a.activa2 {
-  background-color: red; 
+  background-color: red;
 }
 
 li a.activa3 {
-  background-color: rgb(1, 144, 1); 
+  background-color: rgb(1, 144, 1);
 }
 
 nav.enlaces li a:hover {
