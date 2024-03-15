@@ -83,7 +83,6 @@ h3    {text-align: center;
 }
 .historia ol li   {display: list-item;
                    line-height: 4rem;
-                   text-decoration: underline;
                    font-size: 200%;
                    width: 65%;
                    margin: auto;
@@ -542,6 +541,16 @@ p#sanimg>img      {border: .175em #00f solid;
                    height: 315px;
 }
 
+.imagenesFuS:-webkit-full-screen {width: 70%;
+                                  margin-top: 1em;
+                                  border-radius: 16px;
+                                  transition: 1s;
+}
+.imagenesFuS:hover  {cursor: pointer;
+                     transition: 1s;
+                     transform: scale(1.1);
+}
+
 /*Revision Completada*/
 /*****************************************/
 
@@ -624,7 +633,7 @@ p#sanimg>img      {border: .175em #00f solid;
                   height: 20rem;
        }
 
-       p      {font-size: 110%;
+       p      {font-size: 140%;
        }
 
 
@@ -645,7 +654,7 @@ p#sanimg>img      {border: .175em #00f solid;
        /*Historia*/
         .historia ol li {display: list-item;
                          line-height: 4rem;
-                         font-size: 160%;
+                         font-size: 200%;
                          width: 85%;
         }
        #bande1,
@@ -799,7 +808,7 @@ p#sanimg>img      {border: .175em #00f solid;
        }
 
               .maintext {text-align: center;
-                  font-size: 135%;
+                         font-size: 135%;
        }
 
        main #mainflag img {width: 100%;
@@ -810,7 +819,7 @@ p#sanimg>img      {border: .175em #00f solid;
                   height: 20rem;
        }
 
-       p      {font-size: 110%;
+       p      {font-size: 130%;
        }
 
 
@@ -836,7 +845,7 @@ p#sanimg>img      {border: .175em #00f solid;
        /*Historia*/
        .historia ol li {display: list-item;
                         line-height: 2rem;
-                        font-size: 85%;
+                        font-size: 140%;
                         width: 85%;
        }
        #bande1,
@@ -983,7 +992,7 @@ p#sanimg>img      {border: .175em #00f solid;
        }
 
               .maintext {text-align: center;
-                  font-size: 135%;
+                         font-size: 135%;
        }
 
        main #mainflag img {width: 100%;
@@ -994,7 +1003,7 @@ p#sanimg>img      {border: .175em #00f solid;
                   height: 20rem;
        }
 
-       p      {font-size: 110%;
+       p      {font-size: 140%;
        }
 
        .vid1geo {width: 85%;
@@ -1018,7 +1027,7 @@ p#sanimg>img      {border: .175em #00f solid;
        /*Historia*/
        .historia ol li {display: list-item;
                         line-height: 2rem;
-                        font-size: 85%;
+                        font-size: 140%;
                         width: 85%;
        }
        #bande1,
@@ -1188,7 +1197,7 @@ p#sanimg>img      {border: .175em #00f solid;
                   height: 20rem;
        }
 
-       p      {font-size: 110%;
+       p      {font-size: 140%;
        }
 
        .vid1geo {width: 85%;
@@ -1212,7 +1221,7 @@ p#sanimg>img      {border: .175em #00f solid;
        /*Historia*/
        .historia ol li {display: list-item;
                         line-height: 2rem;
-                        font-size: 85%;
+                        font-size: 140%;
                         width: 85%;
        }
        #bande1,
@@ -1386,7 +1395,7 @@ p#sanimg>img      {border: .175em #00f solid;
                   height: 20rem;
        }
 
-       p      {font-size: 110%;
+       p      {font-size: 140%;
        }
 
        .vid1geo {width: 85%;
@@ -1405,14 +1414,14 @@ p#sanimg>img      {border: .175em #00f solid;
        .poblaciones p img {width: 80%;
                            height: 6rem;
        }
-       .textcen iframe {width: 13em;
+       .textcen iframe {width: 10em;
                         height: 12em;
        }
 
        /*Historia*/
        .historia ol li {display: list-item;
                         line-height: 2rem;
-                        font-size: 85%;
+                        font-size: 140%;
                         width: 85%;
        }
        #bande1,
@@ -1586,7 +1595,7 @@ p#sanimg>img      {border: .175em #00f solid;
                   height: 20rem;
        }
 
-       p      {font-size: 75%;
+       p      {font-size: 140%;
        }/*Toca todos los parrafos*/
 
 
@@ -1607,14 +1616,14 @@ p#sanimg>img      {border: .175em #00f solid;
        .poblaciones p img {width: 80%;
                            height: 6rem;
        }
-       .textcen iframe {width: 13em;
+       .textcen iframe {width: 9em;
                         height: 12em;
        }
 
        /*Historia*/
        .historia ol li {display: list-item;
                         line-height: 2rem;
-                        font-size: 85%;
+                        font-size: 140%;
                         width: 85%;
        }
        #bande1,

@@ -39,3 +39,14 @@ videoHeader.onended= function () {
 document.getElementById('menuprinc').onclick= function () {
   history.back()
 }
+
+// Selecciona todos los elementos con la clase "imagenesFuS"
+const imageElements = document.getElementsByClassName("imagenesFuS");
+
+// Agrega un evento de clic a cada elemento
+for (const imageElement of imageElements) {
+    imageElement.addEventListener("click", () => {
+        // Abre la imagen en otra pestaña
+        window.open(imageElement.src, "_blank");
+    });
+}
