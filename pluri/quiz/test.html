@@ -7,6 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css" />
   <script>
+    /** @type {{ [country: string]: { question: string, answers: string[], correctAnswer: number | number[] }[] }} */
     const questionsByCountry = {
       ucrania: [
         {
@@ -14,31 +15,11 @@
           answers: ["Polonia", "Hungría", "Rumanía", "Serbia"],
           correctAnswer: 3,
         },
-        // {
-        //     question: "¿Durante qué evento fue completamente destruida la ciudad de Kiev?",
-        //     answers: [
-        //         "La Segunda Guerra Mundial",
-        //         "La Guerra Civil Rusa",
-        //         "La Invasion Mongola",
-        //         "La Guerra de los Seis Días"
-        //     ],
-        //     correctAnswer: 2
-        // },
         {
           question: "¿Qué ciudad se llama «la Madre de las ciudades rusas»?",
           answers: ["Lviv", "Odesa", "Kyiv", "Kharkiv"],
           correctAnswer: 2,
         },
-        // {
-        //     question: "¿Que no está declarado Patrimonio de la Humanidad por la UNESCO?",
-        //     answers: [
-        //         "Centro historico de Odesa",
-        //         "La Iglesia de San Andrés",
-        //         "Monasterio de las Cuevas de Kiev",
-        //         "Biblioteca Nacional de Ucrania V. I. Vernadsky"
-        //     ],
-        //     correctAnswer: 3
-        // },
         {
           question: "¿Cuándo se independizó Ucrania de la URSS?",
           answers: ["1990", "1991", "1992", "1993"],
@@ -82,16 +63,6 @@
           ],
           correctAnswer: 3,
         },
-        // {
-        //     question: "¿Qué sistema político se utiliza en Ucrania?",
-        //     answers: [
-        //         "República parlementaria",
-        //         "República semipresidencialista",
-        //         "República presidencialista",
-        //         "Monarquía",
-        //     ],
-        //     correctAnswer: 1
-        // },
         {
           question:
             "¿Cuál es el sector más importante de la industria pesada de Ucrania?",
@@ -108,16 +79,6 @@
           answers: ["₲", "₮", "₴", "ϟ"],
           correctAnswer: 2,
         },
-        // {
-        //     question: "¿Qué religión predomina en Ucrania?",
-        //     answers: [
-        //         "Judaísmo",
-        //         "Catolicismo",
-        //         "Cristianismo ortodoxo",
-        //         "Islam",
-        //     ],
-        //     correctAnswer: 2
-        // }
       ],
       sahrawi: [
         {
@@ -482,6 +443,11 @@
           correctAnswer: 0,
         },
         {
+          question: "¿Qué región disputada reclama Marruecos como su territorio?",
+          answers: ["Sáhara Occidental", "Gibraltar", "Ceuta y Melilla", "Islas Canarias"],
+          correctAnswer: 0,
+        },
+        {
           question: "¿Cuál es la bebida nacional de Marruecos?",
           answers: ["Té con limón", "Té de jazmín", "Té de hibisco", "Té de menta"],
           correctAnswer: 3
@@ -593,42 +559,28 @@
       const element = document.createElement("div");
       element.id = "answers-for-print";
 
+      const isCorrectAnswer = (questionIndex, answerIndex) => {
+        const correctAnswer = questions[questionIndex].correctAnswer;
+        return correctAnswer === answerIndex || Array.isArray(correctAnswer) && correctAnswer.includes(answerIndex);
+      };
+
       Object.entries(questionsByCountry).forEach(([country, questions]) => {
         element.innerHTML += `
-                    <h1>${country}</h1>
-                    <ul>
-                        ${questions
-            .map(
-              (question, questionIndex) => `
-                                <li>
-                                    <h2>${question.question}</h2>
-                                    <ul>
-                                        ${question.answers
-                  .map(
-                    (answer, answerIndex) => `
-                                                <li>
-                                                    ${answerIndex ===
-                        question.correctAnswer ||
-                        (Array.isArray(
-                          question.correctAnswer
-                        ) &&
-                          question.correctAnswer.includes(
-                            answerIndex
-                          ))
-                        ? `<b>${answer}</b>`
-                        : answer
-                      }
-                                                </li>
-                                        `
-                  )
+          <h1>${country}</h1>
+          <ul>
+            ${questions.map((question, questionIndex) => `
+              <li>
+                <h2>${question.question}</h2>
+                <ul>
+                  ${question.answers.map((answer, answerIndex) => `
+                    <li>
+                      ${isCorrectAnswer(questionIndex, answerIndex) ? `<b>${answer}</b>` : answer}
+                    </li>`)
                   .join("")}
-                                    </ul>
-                                </li>
-                        `
-            )
+                </ul>
+              </li>`)
             .join("")}
-                    </ul>
-                `;
+          </ul>`;
       });
 
       document.body.appendChild(element);
