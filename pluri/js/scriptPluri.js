@@ -22,7 +22,7 @@ imagenes.forEach((imagen) => {
 
       if (estaAbierto) {
         // Si ya estaba abierto, revertir la altura a 11.4
-        figura.style.height = "9em";
+        figura.style.height = "17vh";
       } else {
         // Si no estaba abierto, establecer la altura a "auto"
         figura.style.height = "auto";
