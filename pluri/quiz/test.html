@@ -134,8 +134,13 @@
         },
         {
           question:
-            "¿Cuándo se enfrentaron Argentina y Gran Bretaña en la Guerra de las Malvinas (Falkland)?",
-          answers: ["1982", "1983", "1984", "1985"],
+            "¿Qué islas reclama Argentina como su territorio?",
+          answers: [
+            "Islas Malvinas",
+            "Islas Caimán",
+            "Islas Vírgenes",
+            "Islas Canarias",
+          ],
           correctAnswer: 0,
         },
         {
@@ -576,7 +581,7 @@
                     <li>
                       ${isCorrectAnswer(questionIndex, answerIndex) ? `<b>${answer}</b>` : answer}
                     </li>`)
-                  .join("")}
+            .join("")}
                 </ul>
               </li>`)
             .join("")}
