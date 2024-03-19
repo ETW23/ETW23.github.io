@@ -551,6 +551,15 @@ p#sanimg>img      {border: .175em #00f solid;
                      transform: scale(1.1);
 }
 
+#volversito     {background-color: #000;
+                 color: #fff;
+                 font-size: 1.05em;
+                 text-decoration: none;
+}
+#volversito:hover       {color: #ffe600;
+                         cursor: pointer;
+}
+
 /*Revision Completada*/
 /*****************************************/
 
