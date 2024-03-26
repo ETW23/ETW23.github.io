@@ -1,0 +1,172 @@
+
+package colecciones.colecciones;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.TreeSet;
+
+public class COLECCIONES {
+
+    public static void main(String[] args) {
+       
+       ArrayList<String> europaL = new ArrayList<>(List.of("BMW","AUDI","VW","PEUGEOT","SEAT","RENAULT","CITROEN"));
+       ArrayList<String> coreaL = new ArrayList<>(List.of("KIA","HYUNDAI","SSANYONG")) ;
+       ArrayList<String> japonL = new ArrayList<>(List.of("TOYOTA","MAZDA","SUBARU","HONDA","MITSUBISHI","NISSAN")) ;
+        
+       System.out.println("\n(ArrayList)MARCAS EU: " + europaL);
+       System.out.println("(ArrayList)MARCAS COREA: " + coreaL);
+       System.out.println("(ArrayList)MARCAS JAPON: " + japonL);
+       
+       Collections.sort(europaL);
+       Collections.sort(coreaL);
+       Collections.sort(japonL);
+       
+       System.out.println("\n(ArrayList)MARCAS EU: " + europaL);
+       System.out.println("(ArrayList)MARCAS COREA: " + coreaL);
+       System.out.println("(ArrayList)MARCAS JAPON: " + japonL);
+       
+       europaL.addAll(List.of("BMW","AUDI","VW"));
+       japonL.addAll(List.of("SUBARU","HONDA","MITSUBISHI"));
+       
+       System.out.println("\n(ArrayList)MARCAS EU: " + europaL);
+       System.out.println("(ArrayList)MARCAS COREA: " + coreaL);
+       System.out.println("(ArrayList)MARCAS JAPON: " + japonL);
+       
+       HashSet<String> europaS = new HashSet<>(europaL);
+       HashSet<String> coreaS = new HashSet<>(coreaL);
+       HashSet<String> japonS = new HashSet<>(japonL);
+       
+       System.out.println("\n(HashSet)MARCAS EU: " + europaS);
+       System.out.println("(HashSet)MARCAS COREA: " + coreaS);
+       System.out.println("(HashSet)MARCAS JAPON: " + japonS);
+       
+       //HashSet a Array + ordenación
+       String[] japonA = new String[japonS.size()];
+       japonS.toArray(japonA);
+       Arrays.sort(japonA);
+       System.out.println("\n(Array PURO) MARCAS JAPON: " + Arrays.toString(japonA));
+      
+       //HashSet a TreeSet(ordenado)
+       TreeSet<String> japonT = new TreeSet<>(japonS);
+       System.out.println("\n(TreeSet) MARCAS JAPON: " + japonT);
+      
+       //HashSet a Stream + ordenación + impresión
+       System.out.print("\n(Stream) MARCAS JAPON: ");
+       japonS.stream().sorted().forEach((n) -> {System.out.print(n + " "); });
+       
+       //HashSet con tods las marcas       
+       HashSet<String> marcas= new HashSet<>(europaS);
+       marcas.addAll(coreaS);
+       marcas.addAll(japonS);
+       System.out.print("\n\n(HasHSet) TODAS LAS MARCAS: " + marcas);
+       
+       TreeSet<String> marcasT = new TreeSet<>(marcas);
+       System.out.print("\n\n(TreeSet) TODAS LAS MARCAS: " + marcasT);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Excepciones {
+    public static void main(String[] args) {
+	
+	//CREACION ArrayList aleatorios1 - 20 numeros aleatorios entre 0 y 10
+
+	    ArrayList<Integer> aleatorios1 = new ArrayList(); 
+
+        for (int i=1;i<=20;i++){
+            aleatorios1.add((int)(Math.random() * 11));
+        }
+        
+        //CREACION LinkedList aleatorios2  - copia directa en su misma declaración de (aleatorios1)
+ 
+	    LinkedList<Integer> aleatorios2 = new LinkedList(aleatorios1) ; 
+       
+        //IMPRIMO COLECCIONES PARA VER CONTENIDO
+	    System.out.println("\n\nArrayList Aleatorios1 : " + aleatorios1);  	
+        System.out.println("\n\nLinkedList Aleatorios2 : " + aleatorios2);
+        
+        
+	// ORDENAR aleatorio1 DE MENOR A MAYOR y aleatorios2 DE MAYOR A MENOR
+	    Collections.sort(aleatorios1);
+        Collections.sort(aleatorios2);
+        Collections.reverse(aleatorios2);
+        
+        //IMPRIMO COLECCIONES PARA VER CONTENIDO
+	    System.out.println("\n\nArrayList Aleatorios1 : " + aleatorios1);  	
+        System.out.println("\n\nLinkedList Aleatorios2 : " + aleatorios2);
+        
+	//PREGUNTAR SI APARECE EL 7, Y SI APARECE CONTAR EL NÚMERO DE VECES QUE LO HACE
+	    int cont=0;
+        if (aleatorios1.contains(7)){
+            for (Integer i: aleatorios1){ 
+                if (i==7) cont ++;  	
+            }
+            System.out.println(" El 7 aparece: " + cont + " veces");
+        }else{
+            System.out.println("El 7 no aparece NUNCA");
+        }
+        
+	//ELIMINAR TODAS LAS APARICIONES DEL 7 EN AMBAS COLECCIONES -
+	// Se puede enviar otra lista de Integer como parámetro a removeAll y borrara todos los números todas las veces que aparezcan       
+
+	ArrayList<Integer> aux = new ArrayList(List.of(7));
+      
+        aleatorios1.removeAll(aux);
+        aleatorios2.removeAll(aux);
+        
+	//IMPRIMO COLECCIONES PARA VER CONTENIDO        
+	    System.out.println("\n\nArrayList Aleatorios1 : " + aleatorios1);  	
+        System.out.println("\n\nLinkedList Aleatorios2 : " + aleatorios2);
+        
+        //CALCULO MÁXIMO Y MÍNIMO
+        int max=0,min=0;
+        for (Integer i: aleatorios1){ 
+            max=Math.max(max,i);
+            min=Math.min(min,i);
+        }
+        
+        //RELLENO aleatorios1 CON EL MAX Y aleatorios2 CON EL MIN
+	    Collections.fill(aleatorios1,max);
+        Collections.fill(aleatorios2,min);
+        
+        //IMPRIMO COLECCIONES PARA VER CONTENIDO
+	    System.out.println("\n\nArrayList Aleatorios1 : " + aleatorios1);  	
+        System.out.println("\n\nLinkedList Aleatorios2 : " + aleatorios2);
+    }
+}

@@ -1,0 +1,63 @@
+    public void altaPedido(){
+        ArrayList<LineaPedido> pedidoAux = new ArrayList();
+        LocalDate hoy;
+                          
+        System.out.println("INTRODUCE EL DNI CLIENTE PARA EL PEDIDO: ");
+        String dni = sc.next();
+       
+        System.out.println("SE VAN A INTRODUCIR LOS ARTÍCULOS 1 A 1: ");
+        System.out.println("INTRODUCE CODIGO ARTICULO (99 PARA TERMINAR): ");
+        String id=sc.next();
+        while (!id.equals("99")){
+          System.out.println("CUANTAS UNIDADES QUIERES ?:");
+          int unidades=sc.nextInt();
+          pedidoAux.add(new LineaPedido (id,unidades));
+          articulos.get(buscarId(id)).setExistencias(articulos.get(buscarId(id)).getExistencias()-unidades);
+          System.out.println("INTRODUCE CODIGO ARTICULO (99 PARA TERMINAR): ");
+          id=sc.next();
+        }
+        hoy=LocalDate.now();
+        //
+	//LLAMADA AL MÉTODO generaIdPedido() - ALTA DEL NUEVO PEDIDO EN EL ARRAYLIST
+        //
+        pedidos.add(new Pedido(generaIdPedido(dni),clientes.get(buscarDni(dni)),hoy, pedidoAux));
+    }
+    
+    public void totalPedido(){
+       System.out.println("INTRODUCE EL ID DEL PEDIDO PARA CALCULAR TOTAL: ");
+       String id = sc.next();
+       int i=0;
+       double total=0;
+       for (Pedido p : pedidos) {
+            if (pedidos.get(i).getIdPedido().equals(id)){
+                break;
+            }
+            i++;
+       }
+       /*while(!pedidos.get(i).getIdPedido().equals(id)){
+           i++;
+       }*/
+       System.out.println("LISTADO DE ARTICULOS PEDIDO " + id +":\n");
+       for (LineaPedido lp:pedidos.get(i).getCestaCompra()){
+           System.out.println("\t" + articulos.get(buscarId(lp.getIdArticulo())).getDescripcion()+
+                   "\t" + articulos.get(buscarId(lp.getIdArticulo())).getPvp() +
+                   " * " + lp.getUnidades() + " Unidades");
+           
+           total+= articulos.get(buscarId(lp.getIdArticulo())).getPvp()* lp.getUnidades();
+       }
+       System.out.println("\nEL TOTAL DEL PEDIDO " + id + " ES: " + total + "€");
+    }
+    
+    private String generaIdPedido(String idCliente){
+        int contador =0;
+        String nuevoId;
+        for (Pedido p: pedidos){
+            if (p.getClientePedido().getDni().equalsIgnoreCase(idCliente)){
+                contador++;
+            }
+        }
+        contador++;
+        nuevoId= idCliente + "-" + String.format("%03d", contador) + "/" + LocalDate.now().getYear();
+        return nuevoId;
+    }
+    

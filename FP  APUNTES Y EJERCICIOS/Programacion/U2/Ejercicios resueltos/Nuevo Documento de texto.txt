@@ -1,0 +1,1043 @@
+ESTO LO SEPARAIS Y LO METEIS EN DISTINTOS .java
+
+
+
+
+1
+
+
+/**
+ * Programa para calcular el área y perímetro de una circunferencia
+ * a partir de un radio (entero) introducido por teclado
+ * Los resultados se mostrarán con sólo 2 decimales
+ * Si sólo consisten en mostrar port pantalla se puede usar la clase DecimalFormat
+ * Si es necesario redondear area y longitud a 2 decimales para cálculos posteriores se usara Math.round
+ * 
+ * @author Eduardo
+ * @version 1.0 - OCTUBRE 2023
+ */
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Ejemplo1 {
+    public static void main( String[] args ){
+        //declaración+construcción objeto teclado
+        Scanner sc = new Scanner( System.in ); 
+        
+        // declaración del valor constante PI 3.1416. También podemos usar directamente Math.PI
+        final float pi=3.1416f;   
+        
+        //petición de dato por teclado para asignar en vble radio
+        System.out.print("Teclea el radio de la circunferencia: "); 
+        int radio = sc.nextInt(); 
+        
+        double longitud = (2 * Math.PI *radio); // calculamos la longitud (perímetro) con CTE PI de la clase Math
+        double area = pi * Math.pow(radio,2); // calculamos el radio - con nuestra CTE pi
+        
+        //Mostramos los valores calculadoscon sólo 2 decimales 
+        DecimalFormat df = new DecimalFormat ("#.00");
+        System.out.println("El perimetro de la circunferencia es:  " + df.format(longitud));
+        System.out.println("El área de la circunferencia es:  " + df.format(area));
+        
+	//Otra versión sería no sólo mostrar, sino también MODIFICAR el valor de area y longitud a 2 decimales
+	longitud = (double)Math.round(longitud*100)/100;
+        area = (double)Math.round(area*100)/100;
+        System.out.println(longitud);
+	System.out.println(area);
+	sc.close
+    }
+}
+
+
+2
+
+/**
+ * Programa para convertir en MAYÚSCULAS una frase que introducimos por teclado 
+ * 
+ * @author Eduardo 
+ * @version 1.0 - OCTUBRE 2023
+ */
+
+import java.util.Scanner;
+
+public class Ejemplo2 {
+   public static void main( String[] args ){
+      
+	Scanner sc = new Scanner( System.in );
+        System.out.print("Teclea una frase: "); 
+        String frase = new String(sc.nextLine());
+        /* Declaro un objeto de tipo String y en la misma instrucción 
+         * llamo al constructor pasándole como parámetro una llamada al método 
+         * nextLine del objeto Scanner sc 
+         * Es el método resumido de hacer las cosas. Hay que acostumbrarse, 
+         * pues estamos haciendo de una tacada:
+         * 
+         *  String frase;
+         *  frase = new String();
+         *  frase = sc.nextLine();
+         */
+
+        String fraseM = new String (frase.toUpperCase()); 
+        /* en otro objeto String almaceno la frase pasada a Mayúsculas.
+         * También se podía haber hecho en 3 pasos, pero es mejor hacerlo en 1
+         *  String fraseM;
+         *  fraseM = new String();
+         *  fraseM = frase.toUpperCase();
+         */
+        
+        System.out.println(fraseM); 
+	sc.close();
+     }
+}
+
+
+
+3
+
+/**
+ * Programa para averiguar el número de cifras de un número introducido por teclado 
+ * 
+ * @author Eduardo 
+ * @version 1.0 - OCTUBRE 2023
+ */
+
+import java.util.Scanner;
+public class Ejemplo3
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        //Solicitamos un número por teclado
+	System.out.println("Introduzca un número entero CUALQUIERA: ");
+        long numero = sc.nextLong();
+        
+        //convertimos el número a String - cadena de caracteres, para calcular su número de cifras (longitud)
+            
+        String cadena=null;
+        cadena = cadena.valueOf(numero); //método que convierte un número en String  
+       
+        
+        System.out.println("El número entero que has intoducido tiene: " + cadena.length() + "  cifras");
+	sc.close();
+    }
+}
+
+
+4
+
+/**
+ * Programa para darle la vuelta a un número de sólo 4 cifras que introducimos por teclado 
+ * Si el número introducido es 4357 el programa imprimira 7534
+ * 
+ * @author Eduardo 
+ * @version 1.0 - OCTUBRE 2023
+ */
+
+import java.util.Scanner;
+public class Ejemplo4
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numero;
+        String cadena = null;
+        System.out.print("Introduzca un número entero DE 4 CIFRAS: ");
+        numero = sc.nextInt(); 
+        cadena = cadena.valueOf(numero);
+        
+        System.out.println("El número entero que has intoducido es: " + cadena);
+       
+	System.out.println("El número puesto del revés es: " + cadena.charAt(3) + cadena.charAt(2) + cadena.charAt(1) + cadena.charAt(0));
+	sc.close;
+    }
+}
+
+
+
+5
+
+/**
+ * Programa para calcular el máximo entre 2 números introducidos por teclado. También el primer número elevado al segundo 
+ * 
+ * @author Eduardo 
+ * @version 1.0 - OCTUBRE 2022
+ */
+
+import java.util.Scanner;
+
+public class Ejemplo5
+{
+     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num1, num2;
+        System.out.print("Introduzca el primer número entero: ");
+        num1 = sc.nextInt(); 
+        System.out.print("Introduzca el segundo número entero: ");
+        num2 = sc.nextInt(); 
+                       
+        System.out.println("El número MAYOR de los 2 es:  "+ Math.max(num1,num2));
+        System.out.println("El resultado de "+ num1 + " elevado a " + num2 + 
+        " es " + Math.pow(num1,num2));
+	sc.close();
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+LOS 100 MILLONES DE ESPACIOS DE ARRIBA QUIEN DICIR QUE SA ACABAO ESE EJERCICIO.ASI PA TOS.SEPARAD LOS COMENTARIOS QUE ENTRAN TAMBIEN COMO EN ESTE:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.- (DEL DOCUMENTO - UNIDAD 2 (2) - ESTRUCTURAS CONDICIONALES Y DE SELECCIÓN MÚLTIPLE- EJEMPLO 7). HACER EL EJERCICIO 7 CON IFS ANIDADOS PARA EL CÁLCULO DE NOTAS
+    COMENZANDO POR EL SUSPENSO, EN VEZ DE POR LA MATRÍCULA DE HONOR.
+
+
+2.-(DEL MISMO DOCUMENTO - EJEMPLO 8). HACER EL SWITCH PARTIENDO DE LA VARIABLE notas DE TIPO DOUBLE
+    PRIMERO CON UN CASTING Y DESPUÉS CON UN Math.round, Y CONSIDERANDO LA MATRÍCULA DE HONOR SIEMPRE COMO 10 (SIN REDONDEAR)
+ 
+
+3.- AVERIGUAR SI UN AÑO QUE SE INTRODUCE POR TECLADO ES BISIESTO. LO ES CADA 4 AÑOS, PERO NO CUANDO EL BISIESTO COINCIDE CON CAMBIO DE SIGLO (TERMINA EN 00), 
+    A NO SER CADA 4 SIGLOS QUE SI SERÁ BISIESTO
+
+
+
+/**
+ * AÑO BISIESTO: cada 4 años es bisiesto, pero no cuando es divisible entre 100, 
+ * y si cuando es divisible entre 400
+ * 
+ * @author 
+ * @version 1.0 Octubre 2022
+ */
+import java.util.Scanner;
+
+public class EjemCondExtra1{
+      
+    public static void main(String[] args) {
+          
+        Scanner scanner = new Scanner(System.in);
+        int año;
+
+        System.out.print("Introduce el año: ");
+        año = scanner.nextInt();
+    
+        if (año % 400 == 0){
+            System.out.println("Es un año bisiesto.");
+        }else if (año % 100 == 0){
+            System.out.println("No es un año bisiesto");
+        }else if (año % 4 == 0){
+            System.out.println("Es un año bisiesto");
+        }else{
+            System.out.println("No es un año bisiesto");
+        }
+    }
+  }
+
+
+
+4.- CALCULAR EL ÁREA DE UN TRIÁNGULO/CUADRADO/RECTÁNGULO. SE MUESTRA UN SENCILLO MENÚ DE OPCIONES:
+
+
+
+/**
+ * Cálculo de Áreas - CUADRADO - RECTÁNGULO - TRIÁNGULO
+ * 
+ * @author 
+ * @version 1.0 Octubre 2022
+ */
+import java.util.Scanner;
+
+public class EjemCondExtra2 {
+  public static void main(String[] args) {
+  
+    System.out.println(" CÁLCULO DE ÁREAS");
+    System.out.println(" ----------------");
+    System.out.println(" 1. Cuadrado");
+    System.out.println(" 2. Rectángulo");
+    System.out.println(" 3. Triángulo");
+    System.out.print("\n Elija una opción (1-3): ");
+  
+    Scanner sc= new Scanner(System.in);
+    int opcion = sc.nextInt();
+
+    double lado, base, altura;
+
+    
+    switch (opcion) {
+      case 1:
+        System.out.print("\nIntroduzca el lado del cuadrado en cm: ");
+        lado = sc.nextDouble();
+        System.out.println("\nEl área del cuadrado es " + (lado * lado) + " cm2");
+        break;
+    
+      case 2:
+        System.out.print("\nIntroduzca la base del rectángulo en cm: ");
+        base = sc.nextDouble();
+        System.out.print("Introduzca la altura del rectángulo en cm: ");
+        altura = sc.nextDouble();
+        System.out.println("El área del rectángulo es " + (base * altura) + " cm2");
+        break;
+    
+      case 3:
+        System.out.print("\nIntroduzca la base del triángulo en cm: ");
+        base = sc.nextDouble();
+        System.out.print("Introduzca la altura del triángulo en cm: ");
+        altura = sc.nextDouble();
+        System.out.println("El área del triángulo es " + ((base * altura) / 2) + " cm2");
+        break;
+        
+      default:
+        System.out.print("\nLo siento, la opción elegida no es correcta.");
+    }
+  }
+}
+
+
+
+5. ¿ CUANTOS DÍAS TIENE UN MES ?
+
+
+/**
+ * CUANTOS DÍAS TIENE UN MES DADO POR TECLADO
+ * 
+ * @author 
+ * @version 1.0 Octubre 2022
+ */
+
+import java.util.Scanner;
+
+public class EjemCondExtra3{
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int mes;
+
+    System.out.println("SELECCIONA UN MES PARA SABER CUANTOS DÍAS TIENE:");
+    System.out.println(" 1.- Enero.");
+    System.out.println(" 2.- Febrero.");
+    System.out.println(" 3.- Marzo.");
+    System.out.println(" 4.- Abril.");
+    System.out.println(" 5.- Mayo.");
+    System.out.println(" 6.- Junio.");
+    System.out.println(" 7.- Julio.");
+    System.out.println(" 8.- Agosto.");
+    System.out.println(" 9.- Septiembre.");
+    System.out.println("10.- Octubre.");
+    System.out.println("11.- Noviembre.");
+    System.out.println("12.- Diciembre.");
+    
+    mes = sc.nextInt();
+
+    
+//CON IFs ANIDADOS
+
+    if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
+      System.out.println("El mes seleccionado tiene 31 días");
+    } else if (mes ==2){
+      System.out.println("Febrero tiene 28 días");
+    } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
+      System.out.println("El mes seleccionado tiene 30 días");
+    } else {
+      System.out.println("Error, el mes debe estar entre 1-12.");
+    } 
+
+/* CON UN SWITCH - CASE
+   switch (mes) {
+      case 1: case 3: case5: case 7: case 8: case 10: case 12:
+      	System.out.println("El mes seleccionado tiene 31 días");
+        break;
+     case 2:
+        System.out.println("Febrero tiene 28 días, 29 los años bisiestos");
+        break;
+     case 4: case 6: case 9: case 11:
+        System.out.println("El mes seleccionado tiene 31 días");
+        break;
+     default:
+        System.out.print("\nLo siento, la opción elegida no es correcta.");
+   } */
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EJERCICIO 1
+
+* En el ejercicio del Array de faltas, lo reducimos a 10 alumnos y lo complementamos
+* Con un Array con los nombres de los alumnos/as para escribir los nombres de los alumnos
+* que más faltan tienen y los que menos faltas tienen
+* 
+* NO SE INTRODUCEN DATOS POR TECLADO. RESULTADOS DISTINTOS SE OBTIENEN MODIFICANDO
+* LOS DATOS DE LOS ARRAYS
+* 
+* @author Eduardo
+* @version 1.0 Noviembre 2022
+*/
+
+public class ArraysExtra1 {
+    public static void main(String[] args) {
+        int[] faltas = {0,11,0,5,6,8,0,3,11,5};
+        String[] nombres = {"Luisa", "Antonio", "Noelia", "Eva", "Juan", "Lucas",
+                            "Ana", "Luis", "Pepa", "Pepe"};
+        int maxFaltas, minFaltas;
+        maxFaltas = minFaltas = 0;  
+        for (int i=0; i<faltas.length; i++)
+        {
+            maxFaltas = Math.max(maxFaltas,faltas[i]);
+            minFaltas = Math.min(minFaltas,faltas[i]);
+        }
+        
+        // Nuevos bucles para averiguar en que posiciones se encuentran maxFaltas y minFaltas
+        
+        System.out.println ("ALUMNOS/AS QUE MÁS FALTAN: "); 
+        int totMax = 0;
+        for (int i=0; i<faltas.length; i++)
+        {
+            if (faltas[i] == maxFaltas) {
+                System.out.println ("El alumno/a: " + nombres[i] + " tiene "+ maxFaltas + " faltas");
+                totMax++;
+            }
+        }
+        System.out.println ("En total, " + totMax + " alumnos/as tienen " + maxFaltas + " faltas"); 
+        
+        System.out.println ("ALUMNOS/AS QUE MENOS FALTAN: "); 
+        int totMin = 0;
+        for (int i=0; i<faltas.length; i++)
+        {
+            if (faltas[i] == minFaltas) {
+                System.out.println ("El alumno/a: " + nombres[i] + " tiene "+ minFaltas + " faltas");
+                totMin++;
+            }
+        }
+        System.out.println ("En total, " + totMin + " alumnos/as tienen " + minFaltas + " faltas"); 
+    }
+}
+
+
+
+
+EJERCICIO 2
+
+/**
+* En el ejercicio del Array BIDIMENSIONAL de faltas por meses, lo reducimos a 10 alumnos
+* y lo complementamos  Con un Array con los nombres de los alumnos/as
+* 
+* CALCULAR el/los alumno/a que MÁS Y MENOS han faltado en un MES INTRODUCIDO POR TECLADO
+* 
+* @author Eduardo
+* @version 1.0 Noviembre 2022
+*/
+
+import java.util.Scanner;
+
+public class ArraysExtra2 {
+    public static void main(String[] args) {
+        int[][]faltasCurso ={
+                            {1,0,0,5,6,8,0,3,11,5},
+                            {0,12,0,4,5,6,8,20,1,0},
+                            {9,0,2,4,5,0,0,8,6,0},
+                            {0,0,2,5,6,5,0,3,0,5},
+                            {0,0,0,4,5,6,8,20,1,0},
+                            {0,0,2,4,5,3,0,8,6,0},
+                            {0,2,0,5,6,8,0,3,6,5},
+                            {0,5,0,4,5,6,8,20,1,0},
+                            {12,0,2,4,5,0,0,8,6,0},
+                            };
+        String[] meses = {"OCTUBRE","NOVIEMBRE","DICIEMBRE","ENERO","FEBRERO","MARZO",
+                        "ABRIL","MAYO","JUNIO"};                    
+        String[] alumns = {"Luisa", "Antonio", "Noelia", "Eva", "Juan", "Lucas",
+                           "Ana", "Luis", "Pepa", "Pepe"};
+                
+        Scanner sc= new Scanner(System.in);
+        int numMes=0;
+        String mes;
+        
+        // HACEMOS UN BUCLE DO-WHILE + SWITCH PARA PROCESAR EL MES QUE ME INTRODUCEN POR TECLADO Y PONERLO EN EL FORMATO NUMERICO ADAPTADO A NUESTRO ARRAY
+        do{
+            
+          System.out.println ("teclea el MES en letra: ");
+          mes = new String (sc.nextLine());
+          mes=mes.toUpperCase();  //para pasar a mayúsculas las entradas desde teclado
+          switch (mes){
+            case ("OCTUBRE"):
+            {
+                numMes=0; //nosotros los tenemos ordenados así en el Array, Octubre es el 1º
+                break;
+            }
+            case ("NOVIEMBRE"):
+            {
+                numMes=1; 
+                break;
+            }
+            case ("DICIEMBRE"):
+            {
+                numMes=2; 
+                break;
+            }
+            case ("ENERO"):
+            {
+                numMes=3; 
+                break;
+            }
+            case ("FEBRERO"):
+            {
+                numMes=4; 
+                break;
+            }
+            case ("MARZO"):
+            {
+                numMes=5; 
+                break;
+            }
+            case ("ABRIL"):
+            {
+                numMes=6; 
+                break;
+            }
+            case ("MAYO"):
+            {
+                numMes=7; 
+                break;
+            }
+            case ("JUNIO"):
+            {
+                numMes=8; 
+                break;
+            }
+            default: numMes=99;
+          } 
+          
+        } while (numMes==99);  //obligamos a repetir teclear el mes mientras no me introduzcan un mes válido      
+            
+        int maxFaltas, minFaltas;
+        maxFaltas = minFaltas = 0;  
+        
+        for (int f:faltasCurso[numMes]) //recorro sólo la fila del Array Bidimensional del mes que nos interesa
+        {
+            maxFaltas = Math.max(maxFaltas,f);
+            minFaltas = Math.min(minFaltas,f);
+        }
+        
+        System.out.println ();       
+        System.out.println ("ALUMNOS/AS QUE MÁS FALTARON EN "+ mes + " :"); 
+        int totMax = 0;
+        for (int i=0; i<faltasCurso[numMes].length; i++)
+        {
+            if (faltasCurso[numMes][i] == maxFaltas) {
+                System.out.println ("El alumno/a " + alumns[i] + " tiene "+ maxFaltas + " faltas");
+                totMax++;
+            }
+        }
+        System.out.println ("En total, " + totMax + " alumnos tienen " + maxFaltas + " faltas"); 
+        
+        System.out.println ("ALUMNOS/AS QUE MENOS FALTARON EN "+ mes + " :");  
+        int totMin = 0;
+        for (int i=0; i<faltasCurso[numMes].length; i++)
+        {
+            if (faltasCurso[numMes][i] == minFaltas) {
+                System.out.println ("El alumno/a " + alumns[i] + " tiene "+ minFaltas + " faltas");
+                totMin++;
+            }
+        }
+        System.out.println ("En total, " + totMin + " alumnos tienen " + minFaltas + " faltas");          
+    }
+}
+
+
+
+
+EJERCICIO 3
+
+/**
+* PARECIDO AL EJERCICIO ANTERIOR, PERO ESTA VEZ SOLICITAMOS EL NOMBRE DE UN ALUMNO/A POR TECLADO
+* PARA MOSTRAR LAS FALTAS QUE HA TENIDO ESE ALUMNO/A EN CADA MES DEL CURSO
+* 
+* EN EL EJERCICIO ANTERIOR USAMOS UN SWITCH PARA PASAR EL MES A NÚMERO Y ASÍ SABER QUE
+* FILA DEL ARRAY BIDIMENSIONAL CORRESPONDE AL MES INTRODUCIDO POR TECLADO
+* 
+* PODRÍAMOS HACER LO MISMO EN ESTE EJERCICIO PARA AVERIGUAR QUE ALUMNO/A ME HAN TECLEADO Y
+* TRABAJAR CON LA COLUMNA ADECUADA. PERO SI TENEMOS MUCHOS ALUMNOS EL SWITCH QUEDARÍA MUY GRANDE 
+* 
+* 
+* EN LUGAR DE HACERLO CON UN SWITCH LO HAREMOS ESTA VEZ CON EL MÉTODO equalsIgnoreCase
+* PARA BUSCAR EN EL ARRAY DE NOMBRES DEL ALUMNADO EL ALUMNO/A QUE ME HAN TECLEADO.
+* 
+* TANTO EL EJERCICIO ANTERIOR COMO ESTE SE PODRÍAN HACER DE VARIAS FORMAS
+* 
+* 
+* @author Eduardo
+* @version 1.0 Noviembre 2022
+*/
+
+import java.util.Scanner;
+
+public class ArraysExtra3 {
+    public static void main(String[] args) {
+        int[][]faltasCurso ={
+                            {1,0,0,5,6,8,0,3,11,5},
+                            {0,12,0,4,5,6,8,20,1,0},
+                            {9,0,2,4,5,0,0,8,6,0},
+                            {0,0,2,5,6,5,0,3,0,5},
+                            {0,0,0,4,5,6,8,20,1,0},
+                            {0,0,2,4,5,3,0,8,6,0},
+                            {0,2,0,5,6,8,0,3,6,5},
+                            {0,5,0,4,5,6,8,20,1,0},
+                            {12,0,2,4,5,0,0,8,6,0},
+                            };
+        String[] meses = {"OCTUBRE","NOVIEMBRE","DICIEMBRE","ENERO","FEBRERO","MARZO",
+                        "ABRIL","MAYO","JUNIO"};                    
+        String[] alumns = {"Luisa", "Antonio", "Noelia", "Eva", "Juan", "Lucas",
+                           "Ana", "Luis", "Pepa", "Pepe"};
+                
+        Scanner sc= new Scanner(System.in);
+        int posAlumn=0;
+        boolean existeAlum=false;
+        String alumn;
+        
+        do{
+          System.out.println ("teclea el ALUMNO/A para ver sus faltas: ");
+          alumn = new String (sc.nextLine());
+          
+          for (int i=0;i<alumns.length; i++)
+          {
+              if (alumn.equalsIgnoreCase(alumns[i]))
+              {
+                posAlumn=i;
+                existeAlum=true;
+              }                       
+          }
+          
+        } while (existeAlum == false);  //obligamos a repetir teclear alumno/a mientras no me introduzcan 
+                                  // un alumno/a que exista en el Array      
+                          
+        System.out.println("Las faltas del alumno/a "+ alumn.toUpperCase() + " en cada mes del curso han sido:"); 
+        
+        for (int mes=0;mes<9;mes++)//recorro sólo la fila del Array Bidimensional del mes que nos interesa
+        {
+            System.out.println( meses[mes] + " : " + faltasCurso[mes][posAlumn]);
+        }
+    }
+}
+
+
+
+EJERCICIO 4
+
+/**
+* Programa que lee una serie de nombres por teclado y los ordena alfabéticamente
+* Una vez ordenados los imprime por pantalla
+* Antes ha de preguntar cuantos nombres se van a introducir pues sabemos que los ARRAYS "nacen" con un 
+* tamaño fijo.
+* 
+* 
+* @author Eduardo
+* @version 1.0 Noviembre 2022
+*/
+import java.util.Scanner;
+
+public class ArraysExtra4 {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n;
+        System.out.println ("¿Cuantos nombres vas a teclear? ");  
+        n=sc.nextInt();
+        String[] nombres =new String[n];
+        
+        //llenar el Array con n nombres
+        for (int i=1;i<=n; i++)
+        {
+          if (i==n)
+          {
+            System.out.println ("El último nombre por favor: "+ i);
+            nombres[i-1]=sc.next();
+          } else { 
+            System.out.println ("Vamos con el nombre num "+ i);
+            nombres[i-1]=sc.next();
+          }
+        }
+         
+        //ordenar los nombres
+        String menor = new String(); 
+        
+        for (int i=0;i<nombres.length; i++)
+        {
+            menor = nombres[i];
+            int posMenor = i;
+            /* partiendo de la 1ª posición asumo que el elemento que hay en esa
+             * posición inicial es el menor y lo almaceno en el string auxiliar "menor",
+             * y su posición en "posMenor".
+             * A partir de ahí voy iterando posición a posición del Array,
+             * comparando uno a uno cada nuevo elemento con el String "menor" actual.
+             * Si el nuevo elemento es menor que "menor", ese nuevo elemento pasa a
+             * ser el nuevo "menor", y su posición la nueva "posmenor".
+             * Al final de cada pasada el string "menor" y la posición "posMenor"
+             * contienen el menor elemento de toda esa pasada y su posición. 
+             * 
+             * Lo intercambio con la posición de partida de esa pasada y ya está.
+             * 
+             * la 1ª pasada empieza en la posición i=0 y despues de ella ya tendré 
+             * el menor valor en la posición 0
+             * A partir de ahí sigo haciendo pasadas desde la siguiente 
+             * posición del Array, y así hasta el final. 
+             */
+            for (int j=i;j<nombres.length; j++) //busca el menor de todos los elementos
+            {
+              if (menor.compareTo(nombres[j]) > 0)
+              {
+                menor = nombres[j];
+                posMenor = j;
+              } 
+            }
+            nombres[posMenor]=nombres[i];
+            nombres[i]=menor;
+        }
+        
+        //listar los nombres ordenados por pantalla FOR EACH
+        for (String nombre:nombres)
+        {
+             System.out.println (nombre);                      
+        }      
+    }
+}
+
+EJERCICIO 5
+
+
+
+/* PROGRAMA PARA JUGAR CON UNA FRASE
+ * 1º - LA ROMPEMOS EN PALABRAS Y MOSTRAMOS CADA UNA EN UNA LÍNEA
+ * 2º - LA ROMPEMOS EN PALABRAS (AL REVÉS) Y MOSTRAMOS CADA UNA EN UNA LÍNEA
+ * 3º - CONTAMOS LAS PALABRAS QUE TIENE Y CREAMOS UN ARRAY DE STRINGS PARA ALMACENAR ESAS PALABRAS
+ *      A CONTINUACIÓN ESCRIBIMOS LA FRASE PALABRA A PALABRA PERO DESDE EL ARRAYY CREADO
+ * 4º - HACEMOS LO MISMO QUE EN 3º USANDO EL MÉTODO SPLIT
+ */
+
+import java.util.Scanner;
+public class RomperFraseMultiplesFormas
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduzca una frase para descomponer en palabras: ");
+        String frase = new String (sc.nextLine());
+                
+        //EJERCICIO 1
+        System.out.println("Rompemos la frase en palabras:");
+        
+        int inicioPalabra = 0;
+        for (int i=0;i<frase.length();i++){
+            if (frase.charAt(i) == ' '){
+               System.out.println(frase.substring(inicioPalabra,i)); 
+               inicioPalabra=i+1;
+            }   
+            if (i == frase.length()-1){
+               System.out.println(frase.substring(inicioPalabra,i+1)); 
+            }
+        }
+        
+        //EJERCICIO 2
+        System.out.println();
+        System.out.println("Rompemos la frase en palabras al revés:");
+        int finPalabra = frase.length();
+        for (int i=frase.length()-1;i>=0;i--){
+            if (frase.charAt(i) == ' '){
+               System.out.println(frase.substring(i+1,finPalabra)); 
+               finPalabra=i+1;
+            }   
+            if (i == 0){
+               System.out.println(frase.substring(0,finPalabra)); 
+            }
+        }
+        
+        //EJERCICIO 3 - utilizamos la vble contador para contar las palabras de la frase
+        int contador=1;
+        for (int i=0;i<frase.length();i++){
+            if (frase.charAt(i) == ' '){
+               contador++;
+            }
+        }
+        // declaramos un Array de Strings (tamaño contador) para almacenar las palabras de la frase
+        String [] palabras = new String[contador];
+        inicioPalabra = 0;
+        int indiceArray=0;
+        for (int i=0;i<frase.length();i++){
+            if (frase.charAt(i) == ' '){
+               palabras[indiceArray]=frase.substring(inicioPalabra,i); 
+               inicioPalabra=i+1;
+               indiceArray++;
+            }   
+            if (i == frase.length()-1){
+               palabras[indiceArray]=frase.substring(inicioPalabra,i+1);
+            }
+        }
+        //Finalmente mostramos las palabras una a una recorriendo el Array con un ForEach
+        System.out.println();
+        System.out.println("Mostramos las palabras desde el Array:");
+        for(String p:palabras){
+            System.out.println(p);
+        }
+        
+        //EJERCICIO 4
+        //rompemos la frase usando el método Split de Java. Solicitamos una nueva frase para comprobar
+        //que funciona y lo hacemo en otro Array sin necesidad de dimensionarlo
+        System.out.println();
+        System.out.print("Introduzca una nueva frase para descomponer con split: ");
+        String frase2 = new String (sc.nextLine());
+        String [] palabras2 = frase2.split(" ",0);
+        for(String p:palabras2){
+            System.out.println(p);
+        }
+        
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Vamos a hacer una Clase con utilidades para Arrays de números enteros (int) de 1 dimensión
+ * 
+ * Tendrá una serie de métodos:
+ * 
+ *  void ordenaMenorMayor (int[] a)  -- ordena de menor a mayor un Array  
+ *  void ordenaMayorMenor (int[] a)  -- ordena de mayor a menor un Array 
+ *  int maxArray (int[] a)           -- calcula el número MAYOR del Array
+ *  int minArray (int[] a)           -- calcula el número MENOR del Array
+ *  int totalArray (int[] a)         -- calcula el total del Array
+ *  void rellenaArray(int[] a, int r)-- rellena el Array con un número que se pasa como parámetro
+ *   
+ * @author Eduardo 
+ * @version 1.0 NOVIEMBRE 2022
+ */
+public class Utilidades
+{
+    static void ordenaMenorMayor (int[] a)
+    {
+       int menor = 0; 
+       for (int i=0;i<a.length; i++)
+       {
+           menor = a[i];
+           int posMenor = i;
+           for (int j=i;j<a.length; j++) //busca el menor de todos los elementos
+            {
+              if (menor > a[j])
+              {
+                menor = a[j];
+                posMenor = j;
+              } 
+            }
+            a[posMenor]=a[i];
+            a[i]=menor;
+       }
+    };  
+    
+    static void ordenaMayorMenor (int[] a)
+    {
+       int mayor = 0; 
+       for (int i=0;i<a.length; i++)
+       {
+           mayor = a[i];
+           int posMayor = i;
+           for (int j=i;j<a.length; j++) //busca el mayor de todos los elementos
+            {
+              if (mayor < a[j])
+              {
+                mayor = a[j];
+                posMayor = j;
+              } 
+            }
+            a[posMayor]=a[i];
+            a[i]=mayor;
+       }    
+    };
+    
+    static int maxArray (int[] a)
+    {
+        int max=a[0];
+        for(int n:a)
+        {
+            max=Math.max(max,n);
+        }
+        return max;
+    };
+    
+    static int minArray (int[] a)
+    {
+        int min=a[0];
+        for(int n:a)
+        {
+            min=Math.min(min,n);
+        }
+        return min;
+    };
+    
+    static int totalArray (int[] a)
+    {
+       int tot=0;
+       for(int n:a)
+       {
+            tot+=n;
+       }
+       return tot; 
+    };
+    
+    static void rellenaArray(int[] a, int r)
+    {
+       for(int i=0;i < a.length; i++)
+       {
+            a[i]=r;
+       }
+    };
+}
+
+
+AHORA CREAREMOS UNA MAIN-CLASS PARA PROBAR LOS MÉTODOS DE UTILIDAD ANTERORES. Declaramos 3 Arrays de distinto tamaño para probar los métodos
+
+
+public class PruebaUtilidades
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int[] array1={4,55,76,2,4,90,78};
+        int[] array2={55,79,111,34,5,7,87,7,64,55,76};
+        int[] array3={33,41,5,76,22,14,9,7,15,65,32,6,44,21};
+        
+        System.out.println("Máximo Array 1: " + Utilidades.maxArray(array1));  
+        System.out.println("Máximo Array 2: " + Utilidades.maxArray(array2));
+        System.out.println("Máximo Array 3: " + Utilidades.maxArray(array3));
+        System.out.println("Mínimo Array 1: " + Utilidades.minArray(array1));
+        System.out.println("Mínimo Array 2: " + Utilidades.minArray(array2));
+        System.out.println("Mínimo Array 3: " + Utilidades.minArray(array3));
+        System.out.println("Total Array 1: " + Utilidades.totalArray(array1));
+        System.out.println("Total Array 2: " + Utilidades.totalArray(array2));
+        System.out.println("Total Array 3: " + Utilidades.totalArray(array3));
+        Utilidades.ordenaMenorMayor(array1);
+        Utilidades.ordenaMenorMayor(array2);
+        Utilidades.ordenaMenorMayor(array3);
+        for (int n:array1)
+        {
+            System.out.print(n+" ");
+        }
+        System.out.println();
+        for (int n:array2)
+        {
+            System.out.print(n+" ");
+        }
+        System.out.println();
+        for (int n:array3)
+        {
+            System.out.print(n+" ");
+        }
+        System.out.println();
+        
+        Utilidades.ordenaMayorMenor(array1);
+        Utilidades.ordenaMayorMenor(array2);
+        Utilidades.ordenaMayorMenor(array3);
+        for (int n:array1)
+        {
+            System.out.print(n+" ");
+        }
+        System.out.println();
+        for (int n:array2)
+        {
+            System.out.print(n+" ");
+        }
+        System.out.println();
+        for (int n:array3)
+        {
+            System.out.print(n+" ");
+        }
+        System.out.println();
+        
+        System.out.println("Teclea el número de relleno para el Array 1: ");
+        Utilidades.rellenaArray(array1, sc.nextInt());
+        System.out.println("Teclea el número de relleno para el Array 2: ");
+        Utilidades.rellenaArray(array2, sc.nextInt());
+        System.out.println("Teclea el número de relleno para el Array 3: ");
+        Utilidades.rellenaArray(array3, sc.nextInt());
+        for (int n:array1)
+        {
+            System.out.print(n+" ");
+        }
+        System.out.println();
+        for (int n:array2)
+        {
+            System.out.print(n+" ");
+        }
+        System.out.println();
+        for (int n:array3)
+        {
+            System.out.print(n+" ");
+        }
+        System.out.println();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
