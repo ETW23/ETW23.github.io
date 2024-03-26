@@ -204,6 +204,15 @@ function handleElementClick(elementId) {
                     event.classList.remove("diactive");
                 }
             });
+        } else if (elementNumber === 20240220) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event16) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
         }
     } else { 
         events.forEach(event => {
@@ -367,6 +376,7 @@ function shouldHaveBlueBackground(year, month, day) {
         { year: 2024, month: 0, day: 18 }, // 18-01-2024
         { year: 2024, month: 0, day: 25 }, // 25-01-2024
         { year: 2024, month: 1, day: 8 }, // 08-02-2024
+        { year: 2024, month: 2, day: 20 }, // 20-03-2024
     ];
 
     return blueDates.some(date => date.year === year && date.month === month && date.day === day);
