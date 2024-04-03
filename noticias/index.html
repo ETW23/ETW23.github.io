@@ -71,13 +71,13 @@
       </h2>
       <div class="containerTextoYFoto">
         <p class="textoNoticia">
-          Recibimos la visita de los representantes del Ayuntamiento de Gijón,
+          Recibimos la visita de los/as representantes del Ayuntamiento de Gijón,
           Ángela Pumariega Menéndez (Concejala de Economía, Empleo, Turismo e
           Innovación), Carla Álvarez Sanjurjo, (Directora General de Promoción
           del Empleo), Javier Rodr&iacute;guez (Jefe de Servicio) y
           Mari&aacute;n &Aacute;lvarez (Directora del Departamento "Escuelas
           Taller"). Estamos agradecidos por su presencia y compromiso al
-          respaldar nuestras iniciativas. Los directores se mostraron
+          respaldar nuestras iniciativas. Se mostraron
           interesados en conocer de cerca las labores que llevamos a cabo en la
           Escuela Taller. Se presentaron detalladamente los proyectos en
           desarrollo, generando un intercambio enriquecedor de ideas y
@@ -109,7 +109,7 @@
             estudiantes provenientes de diferentes m&oacute;dulos, desde
             p&aacute;ginas y aplicaciones web hasta sociosanitario con
             dinamizaci&oacute;n. La jornada se inaugur&oacute; con la
-            participaci&oacute;n entusiasta de compa&ntilde;eros de diversos
+            participaci&oacute;n entusiasta de compa&ntilde;eros/as de diversos
             m&oacute;dulos, quienes llevaron a cabo presentaciones emotivas
             sobre sus respectivos pa&iacute;ses y etnia gitana.
           </p>
@@ -122,7 +122,7 @@
             im&aacute;genes, cada presentaci&oacute;n ofreci&oacute; una ventana
             colorida hacia la riqueza cultural del mundo. Siguiendo esta
             celebraci&oacute;n de la diversidad, se llev&oacute; a cabo una mesa
-            redonda donde los estudiantes compartieron sus experiencias
+            redonda donde los/as estudiantes compartieron sus experiencias
             personales y profesionales.
           </p>
           <p class="textoNoticia2">
@@ -842,6 +842,13 @@
         " de " +
         fecha.getUTCFullYear();
       document.getElementById("date").textContent = dia_mes_anno;
+
+    /////////////////Click derecho desactivado///////////////////
+
+    for (let event of ['cut', 'copy', 'paste', 'contextmenu']) {
+        window.addEventListener(event, e => e.preventDefault())
+    }
+    /////////////////////////////////////////////////////////// 
     </script>
   </body>
 </html>
