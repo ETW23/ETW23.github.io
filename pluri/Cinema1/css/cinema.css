@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#video-container {
+    width: 65%;
+    min-width: 18em;
+}
+
+#myVideo {
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    max-width: 48vw;
+    float: right;
+    min-width: 18em;
+    margin-top: 2em;
+}
+
+#video-controls {
+    padding: 10px;
+    border-radius: 5px;
+    width: 15%;
+    min-width: 15em;
+    z-index: 1;
+
+}
+
+#video-controls button {
+    margin: 0 5px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#video-controls button:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: auto;
+}
+#showControlsBtn    {
+    z-index: 1;
+    margin-top: -5em;
+    background-color: #000;
+    color: #fff;
+    border: .15em #ff3014 solid;
+    border-top-left-radius: .25em;
+    border-top-right-radius: .25em;
+    border-bottom-left-radius: .25em;
+    border-bottom-right-radius: .25em;
+    width: 10rem;
+    height: 1.5rem;
+    visibility: hidden;
+}
+.control-btn {
+    fill: #333; /* Color inicial del ícono */
+    width: 40px; /* Ancho del icono */
+    height: 40px; /* Altura del icono */
+    cursor: pointer; /* Cursor de puntero */
+    transition: fill 0.3s; /* Transición para el cambio de color */
+}
+
+.control-btn:hover {
+    fill: #666; /* Color al pasar el cursor */
+}
+
+.control-btn:active {
+    fill: #999; /* Color al hacer clic */
+}
+.giro   {
+    transform: translate(510px, 0px) rotateY(180deg);
+}
+.retroce    {
+    transform: translate(0px, 0px);
+}
+#videoBloc  {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+/*Hasta 430px*/
+@media (max-width: 26.875em)    {#myVideo   {margin-top: 2.5rem;
+}
+#showControlsBtn    {margin-top: 10rem;
+}
+}
+/*De 430px a 565px*/
+@media (min-width: 26.876em) and (max-width: 35.3125em) {#myVideo   {margin-top: 2.5rem;
+                                                                      margin-left: 1.25rem;
+                                                                      float: none;
+}
+#showControlsBtn    {margin-top: 10rem;
+}
+}
+/*De 565px a 685px*/
+@media (min-width: 35.3125em) and (max-width: 42.875em)  {#myVideo   {margin-top: 2.5rem;
+                                                                      margin-left: 3rem;
+                                                                      float: none;
+}
+#showControlsBtn    {margin-top: 10rem;
+}
+}
+/*De 685px a 1100px*/
+@media (min-width: 42.875em) and (max-width: 68.75em)    {#myVideo   {margin-top: 2.5rem;
+                                                                      margin-left: 5rem;
+                                                                      float: none;
+}
+#showControlsBtn    {margin-top: 10rem;
+}
+#videoBloc {display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+}
+}
