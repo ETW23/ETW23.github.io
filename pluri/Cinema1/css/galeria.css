@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (max-width: 60em) {
+    footer p {
+        font-size: 0.7rem;
+    }
+}
+
+/*Parte fija de la página*/
+
+body {
+    background-color: #f8f9fa;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4em;
+    margin: 0%;
+    padding: 1em;
+    background-color: black;
+    border-bottom: 5px solid #ad0000;
+  }
+  nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .navE {
+    height: 3em;
+    width: 3em;
+  }
+  .et {
+    line-height: 8vw;
+    font-weight: bolder;
+    color: #f8f9fa;
+    margin-left: 2.5vw;
+    font-size: max(2vw, 1.6em);
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  nav button {
+    height: 3em;
+    width: 3em;
+    border-radius: 20%;
+    border: none;
+    cursor: pointer;
+    background-color: #fdfeff;
+  }
+  .navE img {
+    height: 100%;
+    width: 100%;
+  }
+  .navE button img {
+    width: 2em;
+    height: 2em;
+  }
+
+/*Parte fija de la página*/
+
+footer {
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+p{
+    color: white;
+}
+footer div {
+    width: 30%;
+}
+#direc  {
+    width: 40%;
+}
+
+footer img {
+    display: block;
+    margin: auto;
+}
+
+#logoET,#logoHTML {
+    width: 5rem;
+    margin-top: 0.5rem;
+}
+  

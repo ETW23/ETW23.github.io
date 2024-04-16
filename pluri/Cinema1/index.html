@@ -5,49 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página con video</title>
     <link rel="stylesheet" type="text/css" href="css/cinema.css">
-    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/galeria.css">
 </head>
 <body>
-    <header id="background-container">
-        <!--Logo de Gijon -->
-        <div class="portadaLogo">
-          <div class="logos">
-            <div>
-              <img class="logo" src="img/Logo Gijon.png" alt="Ayto Gijón" title="Ayto Gijón" />
-            </div>
-            <div>
-              <img class="logo" src="img/logoet2.png" alt="Escuela Taller" title="Escuela Taller" id="et" />
-            </div>
-          </div>
-          <div class="portadaMenu">
-            <button id="botonHamburguesa">
-              <span>&#9776;</span>
-            </button>
-            <nav id="menu">
-              <ul id="menunav">
-                <li><a href="../agenda/">Agenda</a></li>
-                <li>
-                  <a id="botonModus" href="#null">Modulo</a>
-                  <nav id="modulos">
-                    <ul id="menumodus">
-                      <li><a href="#ancla1"> servicios de oficina</a></li>
-                      <li><a href="#ancla2"> p&aacute;ginas y aplicaciones web</a></li>
-                      <li><a href="#ancla3"> sociosanitaria con dinamizaci&oacute;n</a></li>
-                      <li><a href="#ancla4"> atenci&oacute;n sociosanitaria</a></li>
-                    </ul>
-                  </nav>
-                </li>
-                <li><a href="../equipo/">Equipo</a></li>
-                <li><a href="../alumnado/">Alumnado</a></li>
-                <li><a href="../instalaciones/">Instalaciones</a></li>
-                <li><a href="../mapaweb/">Mapa de la Web</a></li>
-                <li><a href="../pluri/index.html">Pluriculturalidad</a></li>
-                <li><a href="../manual/manualdeusuario.pdf" target="_blank">Manual de usuario</a></li>
-              </ul>
-            </nav>
-          </div>
+  <header>
+    <nav>
+        <div>
+            <div class="navE">
+                <a href="https://etw23.github.io/"><img src="img/logoet.png" alt="Logo escuelas taller gijon">
+            </a></div><a href="https://etw23.github.io/">
+            <div class="et">Escuelas Taller</div></a>
         </div>
-    </header>
+
+        <div class="navE">
+            <button>
+                <a href="https://etw23.github.io/pluri/index.html"> <img src="img/home.jpg" alt="Boton de inicio">  </a>
+            </button>
+        </div>
+    </nav>
+  </header>
 
     <main>
       <button id="showControlsBtn">Mostrar controles</button>
@@ -92,27 +68,21 @@
     </main>
 
     <footer>
-        <section class="f1">
-          <img src="img/acces.png" alt="accesibilidad " /><!-- imagen access AAA HTML5 -->
-          <p class="dire">Accesibilidad:</p>
-          <p class="dire">AAA HTML5</p>
-        </section>
-    
-        <section class="f2">
-          <p><a href="../legal/" class="links">Aviso legal</a></p>
-          <p><a href="../proteccion_datos/index.html" class="links">Proteccion de datos</a></p>
-          <p><a href="../ubicacion/index.html" class="links">Ubicaci&oacute;n</a> </p>
-        </section>
-    
-        <section class="f3">
-          <p class="links">Contacto:</p>
-          <p class="dire">630 76 16 62</p>
-          <p class="dire">985 18 16 13</p>
-          <p class="dire">985 86 57 05</p>
-        </section>
-    </footer>
+      <div>
+          <img src="img/logo-escuelas-taller.jpg" alt="Logo ET" id="logoET">
+      </div>
+      <div id="direc">
+          <p>
+              <br>CONTACTO <br>
+              <br> Teléfono: 985 18 16 13 <br> 
+              <br> Gijón, 33209 <br> 
+              <br> C/ Río de Oro 15B</p>
+      </div>
+      <div>
+          <img src="img/logo3.png" alt="Logo HTML5" id="logoHTML">
+      </div>
+  </footer>
 
     <script src="js/cinema.js"></script>
-    <script src="js/menu.js"></script>
 </body>
 </html>
