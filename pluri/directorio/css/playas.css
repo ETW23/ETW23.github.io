@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.informacion {
+  width: 50%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.bloque,
+.cajaCaliAgua {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3em;
+  margin: 0.25em;
+  border-bottom: 1px solid lightgrey;
+  padding: 5px;
+}
+
+.finBande {
+  border-bottom: 1px solid black;
+}
+
+.separador {
+  margin-bottom: 1em;
+}
+
+.lorePoniArbe {
+  display: flex;
+  flex-direction: column;
+}
+
+.cajaCaliAgua {
+  height: auto;
+}
+
+.icono {
+  height: 100%;
+  width: 25%;
+}
+
+.icono img {
+  height: 100%;
+}
+
+.lorePoniArbe img {
+  height: 30%;
+  width: 50%;
+  margin-bottom: 0.4em;
+}
+
+.iconoBan1 img {
+  height: 100%;
+  width: 70%;
+}
+
+.texto {
+  text-align: center;
+  width: 25%;
+  height: auto;
+}
+
+.centro {
+  width: 50%;
+}
+
+.estadoBanderaTit {
+  width: 100%;
+  text-align: center;
+}
+
+.izqui {
+  text-align: left;
+}
+
+.salva {
+  border-bottom: none;
+}
+
+.centrado {
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #e60000;
+  text-align: center;
+}
+
+.medidor-uv {
+  width: 40%;
+  height: 2em;
+  border-radius: 0.6em;
+}
+
+.verde::-webkit-meter-optimum-value {
+  background: #4eb400;
+}
+
+.verde::-moz-meter-bar {
+  background: #4eb400;
+}
+
+.amarillo::-webkit-meter-optimum-value {
+  background: #f7e400;
+}
+
+.amarillo::-moz-meter-bar {
+  background: #f7e400;
+}
+
+.naranja::-webkit-meter-optimum-value {
+  background: #f88700;
+}
+
+.naranja::-moz-meter-bar {
+  background: #f88700;
+}
+
+.rojo::-webkit-meter-optimum-value {
+  background: #d8001d;
+}
+
+.rojo::-moz-meter-bar {
+  background: #d8001d;
+}
+
+.morado::-webkit-meter-optimum-value {
+  background: #b54cff;
+}
+
+.morado::-moz-meter-bar {
+  background: #b54cff;
+}
+
+.uv {
+  border-bottom: none;
+}
+
+.sinUv {
+  display: none;
+}
+
+#recomenda {
+  width: 60%;
+  text-align: right;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .informacion {
+    width: 95%;
+  }
+
+}
