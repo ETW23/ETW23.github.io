@@ -130,6 +130,8 @@ caliAgua.obtenerDatos(function (bano) {
 function cambiarIconoZonas3(...zonas) {
   zonas.forEach((zona, index) => {
     const icono = document.getElementsByClassName('band')[index];
+    const bandera = document.getElementById(['banderaOeste', 'banderaCentro', 'banderaEste'][index]);
+
     if (zona.indexOf('-') !== -1) {
       icono.src = '../images/bandera.png';
       banderas.innerHTML = '<strong>SIN BANDERA</strong>';
@@ -145,13 +147,7 @@ function cambiarIconoZonas3(...zonas) {
 const radiUV = new CapturaJSON("https://opendata.gijon.es/", "descargar.php?id=976&tipo=JSON");
 //Accede a los valores de los datos
 radiUV.obtenerDatos(function (uv) {
-  let radiaciones = 0//uv.radiaciones.radiacion[0].indice;
-  const uv1 = document.getElementById('uv1');
-  const uv2 = document.getElementById('uv2');
-  if (radiaciones > 11 || radiaciones < 1) {
-    uv1.style.display = 'none';
-    uv2.style.display = 'none';
-  }
+  let radiaciones = uv.radiaciones.radiacion[0].indice;
   let iuv = document.getElementById('nivelUv');
   iuv.innerHTML = radiaciones;
   actualizarNivelUV();
@@ -167,7 +163,6 @@ function actualizarNivelUV() {
 
   // Actualizar el color del medidor basado en el valor
   barraUV.classList.remove('verde', 'amarillo', 'naranja', 'rojo', 'morado');
-  uv1.classList.remove('sinUv');
 
   if (numeroUV <= 2) {
     barraUV.classList.add('verde');
@@ -177,11 +172,12 @@ function actualizarNivelUV() {
     recomenda.innerHTML = '<strong>NECESITA PROTECCI&Oacute;N</strong>';
   } else if (numeroUV <= 7) {
     barraUV.classList.add('naranja');
+    //  barraUV.style.color='orange';
     recomenda.innerHTML = '<strong>NECESITA PROTECCI&Oacute;N</strong>';
   } else if (numeroUV <= 10) {
     barraUV.classList.add('rojo');
     recomenda.innerHTML = '<strong>NECESITA PROTECCI&Oacute;N EXTRA</strong>';
-  } else if (numeroUV === 11) {
+  } else {
     barraUV.classList.add('morado');
     recomenda.innerHTML = '<strong>NECESITA PROTECCI&Oacute;N EXTRA</strong>';
   }
