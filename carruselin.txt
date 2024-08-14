@@ -1,0 +1,279 @@
+-------------------------------------HTML---------------------------------------------
+    <div class="trabajos">
+            <div class="foto">
+                <h2>veh&iacute;culos el&eacute;ctricos</h2>
+                <div class="carrusel">
+                    <button class="anterior" onclick="moverFoto(this, -1)">&#10094;</button>
+                    <div class="imagenes">
+                            <img src="vehiculos-electricos1.png" class="captura">
+                            <img src="vehiculos-electricos.png" class="captura">
+                    </div>
+                    <button class="siguiente" onclick="moverFoto(this, 1)">&#10095;</button>
+                </div>
+            </div>
+            <div class="foto">
+                <h2>web escuela taller</h2>
+                <div class="carrusel">
+                    <button class="anterior" onclick="moverFoto(this, -1)">&#10094;</button>
+                    <div class="imagenes">
+                        <img src="escuela taller.png" class="captura">
+                        <img src="escuela taller 2.png" class="captura">
+                        <img src="agenda.png" class="captura">
+                        <img src="modulo.png" class="captura">
+                        <img src="equipo.png" class="captura">
+                        <img src="alumnado1.png" class="captura">
+                        <img src="alumnado.png" class="captura">
+                        <img src="instalaciones.png" class="captura">
+                        <img src="mapaweb.png" class="captura">
+                    </div>
+                    <button class="siguiente" onclick="moverFoto(this, 1)">&#10095;</button>
+                </div>
+            </div>
+            <div class="foto">
+                <h2>pluriculturalidad</h2>
+                <div class="carrusel">
+                    <button class="anterior" onclick="moverFoto(this, -1)">&#10094;</button>
+                    <div class="imagenes">
+                        <img src="pluri.png" class="captura">
+                        <img src="pluri2.png" class="captura">
+                        <img src="sahara1.png" class="captura">
+                        <img src="sahara2.png" class="captura">
+                        <img src="sahara3.png" class="captura">
+                        <img src="sahara4.png" class="captura">
+                    </div>
+                    <button class="siguiente" onclick="moverFoto(this, 1)">&#10095;</button>
+                </div>
+            </div>
+            <div class="foto">
+                <h2>tarjetas ciudadanas</h2>
+                <a href="usos.png" target="_blank"><img src="usos.png" class="captura"></a>                
+            </div>
+            <div class="foto">
+                <h2>playas gij&oacute;n</h2>
+                <img src="escuela taller 2.png" class="captura">
+            </div>
+            <div class="foto">
+                <h2>jard&iacute;n bot&aacute;nico</h2>
+                <img src="escuela taller 2.png" class="captura">
+            </div>
+    </div>
+
+-----------------------------------------CSS---------------------------------------------------------
+        .trabajos{
+            width: 100%;
+            height: auto;
+            background-color: #333333;
+            color: whitesmoke;
+            text-align: center;
+            font-size: 2rem;
+            font-family: "Playwrite DK Loopet", cursive;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .foto, .fotocv{
+            width: 33.33%;
+            height: auto;
+            padding: 10px;
+        }
+        .foto{
+            margin-top: 5rem;
+            margin-bottom: 3rem;         
+        }
+        .ampliar:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        h2{
+            width: 100%;
+            margin: 0;
+        }
+        .captura, .ampliar{
+            width: 95%;
+            height: auto;
+            border-radius: 16px;
+            margin-top: 8%;
+        }
+        /* -----------------------------carrusel------------------------------------------- */
+        /* Estilo base para el carrusel */
+        .carrusel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .carrusel .imagenes {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+        }
+        .carrusel img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        .carrusel .anterior, .carrusel .siguiente {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .carrusel .anterior {
+            left: 0;
+            z-index: 20;
+        }
+        .carrusel .siguiente {
+            right: 0;
+            z-index: 20;
+        }
+/* Ajustar el tamaño y centrar el carrusel ampliado */
+/* Estilo para el carrusel ampliado */
+.carrusel-ampliado {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw; /* Ajusta el ancho según sea necesario */
+    height: 80vh; /* Ajusta la altura según sea necesario */
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden; /* Asegura que el contenido no desborde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añadir sombra para mejor visualización */
+}
+
+.carrusel-ampliado .imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel-ampliado img {
+    width: auto; /* Ajustar el ancho para mantener la proporción */
+    height: 100%; /* Ajustar la altura para llenar el contenedor sin desbordar */
+    max-height: 100%;
+    object-fit: contain; /* Asegurar que la imagen se ajuste dentro del contenedor sin distorsión */
+    display: block; /* Eliminar el espacio en blanco debajo de la imagen */
+    margin: auto; /* Centrar la imagen dentro del contenedor */
+}
+        .carrusel-ampliado .anterior,
+        .carrusel-ampliado .siguiente {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: whitesmoke;
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .carrusel-ampliado .anterior {
+            left: 10px;
+        }
+        .carrusel-ampliado .siguiente {
+            right: 10px;
+        }
+        /* Estilo del botón de cerrar */
+        .carrusel-ampliado .cerrar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
+
+----------------------------------------------------------JS--------------------------------------------
+    // Función para mostrar la foto correcta en el carrusel
+    function mostrarFoto(offset, carrusel) {
+        let imagenes = carrusel.querySelector('.imagenes');
+        let imgs = imagenes.querySelectorAll('img');
+        let indice = 0;
+        
+        indice = (indice + offset + imgs.length) % imgs.length;
+        imagenes.style.transform = `translateX(${-indice * 100}%)`;
+    }
+
+    // Inicializar los carruseles en la página
+    let carruseles = document.querySelectorAll('.carrusel');
+
+    carruseles.forEach(carrusel => {
+        let imagenes = carrusel.querySelector('.imagenes');
+        let imgs = imagenes.querySelectorAll('img');
+        let indice = 0;
+
+        // Función para actualizar la imagen visible en el carrusel
+        function mostrarFoto(offset) {
+            indice = (indice + offset + imgs.length) % imgs.length;
+            imagenes.style.transform = `translateX(${-indice * 100}%)`;
+        }
+
+        carrusel.querySelector('.anterior').addEventListener('click', () => {
+            mostrarFoto(-1);
+        });
+
+        carrusel.querySelector('.siguiente').addEventListener('click', () => {
+            mostrarFoto(1);
+        });
+
+// Función para hacer que el carrusel se abra en pantalla completa
+carrusel.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', function() {
+        const carruselClonado = carrusel.cloneNode(true);
+        carruselClonado.classList.add('carrusel-ampliado');
+        document.body.style.overflow = 'hidden';  // Desactivar scroll en el fondo
+
+        // Crear el botón de cerrar
+        const botonCerrar = document.createElement('button');
+        botonCerrar.classList.add('cerrar');
+        botonCerrar.innerText = '×';
+        botonCerrar.addEventListener('click', () => {
+            document.body.removeChild(carruselClonado);
+            document.body.style.overflow = '';  // Reactivar scroll
+        });
+
+        carruselClonado.appendChild(botonCerrar);
+
+        // Agregar el evento para cerrar el carrusel ampliado al hacer clic fuera de él
+        carruselClonado.addEventListener('click', (e) => {
+            if (e.target === carruselClonado) {
+                document.body.removeChild(carruselClonado);
+                document.body.style.overflow = '';  // Reactivar scroll
+            }
+        });
+
+        document.body.appendChild(carruselClonado);
+
+        // Mover las fotos dentro del carrusel ampliado
+        let imagenesAmpliadas = carruselClonado.querySelector('.imagenes');
+        let imgsAmpliadas = imagenesAmpliadas.querySelectorAll('img');
+        let indiceAmpliado = 0;
+
+        function mostrarFotoAmpliado(offset) {
+            indiceAmpliado = (indiceAmpliado + offset + imgsAmpliadas.length) % imgsAmpliadas.length;
+            imagenesAmpliadas.style.transform = `translateX(${-indiceAmpliado * 100}%)`;
+        }
+
+        carruselClonado.querySelector('.anterior').addEventListener('click', (e) => {
+            e.stopPropagation();
+            mostrarFotoAmpliado(-1);
+        });
+
+        carruselClonado.querySelector('.siguiente').addEventListener('click', (e) => {
+            e.stopPropagation();
+            mostrarFotoAmpliado(1);
+        });
+    });
+});
+    });
