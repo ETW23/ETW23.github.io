@@ -213,6 +213,60 @@ function handleElementClick(elementId) {
                     event.classList.remove("diactive");
                 }
             });
+        } else if (elementNumber === 20240510) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event17) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20240514) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event18) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20240521) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event19) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20240604) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event20) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20240611) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event21) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
+        } else if (elementNumber === 20240630) {
+            prepoNotita();
+            events.forEach(event => {
+                if (event === event22) {
+                    event.classList.add("diactive");
+                } else {
+                    event.classList.remove("diactive");
+                }
+            });
         }
     } else { 
         events.forEach(event => {
@@ -377,6 +431,12 @@ function shouldHaveBlueBackground(year, month, day) {
         { year: 2024, month: 0, day: 25 }, // 25-01-2024
         { year: 2024, month: 1, day: 8 }, // 08-02-2024
         { year: 2024, month: 2, day: 20 }, // 20-03-2024
+        { year: 2024, month: 5, day: 10 }, // 10-06-2024
+        { year: 2024, month: 5, day: 14 }, // 14-06-2024
+        { year: 2024, month: 5, day: 21 }, // 21-06-2024
+        { year: 2024, month: 6, day: 4 }, // 04-07-2024
+        { year: 2024, month: 6, day: 11 }, // 11-07-2024
+        { year: 2024, month: 6, day: 30 }, // 30-07-2024
     ];
 
     return blueDates.some(date => date.year === year && date.month === month && date.day === day);

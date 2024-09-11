@@ -92,7 +92,7 @@
 .ulpreportada   {
     list-style: circle;
     list-style-type: circle;
-    overflow: visible;
+    overflow: auto;
     display: flex;
     width: 43em;
     height: 25em;
@@ -100,13 +100,18 @@
     flex-wrap: wrap;
     align-content: space-between;
 }
+.ulpreportada li {
+    width: 20vw;
+    min-width: 19em;
+}
 .ulfecha    {
-    width: 100%;
+    width: 18vw;
     text-align: right;
     font-style: oblique;
     font-size: 0.8em;
     padding-top: 0.1em;
     padding-bottom: 1em;
+    min-width: 23em;
 }
 .divpreportada  {
     clear: both;
