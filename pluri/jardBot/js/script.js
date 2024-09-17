@@ -4,7 +4,7 @@ var map = L.map("map").setView([lati, longi], 17);
 
 var imageUrl = "images/plano_jbag_FINALbg.png";
 var errorOverlayUrl = "https://cdn-icons-png.flaticon.com/512/110/110686.png";
-var altText = "maripili";
+var altText = "Jardin Botanico";
 var latLngBounds = L.latLngBounds([
   [43.5224, -5.627204],
   [43.517905, -5.612797],
@@ -18,7 +18,8 @@ var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
 }).addTo(map);
 
 L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+  attribution:
+    'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
   maxZoom: 22,
 }).addTo(map);
 
@@ -3210,9 +3211,9 @@ document.addEventListener("DOMContentLoaded", function () {
       container: "sidebar",
     })
     .addTo(map);
-  document.addEventListener('click', function (event) {
+  document.addEventListener("click", function (event) {
     // Verifica si el clic ocurrió dentro del sidebar o en cualquier parte del mapa
-    var sidebarContainer = document.getElementById('home');
+    var sidebarContainer = document.getElementById("home");
     var clickedInsideSidebar = sidebarContainer.contains(event.target);
 
     // Si el clic no fue dentro del sidebar, cerramos el pane activo
@@ -3222,12 +3223,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Esta parte es opcional, dependiendo de cómo inicialices el sidebar
-  sidebar.on('shown', function () {
-    console.log('Sidebar abierto');
+  sidebar.on("shown", function () {
+    console.log("Sidebar abierto");
   });
-  sidebar.on('hidden', function () {
-    console.log('Sidebar cerrado');
+  sidebar.on("hidden", function () {
+    console.log("Sidebar cerrado");
   });
-
 });
-
