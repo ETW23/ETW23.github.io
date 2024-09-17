@@ -1,0 +1,99 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jardin Botanico</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-sidebar-v2@3.0.0/css/leaflet-sidebar.css" />
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.3.0/dist/leaflet-ant-path.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <main>
+    <div class="cajaMapa">
+      <div id="map">
+        <div id="pideUbi">
+          <img src="images/geotarget.png" alt="Icono geolocalizacion">
+        </div>
+      </div>
+    </div>
+
+    <div id="sidebar" class="leaflet-sidebar collapsed">
+      <div class="leaflet-sidebar-tabs">
+        <ul role="tablist">
+          <li><a href="#home" role="tab"><i class="fa fa-home">CB</i></a></li>
+          <li><a href="#info" role="tab"><i class="fa fa-info">R</i></a></li>
+        </ul>
+      </div>
+
+      <div class="leaflet-sidebar-content">
+
+        <!-- Sección de Colección Botánica con Checkboxes -->
+        <div class="leaflet-sidebar-pane" id="home">
+          <h1 class="leaflet-sidebar-header">
+            Colección Bot&aacute;nica
+            <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+          </h1>
+          <div class="checkbox-container colebotchek">
+            <label>
+              <input type="checkbox" id="EntornoCantabrico" checked>
+              Entorno Cant&aacute;brico
+            </label><br>
+            <label>
+              <input type="checkbox" id="FactoriaVegetal" checked>
+              Factor&iacute;a Vegetal
+            </label><br>
+            <label>
+              <input type="checkbox" id="JardinIsla" checked>
+              Jard&iacute;n de la Isla
+            </label><br>
+            <label>
+              <input type="checkbox" id="ItinerarioAtlantico" checked>
+              Itinerario Atl&aacute;ntico
+            </label><br>
+          </div>
+        </div>
+
+        <!-- Sección de Recorridos con Botones -->
+        <div class="leaflet-sidebar-pane" id="info">
+          <h1 class="leaflet-sidebar-header">
+            Recorridos
+            <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+          </h1>
+          <div class="botonera">
+            <button class="button rojo" id="corto">Corto</button>
+            <button class="button morado" id="largo">Largo</button>
+            <button class="button amarillo" id="bosques">Bosques</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--
+    <nav>
+      <ul>
+        <li>MARCADORES</li>
+        <li class="verdeClaro">Colecciones Bot&aacute;nicas
+          <ul>
+            <li class="coleb">Entorno Cant&aacute;brico</li>
+            <li class="coleb">factor&iacute;a Vegetal</li>
+            <li class="coleb">Jard&iacute;n de la Isla</li>
+            <li class="coleb">Itinerario Atl&aacute;ntico</li>
+          </ul>
+        </li>
+        <li class="verdeClaro">Ubicaciones</li>
+      </ul>
+    </nav>-->
+  </main>
+  <script src="https://unpkg.com/leaflet-sidebar-v2@3.0.0/js/leaflet-sidebar.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
