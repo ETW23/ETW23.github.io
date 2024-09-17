@@ -16,12 +16,12 @@ var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
   alt: altText,
   interactive: true,
 }).addTo(map);
-/*
+
 L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
   maxZoom: 22,
 }).addTo(map);
-*/
+
 function Geolocalizacion(params) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -2796,7 +2796,7 @@ const pathAma = L.polyline
   .addTo(map);
 
 map.options.minZoom = 16;
-
+/*
 var southWest = L.latLng(43.5174237005487, -5.627562212508502);
 var northEast = L.latLng(43.52273551568553, -5.612565503367269);
 var bounds = L.latLngBounds(southWest, northEast);
@@ -2807,7 +2807,7 @@ map.setMaxBounds(bounds);
 // Evitar que el mapa se desplace fuera de los límites establecidos
 map.on("drag", function () {
   map.panInsideBounds(bounds, { animate: false });
-});
+});*/
 
 // Función para mostrar solo el path seleccionado
 function mostrarPath(seleccionado) {
