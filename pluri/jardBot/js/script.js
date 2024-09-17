@@ -2,7 +2,7 @@ var lati = 43.520921;
 var longi = -5.617275;
 var map = L.map("map").setView([lati, longi], 17);
 
-var imageUrl = "images/plano_jbag_FINAL.jpg";
+var imageUrl = "images/plano_jbag_FINALbg.png";
 var errorOverlayUrl = "https://cdn-icons-png.flaticon.com/512/110/110686.png";
 var altText = "maripili";
 var latLngBounds = L.latLngBounds([
@@ -2796,7 +2796,7 @@ const pathAma = L.polyline
   .addTo(map);
 
 map.options.minZoom = 16;
-/*
+
 var southWest = L.latLng(43.5174237005487, -5.627562212508502);
 var northEast = L.latLng(43.52273551568553, -5.612565503367269);
 var bounds = L.latLngBounds(southWest, northEast);
@@ -2807,7 +2807,7 @@ map.setMaxBounds(bounds);
 // Evitar que el mapa se desplace fuera de los límites establecidos
 map.on("drag", function () {
   map.panInsideBounds(bounds, { animate: false });
-});*/
+});
 
 // Función para mostrar solo el path seleccionado
 function mostrarPath(seleccionado) {
@@ -3210,4 +3210,24 @@ document.addEventListener("DOMContentLoaded", function () {
       container: "sidebar",
     })
     .addTo(map);
+  document.addEventListener('click', function (event) {
+    // Verifica si el clic ocurrió dentro del sidebar o en cualquier parte del mapa
+    var sidebarContainer = document.getElementById('home');
+    var clickedInsideSidebar = sidebarContainer.contains(event.target);
+
+    // Si el clic no fue dentro del sidebar, cerramos el pane activo
+    if (!clickedInsideSidebar) {
+      sidebar.close();
+    }
+  });
+
+  // Esta parte es opcional, dependiendo de cómo inicialices el sidebar
+  sidebar.on('shown', function () {
+    console.log('Sidebar abierto');
+  });
+  sidebar.on('hidden', function () {
+    console.log('Sidebar cerrado');
+  });
+
 });
+

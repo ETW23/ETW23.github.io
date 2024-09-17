@@ -177,14 +177,14 @@ main {
   display: flex;
   flex-wrap: nowrap;
   background-color: #8bc34a;
-  color: #5a3103;
+  color: #000;
   size: 50px;
 }
 
 .leaflet-sidebar-tabs>li.active,
 .leaflet-sidebar-tabs>ul>li.active {
   color: #fff;
-  background-color: #1e8100;
+  background-color: #186600;
 }
 
 .leaflet-sidebar-pane.active {
