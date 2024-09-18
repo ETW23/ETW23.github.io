@@ -18,12 +18,11 @@ var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
 }).addTo(map);
 
 L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution:
-    'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
   maxZoom: 22,
 }).addTo(map);
 
-function Geolocalizacion(params) {
+/*function Geolocalizacion(params) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
       var latitude = position.coords.latitude;
@@ -38,9 +37,43 @@ function Geolocalizacion(params) {
   } else {
     alert("Geolocalización no soportada por este navegador.");
   }
+}*/
+
+
+var marker, circle, lat, long, accuracy;
+
+L.Control.geocoder().addTo(map);
+if (!navigator.geolocation) {
+  console.log("Your browser doesn't support geolocation feature!")
+} else {
+  setInterval(() => {
+    navigator.geolocation.getCurrentPosition(getPosition)
+  }, 5000);
+};
+var marker, circle, lat, long, accuracy;
+
+function getPosition(position) {
+  // console.log(position)
+  lat = position.coords.latitude
+  long = position.coords.longitude
+  accuracy = position.coords.accuracy
+
+  if (marker) {
+    map.removeLayer(marker)
+  }
+
+  marker = L.marker([lat, long])
+
+  var featureGroup = L.featureGroup([marker]).addTo(map)
+
+  map.fitBounds(featureGroup.getBounds())
+
+  console.log("Your coordinate is: Lat: " + lat + " Long: " + long + " Accuracy: " + accuracy)
 }
+
+
 var pideUbi = document.getElementById("pideUbi");
-pideUbi.addEventListener("click", Geolocalizacion);
+pideUbi.addEventListener("click", getPosition);
 
 map.on("click", function (e) {
   var coord = e.latlng;
@@ -2798,7 +2831,7 @@ const pathAma = L.polyline
 
 map.options.minZoom = 16;
 
-var southWest = L.latLng(43.5174237005487, -5.627562212508502);
+/*var southWest = L.latLng(43.5174237005487, -5.627562212508502);
 var northEast = L.latLng(43.52273551568553, -5.612565503367269);
 var bounds = L.latLngBounds(southWest, northEast);
 
@@ -2809,7 +2842,7 @@ map.setMaxBounds(bounds);
 map.on("drag", function () {
   map.panInsideBounds(bounds, { animate: false });
 });
-
+*/
 // Función para mostrar solo el path seleccionado
 function mostrarPath(seleccionado) {
   pathMora.remove();
@@ -3211,22 +3244,5 @@ document.addEventListener("DOMContentLoaded", function () {
       container: "sidebar",
     })
     .addTo(map);
-  document.addEventListener("click", function (event) {
-    // Verifica si el clic ocurrió dentro del sidebar o en cualquier parte del mapa
-    var sidebarContainer = document.getElementById("home");
-    var clickedInsideSidebar = sidebarContainer.contains(event.target);
-
-    // Si el clic no fue dentro del sidebar, cerramos el pane activo
-    if (!clickedInsideSidebar) {
-      sidebar.close();
-    }
-  });
-
-  // Esta parte es opcional, dependiendo de cómo inicialices el sidebar
-  sidebar.on("shown", function () {
-    console.log("Sidebar abierto");
-  });
-  sidebar.on("hidden", function () {
-    console.log("Sidebar cerrado");
-  });
 });
+
